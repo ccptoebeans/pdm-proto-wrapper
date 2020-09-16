@@ -29,7 +29,9 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
+#include <google/protobuf/timestamp.pb.h>
 // @@protoc_insertion_point(includes)
 #define PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto 
 
@@ -38,45 +40,167 @@ namespace protobuf_pdm_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[1];
+  static const ::google::protobuf::internal::ParseTable schema[14];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
 void AddDescriptors();
 }  // namespace protobuf_pdm_2eproto
+namespace eve_launcher {
 namespace pdm {
-class foo;
-class fooDefaultTypeInternal;
-extern fooDefaultTypeInternal _foo_default_instance_;
+class Application;
+class ApplicationDefaultTypeInternal;
+extern ApplicationDefaultTypeInternal _Application_default_instance_;
+class Attributes;
+class AttributesDefaultTypeInternal;
+extern AttributesDefaultTypeInternal _Attributes_default_instance_;
+class Machine;
+class MachineDefaultTypeInternal;
+extern MachineDefaultTypeInternal _Machine_default_instance_;
+class Machine_CPU;
+class Machine_CPUDefaultTypeInternal;
+extern Machine_CPUDefaultTypeInternal _Machine_CPU_default_instance_;
+class Machine_GPU;
+class Machine_GPUDefaultTypeInternal;
+extern Machine_GPUDefaultTypeInternal _Machine_GPU_default_instance_;
+class Machine_GPU_Driver;
+class Machine_GPU_DriverDefaultTypeInternal;
+extern Machine_GPU_DriverDefaultTypeInternal _Machine_GPU_Driver_default_instance_;
+class Machine_Monitor;
+class Machine_MonitorDefaultTypeInternal;
+extern Machine_MonitorDefaultTypeInternal _Machine_Monitor_default_instance_;
+class Machine_NetworkAdapter;
+class Machine_NetworkAdapterDefaultTypeInternal;
+extern Machine_NetworkAdapterDefaultTypeInternal _Machine_NetworkAdapter_default_instance_;
+class Machine_VM;
+class Machine_VMDefaultTypeInternal;
+extern Machine_VMDefaultTypeInternal _Machine_VM_default_instance_;
+class OS;
+class OSDefaultTypeInternal;
+extern OSDefaultTypeInternal _OS_default_instance_;
+class OS_GraphicsAPIs;
+class OS_GraphicsAPIsDefaultTypeInternal;
+extern OS_GraphicsAPIsDefaultTypeInternal _OS_GraphicsAPIs_default_instance_;
+class OS_GraphicsAPIs_VulkanProperties;
+class OS_GraphicsAPIs_VulkanPropertiesDefaultTypeInternal;
+extern OS_GraphicsAPIs_VulkanPropertiesDefaultTypeInternal _OS_GraphicsAPIs_VulkanProperties_default_instance_;
+class OS_Wine;
+class OS_WineDefaultTypeInternal;
+extern OS_WineDefaultTypeInternal _OS_Wine_default_instance_;
+class Process;
+class ProcessDefaultTypeInternal;
+extern ProcessDefaultTypeInternal _Process_default_instance_;
 }  // namespace pdm
+}  // namespace eve_launcher
 namespace google {
 namespace protobuf {
-template<> ::pdm::foo* Arena::CreateMaybeMessage<::pdm::foo>(Arena*);
+template<> ::eve_launcher::pdm::Application* Arena::CreateMaybeMessage<::eve_launcher::pdm::Application>(Arena*);
+template<> ::eve_launcher::pdm::Attributes* Arena::CreateMaybeMessage<::eve_launcher::pdm::Attributes>(Arena*);
+template<> ::eve_launcher::pdm::Machine* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine>(Arena*);
+template<> ::eve_launcher::pdm::Machine_CPU* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_CPU>(Arena*);
+template<> ::eve_launcher::pdm::Machine_GPU* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_GPU>(Arena*);
+template<> ::eve_launcher::pdm::Machine_GPU_Driver* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_GPU_Driver>(Arena*);
+template<> ::eve_launcher::pdm::Machine_Monitor* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_Monitor>(Arena*);
+template<> ::eve_launcher::pdm::Machine_NetworkAdapter* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_NetworkAdapter>(Arena*);
+template<> ::eve_launcher::pdm::Machine_VM* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_VM>(Arena*);
+template<> ::eve_launcher::pdm::OS* Arena::CreateMaybeMessage<::eve_launcher::pdm::OS>(Arena*);
+template<> ::eve_launcher::pdm::OS_GraphicsAPIs* Arena::CreateMaybeMessage<::eve_launcher::pdm::OS_GraphicsAPIs>(Arena*);
+template<> ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties* Arena::CreateMaybeMessage<::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties>(Arena*);
+template<> ::eve_launcher::pdm::OS_Wine* Arena::CreateMaybeMessage<::eve_launcher::pdm::OS_Wine>(Arena*);
+template<> ::eve_launcher::pdm::Process* Arena::CreateMaybeMessage<::eve_launcher::pdm::Process>(Arena*);
 }  // namespace protobuf
 }  // namespace google
+namespace eve_launcher {
 namespace pdm {
 
+enum OS_GraphicsAPIs_VulkanSupport {
+  OS_GraphicsAPIs_VulkanSupport_UNKNOWN = 0,
+  OS_GraphicsAPIs_VulkanSupport_SUPPORTED = 1,
+  OS_GraphicsAPIs_VulkanSupport_UNSUPPORTED = 2,
+  OS_GraphicsAPIs_VulkanSupport_OS_GraphicsAPIs_VulkanSupport_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  OS_GraphicsAPIs_VulkanSupport_OS_GraphicsAPIs_VulkanSupport_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool OS_GraphicsAPIs_VulkanSupport_IsValid(int value);
+const OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MIN = OS_GraphicsAPIs_VulkanSupport_UNKNOWN;
+const OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MAX = OS_GraphicsAPIs_VulkanSupport_UNSUPPORTED;
+const int OS_GraphicsAPIs_VulkanSupport_VulkanSupport_ARRAYSIZE = OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* OS_GraphicsAPIs_VulkanSupport_descriptor();
+inline const ::std::string& OS_GraphicsAPIs_VulkanSupport_Name(OS_GraphicsAPIs_VulkanSupport value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    OS_GraphicsAPIs_VulkanSupport_descriptor(), value);
+}
+inline bool OS_GraphicsAPIs_VulkanSupport_Parse(
+    const ::std::string& name, OS_GraphicsAPIs_VulkanSupport* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<OS_GraphicsAPIs_VulkanSupport>(
+    OS_GraphicsAPIs_VulkanSupport_descriptor(), name, value);
+}
+enum OS_OS {
+  OS_OS_UNKNOWN = 0,
+  OS_OS_WINDOWS = 1,
+  OS_OS_MACOS = 2,
+  OS_OS_WINE = 3,
+  OS_OS_OS_OS_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  OS_OS_OS_OS_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool OS_OS_IsValid(int value);
+const OS_OS OS_OS_OS_MIN = OS_OS_UNKNOWN;
+const OS_OS OS_OS_OS_MAX = OS_OS_WINE;
+const int OS_OS_OS_ARRAYSIZE = OS_OS_OS_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* OS_OS_descriptor();
+inline const ::std::string& OS_OS_Name(OS_OS value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    OS_OS_descriptor(), value);
+}
+inline bool OS_OS_Parse(
+    const ::std::string& name, OS_OS* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<OS_OS>(
+    OS_OS_descriptor(), name, value);
+}
+enum Bitness {
+  BITNESS_UNKNOWN = 0,
+  BITNESS_32 = 1,
+  BITNESS_64 = 2,
+  Bitness_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  Bitness_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool Bitness_IsValid(int value);
+const Bitness Bitness_MIN = BITNESS_UNKNOWN;
+const Bitness Bitness_MAX = BITNESS_64;
+const int Bitness_ARRAYSIZE = Bitness_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* Bitness_descriptor();
+inline const ::std::string& Bitness_Name(Bitness value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    Bitness_descriptor(), value);
+}
+inline bool Bitness_Parse(
+    const ::std::string& name, Bitness* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<Bitness>(
+    Bitness_descriptor(), name, value);
+}
 // ===================================================================
 
-class foo : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:pdm.foo) */ {
+class Application : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Application) */ {
  public:
-  foo();
-  virtual ~foo();
+  Application();
+  virtual ~Application();
 
-  foo(const foo& from);
+  Application(const Application& from);
 
-  inline foo& operator=(const foo& from) {
+  inline Application& operator=(const Application& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  foo(foo&& from) noexcept
-    : foo() {
+  Application(Application&& from) noexcept
+    : Application() {
     *this = ::std::move(from);
   }
 
-  inline foo& operator=(foo&& from) noexcept {
+  inline Application& operator=(Application&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -86,34 +210,34 @@ class foo : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const foo& default_instance();
+  static const Application& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const foo* internal_default_instance() {
-    return reinterpret_cast<const foo*>(
-               &_foo_default_instance_);
+  static inline const Application* internal_default_instance() {
+    return reinterpret_cast<const Application*>(
+               &_Application_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  void Swap(foo* other);
-  friend void swap(foo& a, foo& b) {
+  void Swap(Application* other);
+  friend void swap(Application& a, Application& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline foo* New() const final {
-    return CreateMaybeMessage<foo>(NULL);
+  inline Application* New() const final {
+    return CreateMaybeMessage<Application>(NULL);
   }
 
-  foo* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<foo>(arena);
+  Application* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Application>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const foo& from);
-  void MergeFrom(const foo& from);
+  void CopyFrom(const Application& from);
+  void MergeFrom(const Application& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -130,7 +254,7 @@ class foo : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(foo* other);
+  void InternalSwap(Application* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -146,17 +270,2091 @@ class foo : public ::google::protobuf::Message /* @@protoc_insertion_point(class
 
   // accessors -------------------------------------------------------
 
-  // int32 bar = 1;
-  void clear_bar();
-  static const int kBarFieldNumber = 1;
-  ::google::protobuf::int32 bar() const;
-  void set_bar(::google::protobuf::int32 value);
+  // string name = 1;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
 
-  // @@protoc_insertion_point(class_scope:pdm.foo)
+  // string version = 2;
+  void clear_version();
+  static const int kVersionFieldNumber = 2;
+  const ::std::string& version() const;
+  void set_version(const ::std::string& value);
+  #if LANG_CXX11
+  void set_version(::std::string&& value);
+  #endif
+  void set_version(const char* value);
+  void set_version(const char* value, size_t size);
+  ::std::string* mutable_version();
+  ::std::string* release_version();
+  void set_allocated_version(::std::string* version);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Application)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::int32 bar_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr version_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Process : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Process) */ {
+ public:
+  Process();
+  virtual ~Process();
+
+  Process(const Process& from);
+
+  inline Process& operator=(const Process& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Process(Process&& from) noexcept
+    : Process() {
+    *this = ::std::move(from);
+  }
+
+  inline Process& operator=(Process&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Process& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Process* internal_default_instance() {
+    return reinterpret_cast<const Process*>(
+               &_Process_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(Process* other);
+  friend void swap(Process& a, Process& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Process* New() const final {
+    return CreateMaybeMessage<Process>(NULL);
+  }
+
+  Process* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Process>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Process& from);
+  void MergeFrom(const Process& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Process* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string version = 1;
+  void clear_version();
+  static const int kVersionFieldNumber = 1;
+  const ::std::string& version() const;
+  void set_version(const ::std::string& value);
+  #if LANG_CXX11
+  void set_version(::std::string&& value);
+  #endif
+  void set_version(const char* value);
+  void set_version(const char* value, size_t size);
+  ::std::string* mutable_version();
+  ::std::string* release_version();
+  void set_allocated_version(::std::string* version);
+
+  // .google.protobuf.Timestamp timestamp = 2;
+  bool has_timestamp() const;
+  void clear_timestamp();
+  static const int kTimestampFieldNumber = 2;
+  private:
+  const ::google::protobuf::Timestamp& _internal_timestamp() const;
+  public:
+  const ::google::protobuf::Timestamp& timestamp() const;
+  ::google::protobuf::Timestamp* release_timestamp();
+  ::google::protobuf::Timestamp* mutable_timestamp();
+  void set_allocated_timestamp(::google::protobuf::Timestamp* timestamp);
+
+  // .eve_launcher.pdm.Bitness bitness = 3;
+  void clear_bitness();
+  static const int kBitnessFieldNumber = 3;
+  ::eve_launcher::pdm::Bitness bitness() const;
+  void set_bitness(::eve_launcher::pdm::Bitness value);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Process)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr version_;
+  ::google::protobuf::Timestamp* timestamp_;
+  int bitness_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class OS_GraphicsAPIs_VulkanProperties : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties) */ {
+ public:
+  OS_GraphicsAPIs_VulkanProperties();
+  virtual ~OS_GraphicsAPIs_VulkanProperties();
+
+  OS_GraphicsAPIs_VulkanProperties(const OS_GraphicsAPIs_VulkanProperties& from);
+
+  inline OS_GraphicsAPIs_VulkanProperties& operator=(const OS_GraphicsAPIs_VulkanProperties& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  OS_GraphicsAPIs_VulkanProperties(OS_GraphicsAPIs_VulkanProperties&& from) noexcept
+    : OS_GraphicsAPIs_VulkanProperties() {
+    *this = ::std::move(from);
+  }
+
+  inline OS_GraphicsAPIs_VulkanProperties& operator=(OS_GraphicsAPIs_VulkanProperties&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OS_GraphicsAPIs_VulkanProperties& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OS_GraphicsAPIs_VulkanProperties* internal_default_instance() {
+    return reinterpret_cast<const OS_GraphicsAPIs_VulkanProperties*>(
+               &_OS_GraphicsAPIs_VulkanProperties_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  void Swap(OS_GraphicsAPIs_VulkanProperties* other);
+  friend void swap(OS_GraphicsAPIs_VulkanProperties& a, OS_GraphicsAPIs_VulkanProperties& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OS_GraphicsAPIs_VulkanProperties* New() const final {
+    return CreateMaybeMessage<OS_GraphicsAPIs_VulkanProperties>(NULL);
+  }
+
+  OS_GraphicsAPIs_VulkanProperties* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<OS_GraphicsAPIs_VulkanProperties>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const OS_GraphicsAPIs_VulkanProperties& from);
+  void MergeFrom(const OS_GraphicsAPIs_VulkanProperties& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OS_GraphicsAPIs_VulkanProperties* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string version = 2;
+  void clear_version();
+  static const int kVersionFieldNumber = 2;
+  const ::std::string& version() const;
+  void set_version(const ::std::string& value);
+  #if LANG_CXX11
+  void set_version(::std::string&& value);
+  #endif
+  void set_version(const char* value);
+  void set_version(const char* value, size_t size);
+  ::std::string* mutable_version();
+  ::std::string* release_version();
+  void set_allocated_version(::std::string* version);
+
+  // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport support = 1;
+  void clear_support();
+  static const int kSupportFieldNumber = 1;
+  ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport support() const;
+  void set_support(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr version_;
+  int support_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class OS_GraphicsAPIs : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.OS.GraphicsAPIs) */ {
+ public:
+  OS_GraphicsAPIs();
+  virtual ~OS_GraphicsAPIs();
+
+  OS_GraphicsAPIs(const OS_GraphicsAPIs& from);
+
+  inline OS_GraphicsAPIs& operator=(const OS_GraphicsAPIs& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  OS_GraphicsAPIs(OS_GraphicsAPIs&& from) noexcept
+    : OS_GraphicsAPIs() {
+    *this = ::std::move(from);
+  }
+
+  inline OS_GraphicsAPIs& operator=(OS_GraphicsAPIs&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OS_GraphicsAPIs& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OS_GraphicsAPIs* internal_default_instance() {
+    return reinterpret_cast<const OS_GraphicsAPIs*>(
+               &_OS_GraphicsAPIs_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  void Swap(OS_GraphicsAPIs* other);
+  friend void swap(OS_GraphicsAPIs& a, OS_GraphicsAPIs& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OS_GraphicsAPIs* New() const final {
+    return CreateMaybeMessage<OS_GraphicsAPIs>(NULL);
+  }
+
+  OS_GraphicsAPIs* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<OS_GraphicsAPIs>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const OS_GraphicsAPIs& from);
+  void MergeFrom(const OS_GraphicsAPIs& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OS_GraphicsAPIs* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef OS_GraphicsAPIs_VulkanProperties VulkanProperties;
+
+  typedef OS_GraphicsAPIs_VulkanSupport VulkanSupport;
+  static const VulkanSupport UNKNOWN =
+    OS_GraphicsAPIs_VulkanSupport_UNKNOWN;
+  static const VulkanSupport SUPPORTED =
+    OS_GraphicsAPIs_VulkanSupport_SUPPORTED;
+  static const VulkanSupport UNSUPPORTED =
+    OS_GraphicsAPIs_VulkanSupport_UNSUPPORTED;
+  static inline bool VulkanSupport_IsValid(int value) {
+    return OS_GraphicsAPIs_VulkanSupport_IsValid(value);
+  }
+  static const VulkanSupport VulkanSupport_MIN =
+    OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MIN;
+  static const VulkanSupport VulkanSupport_MAX =
+    OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MAX;
+  static const int VulkanSupport_ARRAYSIZE =
+    OS_GraphicsAPIs_VulkanSupport_VulkanSupport_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  VulkanSupport_descriptor() {
+    return OS_GraphicsAPIs_VulkanSupport_descriptor();
+  }
+  static inline const ::std::string& VulkanSupport_Name(VulkanSupport value) {
+    return OS_GraphicsAPIs_VulkanSupport_Name(value);
+  }
+  static inline bool VulkanSupport_Parse(const ::std::string& name,
+      VulkanSupport* value) {
+    return OS_GraphicsAPIs_VulkanSupport_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // string vulkan_highest_support = 3;
+  void clear_vulkan_highest_support();
+  static const int kVulkanHighestSupportFieldNumber = 3;
+  const ::std::string& vulkan_highest_support() const;
+  void set_vulkan_highest_support(const ::std::string& value);
+  #if LANG_CXX11
+  void set_vulkan_highest_support(::std::string&& value);
+  #endif
+  void set_vulkan_highest_support(const char* value);
+  void set_vulkan_highest_support(const char* value, size_t size);
+  ::std::string* mutable_vulkan_highest_support();
+  ::std::string* release_vulkan_highest_support();
+  void set_allocated_vulkan_highest_support(::std::string* vulkan_highest_support);
+
+  // string d3d_highest_support = 4;
+  void clear_d3d_highest_support();
+  static const int kD3DHighestSupportFieldNumber = 4;
+  const ::std::string& d3d_highest_support() const;
+  void set_d3d_highest_support(const ::std::string& value);
+  #if LANG_CXX11
+  void set_d3d_highest_support(::std::string&& value);
+  #endif
+  void set_d3d_highest_support(const char* value);
+  void set_d3d_highest_support(const char* value, size_t size);
+  ::std::string* mutable_d3d_highest_support();
+  ::std::string* release_d3d_highest_support();
+  void set_allocated_d3d_highest_support(::std::string* d3d_highest_support);
+
+  // bool metal_supported = 1;
+  void clear_metal_supported();
+  static const int kMetalSupportedFieldNumber = 1;
+  bool metal_supported() const;
+  void set_metal_supported(bool value);
+
+  // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport vulkan_supported = 2;
+  void clear_vulkan_supported();
+  static const int kVulkanSupportedFieldNumber = 2;
+  ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport vulkan_supported() const;
+  void set_vulkan_supported(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.OS.GraphicsAPIs)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr vulkan_highest_support_;
+  ::google::protobuf::internal::ArenaStringPtr d3d_highest_support_;
+  bool metal_supported_;
+  int vulkan_supported_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class OS_Wine : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.OS.Wine) */ {
+ public:
+  OS_Wine();
+  virtual ~OS_Wine();
+
+  OS_Wine(const OS_Wine& from);
+
+  inline OS_Wine& operator=(const OS_Wine& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  OS_Wine(OS_Wine&& from) noexcept
+    : OS_Wine() {
+    *this = ::std::move(from);
+  }
+
+  inline OS_Wine& operator=(OS_Wine&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OS_Wine& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OS_Wine* internal_default_instance() {
+    return reinterpret_cast<const OS_Wine*>(
+               &_OS_Wine_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  void Swap(OS_Wine* other);
+  friend void swap(OS_Wine& a, OS_Wine& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OS_Wine* New() const final {
+    return CreateMaybeMessage<OS_Wine>(NULL);
+  }
+
+  OS_Wine* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<OS_Wine>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const OS_Wine& from);
+  void MergeFrom(const OS_Wine& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OS_Wine* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string version = 1;
+  void clear_version();
+  static const int kVersionFieldNumber = 1;
+  const ::std::string& version() const;
+  void set_version(const ::std::string& value);
+  #if LANG_CXX11
+  void set_version(::std::string&& value);
+  #endif
+  void set_version(const char* value);
+  void set_version(const char* value, size_t size);
+  ::std::string* mutable_version();
+  ::std::string* release_version();
+  void set_allocated_version(::std::string* version);
+
+  // string host_os = 2;
+  void clear_host_os();
+  static const int kHostOsFieldNumber = 2;
+  const ::std::string& host_os() const;
+  void set_host_os(const ::std::string& value);
+  #if LANG_CXX11
+  void set_host_os(::std::string&& value);
+  #endif
+  void set_host_os(const char* value);
+  void set_host_os(const char* value, size_t size);
+  ::std::string* mutable_host_os();
+  ::std::string* release_host_os();
+  void set_allocated_host_os(::std::string* host_os);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.OS.Wine)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr version_;
+  ::google::protobuf::internal::ArenaStringPtr host_os_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class OS : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.OS) */ {
+ public:
+  OS();
+  virtual ~OS();
+
+  OS(const OS& from);
+
+  inline OS& operator=(const OS& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  OS(OS&& from) noexcept
+    : OS() {
+    *this = ::std::move(from);
+  }
+
+  inline OS& operator=(OS&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OS& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OS* internal_default_instance() {
+    return reinterpret_cast<const OS*>(
+               &_OS_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  void Swap(OS* other);
+  friend void swap(OS& a, OS& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OS* New() const final {
+    return CreateMaybeMessage<OS>(NULL);
+  }
+
+  OS* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<OS>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const OS& from);
+  void MergeFrom(const OS& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OS* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef OS_GraphicsAPIs GraphicsAPIs;
+  typedef OS_Wine Wine;
+
+  typedef OS_OS OS;
+  static const OS UNKNOWN =
+    OS_OS_UNKNOWN;
+  static const OS WINDOWS =
+    OS_OS_WINDOWS;
+  static const OS MACOS =
+    OS_OS_MACOS;
+  static const OS WINE =
+    OS_OS_WINE;
+  static inline bool OS_IsValid(int value) {
+    return OS_OS_IsValid(value);
+  }
+  static const OS OS_MIN =
+    OS_OS_OS_MIN;
+  static const OS OS_MAX =
+    OS_OS_OS_MAX;
+  static const int OS_ARRAYSIZE =
+    OS_OS_OS_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  OS_descriptor() {
+    return OS_OS_descriptor();
+  }
+  static inline const ::std::string& OS_Name(OS value) {
+    return OS_OS_Name(value);
+  }
+  static inline bool OS_Parse(const ::std::string& name,
+      OS* value) {
+    return OS_OS_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // string name = 2;
+  void clear_name();
+  static const int kNameFieldNumber = 2;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // string kernel_version = 7;
+  void clear_kernel_version();
+  static const int kKernelVersionFieldNumber = 7;
+  const ::std::string& kernel_version() const;
+  void set_kernel_version(const ::std::string& value);
+  #if LANG_CXX11
+  void set_kernel_version(::std::string&& value);
+  #endif
+  void set_kernel_version(const char* value);
+  void set_kernel_version(const char* value, size_t size);
+  ::std::string* mutable_kernel_version();
+  ::std::string* release_kernel_version();
+  void set_allocated_kernel_version(::std::string* kernel_version);
+
+  // string username = 8;
+  void clear_username();
+  static const int kUsernameFieldNumber = 8;
+  const ::std::string& username() const;
+  void set_username(const ::std::string& value);
+  #if LANG_CXX11
+  void set_username(::std::string&& value);
+  #endif
+  void set_username(const char* value);
+  void set_username(const char* value, size_t size);
+  ::std::string* mutable_username();
+  ::std::string* release_username();
+  void set_allocated_username(::std::string* username);
+
+  // string user_locale = 9;
+  void clear_user_locale();
+  static const int kUserLocaleFieldNumber = 9;
+  const ::std::string& user_locale() const;
+  void set_user_locale(const ::std::string& value);
+  #if LANG_CXX11
+  void set_user_locale(::std::string&& value);
+  #endif
+  void set_user_locale(const char* value);
+  void set_user_locale(const char* value, size_t size);
+  ::std::string* mutable_user_locale();
+  ::std::string* release_user_locale();
+  void set_allocated_user_locale(::std::string* user_locale);
+
+  // .eve_launcher.pdm.OS.GraphicsAPIs graphics_apis = 11;
+  bool has_graphics_apis() const;
+  void clear_graphics_apis();
+  static const int kGraphicsApisFieldNumber = 11;
+  private:
+  const ::eve_launcher::pdm::OS_GraphicsAPIs& _internal_graphics_apis() const;
+  public:
+  const ::eve_launcher::pdm::OS_GraphicsAPIs& graphics_apis() const;
+  ::eve_launcher::pdm::OS_GraphicsAPIs* release_graphics_apis();
+  ::eve_launcher::pdm::OS_GraphicsAPIs* mutable_graphics_apis();
+  void set_allocated_graphics_apis(::eve_launcher::pdm::OS_GraphicsAPIs* graphics_apis);
+
+  // .eve_launcher.pdm.OS.Wine wine = 12;
+  bool has_wine() const;
+  void clear_wine();
+  static const int kWineFieldNumber = 12;
+  private:
+  const ::eve_launcher::pdm::OS_Wine& _internal_wine() const;
+  public:
+  const ::eve_launcher::pdm::OS_Wine& wine() const;
+  ::eve_launcher::pdm::OS_Wine* release_wine();
+  ::eve_launcher::pdm::OS_Wine* mutable_wine();
+  void set_allocated_wine(::eve_launcher::pdm::OS_Wine* wine);
+
+  // .eve_launcher.pdm.OS.OS type = 1;
+  void clear_type();
+  static const int kTypeFieldNumber = 1;
+  ::eve_launcher::pdm::OS_OS type() const;
+  void set_type(::eve_launcher::pdm::OS_OS value);
+
+  // .eve_launcher.pdm.Bitness bitness = 3;
+  void clear_bitness();
+  static const int kBitnessFieldNumber = 3;
+  ::eve_launcher::pdm::Bitness bitness() const;
+  void set_bitness(::eve_launcher::pdm::Bitness value);
+
+  // int32 major_version = 4;
+  void clear_major_version();
+  static const int kMajorVersionFieldNumber = 4;
+  ::google::protobuf::int32 major_version() const;
+  void set_major_version(::google::protobuf::int32 value);
+
+  // int32 minor_version = 5;
+  void clear_minor_version();
+  static const int kMinorVersionFieldNumber = 5;
+  ::google::protobuf::int32 minor_version() const;
+  void set_minor_version(::google::protobuf::int32 value);
+
+  // int32 build_number = 6;
+  void clear_build_number();
+  static const int kBuildNumberFieldNumber = 6;
+  ::google::protobuf::int32 build_number() const;
+  void set_build_number(::google::protobuf::int32 value);
+
+  // bool is_remote_session = 10;
+  void clear_is_remote_session();
+  static const int kIsRemoteSessionFieldNumber = 10;
+  bool is_remote_session() const;
+  void set_is_remote_session(bool value);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.OS)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr kernel_version_;
+  ::google::protobuf::internal::ArenaStringPtr username_;
+  ::google::protobuf::internal::ArenaStringPtr user_locale_;
+  ::eve_launcher::pdm::OS_GraphicsAPIs* graphics_apis_;
+  ::eve_launcher::pdm::OS_Wine* wine_;
+  int type_;
+  int bitness_;
+  ::google::protobuf::int32 major_version_;
+  ::google::protobuf::int32 minor_version_;
+  ::google::protobuf::int32 build_number_;
+  bool is_remote_session_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Machine_CPU : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.CPU) */ {
+ public:
+  Machine_CPU();
+  virtual ~Machine_CPU();
+
+  Machine_CPU(const Machine_CPU& from);
+
+  inline Machine_CPU& operator=(const Machine_CPU& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Machine_CPU(Machine_CPU&& from) noexcept
+    : Machine_CPU() {
+    *this = ::std::move(from);
+  }
+
+  inline Machine_CPU& operator=(Machine_CPU&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Machine_CPU& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Machine_CPU* internal_default_instance() {
+    return reinterpret_cast<const Machine_CPU*>(
+               &_Machine_CPU_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  void Swap(Machine_CPU* other);
+  friend void swap(Machine_CPU& a, Machine_CPU& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Machine_CPU* New() const final {
+    return CreateMaybeMessage<Machine_CPU>(NULL);
+  }
+
+  Machine_CPU* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Machine_CPU>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Machine_CPU& from);
+  void MergeFrom(const Machine_CPU& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Machine_CPU* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string brand = 3;
+  void clear_brand();
+  static const int kBrandFieldNumber = 3;
+  const ::std::string& brand() const;
+  void set_brand(const ::std::string& value);
+  #if LANG_CXX11
+  void set_brand(::std::string&& value);
+  #endif
+  void set_brand(const char* value);
+  void set_brand(const char* value, size_t size);
+  ::std::string* mutable_brand();
+  ::std::string* release_brand();
+  void set_allocated_brand(::std::string* brand);
+
+  // string vendor = 4;
+  void clear_vendor();
+  static const int kVendorFieldNumber = 4;
+  const ::std::string& vendor() const;
+  void set_vendor(const ::std::string& value);
+  #if LANG_CXX11
+  void set_vendor(::std::string&& value);
+  #endif
+  void set_vendor(const char* value);
+  void set_vendor(const char* value, size_t size);
+  ::std::string* mutable_vendor();
+  ::std::string* release_vendor();
+  void set_allocated_vendor(::std::string* vendor);
+
+  // .eve_launcher.pdm.Bitness bitness = 1;
+  void clear_bitness();
+  static const int kBitnessFieldNumber = 1;
+  ::eve_launcher::pdm::Bitness bitness() const;
+  void set_bitness(::eve_launcher::pdm::Bitness value);
+
+  // int32 logical_core_count = 2;
+  void clear_logical_core_count();
+  static const int kLogicalCoreCountFieldNumber = 2;
+  ::google::protobuf::int32 logical_core_count() const;
+  void set_logical_core_count(::google::protobuf::int32 value);
+
+  // int32 model = 5;
+  void clear_model();
+  static const int kModelFieldNumber = 5;
+  ::google::protobuf::int32 model() const;
+  void set_model(::google::protobuf::int32 value);
+
+  // int32 stepping = 6;
+  void clear_stepping();
+  static const int kSteppingFieldNumber = 6;
+  ::google::protobuf::int32 stepping() const;
+  void set_stepping(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.CPU)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr brand_;
+  ::google::protobuf::internal::ArenaStringPtr vendor_;
+  int bitness_;
+  ::google::protobuf::int32 logical_core_count_;
+  ::google::protobuf::int32 model_;
+  ::google::protobuf::int32 stepping_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Machine_VM : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.VM) */ {
+ public:
+  Machine_VM();
+  virtual ~Machine_VM();
+
+  Machine_VM(const Machine_VM& from);
+
+  inline Machine_VM& operator=(const Machine_VM& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Machine_VM(Machine_VM&& from) noexcept
+    : Machine_VM() {
+    *this = ::std::move(from);
+  }
+
+  inline Machine_VM& operator=(Machine_VM&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Machine_VM& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Machine_VM* internal_default_instance() {
+    return reinterpret_cast<const Machine_VM*>(
+               &_Machine_VM_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  void Swap(Machine_VM* other);
+  friend void swap(Machine_VM& a, Machine_VM& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Machine_VM* New() const final {
+    return CreateMaybeMessage<Machine_VM>(NULL);
+  }
+
+  Machine_VM* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Machine_VM>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Machine_VM& from);
+  void MergeFrom(const Machine_VM& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Machine_VM* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string hypervisor_name = 3;
+  void clear_hypervisor_name();
+  static const int kHypervisorNameFieldNumber = 3;
+  const ::std::string& hypervisor_name() const;
+  void set_hypervisor_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_hypervisor_name(::std::string&& value);
+  #endif
+  void set_hypervisor_name(const char* value);
+  void set_hypervisor_name(const char* value, size_t size);
+  ::std::string* mutable_hypervisor_name();
+  ::std::string* release_hypervisor_name();
+  void set_allocated_hypervisor_name(::std::string* hypervisor_name);
+
+  // bool is_suspected_vm = 1;
+  void clear_is_suspected_vm();
+  static const int kIsSuspectedVmFieldNumber = 1;
+  bool is_suspected_vm() const;
+  void set_is_suspected_vm(bool value);
+
+  // bool has_hypervisor_bit = 2;
+  void clear_has_hypervisor_bit();
+  static const int kHasHypervisorBitFieldNumber = 2;
+  bool has_hypervisor_bit() const;
+  void set_has_hypervisor_bit(bool value);
+
+  // bool is_hypervisor_guest_os = 4;
+  void clear_is_hypervisor_guest_os();
+  static const int kIsHypervisorGuestOsFieldNumber = 4;
+  bool is_hypervisor_guest_os() const;
+  void set_is_hypervisor_guest_os(bool value);
+
+  // bool has_vm_execution_timing = 5;
+  void clear_has_vm_execution_timing();
+  static const int kHasVmExecutionTimingFieldNumber = 5;
+  bool has_vm_execution_timing() const;
+  void set_has_vm_execution_timing(bool value);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.VM)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr hypervisor_name_;
+  bool is_suspected_vm_;
+  bool has_hypervisor_bit_;
+  bool is_hypervisor_guest_os_;
+  bool has_vm_execution_timing_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Machine_Monitor : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.Monitor) */ {
+ public:
+  Machine_Monitor();
+  virtual ~Machine_Monitor();
+
+  Machine_Monitor(const Machine_Monitor& from);
+
+  inline Machine_Monitor& operator=(const Machine_Monitor& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Machine_Monitor(Machine_Monitor&& from) noexcept
+    : Machine_Monitor() {
+    *this = ::std::move(from);
+  }
+
+  inline Machine_Monitor& operator=(Machine_Monitor&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Machine_Monitor& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Machine_Monitor* internal_default_instance() {
+    return reinterpret_cast<const Machine_Monitor*>(
+               &_Machine_Monitor_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  void Swap(Machine_Monitor* other);
+  friend void swap(Machine_Monitor& a, Machine_Monitor& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Machine_Monitor* New() const final {
+    return CreateMaybeMessage<Machine_Monitor>(NULL);
+  }
+
+  Machine_Monitor* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Machine_Monitor>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Machine_Monitor& from);
+  void MergeFrom(const Machine_Monitor& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Machine_Monitor* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string name = 1;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // int32 horizontal_resolution = 2;
+  void clear_horizontal_resolution();
+  static const int kHorizontalResolutionFieldNumber = 2;
+  ::google::protobuf::int32 horizontal_resolution() const;
+  void set_horizontal_resolution(::google::protobuf::int32 value);
+
+  // int32 vertical_resolution = 3;
+  void clear_vertical_resolution();
+  static const int kVerticalResolutionFieldNumber = 3;
+  ::google::protobuf::int32 vertical_resolution() const;
+  void set_vertical_resolution(::google::protobuf::int32 value);
+
+  // int32 bits_per_color = 4;
+  void clear_bits_per_color();
+  static const int kBitsPerColorFieldNumber = 4;
+  ::google::protobuf::int32 bits_per_color() const;
+  void set_bits_per_color(::google::protobuf::int32 value);
+
+  // int32 refresh_rate = 5;
+  void clear_refresh_rate();
+  static const int kRefreshRateFieldNumber = 5;
+  ::google::protobuf::int32 refresh_rate() const;
+  void set_refresh_rate(::google::protobuf::int32 value);
+
+  // int32 dpi_scaling_percent = 6;
+  void clear_dpi_scaling_percent();
+  static const int kDpiScalingPercentFieldNumber = 6;
+  ::google::protobuf::int32 dpi_scaling_percent() const;
+  void set_dpi_scaling_percent(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.Monitor)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::int32 horizontal_resolution_;
+  ::google::protobuf::int32 vertical_resolution_;
+  ::google::protobuf::int32 bits_per_color_;
+  ::google::protobuf::int32 refresh_rate_;
+  ::google::protobuf::int32 dpi_scaling_percent_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Machine_GPU_Driver : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.GPU.Driver) */ {
+ public:
+  Machine_GPU_Driver();
+  virtual ~Machine_GPU_Driver();
+
+  Machine_GPU_Driver(const Machine_GPU_Driver& from);
+
+  inline Machine_GPU_Driver& operator=(const Machine_GPU_Driver& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Machine_GPU_Driver(Machine_GPU_Driver&& from) noexcept
+    : Machine_GPU_Driver() {
+    *this = ::std::move(from);
+  }
+
+  inline Machine_GPU_Driver& operator=(Machine_GPU_Driver&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Machine_GPU_Driver& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Machine_GPU_Driver* internal_default_instance() {
+    return reinterpret_cast<const Machine_GPU_Driver*>(
+               &_Machine_GPU_Driver_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    9;
+
+  void Swap(Machine_GPU_Driver* other);
+  friend void swap(Machine_GPU_Driver& a, Machine_GPU_Driver& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Machine_GPU_Driver* New() const final {
+    return CreateMaybeMessage<Machine_GPU_Driver>(NULL);
+  }
+
+  Machine_GPU_Driver* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Machine_GPU_Driver>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Machine_GPU_Driver& from);
+  void MergeFrom(const Machine_GPU_Driver& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Machine_GPU_Driver* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string date = 1;
+  void clear_date();
+  static const int kDateFieldNumber = 1;
+  const ::std::string& date() const;
+  void set_date(const ::std::string& value);
+  #if LANG_CXX11
+  void set_date(::std::string&& value);
+  #endif
+  void set_date(const char* value);
+  void set_date(const char* value, size_t size);
+  ::std::string* mutable_date();
+  ::std::string* release_date();
+  void set_allocated_date(::std::string* date);
+
+  // string vendor = 2;
+  void clear_vendor();
+  static const int kVendorFieldNumber = 2;
+  const ::std::string& vendor() const;
+  void set_vendor(const ::std::string& value);
+  #if LANG_CXX11
+  void set_vendor(::std::string&& value);
+  #endif
+  void set_vendor(const char* value);
+  void set_vendor(const char* value, size_t size);
+  ::std::string* mutable_vendor();
+  ::std::string* release_vendor();
+  void set_allocated_vendor(::std::string* vendor);
+
+  // string version = 3;
+  void clear_version();
+  static const int kVersionFieldNumber = 3;
+  const ::std::string& version() const;
+  void set_version(const ::std::string& value);
+  #if LANG_CXX11
+  void set_version(::std::string&& value);
+  #endif
+  void set_version(const char* value);
+  void set_version(const char* value, size_t size);
+  ::std::string* mutable_version();
+  ::std::string* release_version();
+  void set_allocated_version(::std::string* version);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.GPU.Driver)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr date_;
+  ::google::protobuf::internal::ArenaStringPtr vendor_;
+  ::google::protobuf::internal::ArenaStringPtr version_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Machine_GPU : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.GPU) */ {
+ public:
+  Machine_GPU();
+  virtual ~Machine_GPU();
+
+  Machine_GPU(const Machine_GPU& from);
+
+  inline Machine_GPU& operator=(const Machine_GPU& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Machine_GPU(Machine_GPU&& from) noexcept
+    : Machine_GPU() {
+    *this = ::std::move(from);
+  }
+
+  inline Machine_GPU& operator=(Machine_GPU&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Machine_GPU& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Machine_GPU* internal_default_instance() {
+    return reinterpret_cast<const Machine_GPU*>(
+               &_Machine_GPU_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    10;
+
+  void Swap(Machine_GPU* other);
+  friend void swap(Machine_GPU& a, Machine_GPU& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Machine_GPU* New() const final {
+    return CreateMaybeMessage<Machine_GPU>(NULL);
+  }
+
+  Machine_GPU* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Machine_GPU>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Machine_GPU& from);
+  void MergeFrom(const Machine_GPU& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Machine_GPU* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef Machine_GPU_Driver Driver;
+
+  // accessors -------------------------------------------------------
+
+  // string description = 1;
+  void clear_description();
+  static const int kDescriptionFieldNumber = 1;
+  const ::std::string& description() const;
+  void set_description(const ::std::string& value);
+  #if LANG_CXX11
+  void set_description(::std::string&& value);
+  #endif
+  void set_description(const char* value);
+  void set_description(const char* value, size_t size);
+  ::std::string* mutable_description();
+  ::std::string* release_description();
+  void set_allocated_description(::std::string* description);
+
+  // .eve_launcher.pdm.Machine.GPU.Driver driver = 6;
+  bool has_driver() const;
+  void clear_driver();
+  static const int kDriverFieldNumber = 6;
+  private:
+  const ::eve_launcher::pdm::Machine_GPU_Driver& _internal_driver() const;
+  public:
+  const ::eve_launcher::pdm::Machine_GPU_Driver& driver() const;
+  ::eve_launcher::pdm::Machine_GPU_Driver* release_driver();
+  ::eve_launcher::pdm::Machine_GPU_Driver* mutable_driver();
+  void set_allocated_driver(::eve_launcher::pdm::Machine_GPU_Driver* driver);
+
+  // int32 vendor_id = 2;
+  void clear_vendor_id();
+  static const int kVendorIdFieldNumber = 2;
+  ::google::protobuf::int32 vendor_id() const;
+  void set_vendor_id(::google::protobuf::int32 value);
+
+  // int32 device_id = 3;
+  void clear_device_id();
+  static const int kDeviceIdFieldNumber = 3;
+  ::google::protobuf::int32 device_id() const;
+  void set_device_id(::google::protobuf::int32 value);
+
+  // int64 video_memory = 5;
+  void clear_video_memory();
+  static const int kVideoMemoryFieldNumber = 5;
+  ::google::protobuf::int64 video_memory() const;
+  void set_video_memory(::google::protobuf::int64 value);
+
+  // int32 revision = 4;
+  void clear_revision();
+  static const int kRevisionFieldNumber = 4;
+  ::google::protobuf::int32 revision() const;
+  void set_revision(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.GPU)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr description_;
+  ::eve_launcher::pdm::Machine_GPU_Driver* driver_;
+  ::google::protobuf::int32 vendor_id_;
+  ::google::protobuf::int32 device_id_;
+  ::google::protobuf::int64 video_memory_;
+  ::google::protobuf::int32 revision_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Machine_NetworkAdapter : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.NetworkAdapter) */ {
+ public:
+  Machine_NetworkAdapter();
+  virtual ~Machine_NetworkAdapter();
+
+  Machine_NetworkAdapter(const Machine_NetworkAdapter& from);
+
+  inline Machine_NetworkAdapter& operator=(const Machine_NetworkAdapter& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Machine_NetworkAdapter(Machine_NetworkAdapter&& from) noexcept
+    : Machine_NetworkAdapter() {
+    *this = ::std::move(from);
+  }
+
+  inline Machine_NetworkAdapter& operator=(Machine_NetworkAdapter&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Machine_NetworkAdapter& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Machine_NetworkAdapter* internal_default_instance() {
+    return reinterpret_cast<const Machine_NetworkAdapter*>(
+               &_Machine_NetworkAdapter_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    11;
+
+  void Swap(Machine_NetworkAdapter* other);
+  friend void swap(Machine_NetworkAdapter& a, Machine_NetworkAdapter& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Machine_NetworkAdapter* New() const final {
+    return CreateMaybeMessage<Machine_NetworkAdapter>(NULL);
+  }
+
+  Machine_NetworkAdapter* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Machine_NetworkAdapter>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Machine_NetworkAdapter& from);
+  void MergeFrom(const Machine_NetworkAdapter& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Machine_NetworkAdapter* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string name = 1;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // bytes mac_address = 2;
+  void clear_mac_address();
+  static const int kMacAddressFieldNumber = 2;
+  const ::std::string& mac_address() const;
+  void set_mac_address(const ::std::string& value);
+  #if LANG_CXX11
+  void set_mac_address(::std::string&& value);
+  #endif
+  void set_mac_address(const char* value);
+  void set_mac_address(const void* value, size_t size);
+  ::std::string* mutable_mac_address();
+  ::std::string* release_mac_address();
+  void set_allocated_mac_address(::std::string* mac_address);
+
+  // bytes uuid = 3;
+  void clear_uuid();
+  static const int kUuidFieldNumber = 3;
+  const ::std::string& uuid() const;
+  void set_uuid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_uuid(::std::string&& value);
+  #endif
+  void set_uuid(const char* value);
+  void set_uuid(const void* value, size_t size);
+  ::std::string* mutable_uuid();
+  ::std::string* release_uuid();
+  void set_allocated_uuid(::std::string* uuid);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.NetworkAdapter)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr mac_address_;
+  ::google::protobuf::internal::ArenaStringPtr uuid_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Machine : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine) */ {
+ public:
+  Machine();
+  virtual ~Machine();
+
+  Machine(const Machine& from);
+
+  inline Machine& operator=(const Machine& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Machine(Machine&& from) noexcept
+    : Machine() {
+    *this = ::std::move(from);
+  }
+
+  inline Machine& operator=(Machine&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Machine& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Machine* internal_default_instance() {
+    return reinterpret_cast<const Machine*>(
+               &_Machine_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  void Swap(Machine* other);
+  friend void swap(Machine& a, Machine& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Machine* New() const final {
+    return CreateMaybeMessage<Machine>(NULL);
+  }
+
+  Machine* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Machine>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Machine& from);
+  void MergeFrom(const Machine& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Machine* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef Machine_CPU CPU;
+  typedef Machine_VM VM;
+  typedef Machine_Monitor Monitor;
+  typedef Machine_GPU GPU;
+  typedef Machine_NetworkAdapter NetworkAdapter;
+
+  // accessors -------------------------------------------------------
+
+  // repeated .eve_launcher.pdm.Machine.Monitor monitors = 8;
+  int monitors_size() const;
+  void clear_monitors();
+  static const int kMonitorsFieldNumber = 8;
+  ::eve_launcher::pdm::Machine_Monitor* mutable_monitors(int index);
+  ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor >*
+      mutable_monitors();
+  const ::eve_launcher::pdm::Machine_Monitor& monitors(int index) const;
+  ::eve_launcher::pdm::Machine_Monitor* add_monitors();
+  const ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor >&
+      monitors() const;
+
+  // repeated .eve_launcher.pdm.Machine.GPU gpus = 9;
+  int gpus_size() const;
+  void clear_gpus();
+  static const int kGpusFieldNumber = 9;
+  ::eve_launcher::pdm::Machine_GPU* mutable_gpus(int index);
+  ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU >*
+      mutable_gpus();
+  const ::eve_launcher::pdm::Machine_GPU& gpus(int index) const;
+  ::eve_launcher::pdm::Machine_GPU* add_gpus();
+  const ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU >&
+      gpus() const;
+
+  // repeated .eve_launcher.pdm.Machine.NetworkAdapter network_adapters = 10;
+  int network_adapters_size() const;
+  void clear_network_adapters();
+  static const int kNetworkAdaptersFieldNumber = 10;
+  ::eve_launcher::pdm::Machine_NetworkAdapter* mutable_network_adapters(int index);
+  ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter >*
+      mutable_network_adapters();
+  const ::eve_launcher::pdm::Machine_NetworkAdapter& network_adapters(int index) const;
+  ::eve_launcher::pdm::Machine_NetworkAdapter* add_network_adapters();
+  const ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter >&
+      network_adapters() const;
+
+  // string model = 1;
+  void clear_model();
+  static const int kModelFieldNumber = 1;
+  const ::std::string& model() const;
+  void set_model(const ::std::string& value);
+  #if LANG_CXX11
+  void set_model(::std::string&& value);
+  #endif
+  void set_model(const char* value);
+  void set_model(const char* value, size_t size);
+  ::std::string* mutable_model();
+  ::std::string* release_model();
+  void set_allocated_model(::std::string* model);
+
+  // string name = 2;
+  void clear_name();
+  static const int kNameFieldNumber = 2;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // bytes uuid = 3;
+  void clear_uuid();
+  static const int kUuidFieldNumber = 3;
+  const ::std::string& uuid() const;
+  void set_uuid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_uuid(::std::string&& value);
+  #endif
+  void set_uuid(const char* value);
+  void set_uuid(const void* value, size_t size);
+  ::std::string* mutable_uuid();
+  ::std::string* release_uuid();
+  void set_allocated_uuid(::std::string* uuid);
+
+  // .eve_launcher.pdm.Machine.CPU cpu = 6;
+  bool has_cpu() const;
+  void clear_cpu();
+  static const int kCpuFieldNumber = 6;
+  private:
+  const ::eve_launcher::pdm::Machine_CPU& _internal_cpu() const;
+  public:
+  const ::eve_launcher::pdm::Machine_CPU& cpu() const;
+  ::eve_launcher::pdm::Machine_CPU* release_cpu();
+  ::eve_launcher::pdm::Machine_CPU* mutable_cpu();
+  void set_allocated_cpu(::eve_launcher::pdm::Machine_CPU* cpu);
+
+  // .eve_launcher.pdm.Machine.VM vm = 7;
+  bool has_vm() const;
+  void clear_vm();
+  static const int kVmFieldNumber = 7;
+  private:
+  const ::eve_launcher::pdm::Machine_VM& _internal_vm() const;
+  public:
+  const ::eve_launcher::pdm::Machine_VM& vm() const;
+  ::eve_launcher::pdm::Machine_VM* release_vm();
+  ::eve_launcher::pdm::Machine_VM* mutable_vm();
+  void set_allocated_vm(::eve_launcher::pdm::Machine_VM* vm);
+
+  // int64 total_memory = 4;
+  void clear_total_memory();
+  static const int kTotalMemoryFieldNumber = 4;
+  ::google::protobuf::int64 total_memory() const;
+  void set_total_memory(::google::protobuf::int64 value);
+
+  // int32 monitor_count = 5;
+  void clear_monitor_count();
+  static const int kMonitorCountFieldNumber = 5;
+  ::google::protobuf::int32 monitor_count() const;
+  void set_monitor_count(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor > monitors_;
+  ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU > gpus_;
+  ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter > network_adapters_;
+  ::google::protobuf::internal::ArenaStringPtr model_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr uuid_;
+  ::eve_launcher::pdm::Machine_CPU* cpu_;
+  ::eve_launcher::pdm::Machine_VM* vm_;
+  ::google::protobuf::int64 total_memory_;
+  ::google::protobuf::int32 monitor_count_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_pdm_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class Attributes : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Attributes) */ {
+ public:
+  Attributes();
+  virtual ~Attributes();
+
+  Attributes(const Attributes& from);
+
+  inline Attributes& operator=(const Attributes& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Attributes(Attributes&& from) noexcept
+    : Attributes() {
+    *this = ::std::move(from);
+  }
+
+  inline Attributes& operator=(Attributes&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Attributes& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Attributes* internal_default_instance() {
+    return reinterpret_cast<const Attributes*>(
+               &_Attributes_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    13;
+
+  void Swap(Attributes* other);
+  friend void swap(Attributes& a, Attributes& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Attributes* New() const final {
+    return CreateMaybeMessage<Attributes>(NULL);
+  }
+
+  Attributes* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Attributes>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Attributes& from);
+  void MergeFrom(const Attributes& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Attributes* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .eve_launcher.pdm.Application application = 1;
+  bool has_application() const;
+  void clear_application();
+  static const int kApplicationFieldNumber = 1;
+  private:
+  const ::eve_launcher::pdm::Application& _internal_application() const;
+  public:
+  const ::eve_launcher::pdm::Application& application() const;
+  ::eve_launcher::pdm::Application* release_application();
+  ::eve_launcher::pdm::Application* mutable_application();
+  void set_allocated_application(::eve_launcher::pdm::Application* application);
+
+  // .eve_launcher.pdm.Process process = 2;
+  bool has_process() const;
+  void clear_process();
+  static const int kProcessFieldNumber = 2;
+  private:
+  const ::eve_launcher::pdm::Process& _internal_process() const;
+  public:
+  const ::eve_launcher::pdm::Process& process() const;
+  ::eve_launcher::pdm::Process* release_process();
+  ::eve_launcher::pdm::Process* mutable_process();
+  void set_allocated_process(::eve_launcher::pdm::Process* process);
+
+  // .eve_launcher.pdm.OS os = 3;
+  bool has_os() const;
+  void clear_os();
+  static const int kOsFieldNumber = 3;
+  private:
+  const ::eve_launcher::pdm::OS& _internal_os() const;
+  public:
+  const ::eve_launcher::pdm::OS& os() const;
+  ::eve_launcher::pdm::OS* release_os();
+  ::eve_launcher::pdm::OS* mutable_os();
+  void set_allocated_os(::eve_launcher::pdm::OS* os);
+
+  // .eve_launcher.pdm.Machine machine = 4;
+  bool has_machine() const;
+  void clear_machine();
+  static const int kMachineFieldNumber = 4;
+  private:
+  const ::eve_launcher::pdm::Machine& _internal_machine() const;
+  public:
+  const ::eve_launcher::pdm::Machine& machine() const;
+  ::eve_launcher::pdm::Machine* release_machine();
+  ::eve_launcher::pdm::Machine* mutable_machine();
+  void set_allocated_machine(::eve_launcher::pdm::Machine* machine);
+
+  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Attributes)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::eve_launcher::pdm::Application* application_;
+  ::eve_launcher::pdm::Process* process_;
+  ::eve_launcher::pdm::OS* os_;
+  ::eve_launcher::pdm::Machine* machine_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_pdm_2eproto::TableStruct;
 };
@@ -169,29 +2367,2525 @@ class foo : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// foo
+// Application
 
-// int32 bar = 1;
-inline void foo::clear_bar() {
-  bar_ = 0;
+// string name = 1;
+inline void Application::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::int32 foo::bar() const {
-  // @@protoc_insertion_point(field_get:pdm.foo.bar)
-  return bar_;
+inline const ::std::string& Application::name() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Application.name)
+  return name_.GetNoArena();
 }
-inline void foo::set_bar(::google::protobuf::int32 value) {
+inline void Application::set_name(const ::std::string& value) {
   
-  bar_ = value;
-  // @@protoc_insertion_point(field_set:pdm.foo.bar)
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Application.name)
+}
+#if LANG_CXX11
+inline void Application::set_name(::std::string&& value) {
+  
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Application.name)
+}
+#endif
+inline void Application::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Application.name)
+}
+inline void Application::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Application.name)
+}
+inline ::std::string* Application::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Application.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Application::release_name() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Application.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Application::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Application.name)
+}
+
+// string version = 2;
+inline void Application::clear_version() {
+  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Application::version() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Application.version)
+  return version_.GetNoArena();
+}
+inline void Application::set_version(const ::std::string& value) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Application.version)
+}
+#if LANG_CXX11
+inline void Application::set_version(::std::string&& value) {
+  
+  version_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Application.version)
+}
+#endif
+inline void Application::set_version(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Application.version)
+}
+inline void Application::set_version(const char* value, size_t size) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Application.version)
+}
+inline ::std::string* Application::mutable_version() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Application.version)
+  return version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Application::release_version() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Application.version)
+  
+  return version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Application::set_allocated_version(::std::string* version) {
+  if (version != NULL) {
+    
+  } else {
+    
+  }
+  version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), version);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Application.version)
+}
+
+// -------------------------------------------------------------------
+
+// Process
+
+// string version = 1;
+inline void Process::clear_version() {
+  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Process::version() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Process.version)
+  return version_.GetNoArena();
+}
+inline void Process::set_version(const ::std::string& value) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Process.version)
+}
+#if LANG_CXX11
+inline void Process::set_version(::std::string&& value) {
+  
+  version_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Process.version)
+}
+#endif
+inline void Process::set_version(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Process.version)
+}
+inline void Process::set_version(const char* value, size_t size) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Process.version)
+}
+inline ::std::string* Process::mutable_version() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Process.version)
+  return version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Process::release_version() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Process.version)
+  
+  return version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Process::set_allocated_version(::std::string* version) {
+  if (version != NULL) {
+    
+  } else {
+    
+  }
+  version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), version);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Process.version)
+}
+
+// .google.protobuf.Timestamp timestamp = 2;
+inline bool Process::has_timestamp() const {
+  return this != internal_default_instance() && timestamp_ != NULL;
+}
+inline const ::google::protobuf::Timestamp& Process::_internal_timestamp() const {
+  return *timestamp_;
+}
+inline const ::google::protobuf::Timestamp& Process::timestamp() const {
+  const ::google::protobuf::Timestamp* p = timestamp_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Process.timestamp)
+  return p != NULL ? *p : *reinterpret_cast<const ::google::protobuf::Timestamp*>(
+      &::google::protobuf::_Timestamp_default_instance_);
+}
+inline ::google::protobuf::Timestamp* Process::release_timestamp() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Process.timestamp)
+  
+  ::google::protobuf::Timestamp* temp = timestamp_;
+  timestamp_ = NULL;
+  return temp;
+}
+inline ::google::protobuf::Timestamp* Process::mutable_timestamp() {
+  
+  if (timestamp_ == NULL) {
+    auto* p = CreateMaybeMessage<::google::protobuf::Timestamp>(GetArenaNoVirtual());
+    timestamp_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Process.timestamp)
+  return timestamp_;
+}
+inline void Process::set_allocated_timestamp(::google::protobuf::Timestamp* timestamp) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete reinterpret_cast< ::google::protobuf::MessageLite*>(timestamp_);
+  }
+  if (timestamp) {
+    ::google::protobuf::Arena* submessage_arena =
+      reinterpret_cast<::google::protobuf::MessageLite*>(timestamp)->GetArena();
+    if (message_arena != submessage_arena) {
+      timestamp = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, timestamp, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  timestamp_ = timestamp;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Process.timestamp)
+}
+
+// .eve_launcher.pdm.Bitness bitness = 3;
+inline void Process::clear_bitness() {
+  bitness_ = 0;
+}
+inline ::eve_launcher::pdm::Bitness Process::bitness() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Process.bitness)
+  return static_cast< ::eve_launcher::pdm::Bitness >(bitness_);
+}
+inline void Process::set_bitness(::eve_launcher::pdm::Bitness value) {
+  
+  bitness_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Process.bitness)
+}
+
+// -------------------------------------------------------------------
+
+// OS_GraphicsAPIs_VulkanProperties
+
+// .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport support = 1;
+inline void OS_GraphicsAPIs_VulkanProperties::clear_support() {
+  support_ = 0;
+}
+inline ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs_VulkanProperties::support() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.support)
+  return static_cast< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport >(support_);
+}
+inline void OS_GraphicsAPIs_VulkanProperties::set_support(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value) {
+  
+  support_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.support)
+}
+
+// string version = 2;
+inline void OS_GraphicsAPIs_VulkanProperties::clear_version() {
+  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OS_GraphicsAPIs_VulkanProperties::version() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
+  return version_.GetNoArena();
+}
+inline void OS_GraphicsAPIs_VulkanProperties::set_version(const ::std::string& value) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
+}
+#if LANG_CXX11
+inline void OS_GraphicsAPIs_VulkanProperties::set_version(::std::string&& value) {
+  
+  version_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
+}
+#endif
+inline void OS_GraphicsAPIs_VulkanProperties::set_version(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
+}
+inline void OS_GraphicsAPIs_VulkanProperties::set_version(const char* value, size_t size) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
+}
+inline ::std::string* OS_GraphicsAPIs_VulkanProperties::mutable_version() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
+  return version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OS_GraphicsAPIs_VulkanProperties::release_version() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
+  
+  return version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OS_GraphicsAPIs_VulkanProperties::set_allocated_version(::std::string* version) {
+  if (version != NULL) {
+    
+  } else {
+    
+  }
+  version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), version);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
+}
+
+// -------------------------------------------------------------------
+
+// OS_GraphicsAPIs
+
+// bool metal_supported = 1;
+inline void OS_GraphicsAPIs::clear_metal_supported() {
+  metal_supported_ = false;
+}
+inline bool OS_GraphicsAPIs::metal_supported() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.metal_supported)
+  return metal_supported_;
+}
+inline void OS_GraphicsAPIs::set_metal_supported(bool value) {
+  
+  metal_supported_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.metal_supported)
+}
+
+// .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport vulkan_supported = 2;
+inline void OS_GraphicsAPIs::clear_vulkan_supported() {
+  vulkan_supported_ = 0;
+}
+inline ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::vulkan_supported() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_supported)
+  return static_cast< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport >(vulkan_supported_);
+}
+inline void OS_GraphicsAPIs::set_vulkan_supported(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value) {
+  
+  vulkan_supported_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_supported)
+}
+
+// string vulkan_highest_support = 3;
+inline void OS_GraphicsAPIs::clear_vulkan_highest_support() {
+  vulkan_highest_support_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OS_GraphicsAPIs::vulkan_highest_support() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+  return vulkan_highest_support_.GetNoArena();
+}
+inline void OS_GraphicsAPIs::set_vulkan_highest_support(const ::std::string& value) {
+  
+  vulkan_highest_support_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+}
+#if LANG_CXX11
+inline void OS_GraphicsAPIs::set_vulkan_highest_support(::std::string&& value) {
+  
+  vulkan_highest_support_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+}
+#endif
+inline void OS_GraphicsAPIs::set_vulkan_highest_support(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  vulkan_highest_support_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+}
+inline void OS_GraphicsAPIs::set_vulkan_highest_support(const char* value, size_t size) {
+  
+  vulkan_highest_support_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+}
+inline ::std::string* OS_GraphicsAPIs::mutable_vulkan_highest_support() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+  return vulkan_highest_support_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OS_GraphicsAPIs::release_vulkan_highest_support() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+  
+  return vulkan_highest_support_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OS_GraphicsAPIs::set_allocated_vulkan_highest_support(::std::string* vulkan_highest_support) {
+  if (vulkan_highest_support != NULL) {
+    
+  } else {
+    
+  }
+  vulkan_highest_support_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), vulkan_highest_support);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+}
+
+// string d3d_highest_support = 4;
+inline void OS_GraphicsAPIs::clear_d3d_highest_support() {
+  d3d_highest_support_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OS_GraphicsAPIs::d3d_highest_support() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+  return d3d_highest_support_.GetNoArena();
+}
+inline void OS_GraphicsAPIs::set_d3d_highest_support(const ::std::string& value) {
+  
+  d3d_highest_support_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+}
+#if LANG_CXX11
+inline void OS_GraphicsAPIs::set_d3d_highest_support(::std::string&& value) {
+  
+  d3d_highest_support_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+}
+#endif
+inline void OS_GraphicsAPIs::set_d3d_highest_support(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  d3d_highest_support_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+}
+inline void OS_GraphicsAPIs::set_d3d_highest_support(const char* value, size_t size) {
+  
+  d3d_highest_support_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+}
+inline ::std::string* OS_GraphicsAPIs::mutable_d3d_highest_support() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+  return d3d_highest_support_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OS_GraphicsAPIs::release_d3d_highest_support() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+  
+  return d3d_highest_support_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OS_GraphicsAPIs::set_allocated_d3d_highest_support(::std::string* d3d_highest_support) {
+  if (d3d_highest_support != NULL) {
+    
+  } else {
+    
+  }
+  d3d_highest_support_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), d3d_highest_support);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+}
+
+// -------------------------------------------------------------------
+
+// OS_Wine
+
+// string version = 1;
+inline void OS_Wine::clear_version() {
+  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OS_Wine::version() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.Wine.version)
+  return version_.GetNoArena();
+}
+inline void OS_Wine::set_version(const ::std::string& value) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.Wine.version)
+}
+#if LANG_CXX11
+inline void OS_Wine::set_version(::std::string&& value) {
+  
+  version_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.Wine.version)
+}
+#endif
+inline void OS_Wine::set_version(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.Wine.version)
+}
+inline void OS_Wine::set_version(const char* value, size_t size) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.Wine.version)
+}
+inline ::std::string* OS_Wine::mutable_version() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.Wine.version)
+  return version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OS_Wine::release_version() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.Wine.version)
+  
+  return version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OS_Wine::set_allocated_version(::std::string* version) {
+  if (version != NULL) {
+    
+  } else {
+    
+  }
+  version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), version);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.Wine.version)
+}
+
+// string host_os = 2;
+inline void OS_Wine::clear_host_os() {
+  host_os_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OS_Wine::host_os() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.Wine.host_os)
+  return host_os_.GetNoArena();
+}
+inline void OS_Wine::set_host_os(const ::std::string& value) {
+  
+  host_os_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.Wine.host_os)
+}
+#if LANG_CXX11
+inline void OS_Wine::set_host_os(::std::string&& value) {
+  
+  host_os_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.Wine.host_os)
+}
+#endif
+inline void OS_Wine::set_host_os(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  host_os_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.Wine.host_os)
+}
+inline void OS_Wine::set_host_os(const char* value, size_t size) {
+  
+  host_os_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.Wine.host_os)
+}
+inline ::std::string* OS_Wine::mutable_host_os() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.Wine.host_os)
+  return host_os_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OS_Wine::release_host_os() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.Wine.host_os)
+  
+  return host_os_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OS_Wine::set_allocated_host_os(::std::string* host_os) {
+  if (host_os != NULL) {
+    
+  } else {
+    
+  }
+  host_os_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), host_os);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.Wine.host_os)
+}
+
+// -------------------------------------------------------------------
+
+// OS
+
+// .eve_launcher.pdm.OS.OS type = 1;
+inline void OS::clear_type() {
+  type_ = 0;
+}
+inline ::eve_launcher::pdm::OS_OS OS::type() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.type)
+  return static_cast< ::eve_launcher::pdm::OS_OS >(type_);
+}
+inline void OS::set_type(::eve_launcher::pdm::OS_OS value) {
+  
+  type_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.type)
+}
+
+// string name = 2;
+inline void OS::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OS::name() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.name)
+  return name_.GetNoArena();
+}
+inline void OS::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.name)
+}
+#if LANG_CXX11
+inline void OS::set_name(::std::string&& value) {
+  
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.name)
+}
+#endif
+inline void OS::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.name)
+}
+inline void OS::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.name)
+}
+inline ::std::string* OS::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OS::release_name() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OS::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.name)
+}
+
+// .eve_launcher.pdm.Bitness bitness = 3;
+inline void OS::clear_bitness() {
+  bitness_ = 0;
+}
+inline ::eve_launcher::pdm::Bitness OS::bitness() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.bitness)
+  return static_cast< ::eve_launcher::pdm::Bitness >(bitness_);
+}
+inline void OS::set_bitness(::eve_launcher::pdm::Bitness value) {
+  
+  bitness_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.bitness)
+}
+
+// int32 major_version = 4;
+inline void OS::clear_major_version() {
+  major_version_ = 0;
+}
+inline ::google::protobuf::int32 OS::major_version() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.major_version)
+  return major_version_;
+}
+inline void OS::set_major_version(::google::protobuf::int32 value) {
+  
+  major_version_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.major_version)
+}
+
+// int32 minor_version = 5;
+inline void OS::clear_minor_version() {
+  minor_version_ = 0;
+}
+inline ::google::protobuf::int32 OS::minor_version() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.minor_version)
+  return minor_version_;
+}
+inline void OS::set_minor_version(::google::protobuf::int32 value) {
+  
+  minor_version_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.minor_version)
+}
+
+// int32 build_number = 6;
+inline void OS::clear_build_number() {
+  build_number_ = 0;
+}
+inline ::google::protobuf::int32 OS::build_number() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.build_number)
+  return build_number_;
+}
+inline void OS::set_build_number(::google::protobuf::int32 value) {
+  
+  build_number_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.build_number)
+}
+
+// string kernel_version = 7;
+inline void OS::clear_kernel_version() {
+  kernel_version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OS::kernel_version() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.kernel_version)
+  return kernel_version_.GetNoArena();
+}
+inline void OS::set_kernel_version(const ::std::string& value) {
+  
+  kernel_version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.kernel_version)
+}
+#if LANG_CXX11
+inline void OS::set_kernel_version(::std::string&& value) {
+  
+  kernel_version_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.kernel_version)
+}
+#endif
+inline void OS::set_kernel_version(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  kernel_version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.kernel_version)
+}
+inline void OS::set_kernel_version(const char* value, size_t size) {
+  
+  kernel_version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.kernel_version)
+}
+inline ::std::string* OS::mutable_kernel_version() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.kernel_version)
+  return kernel_version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OS::release_kernel_version() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.kernel_version)
+  
+  return kernel_version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OS::set_allocated_kernel_version(::std::string* kernel_version) {
+  if (kernel_version != NULL) {
+    
+  } else {
+    
+  }
+  kernel_version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), kernel_version);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.kernel_version)
+}
+
+// string username = 8;
+inline void OS::clear_username() {
+  username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OS::username() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.username)
+  return username_.GetNoArena();
+}
+inline void OS::set_username(const ::std::string& value) {
+  
+  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.username)
+}
+#if LANG_CXX11
+inline void OS::set_username(::std::string&& value) {
+  
+  username_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.username)
+}
+#endif
+inline void OS::set_username(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.username)
+}
+inline void OS::set_username(const char* value, size_t size) {
+  
+  username_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.username)
+}
+inline ::std::string* OS::mutable_username() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.username)
+  return username_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OS::release_username() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.username)
+  
+  return username_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OS::set_allocated_username(::std::string* username) {
+  if (username != NULL) {
+    
+  } else {
+    
+  }
+  username_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), username);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.username)
+}
+
+// string user_locale = 9;
+inline void OS::clear_user_locale() {
+  user_locale_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& OS::user_locale() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.user_locale)
+  return user_locale_.GetNoArena();
+}
+inline void OS::set_user_locale(const ::std::string& value) {
+  
+  user_locale_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.user_locale)
+}
+#if LANG_CXX11
+inline void OS::set_user_locale(::std::string&& value) {
+  
+  user_locale_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.user_locale)
+}
+#endif
+inline void OS::set_user_locale(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  user_locale_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.user_locale)
+}
+inline void OS::set_user_locale(const char* value, size_t size) {
+  
+  user_locale_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.user_locale)
+}
+inline ::std::string* OS::mutable_user_locale() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.user_locale)
+  return user_locale_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* OS::release_user_locale() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.user_locale)
+  
+  return user_locale_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void OS::set_allocated_user_locale(::std::string* user_locale) {
+  if (user_locale != NULL) {
+    
+  } else {
+    
+  }
+  user_locale_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), user_locale);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.user_locale)
+}
+
+// bool is_remote_session = 10;
+inline void OS::clear_is_remote_session() {
+  is_remote_session_ = false;
+}
+inline bool OS::is_remote_session() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.is_remote_session)
+  return is_remote_session_;
+}
+inline void OS::set_is_remote_session(bool value) {
+  
+  is_remote_session_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.is_remote_session)
+}
+
+// .eve_launcher.pdm.OS.GraphicsAPIs graphics_apis = 11;
+inline bool OS::has_graphics_apis() const {
+  return this != internal_default_instance() && graphics_apis_ != NULL;
+}
+inline void OS::clear_graphics_apis() {
+  if (GetArenaNoVirtual() == NULL && graphics_apis_ != NULL) {
+    delete graphics_apis_;
+  }
+  graphics_apis_ = NULL;
+}
+inline const ::eve_launcher::pdm::OS_GraphicsAPIs& OS::_internal_graphics_apis() const {
+  return *graphics_apis_;
+}
+inline const ::eve_launcher::pdm::OS_GraphicsAPIs& OS::graphics_apis() const {
+  const ::eve_launcher::pdm::OS_GraphicsAPIs* p = graphics_apis_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.graphics_apis)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_launcher::pdm::OS_GraphicsAPIs*>(
+      &::eve_launcher::pdm::_OS_GraphicsAPIs_default_instance_);
+}
+inline ::eve_launcher::pdm::OS_GraphicsAPIs* OS::release_graphics_apis() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.graphics_apis)
+  
+  ::eve_launcher::pdm::OS_GraphicsAPIs* temp = graphics_apis_;
+  graphics_apis_ = NULL;
+  return temp;
+}
+inline ::eve_launcher::pdm::OS_GraphicsAPIs* OS::mutable_graphics_apis() {
+  
+  if (graphics_apis_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_launcher::pdm::OS_GraphicsAPIs>(GetArenaNoVirtual());
+    graphics_apis_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.graphics_apis)
+  return graphics_apis_;
+}
+inline void OS::set_allocated_graphics_apis(::eve_launcher::pdm::OS_GraphicsAPIs* graphics_apis) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete graphics_apis_;
+  }
+  if (graphics_apis) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      graphics_apis = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, graphics_apis, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  graphics_apis_ = graphics_apis;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.graphics_apis)
+}
+
+// .eve_launcher.pdm.OS.Wine wine = 12;
+inline bool OS::has_wine() const {
+  return this != internal_default_instance() && wine_ != NULL;
+}
+inline void OS::clear_wine() {
+  if (GetArenaNoVirtual() == NULL && wine_ != NULL) {
+    delete wine_;
+  }
+  wine_ = NULL;
+}
+inline const ::eve_launcher::pdm::OS_Wine& OS::_internal_wine() const {
+  return *wine_;
+}
+inline const ::eve_launcher::pdm::OS_Wine& OS::wine() const {
+  const ::eve_launcher::pdm::OS_Wine* p = wine_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.wine)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_launcher::pdm::OS_Wine*>(
+      &::eve_launcher::pdm::_OS_Wine_default_instance_);
+}
+inline ::eve_launcher::pdm::OS_Wine* OS::release_wine() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.wine)
+  
+  ::eve_launcher::pdm::OS_Wine* temp = wine_;
+  wine_ = NULL;
+  return temp;
+}
+inline ::eve_launcher::pdm::OS_Wine* OS::mutable_wine() {
+  
+  if (wine_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_launcher::pdm::OS_Wine>(GetArenaNoVirtual());
+    wine_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.wine)
+  return wine_;
+}
+inline void OS::set_allocated_wine(::eve_launcher::pdm::OS_Wine* wine) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete wine_;
+  }
+  if (wine) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      wine = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, wine, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  wine_ = wine;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.wine)
+}
+
+// -------------------------------------------------------------------
+
+// Machine_CPU
+
+// .eve_launcher.pdm.Bitness bitness = 1;
+inline void Machine_CPU::clear_bitness() {
+  bitness_ = 0;
+}
+inline ::eve_launcher::pdm::Bitness Machine_CPU::bitness() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.bitness)
+  return static_cast< ::eve_launcher::pdm::Bitness >(bitness_);
+}
+inline void Machine_CPU::set_bitness(::eve_launcher::pdm::Bitness value) {
+  
+  bitness_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.bitness)
+}
+
+// int32 logical_core_count = 2;
+inline void Machine_CPU::clear_logical_core_count() {
+  logical_core_count_ = 0;
+}
+inline ::google::protobuf::int32 Machine_CPU::logical_core_count() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.logical_core_count)
+  return logical_core_count_;
+}
+inline void Machine_CPU::set_logical_core_count(::google::protobuf::int32 value) {
+  
+  logical_core_count_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.logical_core_count)
+}
+
+// string brand = 3;
+inline void Machine_CPU::clear_brand() {
+  brand_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_CPU::brand() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.brand)
+  return brand_.GetNoArena();
+}
+inline void Machine_CPU::set_brand(const ::std::string& value) {
+  
+  brand_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.brand)
+}
+#if LANG_CXX11
+inline void Machine_CPU::set_brand(::std::string&& value) {
+  
+  brand_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.CPU.brand)
+}
+#endif
+inline void Machine_CPU::set_brand(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  brand_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.CPU.brand)
+}
+inline void Machine_CPU::set_brand(const char* value, size_t size) {
+  
+  brand_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.CPU.brand)
+}
+inline ::std::string* Machine_CPU::mutable_brand() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.CPU.brand)
+  return brand_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_CPU::release_brand() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.CPU.brand)
+  
+  return brand_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_CPU::set_allocated_brand(::std::string* brand) {
+  if (brand != NULL) {
+    
+  } else {
+    
+  }
+  brand_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), brand);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.CPU.brand)
+}
+
+// string vendor = 4;
+inline void Machine_CPU::clear_vendor() {
+  vendor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_CPU::vendor() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.vendor)
+  return vendor_.GetNoArena();
+}
+inline void Machine_CPU::set_vendor(const ::std::string& value) {
+  
+  vendor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.vendor)
+}
+#if LANG_CXX11
+inline void Machine_CPU::set_vendor(::std::string&& value) {
+  
+  vendor_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.CPU.vendor)
+}
+#endif
+inline void Machine_CPU::set_vendor(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  vendor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.CPU.vendor)
+}
+inline void Machine_CPU::set_vendor(const char* value, size_t size) {
+  
+  vendor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.CPU.vendor)
+}
+inline ::std::string* Machine_CPU::mutable_vendor() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.CPU.vendor)
+  return vendor_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_CPU::release_vendor() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.CPU.vendor)
+  
+  return vendor_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_CPU::set_allocated_vendor(::std::string* vendor) {
+  if (vendor != NULL) {
+    
+  } else {
+    
+  }
+  vendor_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), vendor);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.CPU.vendor)
+}
+
+// int32 model = 5;
+inline void Machine_CPU::clear_model() {
+  model_ = 0;
+}
+inline ::google::protobuf::int32 Machine_CPU::model() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.model)
+  return model_;
+}
+inline void Machine_CPU::set_model(::google::protobuf::int32 value) {
+  
+  model_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.model)
+}
+
+// int32 stepping = 6;
+inline void Machine_CPU::clear_stepping() {
+  stepping_ = 0;
+}
+inline ::google::protobuf::int32 Machine_CPU::stepping() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.stepping)
+  return stepping_;
+}
+inline void Machine_CPU::set_stepping(::google::protobuf::int32 value) {
+  
+  stepping_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.stepping)
+}
+
+// -------------------------------------------------------------------
+
+// Machine_VM
+
+// bool is_suspected_vm = 1;
+inline void Machine_VM::clear_is_suspected_vm() {
+  is_suspected_vm_ = false;
+}
+inline bool Machine_VM::is_suspected_vm() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.is_suspected_vm)
+  return is_suspected_vm_;
+}
+inline void Machine_VM::set_is_suspected_vm(bool value) {
+  
+  is_suspected_vm_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.is_suspected_vm)
+}
+
+// bool has_hypervisor_bit = 2;
+inline void Machine_VM::clear_has_hypervisor_bit() {
+  has_hypervisor_bit_ = false;
+}
+inline bool Machine_VM::has_hypervisor_bit() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.has_hypervisor_bit)
+  return has_hypervisor_bit_;
+}
+inline void Machine_VM::set_has_hypervisor_bit(bool value) {
+  
+  has_hypervisor_bit_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.has_hypervisor_bit)
+}
+
+// string hypervisor_name = 3;
+inline void Machine_VM::clear_hypervisor_name() {
+  hypervisor_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_VM::hypervisor_name() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  return hypervisor_name_.GetNoArena();
+}
+inline void Machine_VM::set_hypervisor_name(const ::std::string& value) {
+  
+  hypervisor_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.hypervisor_name)
+}
+#if LANG_CXX11
+inline void Machine_VM::set_hypervisor_name(::std::string&& value) {
+  
+  hypervisor_name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.VM.hypervisor_name)
+}
+#endif
+inline void Machine_VM::set_hypervisor_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  hypervisor_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.VM.hypervisor_name)
+}
+inline void Machine_VM::set_hypervisor_name(const char* value, size_t size) {
+  
+  hypervisor_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.VM.hypervisor_name)
+}
+inline ::std::string* Machine_VM::mutable_hypervisor_name() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  return hypervisor_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_VM::release_hypervisor_name() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  
+  return hypervisor_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_VM::set_allocated_hypervisor_name(::std::string* hypervisor_name) {
+  if (hypervisor_name != NULL) {
+    
+  } else {
+    
+  }
+  hypervisor_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), hypervisor_name);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.VM.hypervisor_name)
+}
+
+// bool is_hypervisor_guest_os = 4;
+inline void Machine_VM::clear_is_hypervisor_guest_os() {
+  is_hypervisor_guest_os_ = false;
+}
+inline bool Machine_VM::is_hypervisor_guest_os() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.is_hypervisor_guest_os)
+  return is_hypervisor_guest_os_;
+}
+inline void Machine_VM::set_is_hypervisor_guest_os(bool value) {
+  
+  is_hypervisor_guest_os_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.is_hypervisor_guest_os)
+}
+
+// bool has_vm_execution_timing = 5;
+inline void Machine_VM::clear_has_vm_execution_timing() {
+  has_vm_execution_timing_ = false;
+}
+inline bool Machine_VM::has_vm_execution_timing() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.has_vm_execution_timing)
+  return has_vm_execution_timing_;
+}
+inline void Machine_VM::set_has_vm_execution_timing(bool value) {
+  
+  has_vm_execution_timing_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.has_vm_execution_timing)
+}
+
+// -------------------------------------------------------------------
+
+// Machine_Monitor
+
+// string name = 1;
+inline void Machine_Monitor::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_Monitor::name() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.name)
+  return name_.GetNoArena();
+}
+inline void Machine_Monitor::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.name)
+}
+#if LANG_CXX11
+inline void Machine_Monitor::set_name(::std::string&& value) {
+  
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.Monitor.name)
+}
+#endif
+inline void Machine_Monitor::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.Monitor.name)
+}
+inline void Machine_Monitor::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.Monitor.name)
+}
+inline ::std::string* Machine_Monitor::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.Monitor.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_Monitor::release_name() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.Monitor.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_Monitor::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.Monitor.name)
+}
+
+// int32 horizontal_resolution = 2;
+inline void Machine_Monitor::clear_horizontal_resolution() {
+  horizontal_resolution_ = 0;
+}
+inline ::google::protobuf::int32 Machine_Monitor::horizontal_resolution() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.horizontal_resolution)
+  return horizontal_resolution_;
+}
+inline void Machine_Monitor::set_horizontal_resolution(::google::protobuf::int32 value) {
+  
+  horizontal_resolution_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.horizontal_resolution)
+}
+
+// int32 vertical_resolution = 3;
+inline void Machine_Monitor::clear_vertical_resolution() {
+  vertical_resolution_ = 0;
+}
+inline ::google::protobuf::int32 Machine_Monitor::vertical_resolution() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.vertical_resolution)
+  return vertical_resolution_;
+}
+inline void Machine_Monitor::set_vertical_resolution(::google::protobuf::int32 value) {
+  
+  vertical_resolution_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.vertical_resolution)
+}
+
+// int32 bits_per_color = 4;
+inline void Machine_Monitor::clear_bits_per_color() {
+  bits_per_color_ = 0;
+}
+inline ::google::protobuf::int32 Machine_Monitor::bits_per_color() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.bits_per_color)
+  return bits_per_color_;
+}
+inline void Machine_Monitor::set_bits_per_color(::google::protobuf::int32 value) {
+  
+  bits_per_color_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.bits_per_color)
+}
+
+// int32 refresh_rate = 5;
+inline void Machine_Monitor::clear_refresh_rate() {
+  refresh_rate_ = 0;
+}
+inline ::google::protobuf::int32 Machine_Monitor::refresh_rate() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.refresh_rate)
+  return refresh_rate_;
+}
+inline void Machine_Monitor::set_refresh_rate(::google::protobuf::int32 value) {
+  
+  refresh_rate_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.refresh_rate)
+}
+
+// int32 dpi_scaling_percent = 6;
+inline void Machine_Monitor::clear_dpi_scaling_percent() {
+  dpi_scaling_percent_ = 0;
+}
+inline ::google::protobuf::int32 Machine_Monitor::dpi_scaling_percent() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.dpi_scaling_percent)
+  return dpi_scaling_percent_;
+}
+inline void Machine_Monitor::set_dpi_scaling_percent(::google::protobuf::int32 value) {
+  
+  dpi_scaling_percent_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.dpi_scaling_percent)
+}
+
+// -------------------------------------------------------------------
+
+// Machine_GPU_Driver
+
+// string date = 1;
+inline void Machine_GPU_Driver::clear_date() {
+  date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_GPU_Driver::date() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.Driver.date)
+  return date_.GetNoArena();
+}
+inline void Machine_GPU_Driver::set_date(const ::std::string& value) {
+  
+  date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.Driver.date)
+}
+#if LANG_CXX11
+inline void Machine_GPU_Driver::set_date(::std::string&& value) {
+  
+  date_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.GPU.Driver.date)
+}
+#endif
+inline void Machine_GPU_Driver::set_date(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.GPU.Driver.date)
+}
+inline void Machine_GPU_Driver::set_date(const char* value, size_t size) {
+  
+  date_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.GPU.Driver.date)
+}
+inline ::std::string* Machine_GPU_Driver::mutable_date() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.Driver.date)
+  return date_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_GPU_Driver::release_date() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.Driver.date)
+  
+  return date_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_GPU_Driver::set_allocated_date(::std::string* date) {
+  if (date != NULL) {
+    
+  } else {
+    
+  }
+  date_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), date);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.Driver.date)
+}
+
+// string vendor = 2;
+inline void Machine_GPU_Driver::clear_vendor() {
+  vendor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_GPU_Driver::vendor() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  return vendor_.GetNoArena();
+}
+inline void Machine_GPU_Driver::set_vendor(const ::std::string& value) {
+  
+  vendor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+}
+#if LANG_CXX11
+inline void Machine_GPU_Driver::set_vendor(::std::string&& value) {
+  
+  vendor_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+}
+#endif
+inline void Machine_GPU_Driver::set_vendor(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  vendor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+}
+inline void Machine_GPU_Driver::set_vendor(const char* value, size_t size) {
+  
+  vendor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+}
+inline ::std::string* Machine_GPU_Driver::mutable_vendor() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  return vendor_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_GPU_Driver::release_vendor() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  
+  return vendor_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_GPU_Driver::set_allocated_vendor(::std::string* vendor) {
+  if (vendor != NULL) {
+    
+  } else {
+    
+  }
+  vendor_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), vendor);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+}
+
+// string version = 3;
+inline void Machine_GPU_Driver::clear_version() {
+  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_GPU_Driver::version() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.Driver.version)
+  return version_.GetNoArena();
+}
+inline void Machine_GPU_Driver::set_version(const ::std::string& value) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.Driver.version)
+}
+#if LANG_CXX11
+inline void Machine_GPU_Driver::set_version(::std::string&& value) {
+  
+  version_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.GPU.Driver.version)
+}
+#endif
+inline void Machine_GPU_Driver::set_version(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.GPU.Driver.version)
+}
+inline void Machine_GPU_Driver::set_version(const char* value, size_t size) {
+  
+  version_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.GPU.Driver.version)
+}
+inline ::std::string* Machine_GPU_Driver::mutable_version() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.Driver.version)
+  return version_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_GPU_Driver::release_version() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.Driver.version)
+  
+  return version_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_GPU_Driver::set_allocated_version(::std::string* version) {
+  if (version != NULL) {
+    
+  } else {
+    
+  }
+  version_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), version);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.Driver.version)
+}
+
+// -------------------------------------------------------------------
+
+// Machine_GPU
+
+// string description = 1;
+inline void Machine_GPU::clear_description() {
+  description_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_GPU::description() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.description)
+  return description_.GetNoArena();
+}
+inline void Machine_GPU::set_description(const ::std::string& value) {
+  
+  description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.description)
+}
+#if LANG_CXX11
+inline void Machine_GPU::set_description(::std::string&& value) {
+  
+  description_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.GPU.description)
+}
+#endif
+inline void Machine_GPU::set_description(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.GPU.description)
+}
+inline void Machine_GPU::set_description(const char* value, size_t size) {
+  
+  description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.GPU.description)
+}
+inline ::std::string* Machine_GPU::mutable_description() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.description)
+  return description_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_GPU::release_description() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.description)
+  
+  return description_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_GPU::set_allocated_description(::std::string* description) {
+  if (description != NULL) {
+    
+  } else {
+    
+  }
+  description_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), description);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.description)
+}
+
+// int32 vendor_id = 2;
+inline void Machine_GPU::clear_vendor_id() {
+  vendor_id_ = 0;
+}
+inline ::google::protobuf::int32 Machine_GPU::vendor_id() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.vendor_id)
+  return vendor_id_;
+}
+inline void Machine_GPU::set_vendor_id(::google::protobuf::int32 value) {
+  
+  vendor_id_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.vendor_id)
+}
+
+// int32 device_id = 3;
+inline void Machine_GPU::clear_device_id() {
+  device_id_ = 0;
+}
+inline ::google::protobuf::int32 Machine_GPU::device_id() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.device_id)
+  return device_id_;
+}
+inline void Machine_GPU::set_device_id(::google::protobuf::int32 value) {
+  
+  device_id_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.device_id)
+}
+
+// int32 revision = 4;
+inline void Machine_GPU::clear_revision() {
+  revision_ = 0;
+}
+inline ::google::protobuf::int32 Machine_GPU::revision() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.revision)
+  return revision_;
+}
+inline void Machine_GPU::set_revision(::google::protobuf::int32 value) {
+  
+  revision_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.revision)
+}
+
+// int64 video_memory = 5;
+inline void Machine_GPU::clear_video_memory() {
+  video_memory_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 Machine_GPU::video_memory() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.video_memory)
+  return video_memory_;
+}
+inline void Machine_GPU::set_video_memory(::google::protobuf::int64 value) {
+  
+  video_memory_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.video_memory)
+}
+
+// .eve_launcher.pdm.Machine.GPU.Driver driver = 6;
+inline bool Machine_GPU::has_driver() const {
+  return this != internal_default_instance() && driver_ != NULL;
+}
+inline void Machine_GPU::clear_driver() {
+  if (GetArenaNoVirtual() == NULL && driver_ != NULL) {
+    delete driver_;
+  }
+  driver_ = NULL;
+}
+inline const ::eve_launcher::pdm::Machine_GPU_Driver& Machine_GPU::_internal_driver() const {
+  return *driver_;
+}
+inline const ::eve_launcher::pdm::Machine_GPU_Driver& Machine_GPU::driver() const {
+  const ::eve_launcher::pdm::Machine_GPU_Driver* p = driver_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.driver)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Machine_GPU_Driver*>(
+      &::eve_launcher::pdm::_Machine_GPU_Driver_default_instance_);
+}
+inline ::eve_launcher::pdm::Machine_GPU_Driver* Machine_GPU::release_driver() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.driver)
+  
+  ::eve_launcher::pdm::Machine_GPU_Driver* temp = driver_;
+  driver_ = NULL;
+  return temp;
+}
+inline ::eve_launcher::pdm::Machine_GPU_Driver* Machine_GPU::mutable_driver() {
+  
+  if (driver_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Machine_GPU_Driver>(GetArenaNoVirtual());
+    driver_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.driver)
+  return driver_;
+}
+inline void Machine_GPU::set_allocated_driver(::eve_launcher::pdm::Machine_GPU_Driver* driver) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete driver_;
+  }
+  if (driver) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      driver = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, driver, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  driver_ = driver;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.driver)
+}
+
+// -------------------------------------------------------------------
+
+// Machine_NetworkAdapter
+
+// string name = 1;
+inline void Machine_NetworkAdapter::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_NetworkAdapter::name() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  return name_.GetNoArena();
+}
+inline void Machine_NetworkAdapter::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.NetworkAdapter.name)
+}
+#if LANG_CXX11
+inline void Machine_NetworkAdapter::set_name(::std::string&& value) {
+  
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.NetworkAdapter.name)
+}
+#endif
+inline void Machine_NetworkAdapter::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.NetworkAdapter.name)
+}
+inline void Machine_NetworkAdapter::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.NetworkAdapter.name)
+}
+inline ::std::string* Machine_NetworkAdapter::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_NetworkAdapter::release_name() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_NetworkAdapter::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.NetworkAdapter.name)
+}
+
+// bytes mac_address = 2;
+inline void Machine_NetworkAdapter::clear_mac_address() {
+  mac_address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_NetworkAdapter::mac_address() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  return mac_address_.GetNoArena();
+}
+inline void Machine_NetworkAdapter::set_mac_address(const ::std::string& value) {
+  
+  mac_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+}
+#if LANG_CXX11
+inline void Machine_NetworkAdapter::set_mac_address(::std::string&& value) {
+  
+  mac_address_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+}
+#endif
+inline void Machine_NetworkAdapter::set_mac_address(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  mac_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+}
+inline void Machine_NetworkAdapter::set_mac_address(const void* value, size_t size) {
+  
+  mac_address_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+}
+inline ::std::string* Machine_NetworkAdapter::mutable_mac_address() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  return mac_address_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_NetworkAdapter::release_mac_address() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  
+  return mac_address_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_NetworkAdapter::set_allocated_mac_address(::std::string* mac_address) {
+  if (mac_address != NULL) {
+    
+  } else {
+    
+  }
+  mac_address_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), mac_address);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+}
+
+// bytes uuid = 3;
+inline void Machine_NetworkAdapter::clear_uuid() {
+  uuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine_NetworkAdapter::uuid() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  return uuid_.GetNoArena();
+}
+inline void Machine_NetworkAdapter::set_uuid(const ::std::string& value) {
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+}
+#if LANG_CXX11
+inline void Machine_NetworkAdapter::set_uuid(::std::string&& value) {
+  
+  uuid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+}
+#endif
+inline void Machine_NetworkAdapter::set_uuid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+}
+inline void Machine_NetworkAdapter::set_uuid(const void* value, size_t size) {
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+}
+inline ::std::string* Machine_NetworkAdapter::mutable_uuid() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine_NetworkAdapter::release_uuid() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  
+  return uuid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine_NetworkAdapter::set_allocated_uuid(::std::string* uuid) {
+  if (uuid != NULL) {
+    
+  } else {
+    
+  }
+  uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+}
+
+// -------------------------------------------------------------------
+
+// Machine
+
+// string model = 1;
+inline void Machine::clear_model() {
+  model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine::model() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.model)
+  return model_.GetNoArena();
+}
+inline void Machine::set_model(const ::std::string& value) {
+  
+  model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.model)
+}
+#if LANG_CXX11
+inline void Machine::set_model(::std::string&& value) {
+  
+  model_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.model)
+}
+#endif
+inline void Machine::set_model(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.model)
+}
+inline void Machine::set_model(const char* value, size_t size) {
+  
+  model_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.model)
+}
+inline ::std::string* Machine::mutable_model() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.model)
+  return model_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine::release_model() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.model)
+  
+  return model_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine::set_allocated_model(::std::string* model) {
+  if (model != NULL) {
+    
+  } else {
+    
+  }
+  model_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), model);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.model)
+}
+
+// string name = 2;
+inline void Machine::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine::name() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.name)
+  return name_.GetNoArena();
+}
+inline void Machine::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.name)
+}
+#if LANG_CXX11
+inline void Machine::set_name(::std::string&& value) {
+  
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.name)
+}
+#endif
+inline void Machine::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.name)
+}
+inline void Machine::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.name)
+}
+inline ::std::string* Machine::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine::release_name() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.name)
+}
+
+// bytes uuid = 3;
+inline void Machine::clear_uuid() {
+  uuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Machine::uuid() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.uuid)
+  return uuid_.GetNoArena();
+}
+inline void Machine::set_uuid(const ::std::string& value) {
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.uuid)
+}
+#if LANG_CXX11
+inline void Machine::set_uuid(::std::string&& value) {
+  
+  uuid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.uuid)
+}
+#endif
+inline void Machine::set_uuid(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.uuid)
+}
+inline void Machine::set_uuid(const void* value, size_t size) {
+  
+  uuid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.uuid)
+}
+inline ::std::string* Machine::mutable_uuid() {
+  
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.uuid)
+  return uuid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Machine::release_uuid() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.uuid)
+  
+  return uuid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Machine::set_allocated_uuid(::std::string* uuid) {
+  if (uuid != NULL) {
+    
+  } else {
+    
+  }
+  uuid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), uuid);
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.uuid)
+}
+
+// int64 total_memory = 4;
+inline void Machine::clear_total_memory() {
+  total_memory_ = GOOGLE_LONGLONG(0);
+}
+inline ::google::protobuf::int64 Machine::total_memory() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.total_memory)
+  return total_memory_;
+}
+inline void Machine::set_total_memory(::google::protobuf::int64 value) {
+  
+  total_memory_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.total_memory)
+}
+
+// int32 monitor_count = 5;
+inline void Machine::clear_monitor_count() {
+  monitor_count_ = 0;
+}
+inline ::google::protobuf::int32 Machine::monitor_count() const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.monitor_count)
+  return monitor_count_;
+}
+inline void Machine::set_monitor_count(::google::protobuf::int32 value) {
+  
+  monitor_count_ = value;
+  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.monitor_count)
+}
+
+// .eve_launcher.pdm.Machine.CPU cpu = 6;
+inline bool Machine::has_cpu() const {
+  return this != internal_default_instance() && cpu_ != NULL;
+}
+inline void Machine::clear_cpu() {
+  if (GetArenaNoVirtual() == NULL && cpu_ != NULL) {
+    delete cpu_;
+  }
+  cpu_ = NULL;
+}
+inline const ::eve_launcher::pdm::Machine_CPU& Machine::_internal_cpu() const {
+  return *cpu_;
+}
+inline const ::eve_launcher::pdm::Machine_CPU& Machine::cpu() const {
+  const ::eve_launcher::pdm::Machine_CPU* p = cpu_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.cpu)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Machine_CPU*>(
+      &::eve_launcher::pdm::_Machine_CPU_default_instance_);
+}
+inline ::eve_launcher::pdm::Machine_CPU* Machine::release_cpu() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.cpu)
+  
+  ::eve_launcher::pdm::Machine_CPU* temp = cpu_;
+  cpu_ = NULL;
+  return temp;
+}
+inline ::eve_launcher::pdm::Machine_CPU* Machine::mutable_cpu() {
+  
+  if (cpu_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Machine_CPU>(GetArenaNoVirtual());
+    cpu_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.cpu)
+  return cpu_;
+}
+inline void Machine::set_allocated_cpu(::eve_launcher::pdm::Machine_CPU* cpu) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete cpu_;
+  }
+  if (cpu) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      cpu = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, cpu, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  cpu_ = cpu;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.cpu)
+}
+
+// .eve_launcher.pdm.Machine.VM vm = 7;
+inline bool Machine::has_vm() const {
+  return this != internal_default_instance() && vm_ != NULL;
+}
+inline void Machine::clear_vm() {
+  if (GetArenaNoVirtual() == NULL && vm_ != NULL) {
+    delete vm_;
+  }
+  vm_ = NULL;
+}
+inline const ::eve_launcher::pdm::Machine_VM& Machine::_internal_vm() const {
+  return *vm_;
+}
+inline const ::eve_launcher::pdm::Machine_VM& Machine::vm() const {
+  const ::eve_launcher::pdm::Machine_VM* p = vm_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.vm)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Machine_VM*>(
+      &::eve_launcher::pdm::_Machine_VM_default_instance_);
+}
+inline ::eve_launcher::pdm::Machine_VM* Machine::release_vm() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.vm)
+  
+  ::eve_launcher::pdm::Machine_VM* temp = vm_;
+  vm_ = NULL;
+  return temp;
+}
+inline ::eve_launcher::pdm::Machine_VM* Machine::mutable_vm() {
+  
+  if (vm_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Machine_VM>(GetArenaNoVirtual());
+    vm_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.vm)
+  return vm_;
+}
+inline void Machine::set_allocated_vm(::eve_launcher::pdm::Machine_VM* vm) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete vm_;
+  }
+  if (vm) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      vm = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, vm, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  vm_ = vm;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.vm)
+}
+
+// repeated .eve_launcher.pdm.Machine.Monitor monitors = 8;
+inline int Machine::monitors_size() const {
+  return monitors_.size();
+}
+inline void Machine::clear_monitors() {
+  monitors_.Clear();
+}
+inline ::eve_launcher::pdm::Machine_Monitor* Machine::mutable_monitors(int index) {
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.monitors)
+  return monitors_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor >*
+Machine::mutable_monitors() {
+  // @@protoc_insertion_point(field_mutable_list:eve_launcher.pdm.Machine.monitors)
+  return &monitors_;
+}
+inline const ::eve_launcher::pdm::Machine_Monitor& Machine::monitors(int index) const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.monitors)
+  return monitors_.Get(index);
+}
+inline ::eve_launcher::pdm::Machine_Monitor* Machine::add_monitors() {
+  // @@protoc_insertion_point(field_add:eve_launcher.pdm.Machine.monitors)
+  return monitors_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor >&
+Machine::monitors() const {
+  // @@protoc_insertion_point(field_list:eve_launcher.pdm.Machine.monitors)
+  return monitors_;
+}
+
+// repeated .eve_launcher.pdm.Machine.GPU gpus = 9;
+inline int Machine::gpus_size() const {
+  return gpus_.size();
+}
+inline void Machine::clear_gpus() {
+  gpus_.Clear();
+}
+inline ::eve_launcher::pdm::Machine_GPU* Machine::mutable_gpus(int index) {
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.gpus)
+  return gpus_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU >*
+Machine::mutable_gpus() {
+  // @@protoc_insertion_point(field_mutable_list:eve_launcher.pdm.Machine.gpus)
+  return &gpus_;
+}
+inline const ::eve_launcher::pdm::Machine_GPU& Machine::gpus(int index) const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.gpus)
+  return gpus_.Get(index);
+}
+inline ::eve_launcher::pdm::Machine_GPU* Machine::add_gpus() {
+  // @@protoc_insertion_point(field_add:eve_launcher.pdm.Machine.gpus)
+  return gpus_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU >&
+Machine::gpus() const {
+  // @@protoc_insertion_point(field_list:eve_launcher.pdm.Machine.gpus)
+  return gpus_;
+}
+
+// repeated .eve_launcher.pdm.Machine.NetworkAdapter network_adapters = 10;
+inline int Machine::network_adapters_size() const {
+  return network_adapters_.size();
+}
+inline void Machine::clear_network_adapters() {
+  network_adapters_.Clear();
+}
+inline ::eve_launcher::pdm::Machine_NetworkAdapter* Machine::mutable_network_adapters(int index) {
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.network_adapters)
+  return network_adapters_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter >*
+Machine::mutable_network_adapters() {
+  // @@protoc_insertion_point(field_mutable_list:eve_launcher.pdm.Machine.network_adapters)
+  return &network_adapters_;
+}
+inline const ::eve_launcher::pdm::Machine_NetworkAdapter& Machine::network_adapters(int index) const {
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.network_adapters)
+  return network_adapters_.Get(index);
+}
+inline ::eve_launcher::pdm::Machine_NetworkAdapter* Machine::add_network_adapters() {
+  // @@protoc_insertion_point(field_add:eve_launcher.pdm.Machine.network_adapters)
+  return network_adapters_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter >&
+Machine::network_adapters() const {
+  // @@protoc_insertion_point(field_list:eve_launcher.pdm.Machine.network_adapters)
+  return network_adapters_;
+}
+
+// -------------------------------------------------------------------
+
+// Attributes
+
+// .eve_launcher.pdm.Application application = 1;
+inline bool Attributes::has_application() const {
+  return this != internal_default_instance() && application_ != NULL;
+}
+inline void Attributes::clear_application() {
+  if (GetArenaNoVirtual() == NULL && application_ != NULL) {
+    delete application_;
+  }
+  application_ = NULL;
+}
+inline const ::eve_launcher::pdm::Application& Attributes::_internal_application() const {
+  return *application_;
+}
+inline const ::eve_launcher::pdm::Application& Attributes::application() const {
+  const ::eve_launcher::pdm::Application* p = application_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Attributes.application)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Application*>(
+      &::eve_launcher::pdm::_Application_default_instance_);
+}
+inline ::eve_launcher::pdm::Application* Attributes::release_application() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Attributes.application)
+  
+  ::eve_launcher::pdm::Application* temp = application_;
+  application_ = NULL;
+  return temp;
+}
+inline ::eve_launcher::pdm::Application* Attributes::mutable_application() {
+  
+  if (application_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Application>(GetArenaNoVirtual());
+    application_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Attributes.application)
+  return application_;
+}
+inline void Attributes::set_allocated_application(::eve_launcher::pdm::Application* application) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete application_;
+  }
+  if (application) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      application = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, application, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  application_ = application;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Attributes.application)
+}
+
+// .eve_launcher.pdm.Process process = 2;
+inline bool Attributes::has_process() const {
+  return this != internal_default_instance() && process_ != NULL;
+}
+inline void Attributes::clear_process() {
+  if (GetArenaNoVirtual() == NULL && process_ != NULL) {
+    delete process_;
+  }
+  process_ = NULL;
+}
+inline const ::eve_launcher::pdm::Process& Attributes::_internal_process() const {
+  return *process_;
+}
+inline const ::eve_launcher::pdm::Process& Attributes::process() const {
+  const ::eve_launcher::pdm::Process* p = process_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Attributes.process)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Process*>(
+      &::eve_launcher::pdm::_Process_default_instance_);
+}
+inline ::eve_launcher::pdm::Process* Attributes::release_process() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Attributes.process)
+  
+  ::eve_launcher::pdm::Process* temp = process_;
+  process_ = NULL;
+  return temp;
+}
+inline ::eve_launcher::pdm::Process* Attributes::mutable_process() {
+  
+  if (process_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Process>(GetArenaNoVirtual());
+    process_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Attributes.process)
+  return process_;
+}
+inline void Attributes::set_allocated_process(::eve_launcher::pdm::Process* process) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete process_;
+  }
+  if (process) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      process = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, process, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  process_ = process;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Attributes.process)
+}
+
+// .eve_launcher.pdm.OS os = 3;
+inline bool Attributes::has_os() const {
+  return this != internal_default_instance() && os_ != NULL;
+}
+inline void Attributes::clear_os() {
+  if (GetArenaNoVirtual() == NULL && os_ != NULL) {
+    delete os_;
+  }
+  os_ = NULL;
+}
+inline const ::eve_launcher::pdm::OS& Attributes::_internal_os() const {
+  return *os_;
+}
+inline const ::eve_launcher::pdm::OS& Attributes::os() const {
+  const ::eve_launcher::pdm::OS* p = os_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Attributes.os)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_launcher::pdm::OS*>(
+      &::eve_launcher::pdm::_OS_default_instance_);
+}
+inline ::eve_launcher::pdm::OS* Attributes::release_os() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Attributes.os)
+  
+  ::eve_launcher::pdm::OS* temp = os_;
+  os_ = NULL;
+  return temp;
+}
+inline ::eve_launcher::pdm::OS* Attributes::mutable_os() {
+  
+  if (os_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_launcher::pdm::OS>(GetArenaNoVirtual());
+    os_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Attributes.os)
+  return os_;
+}
+inline void Attributes::set_allocated_os(::eve_launcher::pdm::OS* os) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete os_;
+  }
+  if (os) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      os = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, os, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  os_ = os;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Attributes.os)
+}
+
+// .eve_launcher.pdm.Machine machine = 4;
+inline bool Attributes::has_machine() const {
+  return this != internal_default_instance() && machine_ != NULL;
+}
+inline void Attributes::clear_machine() {
+  if (GetArenaNoVirtual() == NULL && machine_ != NULL) {
+    delete machine_;
+  }
+  machine_ = NULL;
+}
+inline const ::eve_launcher::pdm::Machine& Attributes::_internal_machine() const {
+  return *machine_;
+}
+inline const ::eve_launcher::pdm::Machine& Attributes::machine() const {
+  const ::eve_launcher::pdm::Machine* p = machine_;
+  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Attributes.machine)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Machine*>(
+      &::eve_launcher::pdm::_Machine_default_instance_);
+}
+inline ::eve_launcher::pdm::Machine* Attributes::release_machine() {
+  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Attributes.machine)
+  
+  ::eve_launcher::pdm::Machine* temp = machine_;
+  machine_ = NULL;
+  return temp;
+}
+inline ::eve_launcher::pdm::Machine* Attributes::mutable_machine() {
+  
+  if (machine_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Machine>(GetArenaNoVirtual());
+    machine_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Attributes.machine)
+  return machine_;
+}
+inline void Attributes::set_allocated_machine(::eve_launcher::pdm::Machine* machine) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete machine_;
+  }
+  if (machine) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      machine = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, machine, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  machine_ = machine;
+  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Attributes.machine)
 }
 
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace pdm
+}  // namespace eve_launcher
+
+namespace google {
+namespace protobuf {
+
+template <> struct is_proto_enum< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport>() {
+  return ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport_descriptor();
+}
+template <> struct is_proto_enum< ::eve_launcher::pdm::OS_OS> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::eve_launcher::pdm::OS_OS>() {
+  return ::eve_launcher::pdm::OS_OS_descriptor();
+}
+template <> struct is_proto_enum< ::eve_launcher::pdm::Bitness> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::eve_launcher::pdm::Bitness>() {
+  return ::eve_launcher::pdm::Bitness_descriptor();
+}
+
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 
