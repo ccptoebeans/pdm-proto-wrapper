@@ -5,482 +5,442 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
-
-namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
-}  // namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto
-namespace protobuf_pdm_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Application;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_CPU;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_GPU_Driver;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_Monitor;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_NetworkAdapter;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_VM;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_Wine;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Machine_GPU;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Process;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_OS;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_pdm_2eproto ::google::protobuf::internal::SCCInfo<5> scc_info_Machine;
-}  // namespace protobuf_pdm_2eproto
+#include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Application_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_Machine_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_CPU_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Machine_GPU_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_GPU_Driver_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_Monitor_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_NetworkAdapter_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_VM_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_OS_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OS_Wine_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Process_pdm_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2ftimestamp_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto;
 namespace eve_launcher {
 namespace pdm {
 class ApplicationDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Application>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Application> _instance;
 } _Application_default_instance_;
 class ProcessDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Process>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Process> _instance;
 } _Process_default_instance_;
 class OS_GraphicsAPIs_VulkanPropertiesDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OS_GraphicsAPIs_VulkanProperties>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OS_GraphicsAPIs_VulkanProperties> _instance;
 } _OS_GraphicsAPIs_VulkanProperties_default_instance_;
 class OS_GraphicsAPIsDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OS_GraphicsAPIs>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OS_GraphicsAPIs> _instance;
 } _OS_GraphicsAPIs_default_instance_;
 class OS_WineDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OS_Wine>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OS_Wine> _instance;
 } _OS_Wine_default_instance_;
 class OSDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OS>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OS> _instance;
 } _OS_default_instance_;
 class Machine_CPUDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Machine_CPU>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Machine_CPU> _instance;
 } _Machine_CPU_default_instance_;
 class Machine_VMDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Machine_VM>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Machine_VM> _instance;
 } _Machine_VM_default_instance_;
 class Machine_MonitorDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Machine_Monitor>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Machine_Monitor> _instance;
 } _Machine_Monitor_default_instance_;
 class Machine_GPU_DriverDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Machine_GPU_Driver>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Machine_GPU_Driver> _instance;
 } _Machine_GPU_Driver_default_instance_;
 class Machine_GPUDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Machine_GPU>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Machine_GPU> _instance;
 } _Machine_GPU_default_instance_;
 class Machine_NetworkAdapterDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Machine_NetworkAdapter>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Machine_NetworkAdapter> _instance;
 } _Machine_NetworkAdapter_default_instance_;
 class MachineDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Machine>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Machine> _instance;
 } _Machine_default_instance_;
 class AttributesDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Attributes>
-      _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Attributes> _instance;
 } _Attributes_default_instance_;
 }  // namespace pdm
 }  // namespace eve_launcher
-namespace protobuf_pdm_2eproto {
-static void InitDefaultsApplication() {
+static void InitDefaultsscc_info_Application_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
     void* ptr = &::eve_launcher::pdm::_Application_default_instance_;
     new (ptr) ::eve_launcher::pdm::Application();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
   ::eve_launcher::pdm::Application::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_Application =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsApplication}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Application_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Application_pdm_2eproto}, {}};
 
-static void InitDefaultsProcess() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_Process_default_instance_;
-    new (ptr) ::eve_launcher::pdm::Process();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::Process::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_Process =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsProcess}, {
-      &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,}};
-
-static void InitDefaultsOS_GraphicsAPIs_VulkanProperties() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_OS_GraphicsAPIs_VulkanProperties_default_instance_;
-    new (ptr) ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs_VulkanProperties =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOS_GraphicsAPIs_VulkanProperties}, {}};
-
-static void InitDefaultsOS_GraphicsAPIs() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_OS_GraphicsAPIs_default_instance_;
-    new (ptr) ::eve_launcher::pdm::OS_GraphicsAPIs();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::OS_GraphicsAPIs::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOS_GraphicsAPIs}, {}};
-
-static void InitDefaultsOS_Wine() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_OS_Wine_default_instance_;
-    new (ptr) ::eve_launcher::pdm::OS_Wine();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::OS_Wine::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_OS_Wine =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOS_Wine}, {}};
-
-static void InitDefaultsOS() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_OS_default_instance_;
-    new (ptr) ::eve_launcher::pdm::OS();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::OS::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_OS =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsOS}, {
-      &protobuf_pdm_2eproto::scc_info_OS_GraphicsAPIs.base,
-      &protobuf_pdm_2eproto::scc_info_OS_Wine.base,}};
-
-static void InitDefaultsMachine_CPU() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_Machine_CPU_default_instance_;
-    new (ptr) ::eve_launcher::pdm::Machine_CPU();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::Machine_CPU::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_Machine_CPU =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMachine_CPU}, {}};
-
-static void InitDefaultsMachine_VM() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_Machine_VM_default_instance_;
-    new (ptr) ::eve_launcher::pdm::Machine_VM();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::Machine_VM::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_Machine_VM =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMachine_VM}, {}};
-
-static void InitDefaultsMachine_Monitor() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_Machine_Monitor_default_instance_;
-    new (ptr) ::eve_launcher::pdm::Machine_Monitor();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::Machine_Monitor::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_Machine_Monitor =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMachine_Monitor}, {}};
-
-static void InitDefaultsMachine_GPU_Driver() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_Machine_GPU_Driver_default_instance_;
-    new (ptr) ::eve_launcher::pdm::Machine_GPU_Driver();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::Machine_GPU_Driver::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_Machine_GPU_Driver =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMachine_GPU_Driver}, {}};
-
-static void InitDefaultsMachine_GPU() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_Machine_GPU_default_instance_;
-    new (ptr) ::eve_launcher::pdm::Machine_GPU();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::Machine_GPU::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_Machine_GPU =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsMachine_GPU}, {
-      &protobuf_pdm_2eproto::scc_info_Machine_GPU_Driver.base,}};
-
-static void InitDefaultsMachine_NetworkAdapter() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_Machine_NetworkAdapter_default_instance_;
-    new (ptr) ::eve_launcher::pdm::Machine_NetworkAdapter();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::Machine_NetworkAdapter::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_Machine_NetworkAdapter =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMachine_NetworkAdapter}, {}};
-
-static void InitDefaultsMachine() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::eve_launcher::pdm::_Machine_default_instance_;
-    new (ptr) ::eve_launcher::pdm::Machine();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::eve_launcher::pdm::Machine::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<5> scc_info_Machine =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 5, InitDefaultsMachine}, {
-      &protobuf_pdm_2eproto::scc_info_Machine_CPU.base,
-      &protobuf_pdm_2eproto::scc_info_Machine_VM.base,
-      &protobuf_pdm_2eproto::scc_info_Machine_Monitor.base,
-      &protobuf_pdm_2eproto::scc_info_Machine_GPU.base,
-      &protobuf_pdm_2eproto::scc_info_Machine_NetworkAdapter.base,}};
-
-static void InitDefaultsAttributes() {
+static void InitDefaultsscc_info_Attributes_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
     void* ptr = &::eve_launcher::pdm::_Attributes_default_instance_;
     new (ptr) ::eve_launcher::pdm::Attributes();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
   ::eve_launcher::pdm::Attributes::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<4> scc_info_Attributes =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsAttributes}, {
-      &protobuf_pdm_2eproto::scc_info_Application.base,
-      &protobuf_pdm_2eproto::scc_info_Process.base,
-      &protobuf_pdm_2eproto::scc_info_OS.base,
-      &protobuf_pdm_2eproto::scc_info_Machine.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_Attributes_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_Attributes_pdm_2eproto}, {
+      &scc_info_Application_pdm_2eproto.base,
+      &scc_info_Process_pdm_2eproto.base,
+      &scc_info_OS_pdm_2eproto.base,
+      &scc_info_Machine_pdm_2eproto.base,}};
 
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_Application.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Process.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OS_GraphicsAPIs_VulkanProperties.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OS_GraphicsAPIs.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OS_Wine.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OS.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Machine_CPU.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Machine_VM.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Machine_Monitor.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Machine_GPU_Driver.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Machine_GPU.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Machine_NetworkAdapter.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Machine.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_Attributes.base);
+static void InitDefaultsscc_info_Machine_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_Machine_default_instance_;
+    new (ptr) ::eve_launcher::pdm::Machine();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::Machine::InitAsDefaultInstance();
 }
 
-::google::protobuf::Metadata file_level_metadata[14];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[3];
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_Machine_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, 0, InitDefaultsscc_info_Machine_pdm_2eproto}, {
+      &scc_info_Machine_CPU_pdm_2eproto.base,
+      &scc_info_Machine_VM_pdm_2eproto.base,
+      &scc_info_Machine_Monitor_pdm_2eproto.base,
+      &scc_info_Machine_GPU_pdm_2eproto.base,
+      &scc_info_Machine_NetworkAdapter_pdm_2eproto.base,}};
 
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+static void InitDefaultsscc_info_Machine_CPU_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_Machine_CPU_default_instance_;
+    new (ptr) ::eve_launcher::pdm::Machine_CPU();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::Machine_CPU::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_CPU_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Machine_CPU_pdm_2eproto}, {}};
+
+static void InitDefaultsscc_info_Machine_GPU_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_Machine_GPU_default_instance_;
+    new (ptr) ::eve_launcher::pdm::Machine_GPU();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::Machine_GPU::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Machine_GPU_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Machine_GPU_pdm_2eproto}, {
+      &scc_info_Machine_GPU_Driver_pdm_2eproto.base,}};
+
+static void InitDefaultsscc_info_Machine_GPU_Driver_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_Machine_GPU_Driver_default_instance_;
+    new (ptr) ::eve_launcher::pdm::Machine_GPU_Driver();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::Machine_GPU_Driver::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_GPU_Driver_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Machine_GPU_Driver_pdm_2eproto}, {}};
+
+static void InitDefaultsscc_info_Machine_Monitor_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_Machine_Monitor_default_instance_;
+    new (ptr) ::eve_launcher::pdm::Machine_Monitor();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::Machine_Monitor::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_Monitor_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Machine_Monitor_pdm_2eproto}, {}};
+
+static void InitDefaultsscc_info_Machine_NetworkAdapter_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_Machine_NetworkAdapter_default_instance_;
+    new (ptr) ::eve_launcher::pdm::Machine_NetworkAdapter();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::Machine_NetworkAdapter::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_NetworkAdapter_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Machine_NetworkAdapter_pdm_2eproto}, {}};
+
+static void InitDefaultsscc_info_Machine_VM_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_Machine_VM_default_instance_;
+    new (ptr) ::eve_launcher::pdm::Machine_VM();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::Machine_VM::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_VM_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Machine_VM_pdm_2eproto}, {}};
+
+static void InitDefaultsscc_info_OS_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_OS_default_instance_;
+    new (ptr) ::eve_launcher::pdm::OS();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::OS::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_OS_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_OS_pdm_2eproto}, {
+      &scc_info_OS_GraphicsAPIs_pdm_2eproto.base,
+      &scc_info_OS_Wine_pdm_2eproto.base,}};
+
+static void InitDefaultsscc_info_OS_GraphicsAPIs_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_OS_GraphicsAPIs_default_instance_;
+    new (ptr) ::eve_launcher::pdm::OS_GraphicsAPIs();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::OS_GraphicsAPIs::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_OS_GraphicsAPIs_pdm_2eproto}, {}};
+
+static void InitDefaultsscc_info_OS_GraphicsAPIs_VulkanProperties_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_OS_GraphicsAPIs_VulkanProperties_default_instance_;
+    new (ptr) ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs_VulkanProperties_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_OS_GraphicsAPIs_VulkanProperties_pdm_2eproto}, {}};
+
+static void InitDefaultsscc_info_OS_Wine_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_OS_Wine_default_instance_;
+    new (ptr) ::eve_launcher::pdm::OS_Wine();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::OS_Wine::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OS_Wine_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_OS_Wine_pdm_2eproto}, {}};
+
+static void InitDefaultsscc_info_Process_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_launcher::pdm::_Process_default_instance_;
+    new (ptr) ::eve_launcher::pdm::Process();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_launcher::pdm::Process::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Process_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Process_pdm_2eproto}, {
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_pdm_2eproto[14];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_pdm_2eproto[3];
+static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_pdm_2eproto = nullptr;
+
+const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_pdm_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Application, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Application, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Application, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Application, version_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Application, name_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Application, version_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Process, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Process, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Process, version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Process, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Process, bitness_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Process, version_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Process, timestamp_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Process, bitness_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties, support_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties, version_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties, support_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties, version_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, metal_supported_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, vulkan_supported_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, vulkan_highest_support_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, d3d_highest_support_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, metal_supported_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, vulkan_supported_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, vulkan_highest_support_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_GraphicsAPIs, d3d_highest_support_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_Wine, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_Wine, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_Wine, version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS_Wine, host_os_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_Wine, version_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS_Wine, host_os_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, bitness_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, major_version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, minor_version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, build_number_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, kernel_version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, username_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, user_locale_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, is_remote_session_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, graphics_apis_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::OS, wine_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, kind_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, name_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, bitness_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, major_version_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, minor_version_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, build_number_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, kernel_version_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, username_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, user_locale_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, is_remote_session_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, graphics_apis_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::OS, wine_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, bitness_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, logical_core_count_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, brand_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, vendor_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, model_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, stepping_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, bitness_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, logical_core_count_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, brand_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, vendor_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, model_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_CPU, stepping_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, is_suspected_vm_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, has_hypervisor_bit_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, hypervisor_name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, is_hypervisor_guest_os_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, has_vm_execution_timing_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, is_suspected_vm_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, has_hypervisor_bit_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, hypervisor_name_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, is_hypervisor_guest_os_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_VM, has_vm_execution_timing_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, horizontal_resolution_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, vertical_resolution_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, bits_per_color_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, refresh_rate_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, dpi_scaling_percent_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, name_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, horizontal_resolution_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, vertical_resolution_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, bits_per_color_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, refresh_rate_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_Monitor, dpi_scaling_percent_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU_Driver, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU_Driver, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU_Driver, date_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU_Driver, vendor_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU_Driver, version_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU_Driver, date_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU_Driver, vendor_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU_Driver, version_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, description_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, vendor_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, device_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, revision_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, video_memory_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, driver_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, description_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, vendor_id_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, device_id_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, revision_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, video_memory_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_GPU, driver_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_NetworkAdapter, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_NetworkAdapter, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_NetworkAdapter, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_NetworkAdapter, mac_address_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine_NetworkAdapter, uuid_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_NetworkAdapter, name_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_NetworkAdapter, mac_address_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine_NetworkAdapter, uuid_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, model_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, uuid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, total_memory_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, monitor_count_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, cpu_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, vm_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, monitors_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, gpus_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Machine, network_adapters_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, model_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, name_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, uuid_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, total_memory_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, monitor_count_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, cpu_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, vm_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, monitors_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, gpus_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Machine, network_adapters_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Attributes, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Attributes, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Attributes, application_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Attributes, process_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Attributes, os_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_launcher::pdm::Attributes, machine_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Attributes, application_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Attributes, process_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Attributes, os_),
+  PROTOBUF_FIELD_OFFSET(::eve_launcher::pdm::Attributes, machine_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::eve_launcher::pdm::Application)},
   { 7, -1, sizeof(::eve_launcher::pdm::Process)},
   { 15, -1, sizeof(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties)},
@@ -497,129 +457,121 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 129, -1, sizeof(::eve_launcher::pdm::Attributes)},
 };
 
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Application_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Process_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_OS_GraphicsAPIs_VulkanProperties_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_OS_GraphicsAPIs_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_OS_Wine_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_OS_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Machine_CPU_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Machine_VM_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Machine_Monitor_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Machine_GPU_Driver_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Machine_GPU_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Machine_NetworkAdapter_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Machine_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_launcher::pdm::_Attributes_default_instance_),
+static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Application_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Process_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_OS_GraphicsAPIs_VulkanProperties_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_OS_GraphicsAPIs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_OS_Wine_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_OS_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Machine_CPU_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Machine_VM_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Machine_Monitor_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Machine_GPU_Driver_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Machine_GPU_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Machine_NetworkAdapter_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Machine_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::eve_launcher::pdm::_Attributes_default_instance_),
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "pdm.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, file_level_enum_descriptors, NULL);
-}
+const char descriptor_table_protodef_pdm_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\tpdm.proto\022\020eve_launcher.pdm\032\037google/pr"
+  "otobuf/timestamp.proto\",\n\013Application\022\014\n"
+  "\004name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\"u\n\007Process\022"
+  "\017\n\007version\030\001 \001(\t\022-\n\ttimestamp\030\002 \001(\0132\032.go"
+  "ogle.protobuf.Timestamp\022*\n\007bitness\030\003 \001(\016"
+  "2\031.eve_launcher.pdm.Bitness\"\240\006\n\002OS\022\'\n\004ki"
+  "nd\030\001 \001(\0162\031.eve_launcher.pdm.OS.Kind\022\014\n\004n"
+  "ame\030\002 \001(\t\022*\n\007bitness\030\003 \001(\0162\031.eve_launche"
+  "r.pdm.Bitness\022\025\n\rmajor_version\030\004 \001(\t\022\025\n\r"
+  "minor_version\030\005 \001(\t\022\024\n\014build_number\030\006 \001("
+  "\t\022\026\n\016kernel_version\030\007 \001(\t\022\020\n\010username\030\010 "
+  "\001(\t\022\023\n\013user_locale\030\t \001(\t\022\031\n\021is_remote_se"
+  "ssion\030\n \001(\010\0228\n\rgraphics_apis\030\013 \001(\0132!.eve"
+  "_launcher.pdm.OS.GraphicsAPIs\022\'\n\004wine\030\014 "
+  "\001(\0132\031.eve_launcher.pdm.OS.Wine\032\324\002\n\014Graph"
+  "icsAPIs\022\027\n\017metal_supported\030\001 \001(\010\022I\n\020vulk"
+  "an_supported\030\002 \001(\0162/.eve_launcher.pdm.OS"
+  ".GraphicsAPIs.VulkanSupport\022\036\n\026vulkan_hi"
+  "ghest_support\030\003 \001(\t\022\033\n\023d3d_highest_suppo"
+  "rt\030\004 \001(\t\032e\n\020VulkanProperties\022@\n\007support\030"
+  "\001 \001(\0162/.eve_launcher.pdm.OS.GraphicsAPIs"
+  ".VulkanSupport\022\017\n\007version\030\002 \001(\t\"<\n\rVulka"
+  "nSupport\022\013\n\007UNKNOWN\020\000\022\r\n\tSUPPORTED\020\001\022\017\n\013"
+  "UNSUPPORTED\020\002\032(\n\004Wine\022\017\n\007version\030\001 \001(\t\022\017"
+  "\n\007host_os\030\002 \001(\t\"5\n\004Kind\022\013\n\007UNKNOWN\020\000\022\013\n\007"
+  "WINDOWS\020\001\022\t\n\005MACOS\020\002\022\010\n\004WINE\020\003\"\301\010\n\007Machi"
+  "ne\022\r\n\005model\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004uuid\030"
+  "\003 \001(\014\022\024\n\014total_memory\030\004 \001(\003\022\025\n\rmonitor_c"
+  "ount\030\005 \001(\005\022*\n\003cpu\030\006 \001(\0132\035.eve_launcher.p"
+  "dm.Machine.CPU\022(\n\002vm\030\007 \001(\0132\034.eve_launche"
+  "r.pdm.Machine.VM\0223\n\010monitors\030\010 \003(\0132!.eve"
+  "_launcher.pdm.Machine.Monitor\022+\n\004gpus\030\t "
+  "\003(\0132\035.eve_launcher.pdm.Machine.GPU\022B\n\020ne"
+  "twork_adapters\030\n \003(\0132(.eve_launcher.pdm."
+  "Machine.NetworkAdapter\032\215\001\n\003CPU\022*\n\007bitnes"
+  "s\030\001 \001(\0162\031.eve_launcher.pdm.Bitness\022\032\n\022lo"
+  "gical_core_count\030\002 \001(\005\022\r\n\005brand\030\003 \001(\t\022\016\n"
+  "\006vendor\030\004 \001(\t\022\r\n\005model\030\005 \001(\005\022\020\n\010stepping"
+  "\030\006 \001(\005\032\223\001\n\002VM\022\027\n\017is_suspected_vm\030\001 \001(\010\022\032"
+  "\n\022has_hypervisor_bit\030\002 \001(\010\022\027\n\017hypervisor"
+  "_name\030\003 \001(\t\022\036\n\026is_hypervisor_guest_os\030\004 "
+  "\001(\010\022\037\n\027has_vm_execution_timing\030\005 \001(\010\032\236\001\n"
+  "\007Monitor\022\014\n\004name\030\001 \001(\t\022\035\n\025horizontal_res"
+  "olution\030\002 \001(\005\022\033\n\023vertical_resolution\030\003 \001"
+  "(\005\022\026\n\016bits_per_color\030\004 \001(\005\022\024\n\014refresh_ra"
+  "te\030\005 \001(\005\022\033\n\023dpi_scaling_percent\030\006 \001(\005\032\327\001"
+  "\n\003GPU\022\023\n\013description\030\001 \001(\t\022\021\n\tvendor_id\030"
+  "\002 \001(\005\022\021\n\tdevice_id\030\003 \001(\005\022\020\n\010revision\030\004 \001"
+  "(\005\022\024\n\014video_memory\030\005 \001(\003\0224\n\006driver\030\006 \001(\013"
+  "2$.eve_launcher.pdm.Machine.GPU.Driver\0327"
+  "\n\006Driver\022\014\n\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017"
+  "\n\007version\030\003 \001(\t\032A\n\016NetworkAdapter\022\014\n\004nam"
+  "e\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001"
+  "(\014\"\272\001\n\nAttributes\0222\n\013application\030\001 \001(\0132\035"
+  ".eve_launcher.pdm.Application\022*\n\007process"
+  "\030\002 \001(\0132\031.eve_launcher.pdm.Process\022 \n\002os\030"
+  "\003 \001(\0132\024.eve_launcher.pdm.OS\022*\n\007machine\030\004"
+  " \001(\0132\031.eve_launcher.pdm.Machine*>\n\007Bitne"
+  "ss\022\023\n\017BITNESS_UNKNOWN\020\000\022\016\n\nBITNESS_32\020\001\022"
+  "\016\n\nBITNESS_64\020\002B9Z7github.com/ccpgames/e"
+  "ve-proto-go/generated/eve_launcherb\006prot"
+  "o3"
+  ;
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_pdm_2eproto_deps[1] = {
+  &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pdm_2eproto_sccs[14] = {
+  &scc_info_Application_pdm_2eproto.base,
+  &scc_info_Attributes_pdm_2eproto.base,
+  &scc_info_Machine_pdm_2eproto.base,
+  &scc_info_Machine_CPU_pdm_2eproto.base,
+  &scc_info_Machine_GPU_pdm_2eproto.base,
+  &scc_info_Machine_GPU_Driver_pdm_2eproto.base,
+  &scc_info_Machine_Monitor_pdm_2eproto.base,
+  &scc_info_Machine_NetworkAdapter_pdm_2eproto.base,
+  &scc_info_Machine_VM_pdm_2eproto.base,
+  &scc_info_OS_pdm_2eproto.base,
+  &scc_info_OS_GraphicsAPIs_pdm_2eproto.base,
+  &scc_info_OS_GraphicsAPIs_VulkanProperties_pdm_2eproto.base,
+  &scc_info_OS_Wine_pdm_2eproto.base,
+  &scc_info_Process_pdm_2eproto.base,
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_pdm_2eproto_once;
+const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_pdm_2eproto = {
+  false, false, descriptor_table_protodef_pdm_2eproto, "pdm.proto", 2442,
+  &descriptor_table_pdm_2eproto_once, descriptor_table_pdm_2eproto_sccs, descriptor_table_pdm_2eproto_deps, 14, 1,
+  schemas, file_default_instances, TableStruct_pdm_2eproto::offsets,
+  file_level_metadata_pdm_2eproto, 14, file_level_enum_descriptors_pdm_2eproto, file_level_service_descriptors_pdm_2eproto,
+};
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 14);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\tpdm.proto\022\020eve_launcher.pdm\032\037google/pr"
-      "otobuf/timestamp.proto\",\n\013Application\022\014\n"
-      "\004name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\"u\n\007Process\022"
-      "\017\n\007version\030\001 \001(\t\022-\n\ttimestamp\030\002 \001(\0132\032.go"
-      "ogle.protobuf.Timestamp\022*\n\007bitness\030\003 \001(\016"
-      "2\031.eve_launcher.pdm.Bitness\"\234\006\n\002OS\022%\n\004ty"
-      "pe\030\001 \001(\0162\027.eve_launcher.pdm.OS.OS\022\014\n\004nam"
-      "e\030\002 \001(\t\022*\n\007bitness\030\003 \001(\0162\031.eve_launcher."
-      "pdm.Bitness\022\025\n\rmajor_version\030\004 \001(\005\022\025\n\rmi"
-      "nor_version\030\005 \001(\005\022\024\n\014build_number\030\006 \001(\005\022"
-      "\026\n\016kernel_version\030\007 \001(\t\022\020\n\010username\030\010 \001("
-      "\t\022\023\n\013user_locale\030\t \001(\t\022\031\n\021is_remote_sess"
-      "ion\030\n \001(\010\0228\n\rgraphics_apis\030\013 \001(\0132!.eve_l"
-      "auncher.pdm.OS.GraphicsAPIs\022\'\n\004wine\030\014 \001("
-      "\0132\031.eve_launcher.pdm.OS.Wine\032\324\002\n\014Graphic"
-      "sAPIs\022\027\n\017metal_supported\030\001 \001(\010\022I\n\020vulkan"
-      "_supported\030\002 \001(\0162/.eve_launcher.pdm.OS.G"
-      "raphicsAPIs.VulkanSupport\022\036\n\026vulkan_high"
-      "est_support\030\003 \001(\t\022\033\n\023d3d_highest_support"
-      "\030\004 \001(\t\032e\n\020VulkanProperties\022@\n\007support\030\001 "
-      "\001(\0162/.eve_launcher.pdm.OS.GraphicsAPIs.V"
-      "ulkanSupport\022\017\n\007version\030\002 \001(\t\"<\n\rVulkanS"
-      "upport\022\013\n\007UNKNOWN\020\000\022\r\n\tSUPPORTED\020\001\022\017\n\013UN"
-      "SUPPORTED\020\002\032(\n\004Wine\022\017\n\007version\030\001 \001(\t\022\017\n\007"
-      "host_os\030\002 \001(\t\"3\n\002OS\022\013\n\007UNKNOWN\020\000\022\013\n\007WIND"
-      "OWS\020\001\022\t\n\005MACOS\020\002\022\010\n\004WINE\020\003\"\301\010\n\007Machine\022\r"
-      "\n\005model\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004uuid\030\003 \001("
-      "\014\022\024\n\014total_memory\030\004 \001(\003\022\025\n\rmonitor_count"
-      "\030\005 \001(\005\022*\n\003cpu\030\006 \001(\0132\035.eve_launcher.pdm.M"
-      "achine.CPU\022(\n\002vm\030\007 \001(\0132\034.eve_launcher.pd"
-      "m.Machine.VM\0223\n\010monitors\030\010 \003(\0132!.eve_lau"
-      "ncher.pdm.Machine.Monitor\022+\n\004gpus\030\t \003(\0132"
-      "\035.eve_launcher.pdm.Machine.GPU\022B\n\020networ"
-      "k_adapters\030\n \003(\0132(.eve_launcher.pdm.Mach"
-      "ine.NetworkAdapter\032\215\001\n\003CPU\022*\n\007bitness\030\001 "
-      "\001(\0162\031.eve_launcher.pdm.Bitness\022\032\n\022logica"
-      "l_core_count\030\002 \001(\005\022\r\n\005brand\030\003 \001(\t\022\016\n\006ven"
-      "dor\030\004 \001(\t\022\r\n\005model\030\005 \001(\005\022\020\n\010stepping\030\006 \001"
-      "(\005\032\223\001\n\002VM\022\027\n\017is_suspected_vm\030\001 \001(\010\022\032\n\022ha"
-      "s_hypervisor_bit\030\002 \001(\010\022\027\n\017hypervisor_nam"
-      "e\030\003 \001(\t\022\036\n\026is_hypervisor_guest_os\030\004 \001(\010\022"
-      "\037\n\027has_vm_execution_timing\030\005 \001(\010\032\236\001\n\007Mon"
-      "itor\022\014\n\004name\030\001 \001(\t\022\035\n\025horizontal_resolut"
-      "ion\030\002 \001(\005\022\033\n\023vertical_resolution\030\003 \001(\005\022\026"
-      "\n\016bits_per_color\030\004 \001(\005\022\024\n\014refresh_rate\030\005"
-      " \001(\005\022\033\n\023dpi_scaling_percent\030\006 \001(\005\032\327\001\n\003GP"
-      "U\022\023\n\013description\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001("
-      "\005\022\021\n\tdevice_id\030\003 \001(\005\022\020\n\010revision\030\004 \001(\005\022\024"
-      "\n\014video_memory\030\005 \001(\003\0224\n\006driver\030\006 \001(\0132$.e"
-      "ve_launcher.pdm.Machine.GPU.Driver\0327\n\006Dr"
-      "iver\022\014\n\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017\n\007ve"
-      "rsion\030\003 \001(\t\032A\n\016NetworkAdapter\022\014\n\004name\030\001 "
-      "\001(\t\022\023\n\013mac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"\272"
-      "\001\n\nAttributes\0222\n\013application\030\001 \001(\0132\035.eve"
-      "_launcher.pdm.Application\022*\n\007process\030\002 \001"
-      "(\0132\031.eve_launcher.pdm.Process\022 \n\002os\030\003 \001("
-      "\0132\024.eve_launcher.pdm.OS\022*\n\007machine\030\004 \001(\013"
-      "2\031.eve_launcher.pdm.Machine*>\n\007Bitness\022\023"
-      "\n\017BITNESS_UNKNOWN\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nB"
-      "ITNESS_64\020\002B9Z7github.com/ccpgames/eve-p"
-      "roto-go/generated/eve_launcherb\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2438);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "pdm.proto", &protobuf_RegisterTypes);
-  ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_pdm_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_pdm_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_pdm_2eproto)), true);
 namespace eve_launcher {
 namespace pdm {
-const ::google::protobuf::EnumDescriptor* OS_GraphicsAPIs_VulkanSupport_descriptor() {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pdm_2eproto::file_level_enum_descriptors[0];
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* OS_GraphicsAPIs_VulkanSupport_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_pdm_2eproto);
+  return file_level_enum_descriptors_pdm_2eproto[0];
 }
 bool OS_GraphicsAPIs_VulkanSupport_IsValid(int value) {
   switch (value) {
@@ -632,19 +584,19 @@ bool OS_GraphicsAPIs_VulkanSupport_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::UNKNOWN;
-const OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::SUPPORTED;
-const OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::UNSUPPORTED;
-const OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::VulkanSupport_MIN;
-const OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::VulkanSupport_MAX;
-const int OS_GraphicsAPIs::VulkanSupport_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-const ::google::protobuf::EnumDescriptor* OS_OS_descriptor() {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pdm_2eproto::file_level_enum_descriptors[1];
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::UNKNOWN;
+constexpr OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::SUPPORTED;
+constexpr OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::UNSUPPORTED;
+constexpr OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::VulkanSupport_MIN;
+constexpr OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::VulkanSupport_MAX;
+constexpr int OS_GraphicsAPIs::VulkanSupport_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* OS_Kind_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_pdm_2eproto);
+  return file_level_enum_descriptors_pdm_2eproto[1];
 }
-bool OS_OS_IsValid(int value) {
+bool OS_Kind_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -656,18 +608,18 @@ bool OS_OS_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const OS_OS OS::UNKNOWN;
-const OS_OS OS::WINDOWS;
-const OS_OS OS::MACOS;
-const OS_OS OS::WINE;
-const OS_OS OS::OS_MIN;
-const OS_OS OS::OS_MAX;
-const int OS::OS_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-const ::google::protobuf::EnumDescriptor* Bitness_descriptor() {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pdm_2eproto::file_level_enum_descriptors[2];
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr OS_Kind OS::UNKNOWN;
+constexpr OS_Kind OS::WINDOWS;
+constexpr OS_Kind OS::MACOS;
+constexpr OS_Kind OS::WINE;
+constexpr OS_Kind OS::Kind_MIN;
+constexpr OS_Kind OS::Kind_MAX;
+constexpr int OS::Kind_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Bitness_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_pdm_2eproto);
+  return file_level_enum_descriptors_pdm_2eproto[2];
 }
 bool Bitness_IsValid(int value) {
   switch (value) {
@@ -685,200 +637,153 @@ bool Bitness_IsValid(int value) {
 
 void Application::InitAsDefaultInstance() {
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Application::kNameFieldNumber;
-const int Application::kVersionFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class Application::_Internal {
+ public:
+};
 
-Application::Application()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Application.base);
+Application::Application(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Application)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Application)
 }
 Application::Application(const Application& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.name().size() > 0) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.version().size() > 0) {
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_version().empty()) {
+    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_version(),
+      GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:eve_launcher.pdm.Application)
 }
 
 void Application::SharedCtor() {
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Application_pdm_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 Application::~Application() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Application)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Application::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void Application::ArenaDtor(void* object) {
+  Application* _this = reinterpret_cast< Application* >(object);
+  (void)_this;
+}
+void Application::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Application::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Application::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Application& Application::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Application.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Application_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Application::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Application)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Application::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Application)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Application::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // string name = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Application.name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Application.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string version = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_version()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->version().data(), static_cast<int>(this->version().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Application.version"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_version();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Application.version"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Application)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Application)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Application::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Application)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string name = 1;
-  if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Application.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->name(), output);
-  }
-
-  // string version = 2;
-  if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Application.version");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->version(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Application)
-}
-
-::google::protobuf::uint8* Application::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Application::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Application)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string name = 1;
   if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Application.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->name(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
   }
 
   // string version = 2;
   if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Application.version");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->version(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_version(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Application)
   return target;
@@ -888,39 +793,42 @@ size_t Application::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Application)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
   }
 
   // string version = 2;
   if (this->version().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->version());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_version());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Application::MergeFrom(const ::google::protobuf::Message& from) {
+void Application::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Application)
   GOOGLE_DCHECK_NE(&from, this);
   const Application* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Application>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Application>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Application)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Application)
     MergeFrom(*source);
@@ -930,21 +838,19 @@ void Application::MergeFrom(const ::google::protobuf::Message& from) {
 void Application::MergeFrom(const Application& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Application)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    _internal_set_name(from._internal_name());
   }
   if (from.version().size() > 0) {
-
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+    _internal_set_version(from._internal_version());
   }
 }
 
-void Application::CopyFrom(const ::google::protobuf::Message& from) {
+void Application::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Application)
   if (&from == this) return;
   Clear();
@@ -962,69 +868,65 @@ bool Application::IsInitialized() const {
   return true;
 }
 
-void Application::Swap(Application* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Application::InternalSwap(Application* other) {
   using std::swap;
-  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  version_.Swap(&other->version_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  version_.Swap(&other->version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
-::google::protobuf::Metadata Application::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Application::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
 void Process::InitAsDefaultInstance() {
-  ::eve_launcher::pdm::_Process_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
-      ::google::protobuf::Timestamp::internal_default_instance());
+  ::eve_launcher::pdm::_Process_default_instance_._instance.get_mutable()->timestamp_ = const_cast< PROTOBUF_NAMESPACE_ID::Timestamp*>(
+      PROTOBUF_NAMESPACE_ID::Timestamp::internal_default_instance());
+}
+class Process::_Internal {
+ public:
+  static const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const Process* msg);
+};
+
+const PROTOBUF_NAMESPACE_ID::Timestamp&
+Process::_Internal::timestamp(const Process* msg) {
+  return *msg->timestamp_;
 }
 void Process::clear_timestamp() {
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
+  if (GetArena() == nullptr && timestamp_ != nullptr) {
     delete timestamp_;
   }
-  timestamp_ = NULL;
+  timestamp_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Process::kVersionFieldNumber;
-const int Process::kTimestampFieldNumber;
-const int Process::kBitnessFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Process::Process()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Process.base);
+Process::Process(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Process)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Process)
 }
 Process::Process(const Process& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.version().size() > 0) {
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_version().empty()) {
+    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_version(),
+      GetArena());
   }
-  if (from.has_timestamp()) {
-    timestamp_ = new ::google::protobuf::Timestamp(*from.timestamp_);
+  if (from._internal_has_timestamp()) {
+    timestamp_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.timestamp_);
   } else {
-    timestamp_ = NULL;
+    timestamp_ = nullptr;
   }
   bitness_ = from.bitness_;
   // @@protoc_insertion_point(copy_constructor:eve_launcher.pdm.Process)
 }
 
 void Process::SharedCtor() {
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Process_pdm_2eproto.base);
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&timestamp_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&bitness_) -
       reinterpret_cast<char*>(&timestamp_)) + sizeof(bitness_));
@@ -1033,184 +935,133 @@ void Process::SharedCtor() {
 Process::~Process() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Process)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Process::SharedDtor() {
-  version_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete timestamp_;
 }
 
+void Process::ArenaDtor(void* object) {
+  Process* _this = reinterpret_cast< Process* >(object);
+  (void)_this;
+}
+void Process::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Process::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Process::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Process& Process::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Process.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Process_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Process::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Process)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
+  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && timestamp_ != nullptr) {
     delete timestamp_;
   }
-  timestamp_ = NULL;
+  timestamp_ = nullptr;
   bitness_ = 0;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Process::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Process)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Process::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // string version = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_version()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->version().data(), static_cast<int>(this->version().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Process.version"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_version();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Process.version"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .google.protobuf.Timestamp timestamp = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_timestamp()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_timestamp(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.Bitness bitness = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_bitness(static_cast< ::eve_launcher::pdm::Bitness >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_bitness(static_cast<::eve_launcher::pdm::Bitness>(val));
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Process)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Process)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Process::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Process)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string version = 1;
-  if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Process.version");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->version(), output);
-  }
-
-  // .google.protobuf.Timestamp timestamp = 2;
-  if (this->has_timestamp()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_timestamp(), output);
-  }
-
-  // .eve_launcher.pdm.Bitness bitness = 3;
-  if (this->bitness() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      3, this->bitness(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Process)
-}
-
-::google::protobuf::uint8* Process::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Process::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Process)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string version = 1;
   if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Process.version");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->version(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_version(), target);
   }
 
   // .google.protobuf.Timestamp timestamp = 2;
   if (this->has_timestamp()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->_internal_timestamp(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::timestamp(this), target, stream);
   }
 
   // .eve_launcher.pdm.Bitness bitness = 3;
   if (this->bitness() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      3, this->bitness(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_bitness(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Process)
   return target;
@@ -1220,45 +1071,48 @@ size_t Process::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Process)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string version = 1;
   if (this->version().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->version());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_version());
   }
 
   // .google.protobuf.Timestamp timestamp = 2;
   if (this->has_timestamp()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *timestamp_);
   }
 
   // .eve_launcher.pdm.Bitness bitness = 3;
   if (this->bitness() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->bitness());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_bitness());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Process::MergeFrom(const ::google::protobuf::Message& from) {
+void Process::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Process)
   GOOGLE_DCHECK_NE(&from, this);
   const Process* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Process>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Process>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Process)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Process)
     MergeFrom(*source);
@@ -1268,23 +1122,22 @@ void Process::MergeFrom(const ::google::protobuf::Message& from) {
 void Process::MergeFrom(const Process& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Process)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.version().size() > 0) {
-
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+    _internal_set_version(from._internal_version());
   }
   if (from.has_timestamp()) {
-    mutable_timestamp()->::google::protobuf::Timestamp::MergeFrom(from.timestamp());
+    _internal_mutable_timestamp()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_timestamp());
   }
   if (from.bitness() != 0) {
-    set_bitness(from.bitness());
+    _internal_set_bitness(from._internal_bitness());
   }
 }
 
-void Process::CopyFrom(const ::google::protobuf::Message& from) {
+void Process::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Process)
   if (&from == this) return;
   Clear();
@@ -1302,22 +1155,20 @@ bool Process::IsInitialized() const {
   return true;
 }
 
-void Process::Swap(Process* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Process::InternalSwap(Process* other) {
   using std::swap;
-  version_.Swap(&other->version_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(timestamp_, other->timestamp_);
-  swap(bitness_, other->bitness_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  version_.Swap(&other->version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Process, bitness_)
+      + sizeof(Process::bitness_)
+      - PROTOBUF_FIELD_OFFSET(Process, timestamp_)>(
+          reinterpret_cast<char*>(&timestamp_),
+          reinterpret_cast<char*>(&other->timestamp_));
 }
 
-::google::protobuf::Metadata Process::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Process::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -1325,186 +1176,144 @@ void Process::InternalSwap(Process* other) {
 
 void OS_GraphicsAPIs_VulkanProperties::InitAsDefaultInstance() {
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int OS_GraphicsAPIs_VulkanProperties::kSupportFieldNumber;
-const int OS_GraphicsAPIs_VulkanProperties::kVersionFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class OS_GraphicsAPIs_VulkanProperties::_Internal {
+ public:
+};
 
-OS_GraphicsAPIs_VulkanProperties::OS_GraphicsAPIs_VulkanProperties()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_OS_GraphicsAPIs_VulkanProperties.base);
+OS_GraphicsAPIs_VulkanProperties::OS_GraphicsAPIs_VulkanProperties(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
 }
 OS_GraphicsAPIs_VulkanProperties::OS_GraphicsAPIs_VulkanProperties(const OS_GraphicsAPIs_VulkanProperties& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.version().size() > 0) {
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_version().empty()) {
+    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_version(),
+      GetArena());
   }
   support_ = from.support_;
   // @@protoc_insertion_point(copy_constructor:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
 }
 
 void OS_GraphicsAPIs_VulkanProperties::SharedCtor() {
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_OS_GraphicsAPIs_VulkanProperties_pdm_2eproto.base);
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   support_ = 0;
 }
 
 OS_GraphicsAPIs_VulkanProperties::~OS_GraphicsAPIs_VulkanProperties() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void OS_GraphicsAPIs_VulkanProperties::SharedDtor() {
-  version_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void OS_GraphicsAPIs_VulkanProperties::ArenaDtor(void* object) {
+  OS_GraphicsAPIs_VulkanProperties* _this = reinterpret_cast< OS_GraphicsAPIs_VulkanProperties* >(object);
+  (void)_this;
+}
+void OS_GraphicsAPIs_VulkanProperties::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void OS_GraphicsAPIs_VulkanProperties::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* OS_GraphicsAPIs_VulkanProperties::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const OS_GraphicsAPIs_VulkanProperties& OS_GraphicsAPIs_VulkanProperties::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_OS_GraphicsAPIs_VulkanProperties.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_OS_GraphicsAPIs_VulkanProperties_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void OS_GraphicsAPIs_VulkanProperties::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   support_ = 0;
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool OS_GraphicsAPIs_VulkanProperties::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* OS_GraphicsAPIs_VulkanProperties::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport support = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_support(static_cast< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_support(static_cast<::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport>(val));
+        } else goto handle_unusual;
+        continue;
       // string version = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_version()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->version().data(), static_cast<int>(this->version().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_version();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void OS_GraphicsAPIs_VulkanProperties::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport support = 1;
-  if (this->support() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      1, this->support(), output);
-  }
-
-  // string version = 2;
-  if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->version(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
-}
-
-::google::protobuf::uint8* OS_GraphicsAPIs_VulkanProperties::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* OS_GraphicsAPIs_VulkanProperties::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport support = 1;
   if (this->support() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      1, this->support(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_support(), target);
   }
 
   // string version = 2;
   if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->version(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_version(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
   return target;
@@ -1514,38 +1323,41 @@ size_t OS_GraphicsAPIs_VulkanProperties::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string version = 2;
   if (this->version().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->version());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_version());
   }
 
   // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport support = 1;
   if (this->support() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->support());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_support());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void OS_GraphicsAPIs_VulkanProperties::MergeFrom(const ::google::protobuf::Message& from) {
+void OS_GraphicsAPIs_VulkanProperties::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
   GOOGLE_DCHECK_NE(&from, this);
   const OS_GraphicsAPIs_VulkanProperties* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const OS_GraphicsAPIs_VulkanProperties>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OS_GraphicsAPIs_VulkanProperties>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
     MergeFrom(*source);
@@ -1555,20 +1367,19 @@ void OS_GraphicsAPIs_VulkanProperties::MergeFrom(const ::google::protobuf::Messa
 void OS_GraphicsAPIs_VulkanProperties::MergeFrom(const OS_GraphicsAPIs_VulkanProperties& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.version().size() > 0) {
-
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+    _internal_set_version(from._internal_version());
   }
   if (from.support() != 0) {
-    set_support(from.support());
+    _internal_set_support(from._internal_support());
   }
 }
 
-void OS_GraphicsAPIs_VulkanProperties::CopyFrom(const ::google::protobuf::Message& from) {
+void OS_GraphicsAPIs_VulkanProperties::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
   if (&from == this) return;
   Clear();
@@ -1586,21 +1397,15 @@ bool OS_GraphicsAPIs_VulkanProperties::IsInitialized() const {
   return true;
 }
 
-void OS_GraphicsAPIs_VulkanProperties::Swap(OS_GraphicsAPIs_VulkanProperties* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void OS_GraphicsAPIs_VulkanProperties::InternalSwap(OS_GraphicsAPIs_VulkanProperties* other) {
   using std::swap;
-  version_.Swap(&other->version_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  version_.Swap(&other->version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(support_, other->support_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
-::google::protobuf::Metadata OS_GraphicsAPIs_VulkanProperties::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata OS_GraphicsAPIs_VulkanProperties::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -1608,31 +1413,28 @@ void OS_GraphicsAPIs_VulkanProperties::InternalSwap(OS_GraphicsAPIs_VulkanProper
 
 void OS_GraphicsAPIs::InitAsDefaultInstance() {
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int OS_GraphicsAPIs::kMetalSupportedFieldNumber;
-const int OS_GraphicsAPIs::kVulkanSupportedFieldNumber;
-const int OS_GraphicsAPIs::kVulkanHighestSupportFieldNumber;
-const int OS_GraphicsAPIs::kD3DHighestSupportFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class OS_GraphicsAPIs::_Internal {
+ public:
+};
 
-OS_GraphicsAPIs::OS_GraphicsAPIs()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_OS_GraphicsAPIs.base);
+OS_GraphicsAPIs::OS_GraphicsAPIs(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.OS.GraphicsAPIs)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.OS.GraphicsAPIs)
 }
 OS_GraphicsAPIs::OS_GraphicsAPIs(const OS_GraphicsAPIs& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  vulkan_highest_support_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.vulkan_highest_support().size() > 0) {
-    vulkan_highest_support_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vulkan_highest_support_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  vulkan_highest_support_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_vulkan_highest_support().empty()) {
+    vulkan_highest_support_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_vulkan_highest_support(),
+      GetArena());
   }
-  d3d_highest_support_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.d3d_highest_support().size() > 0) {
-    d3d_highest_support_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.d3d_highest_support_);
+  d3d_highest_support_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_d3d_highest_support().empty()) {
+    d3d_highest_support_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_d3d_highest_support(),
+      GetArena());
   }
   ::memcpy(&metal_supported_, &from.metal_supported_,
     static_cast<size_t>(reinterpret_cast<char*>(&vulkan_supported_) -
@@ -1641,8 +1443,9 @@ OS_GraphicsAPIs::OS_GraphicsAPIs(const OS_GraphicsAPIs& from)
 }
 
 void OS_GraphicsAPIs::SharedCtor() {
-  vulkan_highest_support_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  d3d_highest_support_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_OS_GraphicsAPIs_pdm_2eproto.base);
+  vulkan_highest_support_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  d3d_highest_support_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&metal_supported_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&vulkan_supported_) -
       reinterpret_cast<char*>(&metal_supported_)) + sizeof(vulkan_supported_));
@@ -1651,219 +1454,149 @@ void OS_GraphicsAPIs::SharedCtor() {
 OS_GraphicsAPIs::~OS_GraphicsAPIs() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.OS.GraphicsAPIs)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void OS_GraphicsAPIs::SharedDtor() {
-  vulkan_highest_support_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  d3d_highest_support_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  vulkan_highest_support_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  d3d_highest_support_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void OS_GraphicsAPIs::ArenaDtor(void* object) {
+  OS_GraphicsAPIs* _this = reinterpret_cast< OS_GraphicsAPIs* >(object);
+  (void)_this;
+}
+void OS_GraphicsAPIs::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void OS_GraphicsAPIs::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* OS_GraphicsAPIs::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const OS_GraphicsAPIs& OS_GraphicsAPIs::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_OS_GraphicsAPIs.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_OS_GraphicsAPIs_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void OS_GraphicsAPIs::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.OS.GraphicsAPIs)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  vulkan_highest_support_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  d3d_highest_support_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  vulkan_highest_support_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  d3d_highest_support_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&metal_supported_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&vulkan_supported_) -
       reinterpret_cast<char*>(&metal_supported_)) + sizeof(vulkan_supported_));
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool OS_GraphicsAPIs::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.OS.GraphicsAPIs)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* OS_GraphicsAPIs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // bool metal_supported = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &metal_supported_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          metal_supported_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport vulkan_supported = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_vulkan_supported(static_cast< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_vulkan_supported(static_cast<::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport>(val));
+        } else goto handle_unusual;
+        continue;
       // string vulkan_highest_support = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_vulkan_highest_support()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->vulkan_highest_support().data(), static_cast<int>(this->vulkan_highest_support().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_vulkan_highest_support();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string d3d_highest_support = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_d3d_highest_support()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->d3d_highest_support().data(), static_cast<int>(this->d3d_highest_support().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_d3d_highest_support();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.OS.GraphicsAPIs)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.OS.GraphicsAPIs)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void OS_GraphicsAPIs::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.OS.GraphicsAPIs)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool metal_supported = 1;
-  if (this->metal_supported() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->metal_supported(), output);
-  }
-
-  // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport vulkan_supported = 2;
-  if (this->vulkan_supported() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      2, this->vulkan_supported(), output);
-  }
-
-  // string vulkan_highest_support = 3;
-  if (this->vulkan_highest_support().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->vulkan_highest_support().data(), static_cast<int>(this->vulkan_highest_support().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->vulkan_highest_support(), output);
-  }
-
-  // string d3d_highest_support = 4;
-  if (this->d3d_highest_support().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->d3d_highest_support().data(), static_cast<int>(this->d3d_highest_support().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->d3d_highest_support(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.OS.GraphicsAPIs)
-}
-
-::google::protobuf::uint8* OS_GraphicsAPIs::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* OS_GraphicsAPIs::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.OS.GraphicsAPIs)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // bool metal_supported = 1;
   if (this->metal_supported() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->metal_supported(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_metal_supported(), target);
   }
 
   // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport vulkan_supported = 2;
   if (this->vulkan_supported() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      2, this->vulkan_supported(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_vulkan_supported(), target);
   }
 
   // string vulkan_highest_support = 3;
   if (this->vulkan_highest_support().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->vulkan_highest_support().data(), static_cast<int>(this->vulkan_highest_support().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_vulkan_highest_support().data(), static_cast<int>(this->_internal_vulkan_highest_support().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->vulkan_highest_support(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_vulkan_highest_support(), target);
   }
 
   // string d3d_highest_support = 4;
   if (this->d3d_highest_support().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->d3d_highest_support().data(), static_cast<int>(this->d3d_highest_support().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_d3d_highest_support().data(), static_cast<int>(this->_internal_d3d_highest_support().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        4, this->d3d_highest_support(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_d3d_highest_support(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.OS.GraphicsAPIs)
   return target;
@@ -1873,23 +1606,22 @@ size_t OS_GraphicsAPIs::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.OS.GraphicsAPIs)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string vulkan_highest_support = 3;
   if (this->vulkan_highest_support().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->vulkan_highest_support());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_vulkan_highest_support());
   }
 
   // string d3d_highest_support = 4;
   if (this->d3d_highest_support().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->d3d_highest_support());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_d3d_highest_support());
   }
 
   // bool metal_supported = 1;
@@ -1900,23 +1632,27 @@ size_t OS_GraphicsAPIs::ByteSizeLong() const {
   // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport vulkan_supported = 2;
   if (this->vulkan_supported() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->vulkan_supported());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_vulkan_supported());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void OS_GraphicsAPIs::MergeFrom(const ::google::protobuf::Message& from) {
+void OS_GraphicsAPIs::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.OS.GraphicsAPIs)
   GOOGLE_DCHECK_NE(&from, this);
   const OS_GraphicsAPIs* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const OS_GraphicsAPIs>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OS_GraphicsAPIs>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.OS.GraphicsAPIs)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.OS.GraphicsAPIs)
     MergeFrom(*source);
@@ -1926,27 +1662,25 @@ void OS_GraphicsAPIs::MergeFrom(const ::google::protobuf::Message& from) {
 void OS_GraphicsAPIs::MergeFrom(const OS_GraphicsAPIs& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.OS.GraphicsAPIs)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.vulkan_highest_support().size() > 0) {
-
-    vulkan_highest_support_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vulkan_highest_support_);
+    _internal_set_vulkan_highest_support(from._internal_vulkan_highest_support());
   }
   if (from.d3d_highest_support().size() > 0) {
-
-    d3d_highest_support_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.d3d_highest_support_);
+    _internal_set_d3d_highest_support(from._internal_d3d_highest_support());
   }
   if (from.metal_supported() != 0) {
-    set_metal_supported(from.metal_supported());
+    _internal_set_metal_supported(from._internal_metal_supported());
   }
   if (from.vulkan_supported() != 0) {
-    set_vulkan_supported(from.vulkan_supported());
+    _internal_set_vulkan_supported(from._internal_vulkan_supported());
   }
 }
 
-void OS_GraphicsAPIs::CopyFrom(const ::google::protobuf::Message& from) {
+void OS_GraphicsAPIs::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.OS.GraphicsAPIs)
   if (&from == this) return;
   Clear();
@@ -1964,24 +1698,21 @@ bool OS_GraphicsAPIs::IsInitialized() const {
   return true;
 }
 
-void OS_GraphicsAPIs::Swap(OS_GraphicsAPIs* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void OS_GraphicsAPIs::InternalSwap(OS_GraphicsAPIs* other) {
   using std::swap;
-  vulkan_highest_support_.Swap(&other->vulkan_highest_support_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  d3d_highest_support_.Swap(&other->d3d_highest_support_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(metal_supported_, other->metal_supported_);
-  swap(vulkan_supported_, other->vulkan_supported_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  vulkan_highest_support_.Swap(&other->vulkan_highest_support_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  d3d_highest_support_.Swap(&other->d3d_highest_support_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(OS_GraphicsAPIs, vulkan_supported_)
+      + sizeof(OS_GraphicsAPIs::vulkan_supported_)
+      - PROTOBUF_FIELD_OFFSET(OS_GraphicsAPIs, metal_supported_)>(
+          reinterpret_cast<char*>(&metal_supported_),
+          reinterpret_cast<char*>(&other->metal_supported_));
 }
 
-::google::protobuf::Metadata OS_GraphicsAPIs::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata OS_GraphicsAPIs::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -1989,200 +1720,153 @@ void OS_GraphicsAPIs::InternalSwap(OS_GraphicsAPIs* other) {
 
 void OS_Wine::InitAsDefaultInstance() {
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int OS_Wine::kVersionFieldNumber;
-const int OS_Wine::kHostOsFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class OS_Wine::_Internal {
+ public:
+};
 
-OS_Wine::OS_Wine()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_OS_Wine.base);
+OS_Wine::OS_Wine(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.OS.Wine)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.OS.Wine)
 }
 OS_Wine::OS_Wine(const OS_Wine& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.version().size() > 0) {
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_version().empty()) {
+    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_version(),
+      GetArena());
   }
-  host_os_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.host_os().size() > 0) {
-    host_os_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.host_os_);
+  host_os_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_host_os().empty()) {
+    host_os_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_host_os(),
+      GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:eve_launcher.pdm.OS.Wine)
 }
 
 void OS_Wine::SharedCtor() {
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  host_os_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_OS_Wine_pdm_2eproto.base);
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  host_os_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 OS_Wine::~OS_Wine() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.OS.Wine)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void OS_Wine::SharedDtor() {
-  version_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  host_os_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  host_os_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void OS_Wine::ArenaDtor(void* object) {
+  OS_Wine* _this = reinterpret_cast< OS_Wine* >(object);
+  (void)_this;
+}
+void OS_Wine::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void OS_Wine::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* OS_Wine::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const OS_Wine& OS_Wine::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_OS_Wine.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_OS_Wine_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void OS_Wine::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.OS.Wine)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  host_os_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
+  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  host_os_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool OS_Wine::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.OS.Wine)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* OS_Wine::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // string version = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_version()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->version().data(), static_cast<int>(this->version().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.OS.Wine.version"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_version();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.Wine.version"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string host_os = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_host_os()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->host_os().data(), static_cast<int>(this->host_os().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.OS.Wine.host_os"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_host_os();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.Wine.host_os"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.OS.Wine)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.OS.Wine)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void OS_Wine::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.OS.Wine)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string version = 1;
-  if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.OS.Wine.version");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->version(), output);
-  }
-
-  // string host_os = 2;
-  if (this->host_os().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->host_os().data(), static_cast<int>(this->host_os().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.OS.Wine.host_os");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->host_os(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.OS.Wine)
-}
-
-::google::protobuf::uint8* OS_Wine::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* OS_Wine::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.OS.Wine)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string version = 1;
   if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.OS.Wine.version");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->version(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_version(), target);
   }
 
   // string host_os = 2;
   if (this->host_os().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->host_os().data(), static_cast<int>(this->host_os().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_host_os().data(), static_cast<int>(this->_internal_host_os().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.OS.Wine.host_os");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->host_os(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_host_os(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.OS.Wine)
   return target;
@@ -2192,39 +1876,42 @@ size_t OS_Wine::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.OS.Wine)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string version = 1;
   if (this->version().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->version());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_version());
   }
 
   // string host_os = 2;
   if (this->host_os().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->host_os());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_host_os());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void OS_Wine::MergeFrom(const ::google::protobuf::Message& from) {
+void OS_Wine::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.OS.Wine)
   GOOGLE_DCHECK_NE(&from, this);
   const OS_Wine* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const OS_Wine>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OS_Wine>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.OS.Wine)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.OS.Wine)
     MergeFrom(*source);
@@ -2234,21 +1921,19 @@ void OS_Wine::MergeFrom(const ::google::protobuf::Message& from) {
 void OS_Wine::MergeFrom(const OS_Wine& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.OS.Wine)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.version().size() > 0) {
-
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+    _internal_set_version(from._internal_version());
   }
   if (from.host_os().size() > 0) {
-
-    host_os_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.host_os_);
+    _internal_set_host_os(from._internal_host_os());
   }
 }
 
-void OS_Wine::CopyFrom(const ::google::protobuf::Message& from) {
+void OS_Wine::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.OS.Wine)
   if (&from == this) return;
   Clear();
@@ -2266,22 +1951,15 @@ bool OS_Wine::IsInitialized() const {
   return true;
 }
 
-void OS_Wine::Swap(OS_Wine* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void OS_Wine::InternalSwap(OS_Wine* other) {
   using std::swap;
-  version_.Swap(&other->version_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  host_os_.Swap(&other->host_os_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  version_.Swap(&other->version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  host_os_.Swap(&other->host_os_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
-::google::protobuf::Metadata OS_Wine::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata OS_Wine::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -2293,69 +1971,89 @@ void OS::InitAsDefaultInstance() {
   ::eve_launcher::pdm::_OS_default_instance_._instance.get_mutable()->wine_ = const_cast< ::eve_launcher::pdm::OS_Wine*>(
       ::eve_launcher::pdm::OS_Wine::internal_default_instance());
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int OS::kTypeFieldNumber;
-const int OS::kNameFieldNumber;
-const int OS::kBitnessFieldNumber;
-const int OS::kMajorVersionFieldNumber;
-const int OS::kMinorVersionFieldNumber;
-const int OS::kBuildNumberFieldNumber;
-const int OS::kKernelVersionFieldNumber;
-const int OS::kUsernameFieldNumber;
-const int OS::kUserLocaleFieldNumber;
-const int OS::kIsRemoteSessionFieldNumber;
-const int OS::kGraphicsApisFieldNumber;
-const int OS::kWineFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class OS::_Internal {
+ public:
+  static const ::eve_launcher::pdm::OS_GraphicsAPIs& graphics_apis(const OS* msg);
+  static const ::eve_launcher::pdm::OS_Wine& wine(const OS* msg);
+};
 
-OS::OS()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_OS.base);
+const ::eve_launcher::pdm::OS_GraphicsAPIs&
+OS::_Internal::graphics_apis(const OS* msg) {
+  return *msg->graphics_apis_;
+}
+const ::eve_launcher::pdm::OS_Wine&
+OS::_Internal::wine(const OS* msg) {
+  return *msg->wine_;
+}
+OS::OS(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.OS)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.OS)
 }
 OS::OS(const OS& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.name().size() > 0) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
-  kernel_version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.kernel_version().size() > 0) {
-    kernel_version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.kernel_version_);
+  major_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_major_version().empty()) {
+    major_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_major_version(),
+      GetArena());
   }
-  username_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.username().size() > 0) {
-    username_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.username_);
+  minor_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_minor_version().empty()) {
+    minor_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_minor_version(),
+      GetArena());
   }
-  user_locale_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.user_locale().size() > 0) {
-    user_locale_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_locale_);
+  build_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_build_number().empty()) {
+    build_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_build_number(),
+      GetArena());
   }
-  if (from.has_graphics_apis()) {
+  kernel_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_kernel_version().empty()) {
+    kernel_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_kernel_version(),
+      GetArena());
+  }
+  username_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_username().empty()) {
+    username_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_username(),
+      GetArena());
+  }
+  user_locale_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_user_locale().empty()) {
+    user_locale_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_user_locale(),
+      GetArena());
+  }
+  if (from._internal_has_graphics_apis()) {
     graphics_apis_ = new ::eve_launcher::pdm::OS_GraphicsAPIs(*from.graphics_apis_);
   } else {
-    graphics_apis_ = NULL;
+    graphics_apis_ = nullptr;
   }
-  if (from.has_wine()) {
+  if (from._internal_has_wine()) {
     wine_ = new ::eve_launcher::pdm::OS_Wine(*from.wine_);
   } else {
-    wine_ = NULL;
+    wine_ = nullptr;
   }
-  ::memcpy(&type_, &from.type_,
+  ::memcpy(&kind_, &from.kind_,
     static_cast<size_t>(reinterpret_cast<char*>(&is_remote_session_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(is_remote_session_));
+    reinterpret_cast<char*>(&kind_)) + sizeof(is_remote_session_));
   // @@protoc_insertion_point(copy_constructor:eve_launcher.pdm.OS)
 }
 
 void OS::SharedCtor() {
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  kernel_version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  username_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  user_locale_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_OS_pdm_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  major_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  minor_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  build_number_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  kernel_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  username_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  user_locale_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&graphics_apis_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&is_remote_session_) -
       reinterpret_cast<char*>(&graphics_apis_)) + sizeof(is_remote_session_));
@@ -2364,456 +2062,309 @@ void OS::SharedCtor() {
 OS::~OS() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.OS)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void OS::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  kernel_version_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  username_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  user_locale_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  major_version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  minor_version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  build_number_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  kernel_version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  username_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  user_locale_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete graphics_apis_;
   if (this != internal_default_instance()) delete wine_;
 }
 
+void OS::ArenaDtor(void* object) {
+  OS* _this = reinterpret_cast< OS* >(object);
+  (void)_this;
+}
+void OS::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void OS::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* OS::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const OS& OS::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_OS.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_OS_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void OS::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.OS)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  kernel_version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  username_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  user_locale_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && graphics_apis_ != NULL) {
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  major_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  minor_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  build_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  kernel_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  username_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  user_locale_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && graphics_apis_ != nullptr) {
     delete graphics_apis_;
   }
-  graphics_apis_ = NULL;
-  if (GetArenaNoVirtual() == NULL && wine_ != NULL) {
+  graphics_apis_ = nullptr;
+  if (GetArena() == nullptr && wine_ != nullptr) {
     delete wine_;
   }
-  wine_ = NULL;
-  ::memset(&type_, 0, static_cast<size_t>(
+  wine_ = nullptr;
+  ::memset(&kind_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&is_remote_session_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(is_remote_session_));
-  _internal_metadata_.Clear();
+      reinterpret_cast<char*>(&kind_)) + sizeof(is_remote_session_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool OS::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.OS)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .eve_launcher.pdm.OS.OS type = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_type(static_cast< ::eve_launcher::pdm::OS_OS >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .eve_launcher.pdm.OS.Kind kind = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_kind(static_cast<::eve_launcher::pdm::OS_Kind>(val));
+        } else goto handle_unusual;
+        continue;
       // string name = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.OS.name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.Bitness bitness = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_bitness(static_cast< ::eve_launcher::pdm::Bitness >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 major_version = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &major_version_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 minor_version = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &minor_version_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // int32 build_number = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &build_number_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_bitness(static_cast<::eve_launcher::pdm::Bitness>(val));
+        } else goto handle_unusual;
+        continue;
+      // string major_version = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_major_version();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.major_version"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string minor_version = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_minor_version();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.minor_version"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string build_number = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          auto str = _internal_mutable_build_number();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.build_number"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string kernel_version = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_kernel_version()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->kernel_version().data(), static_cast<int>(this->kernel_version().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.OS.kernel_version"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          auto str = _internal_mutable_kernel_version();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.kernel_version"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string username = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_username()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->username().data(), static_cast<int>(this->username().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.OS.username"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          auto str = _internal_mutable_username();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.username"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string user_locale = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_user_locale()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->user_locale().data(), static_cast<int>(this->user_locale().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.OS.user_locale"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          auto str = _internal_mutable_user_locale();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.OS.user_locale"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // bool is_remote_session = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(80u /* 80 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &is_remote_session_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
+          is_remote_session_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.OS.GraphicsAPIs graphics_apis = 11;
-      case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(90u /* 90 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_graphics_apis()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+          ptr = ctx->ParseMessage(_internal_mutable_graphics_apis(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.OS.Wine wine = 12;
-      case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_wine()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+          ptr = ctx->ParseMessage(_internal_mutable_wine(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.OS)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.OS)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void OS::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.OS)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .eve_launcher.pdm.OS.OS type = 1;
-  if (this->type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      1, this->type(), output);
-  }
-
-  // string name = 2;
-  if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.OS.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->name(), output);
-  }
-
-  // .eve_launcher.pdm.Bitness bitness = 3;
-  if (this->bitness() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      3, this->bitness(), output);
-  }
-
-  // int32 major_version = 4;
-  if (this->major_version() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->major_version(), output);
-  }
-
-  // int32 minor_version = 5;
-  if (this->minor_version() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->minor_version(), output);
-  }
-
-  // int32 build_number = 6;
-  if (this->build_number() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(6, this->build_number(), output);
-  }
-
-  // string kernel_version = 7;
-  if (this->kernel_version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->kernel_version().data(), static_cast<int>(this->kernel_version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.OS.kernel_version");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->kernel_version(), output);
-  }
-
-  // string username = 8;
-  if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->username().data(), static_cast<int>(this->username().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.OS.username");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->username(), output);
-  }
-
-  // string user_locale = 9;
-  if (this->user_locale().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->user_locale().data(), static_cast<int>(this->user_locale().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.OS.user_locale");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      9, this->user_locale(), output);
-  }
-
-  // bool is_remote_session = 10;
-  if (this->is_remote_session() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(10, this->is_remote_session(), output);
-  }
-
-  // .eve_launcher.pdm.OS.GraphicsAPIs graphics_apis = 11;
-  if (this->has_graphics_apis()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, this->_internal_graphics_apis(), output);
-  }
-
-  // .eve_launcher.pdm.OS.Wine wine = 12;
-  if (this->has_wine()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      12, this->_internal_wine(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.OS)
-}
-
-::google::protobuf::uint8* OS::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* OS::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.OS)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .eve_launcher.pdm.OS.OS type = 1;
-  if (this->type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      1, this->type(), target);
+  // .eve_launcher.pdm.OS.Kind kind = 1;
+  if (this->kind() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_kind(), target);
   }
 
   // string name = 2;
   if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.OS.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->name(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_name(), target);
   }
 
   // .eve_launcher.pdm.Bitness bitness = 3;
   if (this->bitness() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      3, this->bitness(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_bitness(), target);
   }
 
-  // int32 major_version = 4;
-  if (this->major_version() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->major_version(), target);
+  // string major_version = 4;
+  if (this->major_version().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_major_version().data(), static_cast<int>(this->_internal_major_version().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "eve_launcher.pdm.OS.major_version");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_major_version(), target);
   }
 
-  // int32 minor_version = 5;
-  if (this->minor_version() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->minor_version(), target);
+  // string minor_version = 5;
+  if (this->minor_version().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_minor_version().data(), static_cast<int>(this->_internal_minor_version().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "eve_launcher.pdm.OS.minor_version");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_minor_version(), target);
   }
 
-  // int32 build_number = 6;
-  if (this->build_number() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(6, this->build_number(), target);
+  // string build_number = 6;
+  if (this->build_number().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_build_number().data(), static_cast<int>(this->_internal_build_number().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "eve_launcher.pdm.OS.build_number");
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_build_number(), target);
   }
 
   // string kernel_version = 7;
   if (this->kernel_version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->kernel_version().data(), static_cast<int>(this->kernel_version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_kernel_version().data(), static_cast<int>(this->_internal_kernel_version().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.OS.kernel_version");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        7, this->kernel_version(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_kernel_version(), target);
   }
 
   // string username = 8;
   if (this->username().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->username().data(), static_cast<int>(this->username().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.OS.username");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        8, this->username(), target);
+    target = stream->WriteStringMaybeAliased(
+        8, this->_internal_username(), target);
   }
 
   // string user_locale = 9;
   if (this->user_locale().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->user_locale().data(), static_cast<int>(this->user_locale().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_user_locale().data(), static_cast<int>(this->_internal_user_locale().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.OS.user_locale");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        9, this->user_locale(), target);
+    target = stream->WriteStringMaybeAliased(
+        9, this->_internal_user_locale(), target);
   }
 
   // bool is_remote_session = 10;
   if (this->is_remote_session() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(10, this->is_remote_session(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(10, this->_internal_is_remote_session(), target);
   }
 
   // .eve_launcher.pdm.OS.GraphicsAPIs graphics_apis = 11;
   if (this->has_graphics_apis()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        11, this->_internal_graphics_apis(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        11, _Internal::graphics_apis(this), target, stream);
   }
 
   // .eve_launcher.pdm.OS.Wine wine = 12;
   if (this->has_wine()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        12, this->_internal_wine(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        12, _Internal::wine(this), target, stream);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.OS)
   return target;
@@ -2823,84 +2374,83 @@ size_t OS::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.OS)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string name = 2;
   if (this->name().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  // string major_version = 4;
+  if (this->major_version().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_major_version());
+  }
+
+  // string minor_version = 5;
+  if (this->minor_version().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_minor_version());
+  }
+
+  // string build_number = 6;
+  if (this->build_number().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_build_number());
   }
 
   // string kernel_version = 7;
   if (this->kernel_version().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->kernel_version());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_kernel_version());
   }
 
   // string username = 8;
   if (this->username().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->username());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_username());
   }
 
   // string user_locale = 9;
   if (this->user_locale().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->user_locale());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_user_locale());
   }
 
   // .eve_launcher.pdm.OS.GraphicsAPIs graphics_apis = 11;
   if (this->has_graphics_apis()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *graphics_apis_);
   }
 
   // .eve_launcher.pdm.OS.Wine wine = 12;
   if (this->has_wine()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *wine_);
   }
 
-  // .eve_launcher.pdm.OS.OS type = 1;
-  if (this->type() != 0) {
+  // .eve_launcher.pdm.OS.Kind kind = 1;
+  if (this->kind() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_kind());
   }
 
   // .eve_launcher.pdm.Bitness bitness = 3;
   if (this->bitness() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->bitness());
-  }
-
-  // int32 major_version = 4;
-  if (this->major_version() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->major_version());
-  }
-
-  // int32 minor_version = 5;
-  if (this->minor_version() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->minor_version());
-  }
-
-  // int32 build_number = 6;
-  if (this->build_number() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->build_number());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_bitness());
   }
 
   // bool is_remote_session = 10;
@@ -2908,20 +2458,24 @@ size_t OS::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void OS::MergeFrom(const ::google::protobuf::Message& from) {
+void OS::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.OS)
   GOOGLE_DCHECK_NE(&from, this);
   const OS* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const OS>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OS>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.OS)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.OS)
     MergeFrom(*source);
@@ -2931,53 +2485,49 @@ void OS::MergeFrom(const ::google::protobuf::Message& from) {
 void OS::MergeFrom(const OS& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.OS)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    _internal_set_name(from._internal_name());
+  }
+  if (from.major_version().size() > 0) {
+    _internal_set_major_version(from._internal_major_version());
+  }
+  if (from.minor_version().size() > 0) {
+    _internal_set_minor_version(from._internal_minor_version());
+  }
+  if (from.build_number().size() > 0) {
+    _internal_set_build_number(from._internal_build_number());
   }
   if (from.kernel_version().size() > 0) {
-
-    kernel_version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.kernel_version_);
+    _internal_set_kernel_version(from._internal_kernel_version());
   }
   if (from.username().size() > 0) {
-
-    username_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.username_);
+    _internal_set_username(from._internal_username());
   }
   if (from.user_locale().size() > 0) {
-
-    user_locale_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.user_locale_);
+    _internal_set_user_locale(from._internal_user_locale());
   }
   if (from.has_graphics_apis()) {
-    mutable_graphics_apis()->::eve_launcher::pdm::OS_GraphicsAPIs::MergeFrom(from.graphics_apis());
+    _internal_mutable_graphics_apis()->::eve_launcher::pdm::OS_GraphicsAPIs::MergeFrom(from._internal_graphics_apis());
   }
   if (from.has_wine()) {
-    mutable_wine()->::eve_launcher::pdm::OS_Wine::MergeFrom(from.wine());
+    _internal_mutable_wine()->::eve_launcher::pdm::OS_Wine::MergeFrom(from._internal_wine());
   }
-  if (from.type() != 0) {
-    set_type(from.type());
+  if (from.kind() != 0) {
+    _internal_set_kind(from._internal_kind());
   }
   if (from.bitness() != 0) {
-    set_bitness(from.bitness());
-  }
-  if (from.major_version() != 0) {
-    set_major_version(from.major_version());
-  }
-  if (from.minor_version() != 0) {
-    set_minor_version(from.minor_version());
-  }
-  if (from.build_number() != 0) {
-    set_build_number(from.build_number());
+    _internal_set_bitness(from._internal_bitness());
   }
   if (from.is_remote_session() != 0) {
-    set_is_remote_session(from.is_remote_session());
+    _internal_set_is_remote_session(from._internal_is_remote_session());
   }
 }
 
-void OS::CopyFrom(const ::google::protobuf::Message& from) {
+void OS::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.OS)
   if (&from == this) return;
   Clear();
@@ -2995,34 +2545,26 @@ bool OS::IsInitialized() const {
   return true;
 }
 
-void OS::Swap(OS* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void OS::InternalSwap(OS* other) {
   using std::swap;
-  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  kernel_version_.Swap(&other->kernel_version_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  username_.Swap(&other->username_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  user_locale_.Swap(&other->user_locale_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(graphics_apis_, other->graphics_apis_);
-  swap(wine_, other->wine_);
-  swap(type_, other->type_);
-  swap(bitness_, other->bitness_);
-  swap(major_version_, other->major_version_);
-  swap(minor_version_, other->minor_version_);
-  swap(build_number_, other->build_number_);
-  swap(is_remote_session_, other->is_remote_session_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  major_version_.Swap(&other->major_version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  minor_version_.Swap(&other->minor_version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  build_number_.Swap(&other->build_number_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  kernel_version_.Swap(&other->kernel_version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  username_.Swap(&other->username_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  user_locale_.Swap(&other->user_locale_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(OS, is_remote_session_)
+      + sizeof(OS::is_remote_session_)
+      - PROTOBUF_FIELD_OFFSET(OS, graphics_apis_)>(
+          reinterpret_cast<char*>(&graphics_apis_),
+          reinterpret_cast<char*>(&other->graphics_apis_));
 }
 
-::google::protobuf::Metadata OS::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata OS::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -3030,33 +2572,28 @@ void OS::InternalSwap(OS* other) {
 
 void Machine_CPU::InitAsDefaultInstance() {
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Machine_CPU::kBitnessFieldNumber;
-const int Machine_CPU::kLogicalCoreCountFieldNumber;
-const int Machine_CPU::kBrandFieldNumber;
-const int Machine_CPU::kVendorFieldNumber;
-const int Machine_CPU::kModelFieldNumber;
-const int Machine_CPU::kSteppingFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class Machine_CPU::_Internal {
+ public:
+};
 
-Machine_CPU::Machine_CPU()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Machine_CPU.base);
+Machine_CPU::Machine_CPU(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Machine.CPU)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Machine.CPU)
 }
 Machine_CPU::Machine_CPU(const Machine_CPU& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  brand_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.brand().size() > 0) {
-    brand_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.brand_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  brand_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_brand().empty()) {
+    brand_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_brand(),
+      GetArena());
   }
-  vendor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.vendor().size() > 0) {
-    vendor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vendor_);
+  vendor_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_vendor().empty()) {
+    vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_vendor(),
+      GetArena());
   }
   ::memcpy(&bitness_, &from.bitness_,
     static_cast<size_t>(reinterpret_cast<char*>(&stepping_) -
@@ -3065,8 +2602,9 @@ Machine_CPU::Machine_CPU(const Machine_CPU& from)
 }
 
 void Machine_CPU::SharedCtor() {
-  brand_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  vendor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Machine_CPU_pdm_2eproto.base);
+  brand_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  vendor_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&bitness_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&stepping_) -
       reinterpret_cast<char*>(&bitness_)) + sizeof(stepping_));
@@ -3075,267 +2613,175 @@ void Machine_CPU::SharedCtor() {
 Machine_CPU::~Machine_CPU() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Machine.CPU)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Machine_CPU::SharedDtor() {
-  brand_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  vendor_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  brand_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  vendor_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void Machine_CPU::ArenaDtor(void* object) {
+  Machine_CPU* _this = reinterpret_cast< Machine_CPU* >(object);
+  (void)_this;
+}
+void Machine_CPU::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Machine_CPU::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Machine_CPU::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Machine_CPU& Machine_CPU::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Machine_CPU.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Machine_CPU_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Machine_CPU::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Machine.CPU)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  brand_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  vendor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  brand_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  vendor_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&bitness_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&stepping_) -
       reinterpret_cast<char*>(&bitness_)) + sizeof(stepping_));
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Machine_CPU::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Machine.CPU)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Machine_CPU::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // .eve_launcher.pdm.Bitness bitness = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_bitness(static_cast< ::eve_launcher::pdm::Bitness >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_bitness(static_cast<::eve_launcher::pdm::Bitness>(val));
+        } else goto handle_unusual;
+        continue;
       // int32 logical_core_count = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &logical_core_count_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          logical_core_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string brand = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_brand()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->brand().data(), static_cast<int>(this->brand().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.CPU.brand"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_brand();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.CPU.brand"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string vendor = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_vendor()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->vendor().data(), static_cast<int>(this->vendor().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.CPU.vendor"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_vendor();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.CPU.vendor"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 model = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &model_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          model_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 stepping = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &stepping_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          stepping_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Machine.CPU)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Machine.CPU)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Machine_CPU::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Machine.CPU)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .eve_launcher.pdm.Bitness bitness = 1;
-  if (this->bitness() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      1, this->bitness(), output);
-  }
-
-  // int32 logical_core_count = 2;
-  if (this->logical_core_count() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->logical_core_count(), output);
-  }
-
-  // string brand = 3;
-  if (this->brand().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->brand().data(), static_cast<int>(this->brand().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.CPU.brand");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->brand(), output);
-  }
-
-  // string vendor = 4;
-  if (this->vendor().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->vendor().data(), static_cast<int>(this->vendor().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.CPU.vendor");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->vendor(), output);
-  }
-
-  // int32 model = 5;
-  if (this->model() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->model(), output);
-  }
-
-  // int32 stepping = 6;
-  if (this->stepping() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(6, this->stepping(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Machine.CPU)
-}
-
-::google::protobuf::uint8* Machine_CPU::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Machine_CPU::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Machine.CPU)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .eve_launcher.pdm.Bitness bitness = 1;
   if (this->bitness() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      1, this->bitness(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_bitness(), target);
   }
 
   // int32 logical_core_count = 2;
   if (this->logical_core_count() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->logical_core_count(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_logical_core_count(), target);
   }
 
   // string brand = 3;
   if (this->brand().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->brand().data(), static_cast<int>(this->brand().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_brand().data(), static_cast<int>(this->_internal_brand().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.CPU.brand");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->brand(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_brand(), target);
   }
 
   // string vendor = 4;
   if (this->vendor().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->vendor().data(), static_cast<int>(this->vendor().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_vendor().data(), static_cast<int>(this->_internal_vendor().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.CPU.vendor");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        4, this->vendor(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_vendor(), target);
   }
 
   // int32 model = 5;
   if (this->model() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->model(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_model(), target);
   }
 
   // int32 stepping = 6;
   if (this->stepping() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(6, this->stepping(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->_internal_stepping(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Machine.CPU)
   return target;
@@ -3345,66 +2791,69 @@ size_t Machine_CPU::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Machine.CPU)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string brand = 3;
   if (this->brand().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->brand());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_brand());
   }
 
   // string vendor = 4;
   if (this->vendor().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->vendor());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_vendor());
   }
 
   // .eve_launcher.pdm.Bitness bitness = 1;
   if (this->bitness() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->bitness());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_bitness());
   }
 
   // int32 logical_core_count = 2;
   if (this->logical_core_count() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->logical_core_count());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_logical_core_count());
   }
 
   // int32 model = 5;
   if (this->model() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->model());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_model());
   }
 
   // int32 stepping = 6;
   if (this->stepping() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->stepping());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_stepping());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Machine_CPU::MergeFrom(const ::google::protobuf::Message& from) {
+void Machine_CPU::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Machine.CPU)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_CPU* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Machine_CPU>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_CPU>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Machine.CPU)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Machine.CPU)
     MergeFrom(*source);
@@ -3414,33 +2863,31 @@ void Machine_CPU::MergeFrom(const ::google::protobuf::Message& from) {
 void Machine_CPU::MergeFrom(const Machine_CPU& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Machine.CPU)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.brand().size() > 0) {
-
-    brand_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.brand_);
+    _internal_set_brand(from._internal_brand());
   }
   if (from.vendor().size() > 0) {
-
-    vendor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vendor_);
+    _internal_set_vendor(from._internal_vendor());
   }
   if (from.bitness() != 0) {
-    set_bitness(from.bitness());
+    _internal_set_bitness(from._internal_bitness());
   }
   if (from.logical_core_count() != 0) {
-    set_logical_core_count(from.logical_core_count());
+    _internal_set_logical_core_count(from._internal_logical_core_count());
   }
   if (from.model() != 0) {
-    set_model(from.model());
+    _internal_set_model(from._internal_model());
   }
   if (from.stepping() != 0) {
-    set_stepping(from.stepping());
+    _internal_set_stepping(from._internal_stepping());
   }
 }
 
-void Machine_CPU::CopyFrom(const ::google::protobuf::Message& from) {
+void Machine_CPU::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Machine.CPU)
   if (&from == this) return;
   Clear();
@@ -3458,26 +2905,21 @@ bool Machine_CPU::IsInitialized() const {
   return true;
 }
 
-void Machine_CPU::Swap(Machine_CPU* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Machine_CPU::InternalSwap(Machine_CPU* other) {
   using std::swap;
-  brand_.Swap(&other->brand_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  vendor_.Swap(&other->vendor_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(bitness_, other->bitness_);
-  swap(logical_core_count_, other->logical_core_count_);
-  swap(model_, other->model_);
-  swap(stepping_, other->stepping_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  brand_.Swap(&other->brand_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  vendor_.Swap(&other->vendor_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Machine_CPU, stepping_)
+      + sizeof(Machine_CPU::stepping_)
+      - PROTOBUF_FIELD_OFFSET(Machine_CPU, bitness_)>(
+          reinterpret_cast<char*>(&bitness_),
+          reinterpret_cast<char*>(&other->bitness_));
 }
 
-::google::protobuf::Metadata Machine_CPU::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Machine_CPU::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -3485,28 +2927,23 @@ void Machine_CPU::InternalSwap(Machine_CPU* other) {
 
 void Machine_VM::InitAsDefaultInstance() {
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Machine_VM::kIsSuspectedVmFieldNumber;
-const int Machine_VM::kHasHypervisorBitFieldNumber;
-const int Machine_VM::kHypervisorNameFieldNumber;
-const int Machine_VM::kIsHypervisorGuestOsFieldNumber;
-const int Machine_VM::kHasVmExecutionTimingFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class Machine_VM::_Internal {
+ public:
+};
 
-Machine_VM::Machine_VM()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Machine_VM.base);
+Machine_VM::Machine_VM(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Machine.VM)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Machine.VM)
 }
 Machine_VM::Machine_VM(const Machine_VM& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  hypervisor_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.hypervisor_name().size() > 0) {
-    hypervisor_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.hypervisor_name_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  hypervisor_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_hypervisor_name().empty()) {
+    hypervisor_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_hypervisor_name(),
+      GetArena());
   }
   ::memcpy(&is_suspected_vm_, &from.is_suspected_vm_,
     static_cast<size_t>(reinterpret_cast<char*>(&has_vm_execution_timing_) -
@@ -3515,7 +2952,8 @@ Machine_VM::Machine_VM(const Machine_VM& from)
 }
 
 void Machine_VM::SharedCtor() {
-  hypervisor_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Machine_VM_pdm_2eproto.base);
+  hypervisor_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&is_suspected_vm_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&has_vm_execution_timing_) -
       reinterpret_cast<char*>(&is_suspected_vm_)) + sizeof(has_vm_execution_timing_));
@@ -3524,225 +2962,152 @@ void Machine_VM::SharedCtor() {
 Machine_VM::~Machine_VM() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Machine.VM)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Machine_VM::SharedDtor() {
-  hypervisor_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  hypervisor_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void Machine_VM::ArenaDtor(void* object) {
+  Machine_VM* _this = reinterpret_cast< Machine_VM* >(object);
+  (void)_this;
+}
+void Machine_VM::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Machine_VM::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Machine_VM::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Machine_VM& Machine_VM::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Machine_VM.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Machine_VM_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Machine_VM::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Machine.VM)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  hypervisor_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  hypervisor_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&is_suspected_vm_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&has_vm_execution_timing_) -
       reinterpret_cast<char*>(&is_suspected_vm_)) + sizeof(has_vm_execution_timing_));
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Machine_VM::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Machine.VM)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Machine_VM::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // bool is_suspected_vm = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &is_suspected_vm_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          is_suspected_vm_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // bool has_hypervisor_bit = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &has_hypervisor_bit_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          has_hypervisor_bit_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string hypervisor_name = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_hypervisor_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->hypervisor_name().data(), static_cast<int>(this->hypervisor_name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.VM.hypervisor_name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_hypervisor_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.VM.hypervisor_name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // bool is_hypervisor_guest_os = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &is_hypervisor_guest_os_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          is_hypervisor_guest_os_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // bool has_vm_execution_timing = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &has_vm_execution_timing_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          has_vm_execution_timing_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Machine.VM)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Machine.VM)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Machine_VM::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Machine.VM)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool is_suspected_vm = 1;
-  if (this->is_suspected_vm() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->is_suspected_vm(), output);
-  }
-
-  // bool has_hypervisor_bit = 2;
-  if (this->has_hypervisor_bit() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->has_hypervisor_bit(), output);
-  }
-
-  // string hypervisor_name = 3;
-  if (this->hypervisor_name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->hypervisor_name().data(), static_cast<int>(this->hypervisor_name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.VM.hypervisor_name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->hypervisor_name(), output);
-  }
-
-  // bool is_hypervisor_guest_os = 4;
-  if (this->is_hypervisor_guest_os() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->is_hypervisor_guest_os(), output);
-  }
-
-  // bool has_vm_execution_timing = 5;
-  if (this->has_vm_execution_timing() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->has_vm_execution_timing(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Machine.VM)
-}
-
-::google::protobuf::uint8* Machine_VM::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Machine_VM::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Machine.VM)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // bool is_suspected_vm = 1;
   if (this->is_suspected_vm() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->is_suspected_vm(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_is_suspected_vm(), target);
   }
 
   // bool has_hypervisor_bit = 2;
   if (this->has_hypervisor_bit() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->has_hypervisor_bit(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->_internal_has_hypervisor_bit(), target);
   }
 
   // string hypervisor_name = 3;
   if (this->hypervisor_name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->hypervisor_name().data(), static_cast<int>(this->hypervisor_name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_hypervisor_name().data(), static_cast<int>(this->_internal_hypervisor_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.VM.hypervisor_name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->hypervisor_name(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_hypervisor_name(), target);
   }
 
   // bool is_hypervisor_guest_os = 4;
   if (this->is_hypervisor_guest_os() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->is_hypervisor_guest_os(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(4, this->_internal_is_hypervisor_guest_os(), target);
   }
 
   // bool has_vm_execution_timing = 5;
   if (this->has_vm_execution_timing() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->has_vm_execution_timing(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_has_vm_execution_timing(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Machine.VM)
   return target;
@@ -3752,16 +3117,15 @@ size_t Machine_VM::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Machine.VM)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string hypervisor_name = 3;
   if (this->hypervisor_name().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->hypervisor_name());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_hypervisor_name());
   }
 
   // bool is_suspected_vm = 1;
@@ -3784,20 +3148,24 @@ size_t Machine_VM::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Machine_VM::MergeFrom(const ::google::protobuf::Message& from) {
+void Machine_VM::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Machine.VM)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_VM* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Machine_VM>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_VM>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Machine.VM)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Machine.VM)
     MergeFrom(*source);
@@ -3807,29 +3175,28 @@ void Machine_VM::MergeFrom(const ::google::protobuf::Message& from) {
 void Machine_VM::MergeFrom(const Machine_VM& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Machine.VM)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.hypervisor_name().size() > 0) {
-
-    hypervisor_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.hypervisor_name_);
+    _internal_set_hypervisor_name(from._internal_hypervisor_name());
   }
   if (from.is_suspected_vm() != 0) {
-    set_is_suspected_vm(from.is_suspected_vm());
+    _internal_set_is_suspected_vm(from._internal_is_suspected_vm());
   }
   if (from.has_hypervisor_bit() != 0) {
-    set_has_hypervisor_bit(from.has_hypervisor_bit());
+    _internal_set_has_hypervisor_bit(from._internal_has_hypervisor_bit());
   }
   if (from.is_hypervisor_guest_os() != 0) {
-    set_is_hypervisor_guest_os(from.is_hypervisor_guest_os());
+    _internal_set_is_hypervisor_guest_os(from._internal_is_hypervisor_guest_os());
   }
   if (from.has_vm_execution_timing() != 0) {
-    set_has_vm_execution_timing(from.has_vm_execution_timing());
+    _internal_set_has_vm_execution_timing(from._internal_has_vm_execution_timing());
   }
 }
 
-void Machine_VM::CopyFrom(const ::google::protobuf::Message& from) {
+void Machine_VM::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Machine.VM)
   if (&from == this) return;
   Clear();
@@ -3847,24 +3214,20 @@ bool Machine_VM::IsInitialized() const {
   return true;
 }
 
-void Machine_VM::Swap(Machine_VM* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Machine_VM::InternalSwap(Machine_VM* other) {
   using std::swap;
-  hypervisor_name_.Swap(&other->hypervisor_name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(is_suspected_vm_, other->is_suspected_vm_);
-  swap(has_hypervisor_bit_, other->has_hypervisor_bit_);
-  swap(is_hypervisor_guest_os_, other->is_hypervisor_guest_os_);
-  swap(has_vm_execution_timing_, other->has_vm_execution_timing_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  hypervisor_name_.Swap(&other->hypervisor_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Machine_VM, has_vm_execution_timing_)
+      + sizeof(Machine_VM::has_vm_execution_timing_)
+      - PROTOBUF_FIELD_OFFSET(Machine_VM, is_suspected_vm_)>(
+          reinterpret_cast<char*>(&is_suspected_vm_),
+          reinterpret_cast<char*>(&other->is_suspected_vm_));
 }
 
-::google::protobuf::Metadata Machine_VM::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Machine_VM::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -3872,29 +3235,23 @@ void Machine_VM::InternalSwap(Machine_VM* other) {
 
 void Machine_Monitor::InitAsDefaultInstance() {
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Machine_Monitor::kNameFieldNumber;
-const int Machine_Monitor::kHorizontalResolutionFieldNumber;
-const int Machine_Monitor::kVerticalResolutionFieldNumber;
-const int Machine_Monitor::kBitsPerColorFieldNumber;
-const int Machine_Monitor::kRefreshRateFieldNumber;
-const int Machine_Monitor::kDpiScalingPercentFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class Machine_Monitor::_Internal {
+ public:
+};
 
-Machine_Monitor::Machine_Monitor()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Machine_Monitor.base);
+Machine_Monitor::Machine_Monitor(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Machine.Monitor)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Machine.Monitor)
 }
 Machine_Monitor::Machine_Monitor(const Machine_Monitor& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.name().size() > 0) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
   ::memcpy(&horizontal_resolution_, &from.horizontal_resolution_,
     static_cast<size_t>(reinterpret_cast<char*>(&dpi_scaling_percent_) -
@@ -3903,7 +3260,8 @@ Machine_Monitor::Machine_Monitor(const Machine_Monitor& from)
 }
 
 void Machine_Monitor::SharedCtor() {
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Machine_Monitor_pdm_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&horizontal_resolution_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&dpi_scaling_percent_) -
       reinterpret_cast<char*>(&horizontal_resolution_)) + sizeof(dpi_scaling_percent_));
@@ -3912,249 +3270,165 @@ void Machine_Monitor::SharedCtor() {
 Machine_Monitor::~Machine_Monitor() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Machine.Monitor)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Machine_Monitor::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void Machine_Monitor::ArenaDtor(void* object) {
+  Machine_Monitor* _this = reinterpret_cast< Machine_Monitor* >(object);
+  (void)_this;
+}
+void Machine_Monitor::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Machine_Monitor::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Machine_Monitor::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Machine_Monitor& Machine_Monitor::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Machine_Monitor.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Machine_Monitor_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Machine_Monitor::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Machine.Monitor)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::memset(&horizontal_resolution_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&dpi_scaling_percent_) -
       reinterpret_cast<char*>(&horizontal_resolution_)) + sizeof(dpi_scaling_percent_));
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Machine_Monitor::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Machine.Monitor)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Machine_Monitor::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // string name = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.Monitor.name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.Monitor.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 horizontal_resolution = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &horizontal_resolution_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          horizontal_resolution_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 vertical_resolution = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &vertical_resolution_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          vertical_resolution_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 bits_per_color = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &bits_per_color_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          bits_per_color_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 refresh_rate = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &refresh_rate_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          refresh_rate_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 dpi_scaling_percent = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &dpi_scaling_percent_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          dpi_scaling_percent_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Machine.Monitor)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Machine.Monitor)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Machine_Monitor::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Machine.Monitor)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string name = 1;
-  if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.Monitor.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->name(), output);
-  }
-
-  // int32 horizontal_resolution = 2;
-  if (this->horizontal_resolution() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->horizontal_resolution(), output);
-  }
-
-  // int32 vertical_resolution = 3;
-  if (this->vertical_resolution() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->vertical_resolution(), output);
-  }
-
-  // int32 bits_per_color = 4;
-  if (this->bits_per_color() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->bits_per_color(), output);
-  }
-
-  // int32 refresh_rate = 5;
-  if (this->refresh_rate() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->refresh_rate(), output);
-  }
-
-  // int32 dpi_scaling_percent = 6;
-  if (this->dpi_scaling_percent() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(6, this->dpi_scaling_percent(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Machine.Monitor)
-}
-
-::google::protobuf::uint8* Machine_Monitor::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Machine_Monitor::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Machine.Monitor)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string name = 1;
   if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.Monitor.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->name(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
   }
 
   // int32 horizontal_resolution = 2;
   if (this->horizontal_resolution() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->horizontal_resolution(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_horizontal_resolution(), target);
   }
 
   // int32 vertical_resolution = 3;
   if (this->vertical_resolution() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->vertical_resolution(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_vertical_resolution(), target);
   }
 
   // int32 bits_per_color = 4;
   if (this->bits_per_color() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->bits_per_color(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_bits_per_color(), target);
   }
 
   // int32 refresh_rate = 5;
   if (this->refresh_rate() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->refresh_rate(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_refresh_rate(), target);
   }
 
   // int32 dpi_scaling_percent = 6;
   if (this->dpi_scaling_percent() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(6, this->dpi_scaling_percent(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->_internal_dpi_scaling_percent(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Machine.Monitor)
   return target;
@@ -4164,67 +3438,70 @@ size_t Machine_Monitor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Machine.Monitor)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
   }
 
   // int32 horizontal_resolution = 2;
   if (this->horizontal_resolution() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->horizontal_resolution());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_horizontal_resolution());
   }
 
   // int32 vertical_resolution = 3;
   if (this->vertical_resolution() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->vertical_resolution());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_vertical_resolution());
   }
 
   // int32 bits_per_color = 4;
   if (this->bits_per_color() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->bits_per_color());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_bits_per_color());
   }
 
   // int32 refresh_rate = 5;
   if (this->refresh_rate() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->refresh_rate());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_refresh_rate());
   }
 
   // int32 dpi_scaling_percent = 6;
   if (this->dpi_scaling_percent() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->dpi_scaling_percent());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_dpi_scaling_percent());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Machine_Monitor::MergeFrom(const ::google::protobuf::Message& from) {
+void Machine_Monitor::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Machine.Monitor)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_Monitor* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Machine_Monitor>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_Monitor>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Machine.Monitor)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Machine.Monitor)
     MergeFrom(*source);
@@ -4234,32 +3511,31 @@ void Machine_Monitor::MergeFrom(const ::google::protobuf::Message& from) {
 void Machine_Monitor::MergeFrom(const Machine_Monitor& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Machine.Monitor)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    _internal_set_name(from._internal_name());
   }
   if (from.horizontal_resolution() != 0) {
-    set_horizontal_resolution(from.horizontal_resolution());
+    _internal_set_horizontal_resolution(from._internal_horizontal_resolution());
   }
   if (from.vertical_resolution() != 0) {
-    set_vertical_resolution(from.vertical_resolution());
+    _internal_set_vertical_resolution(from._internal_vertical_resolution());
   }
   if (from.bits_per_color() != 0) {
-    set_bits_per_color(from.bits_per_color());
+    _internal_set_bits_per_color(from._internal_bits_per_color());
   }
   if (from.refresh_rate() != 0) {
-    set_refresh_rate(from.refresh_rate());
+    _internal_set_refresh_rate(from._internal_refresh_rate());
   }
   if (from.dpi_scaling_percent() != 0) {
-    set_dpi_scaling_percent(from.dpi_scaling_percent());
+    _internal_set_dpi_scaling_percent(from._internal_dpi_scaling_percent());
   }
 }
 
-void Machine_Monitor::CopyFrom(const ::google::protobuf::Message& from) {
+void Machine_Monitor::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Machine.Monitor)
   if (&from == this) return;
   Clear();
@@ -4277,25 +3553,20 @@ bool Machine_Monitor::IsInitialized() const {
   return true;
 }
 
-void Machine_Monitor::Swap(Machine_Monitor* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Machine_Monitor::InternalSwap(Machine_Monitor* other) {
   using std::swap;
-  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(horizontal_resolution_, other->horizontal_resolution_);
-  swap(vertical_resolution_, other->vertical_resolution_);
-  swap(bits_per_color_, other->bits_per_color_);
-  swap(refresh_rate_, other->refresh_rate_);
-  swap(dpi_scaling_percent_, other->dpi_scaling_percent_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Machine_Monitor, dpi_scaling_percent_)
+      + sizeof(Machine_Monitor::dpi_scaling_percent_)
+      - PROTOBUF_FIELD_OFFSET(Machine_Monitor, horizontal_resolution_)>(
+          reinterpret_cast<char*>(&horizontal_resolution_),
+          reinterpret_cast<char*>(&other->horizontal_resolution_));
 }
 
-::google::protobuf::Metadata Machine_Monitor::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Machine_Monitor::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -4303,245 +3574,180 @@ void Machine_Monitor::InternalSwap(Machine_Monitor* other) {
 
 void Machine_GPU_Driver::InitAsDefaultInstance() {
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Machine_GPU_Driver::kDateFieldNumber;
-const int Machine_GPU_Driver::kVendorFieldNumber;
-const int Machine_GPU_Driver::kVersionFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class Machine_GPU_Driver::_Internal {
+ public:
+};
 
-Machine_GPU_Driver::Machine_GPU_Driver()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Machine_GPU_Driver.base);
+Machine_GPU_Driver::Machine_GPU_Driver(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Machine.GPU.Driver)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Machine.GPU.Driver)
 }
 Machine_GPU_Driver::Machine_GPU_Driver(const Machine_GPU_Driver& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.date().size() > 0) {
-    date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.date_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  date_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_date().empty()) {
+    date_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_date(),
+      GetArena());
   }
-  vendor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.vendor().size() > 0) {
-    vendor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vendor_);
+  vendor_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_vendor().empty()) {
+    vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_vendor(),
+      GetArena());
   }
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.version().size() > 0) {
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_version().empty()) {
+    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_version(),
+      GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:eve_launcher.pdm.Machine.GPU.Driver)
 }
 
 void Machine_GPU_Driver::SharedCtor() {
-  date_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  vendor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Machine_GPU_Driver_pdm_2eproto.base);
+  date_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  vendor_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 Machine_GPU_Driver::~Machine_GPU_Driver() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Machine.GPU.Driver)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Machine_GPU_Driver::SharedDtor() {
-  date_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  vendor_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  date_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  vendor_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void Machine_GPU_Driver::ArenaDtor(void* object) {
+  Machine_GPU_Driver* _this = reinterpret_cast< Machine_GPU_Driver* >(object);
+  (void)_this;
+}
+void Machine_GPU_Driver::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Machine_GPU_Driver::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Machine_GPU_Driver::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Machine_GPU_Driver& Machine_GPU_Driver::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Machine_GPU_Driver.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Machine_GPU_Driver_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Machine_GPU_Driver::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Machine.GPU.Driver)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  date_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  vendor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  version_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
+  date_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  vendor_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Machine_GPU_Driver::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Machine.GPU.Driver)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Machine_GPU_Driver::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // string date = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_date()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->date().data(), static_cast<int>(this->date().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.GPU.Driver.date"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_date();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.GPU.Driver.date"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string vendor = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_vendor()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->vendor().data(), static_cast<int>(this->vendor().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.GPU.Driver.vendor"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_vendor();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.GPU.Driver.vendor"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string version = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_version()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->version().data(), static_cast<int>(this->version().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.GPU.Driver.version"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_version();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.GPU.Driver.version"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Machine.GPU.Driver)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Machine.GPU.Driver)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Machine_GPU_Driver::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Machine.GPU.Driver)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string date = 1;
-  if (this->date().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->date().data(), static_cast<int>(this->date().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.GPU.Driver.date");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->date(), output);
-  }
-
-  // string vendor = 2;
-  if (this->vendor().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->vendor().data(), static_cast<int>(this->vendor().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.GPU.Driver.vendor");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->vendor(), output);
-  }
-
-  // string version = 3;
-  if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.GPU.Driver.version");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->version(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Machine.GPU.Driver)
-}
-
-::google::protobuf::uint8* Machine_GPU_Driver::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Machine_GPU_Driver::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Machine.GPU.Driver)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string date = 1;
   if (this->date().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->date().data(), static_cast<int>(this->date().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_date().data(), static_cast<int>(this->_internal_date().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.GPU.Driver.date");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->date(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_date(), target);
   }
 
   // string vendor = 2;
   if (this->vendor().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->vendor().data(), static_cast<int>(this->vendor().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_vendor().data(), static_cast<int>(this->_internal_vendor().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.GPU.Driver.vendor");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->vendor(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_vendor(), target);
   }
 
   // string version = 3;
   if (this->version().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->version().data(), static_cast<int>(this->version().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.GPU.Driver.version");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->version(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_version(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Machine.GPU.Driver)
   return target;
@@ -4551,46 +3757,49 @@ size_t Machine_GPU_Driver::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Machine.GPU.Driver)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string date = 1;
   if (this->date().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->date());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_date());
   }
 
   // string vendor = 2;
   if (this->vendor().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->vendor());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_vendor());
   }
 
   // string version = 3;
   if (this->version().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->version());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_version());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Machine_GPU_Driver::MergeFrom(const ::google::protobuf::Message& from) {
+void Machine_GPU_Driver::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Machine.GPU.Driver)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_GPU_Driver* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Machine_GPU_Driver>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_GPU_Driver>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Machine.GPU.Driver)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Machine.GPU.Driver)
     MergeFrom(*source);
@@ -4600,25 +3809,22 @@ void Machine_GPU_Driver::MergeFrom(const ::google::protobuf::Message& from) {
 void Machine_GPU_Driver::MergeFrom(const Machine_GPU_Driver& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Machine.GPU.Driver)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.date().size() > 0) {
-
-    date_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.date_);
+    _internal_set_date(from._internal_date());
   }
   if (from.vendor().size() > 0) {
-
-    vendor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vendor_);
+    _internal_set_vendor(from._internal_vendor());
   }
   if (from.version().size() > 0) {
-
-    version_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.version_);
+    _internal_set_version(from._internal_version());
   }
 }
 
-void Machine_GPU_Driver::CopyFrom(const ::google::protobuf::Message& from) {
+void Machine_GPU_Driver::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Machine.GPU.Driver)
   if (&from == this) return;
   Clear();
@@ -4636,24 +3842,16 @@ bool Machine_GPU_Driver::IsInitialized() const {
   return true;
 }
 
-void Machine_GPU_Driver::Swap(Machine_GPU_Driver* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Machine_GPU_Driver::InternalSwap(Machine_GPU_Driver* other) {
   using std::swap;
-  date_.Swap(&other->date_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  vendor_.Swap(&other->vendor_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  version_.Swap(&other->version_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  date_.Swap(&other->date_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  vendor_.Swap(&other->vendor_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  version_.Swap(&other->version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
-::google::protobuf::Metadata Machine_GPU_Driver::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Machine_GPU_Driver::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -4663,34 +3861,33 @@ void Machine_GPU::InitAsDefaultInstance() {
   ::eve_launcher::pdm::_Machine_GPU_default_instance_._instance.get_mutable()->driver_ = const_cast< ::eve_launcher::pdm::Machine_GPU_Driver*>(
       ::eve_launcher::pdm::Machine_GPU_Driver::internal_default_instance());
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Machine_GPU::kDescriptionFieldNumber;
-const int Machine_GPU::kVendorIdFieldNumber;
-const int Machine_GPU::kDeviceIdFieldNumber;
-const int Machine_GPU::kRevisionFieldNumber;
-const int Machine_GPU::kVideoMemoryFieldNumber;
-const int Machine_GPU::kDriverFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class Machine_GPU::_Internal {
+ public:
+  static const ::eve_launcher::pdm::Machine_GPU_Driver& driver(const Machine_GPU* msg);
+};
 
-Machine_GPU::Machine_GPU()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Machine_GPU.base);
+const ::eve_launcher::pdm::Machine_GPU_Driver&
+Machine_GPU::_Internal::driver(const Machine_GPU* msg) {
+  return *msg->driver_;
+}
+Machine_GPU::Machine_GPU(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Machine.GPU)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Machine.GPU)
 }
 Machine_GPU::Machine_GPU(const Machine_GPU& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  description_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.description().size() > 0) {
-    description_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.description_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  description_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_description().empty()) {
+    description_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_description(),
+      GetArena());
   }
-  if (from.has_driver()) {
+  if (from._internal_has_driver()) {
     driver_ = new ::eve_launcher::pdm::Machine_GPU_Driver(*from.driver_);
   } else {
-    driver_ = NULL;
+    driver_ = nullptr;
   }
   ::memcpy(&vendor_id_, &from.vendor_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&revision_) -
@@ -4699,7 +3896,8 @@ Machine_GPU::Machine_GPU(const Machine_GPU& from)
 }
 
 void Machine_GPU::SharedCtor() {
-  description_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Machine_GPU_pdm_2eproto.base);
+  description_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&driver_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&revision_) -
       reinterpret_cast<char*>(&driver_)) + sizeof(revision_));
@@ -4708,255 +3906,172 @@ void Machine_GPU::SharedCtor() {
 Machine_GPU::~Machine_GPU() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Machine.GPU)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Machine_GPU::SharedDtor() {
-  description_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  description_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete driver_;
 }
 
+void Machine_GPU::ArenaDtor(void* object) {
+  Machine_GPU* _this = reinterpret_cast< Machine_GPU* >(object);
+  (void)_this;
+}
+void Machine_GPU::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Machine_GPU::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Machine_GPU::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Machine_GPU& Machine_GPU::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Machine_GPU.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Machine_GPU_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Machine_GPU::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Machine.GPU)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  description_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && driver_ != NULL) {
+  description_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && driver_ != nullptr) {
     delete driver_;
   }
-  driver_ = NULL;
+  driver_ = nullptr;
   ::memset(&vendor_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&revision_) -
       reinterpret_cast<char*>(&vendor_id_)) + sizeof(revision_));
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Machine_GPU::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Machine.GPU)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Machine_GPU::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // string description = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_description()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->description().data(), static_cast<int>(this->description().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.GPU.description"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_description();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.GPU.description"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 vendor_id = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &vendor_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          vendor_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 device_id = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &device_id_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          device_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 revision = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &revision_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          revision_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int64 video_memory = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &video_memory_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          video_memory_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.Machine.GPU.Driver driver = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_driver()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_driver(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Machine.GPU)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Machine.GPU)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Machine_GPU::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Machine.GPU)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string description = 1;
-  if (this->description().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->description().data(), static_cast<int>(this->description().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.GPU.description");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->description(), output);
-  }
-
-  // int32 vendor_id = 2;
-  if (this->vendor_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->vendor_id(), output);
-  }
-
-  // int32 device_id = 3;
-  if (this->device_id() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->device_id(), output);
-  }
-
-  // int32 revision = 4;
-  if (this->revision() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->revision(), output);
-  }
-
-  // int64 video_memory = 5;
-  if (this->video_memory() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(5, this->video_memory(), output);
-  }
-
-  // .eve_launcher.pdm.Machine.GPU.Driver driver = 6;
-  if (this->has_driver()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, this->_internal_driver(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Machine.GPU)
-}
-
-::google::protobuf::uint8* Machine_GPU::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Machine_GPU::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Machine.GPU)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string description = 1;
   if (this->description().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->description().data(), static_cast<int>(this->description().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_description().data(), static_cast<int>(this->_internal_description().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.GPU.description");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->description(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_description(), target);
   }
 
   // int32 vendor_id = 2;
   if (this->vendor_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->vendor_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_vendor_id(), target);
   }
 
   // int32 device_id = 3;
   if (this->device_id() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->device_id(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_device_id(), target);
   }
 
   // int32 revision = 4;
   if (this->revision() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->revision(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_revision(), target);
   }
 
   // int64 video_memory = 5;
   if (this->video_memory() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(5, this->video_memory(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(5, this->_internal_video_memory(), target);
   }
 
   // .eve_launcher.pdm.Machine.GPU.Driver driver = 6;
   if (this->has_driver()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, this->_internal_driver(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        6, _Internal::driver(this), target, stream);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Machine.GPU)
   return target;
@@ -4966,67 +4081,70 @@ size_t Machine_GPU::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Machine.GPU)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string description = 1;
   if (this->description().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->description());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_description());
   }
 
   // .eve_launcher.pdm.Machine.GPU.Driver driver = 6;
   if (this->has_driver()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *driver_);
   }
 
   // int32 vendor_id = 2;
   if (this->vendor_id() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->vendor_id());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_vendor_id());
   }
 
   // int32 device_id = 3;
   if (this->device_id() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->device_id());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_device_id());
   }
 
   // int64 video_memory = 5;
   if (this->video_memory() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->video_memory());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_video_memory());
   }
 
   // int32 revision = 4;
   if (this->revision() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->revision());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_revision());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Machine_GPU::MergeFrom(const ::google::protobuf::Message& from) {
+void Machine_GPU::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Machine.GPU)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_GPU* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Machine_GPU>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_GPU>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Machine.GPU)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Machine.GPU)
     MergeFrom(*source);
@@ -5036,32 +4154,31 @@ void Machine_GPU::MergeFrom(const ::google::protobuf::Message& from) {
 void Machine_GPU::MergeFrom(const Machine_GPU& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Machine.GPU)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.description().size() > 0) {
-
-    description_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.description_);
+    _internal_set_description(from._internal_description());
   }
   if (from.has_driver()) {
-    mutable_driver()->::eve_launcher::pdm::Machine_GPU_Driver::MergeFrom(from.driver());
+    _internal_mutable_driver()->::eve_launcher::pdm::Machine_GPU_Driver::MergeFrom(from._internal_driver());
   }
   if (from.vendor_id() != 0) {
-    set_vendor_id(from.vendor_id());
+    _internal_set_vendor_id(from._internal_vendor_id());
   }
   if (from.device_id() != 0) {
-    set_device_id(from.device_id());
+    _internal_set_device_id(from._internal_device_id());
   }
   if (from.video_memory() != 0) {
-    set_video_memory(from.video_memory());
+    _internal_set_video_memory(from._internal_video_memory());
   }
   if (from.revision() != 0) {
-    set_revision(from.revision());
+    _internal_set_revision(from._internal_revision());
   }
 }
 
-void Machine_GPU::CopyFrom(const ::google::protobuf::Message& from) {
+void Machine_GPU::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Machine.GPU)
   if (&from == this) return;
   Clear();
@@ -5079,25 +4196,20 @@ bool Machine_GPU::IsInitialized() const {
   return true;
 }
 
-void Machine_GPU::Swap(Machine_GPU* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Machine_GPU::InternalSwap(Machine_GPU* other) {
   using std::swap;
-  description_.Swap(&other->description_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(driver_, other->driver_);
-  swap(vendor_id_, other->vendor_id_);
-  swap(device_id_, other->device_id_);
-  swap(video_memory_, other->video_memory_);
-  swap(revision_, other->revision_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  description_.Swap(&other->description_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Machine_GPU, revision_)
+      + sizeof(Machine_GPU::revision_)
+      - PROTOBUF_FIELD_OFFSET(Machine_GPU, driver_)>(
+          reinterpret_cast<char*>(&driver_),
+          reinterpret_cast<char*>(&other->driver_));
 }
 
-::google::protobuf::Metadata Machine_GPU::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Machine_GPU::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -5105,221 +4217,170 @@ void Machine_GPU::InternalSwap(Machine_GPU* other) {
 
 void Machine_NetworkAdapter::InitAsDefaultInstance() {
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Machine_NetworkAdapter::kNameFieldNumber;
-const int Machine_NetworkAdapter::kMacAddressFieldNumber;
-const int Machine_NetworkAdapter::kUuidFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class Machine_NetworkAdapter::_Internal {
+ public:
+};
 
-Machine_NetworkAdapter::Machine_NetworkAdapter()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Machine_NetworkAdapter.base);
+Machine_NetworkAdapter::Machine_NetworkAdapter(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Machine.NetworkAdapter)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Machine.NetworkAdapter)
 }
 Machine_NetworkAdapter::Machine_NetworkAdapter(const Machine_NetworkAdapter& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.name().size() > 0) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
-  mac_address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.mac_address().size() > 0) {
-    mac_address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.mac_address_);
+  mac_address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_mac_address().empty()) {
+    mac_address_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_mac_address(),
+      GetArena());
   }
-  uuid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.uuid().size() > 0) {
-    uuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+  uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_uuid().empty()) {
+    uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_uuid(),
+      GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:eve_launcher.pdm.Machine.NetworkAdapter)
 }
 
 void Machine_NetworkAdapter::SharedCtor() {
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  mac_address_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  uuid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Machine_NetworkAdapter_pdm_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  mac_address_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 Machine_NetworkAdapter::~Machine_NetworkAdapter() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Machine.NetworkAdapter)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Machine_NetworkAdapter::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  mac_address_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  uuid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  mac_address_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void Machine_NetworkAdapter::ArenaDtor(void* object) {
+  Machine_NetworkAdapter* _this = reinterpret_cast< Machine_NetworkAdapter* >(object);
+  (void)_this;
+}
+void Machine_NetworkAdapter::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Machine_NetworkAdapter::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Machine_NetworkAdapter::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Machine_NetworkAdapter& Machine_NetworkAdapter::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Machine_NetworkAdapter.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Machine_NetworkAdapter_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Machine_NetworkAdapter::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Machine.NetworkAdapter)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  mac_address_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  uuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  mac_address_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Machine_NetworkAdapter::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Machine.NetworkAdapter)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Machine_NetworkAdapter::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // string name = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.NetworkAdapter.name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.NetworkAdapter.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // bytes mac_address = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_mac_address()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_mac_address();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // bytes uuid = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_uuid()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_uuid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Machine.NetworkAdapter)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Machine.NetworkAdapter)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Machine_NetworkAdapter::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Machine.NetworkAdapter)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string name = 1;
-  if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.NetworkAdapter.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->name(), output);
-  }
-
-  // bytes mac_address = 2;
-  if (this->mac_address().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      2, this->mac_address(), output);
-  }
-
-  // bytes uuid = 3;
-  if (this->uuid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      3, this->uuid(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Machine.NetworkAdapter)
-}
-
-::google::protobuf::uint8* Machine_NetworkAdapter::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Machine_NetworkAdapter::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Machine.NetworkAdapter)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string name = 1;
   if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.NetworkAdapter.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->name(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
   }
 
   // bytes mac_address = 2;
   if (this->mac_address().size() > 0) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        2, this->mac_address(), target);
+    target = stream->WriteBytesMaybeAliased(
+        2, this->_internal_mac_address(), target);
   }
 
   // bytes uuid = 3;
   if (this->uuid().size() > 0) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        3, this->uuid(), target);
+    target = stream->WriteBytesMaybeAliased(
+        3, this->_internal_uuid(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Machine.NetworkAdapter)
   return target;
@@ -5329,46 +4390,49 @@ size_t Machine_NetworkAdapter::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Machine.NetworkAdapter)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
   }
 
   // bytes mac_address = 2;
   if (this->mac_address().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->mac_address());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_mac_address());
   }
 
   // bytes uuid = 3;
   if (this->uuid().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->uuid());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_uuid());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Machine_NetworkAdapter::MergeFrom(const ::google::protobuf::Message& from) {
+void Machine_NetworkAdapter::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Machine.NetworkAdapter)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_NetworkAdapter* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Machine_NetworkAdapter>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_NetworkAdapter>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Machine.NetworkAdapter)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Machine.NetworkAdapter)
     MergeFrom(*source);
@@ -5378,25 +4442,22 @@ void Machine_NetworkAdapter::MergeFrom(const ::google::protobuf::Message& from) 
 void Machine_NetworkAdapter::MergeFrom(const Machine_NetworkAdapter& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Machine.NetworkAdapter)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    _internal_set_name(from._internal_name());
   }
   if (from.mac_address().size() > 0) {
-
-    mac_address_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.mac_address_);
+    _internal_set_mac_address(from._internal_mac_address());
   }
   if (from.uuid().size() > 0) {
-
-    uuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+    _internal_set_uuid(from._internal_uuid());
   }
 }
 
-void Machine_NetworkAdapter::CopyFrom(const ::google::protobuf::Message& from) {
+void Machine_NetworkAdapter::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Machine.NetworkAdapter)
   if (&from == this) return;
   Clear();
@@ -5414,24 +4475,16 @@ bool Machine_NetworkAdapter::IsInitialized() const {
   return true;
 }
 
-void Machine_NetworkAdapter::Swap(Machine_NetworkAdapter* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Machine_NetworkAdapter::InternalSwap(Machine_NetworkAdapter* other) {
   using std::swap;
-  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  mac_address_.Swap(&other->mac_address_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  uuid_.Swap(&other->uuid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  mac_address_.Swap(&other->mac_address_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  uuid_.Swap(&other->uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
-::google::protobuf::Metadata Machine_NetworkAdapter::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Machine_NetworkAdapter::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -5443,54 +4496,59 @@ void Machine::InitAsDefaultInstance() {
   ::eve_launcher::pdm::_Machine_default_instance_._instance.get_mutable()->vm_ = const_cast< ::eve_launcher::pdm::Machine_VM*>(
       ::eve_launcher::pdm::Machine_VM::internal_default_instance());
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Machine::kModelFieldNumber;
-const int Machine::kNameFieldNumber;
-const int Machine::kUuidFieldNumber;
-const int Machine::kTotalMemoryFieldNumber;
-const int Machine::kMonitorCountFieldNumber;
-const int Machine::kCpuFieldNumber;
-const int Machine::kVmFieldNumber;
-const int Machine::kMonitorsFieldNumber;
-const int Machine::kGpusFieldNumber;
-const int Machine::kNetworkAdaptersFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class Machine::_Internal {
+ public:
+  static const ::eve_launcher::pdm::Machine_CPU& cpu(const Machine* msg);
+  static const ::eve_launcher::pdm::Machine_VM& vm(const Machine* msg);
+};
 
-Machine::Machine()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Machine.base);
+const ::eve_launcher::pdm::Machine_CPU&
+Machine::_Internal::cpu(const Machine* msg) {
+  return *msg->cpu_;
+}
+const ::eve_launcher::pdm::Machine_VM&
+Machine::_Internal::vm(const Machine* msg) {
+  return *msg->vm_;
+}
+Machine::Machine(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  monitors_(arena),
+  gpus_(arena),
+  network_adapters_(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Machine)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Machine)
 }
 Machine::Machine(const Machine& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       monitors_(from.monitors_),
       gpus_(from.gpus_),
       network_adapters_(from.network_adapters_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.model().size() > 0) {
-    model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.model_);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  model_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_model().empty()) {
+    model_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_model(),
+      GetArena());
   }
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.name().size() > 0) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
-  uuid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.uuid().size() > 0) {
-    uuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+  uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_uuid().empty()) {
+    uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_uuid(),
+      GetArena());
   }
-  if (from.has_cpu()) {
+  if (from._internal_has_cpu()) {
     cpu_ = new ::eve_launcher::pdm::Machine_CPU(*from.cpu_);
   } else {
-    cpu_ = NULL;
+    cpu_ = nullptr;
   }
-  if (from.has_vm()) {
+  if (from._internal_has_vm()) {
     vm_ = new ::eve_launcher::pdm::Machine_VM(*from.vm_);
   } else {
-    vm_ = NULL;
+    vm_ = nullptr;
   }
   ::memcpy(&total_memory_, &from.total_memory_,
     static_cast<size_t>(reinterpret_cast<char*>(&monitor_count_) -
@@ -5499,9 +4557,10 @@ Machine::Machine(const Machine& from)
 }
 
 void Machine::SharedCtor() {
-  model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  uuid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Machine_pdm_2eproto.base);
+  model_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&cpu_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&monitor_count_) -
       reinterpret_cast<char*>(&cpu_)) + sizeof(monitor_count_));
@@ -5510,393 +4569,266 @@ void Machine::SharedCtor() {
 Machine::~Machine() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Machine)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Machine::SharedDtor() {
-  model_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  uuid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  model_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete cpu_;
   if (this != internal_default_instance()) delete vm_;
 }
 
+void Machine::ArenaDtor(void* object) {
+  Machine* _this = reinterpret_cast< Machine* >(object);
+  (void)_this;
+}
+void Machine::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Machine::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Machine::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Machine& Machine::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Machine.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Machine_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Machine::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Machine)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   monitors_.Clear();
   gpus_.Clear();
   network_adapters_.Clear();
-  model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  uuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && cpu_ != NULL) {
+  model_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && cpu_ != nullptr) {
     delete cpu_;
   }
-  cpu_ = NULL;
-  if (GetArenaNoVirtual() == NULL && vm_ != NULL) {
+  cpu_ = nullptr;
+  if (GetArena() == nullptr && vm_ != nullptr) {
     delete vm_;
   }
-  vm_ = NULL;
+  vm_ = nullptr;
   ::memset(&total_memory_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&monitor_count_) -
       reinterpret_cast<char*>(&total_memory_)) + sizeof(monitor_count_));
-  _internal_metadata_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Machine::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Machine)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Machine::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // string model = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_model()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->model().data(), static_cast<int>(this->model().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.model"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_model();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.model"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string name = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "eve_launcher.pdm.Machine.name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "eve_launcher.pdm.Machine.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // bytes uuid = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_uuid()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_uuid();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int64 total_memory = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &total_memory_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          total_memory_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // int32 monitor_count = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &monitor_count_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          monitor_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.Machine.CPU cpu = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_cpu()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_cpu(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.Machine.VM vm = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_vm()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_vm(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // repeated .eve_launcher.pdm.Machine.Monitor monitors = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_monitors()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_monitors(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<66>(ptr));
+        } else goto handle_unusual;
+        continue;
       // repeated .eve_launcher.pdm.Machine.GPU gpus = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_gpus()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_gpus(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<74>(ptr));
+        } else goto handle_unusual;
+        continue;
       // repeated .eve_launcher.pdm.Machine.NetworkAdapter network_adapters = 10;
-      case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(82u /* 82 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_network_adapters()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_network_adapters(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<82>(ptr));
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Machine)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Machine)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Machine::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Machine)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string model = 1;
-  if (this->model().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->model().data(), static_cast<int>(this->model().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.model");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->model(), output);
-  }
-
-  // string name = 2;
-  if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "eve_launcher.pdm.Machine.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->name(), output);
-  }
-
-  // bytes uuid = 3;
-  if (this->uuid().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      3, this->uuid(), output);
-  }
-
-  // int64 total_memory = 4;
-  if (this->total_memory() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(4, this->total_memory(), output);
-  }
-
-  // int32 monitor_count = 5;
-  if (this->monitor_count() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(5, this->monitor_count(), output);
-  }
-
-  // .eve_launcher.pdm.Machine.CPU cpu = 6;
-  if (this->has_cpu()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, this->_internal_cpu(), output);
-  }
-
-  // .eve_launcher.pdm.Machine.VM vm = 7;
-  if (this->has_vm()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, this->_internal_vm(), output);
-  }
-
-  // repeated .eve_launcher.pdm.Machine.Monitor monitors = 8;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->monitors_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8,
-      this->monitors(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .eve_launcher.pdm.Machine.GPU gpus = 9;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->gpus_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9,
-      this->gpus(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .eve_launcher.pdm.Machine.NetworkAdapter network_adapters = 10;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->network_adapters_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10,
-      this->network_adapters(static_cast<int>(i)),
-      output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Machine)
-}
-
-::google::protobuf::uint8* Machine::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Machine::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Machine)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string model = 1;
   if (this->model().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->model().data(), static_cast<int>(this->model().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_model().data(), static_cast<int>(this->_internal_model().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.model");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->model(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_model(), target);
   }
 
   // string name = 2;
   if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "eve_launcher.pdm.Machine.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->name(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_name(), target);
   }
 
   // bytes uuid = 3;
   if (this->uuid().size() > 0) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        3, this->uuid(), target);
+    target = stream->WriteBytesMaybeAliased(
+        3, this->_internal_uuid(), target);
   }
 
   // int64 total_memory = 4;
   if (this->total_memory() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(4, this->total_memory(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(4, this->_internal_total_memory(), target);
   }
 
   // int32 monitor_count = 5;
   if (this->monitor_count() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(5, this->monitor_count(), target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_monitor_count(), target);
   }
 
   // .eve_launcher.pdm.Machine.CPU cpu = 6;
   if (this->has_cpu()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, this->_internal_cpu(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        6, _Internal::cpu(this), target, stream);
   }
 
   // .eve_launcher.pdm.Machine.VM vm = 7;
   if (this->has_vm()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, this->_internal_vm(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::vm(this), target, stream);
   }
 
   // repeated .eve_launcher.pdm.Machine.Monitor monitors = 8;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->monitors_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, this->monitors(static_cast<int>(i)), deterministic, target);
+      n = static_cast<unsigned int>(this->_internal_monitors_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(8, this->_internal_monitors(i), target, stream);
   }
 
   // repeated .eve_launcher.pdm.Machine.GPU gpus = 9;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->gpus_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        9, this->gpus(static_cast<int>(i)), deterministic, target);
+      n = static_cast<unsigned int>(this->_internal_gpus_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(9, this->_internal_gpus(i), target, stream);
   }
 
   // repeated .eve_launcher.pdm.Machine.NetworkAdapter network_adapters = 10;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->network_adapters_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        10, this->network_adapters(static_cast<int>(i)), deterministic, target);
+      n = static_cast<unsigned int>(this->_internal_network_adapters_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(10, this->_internal_network_adapters(i), target, stream);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Machine)
   return target;
@@ -5906,107 +4838,98 @@ size_t Machine::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Machine)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .eve_launcher.pdm.Machine.Monitor monitors = 8;
-  {
-    unsigned int count = static_cast<unsigned int>(this->monitors_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->monitors(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_monitors_size();
+  for (const auto& msg : this->monitors_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .eve_launcher.pdm.Machine.GPU gpus = 9;
-  {
-    unsigned int count = static_cast<unsigned int>(this->gpus_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->gpus(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_gpus_size();
+  for (const auto& msg : this->gpus_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .eve_launcher.pdm.Machine.NetworkAdapter network_adapters = 10;
-  {
-    unsigned int count = static_cast<unsigned int>(this->network_adapters_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->network_adapters(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_network_adapters_size();
+  for (const auto& msg : this->network_adapters_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string model = 1;
   if (this->model().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->model());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_model());
   }
 
   // string name = 2;
   if (this->name().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
   }
 
   // bytes uuid = 3;
   if (this->uuid().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->uuid());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_uuid());
   }
 
   // .eve_launcher.pdm.Machine.CPU cpu = 6;
   if (this->has_cpu()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *cpu_);
   }
 
   // .eve_launcher.pdm.Machine.VM vm = 7;
   if (this->has_vm()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *vm_);
   }
 
   // int64 total_memory = 4;
   if (this->total_memory() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->total_memory());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_total_memory());
   }
 
   // int32 monitor_count = 5;
   if (this->monitor_count() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->monitor_count());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_monitor_count());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Machine::MergeFrom(const ::google::protobuf::Message& from) {
+void Machine::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Machine)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Machine>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Machine)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Machine)
     MergeFrom(*source);
@@ -6016,40 +4939,37 @@ void Machine::MergeFrom(const ::google::protobuf::Message& from) {
 void Machine::MergeFrom(const Machine& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Machine)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   monitors_.MergeFrom(from.monitors_);
   gpus_.MergeFrom(from.gpus_);
   network_adapters_.MergeFrom(from.network_adapters_);
   if (from.model().size() > 0) {
-
-    model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.model_);
+    _internal_set_model(from._internal_model());
   }
   if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    _internal_set_name(from._internal_name());
   }
   if (from.uuid().size() > 0) {
-
-    uuid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.uuid_);
+    _internal_set_uuid(from._internal_uuid());
   }
   if (from.has_cpu()) {
-    mutable_cpu()->::eve_launcher::pdm::Machine_CPU::MergeFrom(from.cpu());
+    _internal_mutable_cpu()->::eve_launcher::pdm::Machine_CPU::MergeFrom(from._internal_cpu());
   }
   if (from.has_vm()) {
-    mutable_vm()->::eve_launcher::pdm::Machine_VM::MergeFrom(from.vm());
+    _internal_mutable_vm()->::eve_launcher::pdm::Machine_VM::MergeFrom(from._internal_vm());
   }
   if (from.total_memory() != 0) {
-    set_total_memory(from.total_memory());
+    _internal_set_total_memory(from._internal_total_memory());
   }
   if (from.monitor_count() != 0) {
-    set_monitor_count(from.monitor_count());
+    _internal_set_monitor_count(from._internal_monitor_count());
   }
 }
 
-void Machine::CopyFrom(const ::google::protobuf::Message& from) {
+void Machine::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Machine)
   if (&from == this) return;
   Clear();
@@ -6067,31 +4987,25 @@ bool Machine::IsInitialized() const {
   return true;
 }
 
-void Machine::Swap(Machine* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Machine::InternalSwap(Machine* other) {
   using std::swap;
-  CastToBase(&monitors_)->InternalSwap(CastToBase(&other->monitors_));
-  CastToBase(&gpus_)->InternalSwap(CastToBase(&other->gpus_));
-  CastToBase(&network_adapters_)->InternalSwap(CastToBase(&other->network_adapters_));
-  model_.Swap(&other->model_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  uuid_.Swap(&other->uuid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(cpu_, other->cpu_);
-  swap(vm_, other->vm_);
-  swap(total_memory_, other->total_memory_);
-  swap(monitor_count_, other->monitor_count_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  monitors_.InternalSwap(&other->monitors_);
+  gpus_.InternalSwap(&other->gpus_);
+  network_adapters_.InternalSwap(&other->network_adapters_);
+  model_.Swap(&other->model_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  uuid_.Swap(&other->uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Machine, monitor_count_)
+      + sizeof(Machine::monitor_count_)
+      - PROTOBUF_FIELD_OFFSET(Machine, cpu_)>(
+          reinterpret_cast<char*>(&cpu_),
+          reinterpret_cast<char*>(&other->cpu_));
 }
 
-::google::protobuf::Metadata Machine::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Machine::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -6107,48 +5021,64 @@ void Attributes::InitAsDefaultInstance() {
   ::eve_launcher::pdm::_Attributes_default_instance_._instance.get_mutable()->machine_ = const_cast< ::eve_launcher::pdm::Machine*>(
       ::eve_launcher::pdm::Machine::internal_default_instance());
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Attributes::kApplicationFieldNumber;
-const int Attributes::kProcessFieldNumber;
-const int Attributes::kOsFieldNumber;
-const int Attributes::kMachineFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class Attributes::_Internal {
+ public:
+  static const ::eve_launcher::pdm::Application& application(const Attributes* msg);
+  static const ::eve_launcher::pdm::Process& process(const Attributes* msg);
+  static const ::eve_launcher::pdm::OS& os(const Attributes* msg);
+  static const ::eve_launcher::pdm::Machine& machine(const Attributes* msg);
+};
 
-Attributes::Attributes()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_pdm_2eproto::scc_info_Attributes.base);
+const ::eve_launcher::pdm::Application&
+Attributes::_Internal::application(const Attributes* msg) {
+  return *msg->application_;
+}
+const ::eve_launcher::pdm::Process&
+Attributes::_Internal::process(const Attributes* msg) {
+  return *msg->process_;
+}
+const ::eve_launcher::pdm::OS&
+Attributes::_Internal::os(const Attributes* msg) {
+  return *msg->os_;
+}
+const ::eve_launcher::pdm::Machine&
+Attributes::_Internal::machine(const Attributes* msg) {
+  return *msg->machine_;
+}
+Attributes::Attributes(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:eve_launcher.pdm.Attributes)
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:eve_launcher.pdm.Attributes)
 }
 Attributes::Attributes(const Attributes& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_application()) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_application()) {
     application_ = new ::eve_launcher::pdm::Application(*from.application_);
   } else {
-    application_ = NULL;
+    application_ = nullptr;
   }
-  if (from.has_process()) {
+  if (from._internal_has_process()) {
     process_ = new ::eve_launcher::pdm::Process(*from.process_);
   } else {
-    process_ = NULL;
+    process_ = nullptr;
   }
-  if (from.has_os()) {
+  if (from._internal_has_os()) {
     os_ = new ::eve_launcher::pdm::OS(*from.os_);
   } else {
-    os_ = NULL;
+    os_ = nullptr;
   }
-  if (from.has_machine()) {
+  if (from._internal_has_machine()) {
     machine_ = new ::eve_launcher::pdm::Machine(*from.machine_);
   } else {
-    machine_ = NULL;
+    machine_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:eve_launcher.pdm.Attributes)
 }
 
 void Attributes::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Attributes_pdm_2eproto.base);
   ::memset(&application_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&machine_) -
       reinterpret_cast<char*>(&application_)) + sizeof(machine_));
@@ -6157,207 +5087,156 @@ void Attributes::SharedCtor() {
 Attributes::~Attributes() {
   // @@protoc_insertion_point(destructor:eve_launcher.pdm.Attributes)
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 void Attributes::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete application_;
   if (this != internal_default_instance()) delete process_;
   if (this != internal_default_instance()) delete os_;
   if (this != internal_default_instance()) delete machine_;
 }
 
+void Attributes::ArenaDtor(void* object) {
+  Attributes* _this = reinterpret_cast< Attributes* >(object);
+  (void)_this;
+}
+void Attributes::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void Attributes::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Attributes::descriptor() {
-  ::protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Attributes& Attributes::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_pdm_2eproto::scc_info_Attributes.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Attributes_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void Attributes::Clear() {
 // @@protoc_insertion_point(message_clear_start:eve_launcher.pdm.Attributes)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && application_ != NULL) {
+  if (GetArena() == nullptr && application_ != nullptr) {
     delete application_;
   }
-  application_ = NULL;
-  if (GetArenaNoVirtual() == NULL && process_ != NULL) {
+  application_ = nullptr;
+  if (GetArena() == nullptr && process_ != nullptr) {
     delete process_;
   }
-  process_ = NULL;
-  if (GetArenaNoVirtual() == NULL && os_ != NULL) {
+  process_ = nullptr;
+  if (GetArena() == nullptr && os_ != nullptr) {
     delete os_;
   }
-  os_ = NULL;
-  if (GetArenaNoVirtual() == NULL && machine_ != NULL) {
+  os_ = nullptr;
+  if (GetArena() == nullptr && machine_ != nullptr) {
     delete machine_;
   }
-  machine_ = NULL;
-  _internal_metadata_.Clear();
+  machine_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Attributes::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:eve_launcher.pdm.Attributes)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Attributes::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
       // .eve_launcher.pdm.Application application = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_application()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_application(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.Process process = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_process()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_process(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.OS os = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_os()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_os(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // .eve_launcher.pdm.Machine machine = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_machine()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_machine(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
-        if (tag == 0) {
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
-    }
-  }
+    }  // switch
+  }  // while
 success:
-  // @@protoc_insertion_point(parse_success:eve_launcher.pdm.Attributes)
-  return true;
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:eve_launcher.pdm.Attributes)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 
-void Attributes::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:eve_launcher.pdm.Attributes)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .eve_launcher.pdm.Application application = 1;
-  if (this->has_application()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_application(), output);
-  }
-
-  // .eve_launcher.pdm.Process process = 2;
-  if (this->has_process()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_process(), output);
-  }
-
-  // .eve_launcher.pdm.OS os = 3;
-  if (this->has_os()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->_internal_os(), output);
-  }
-
-  // .eve_launcher.pdm.Machine machine = 4;
-  if (this->has_machine()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, this->_internal_machine(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:eve_launcher.pdm.Attributes)
-}
-
-::google::protobuf::uint8* Attributes::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+::PROTOBUF_NAMESPACE_ID::uint8* Attributes::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:eve_launcher.pdm.Attributes)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .eve_launcher.pdm.Application application = 1;
   if (this->has_application()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_application(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::application(this), target, stream);
   }
 
   // .eve_launcher.pdm.Process process = 2;
   if (this->has_process()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->_internal_process(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::process(this), target, stream);
   }
 
   // .eve_launcher.pdm.OS os = 3;
   if (this->has_os()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->_internal_os(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::os(this), target, stream);
   }
 
   // .eve_launcher.pdm.Machine machine = 4;
   if (this->has_machine()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, this->_internal_machine(), deterministic, target);
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::machine(this), target, stream);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:eve_launcher.pdm.Attributes)
   return target;
@@ -6367,53 +5246,56 @@ size_t Attributes::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:eve_launcher.pdm.Attributes)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // .eve_launcher.pdm.Application application = 1;
   if (this->has_application()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *application_);
   }
 
   // .eve_launcher.pdm.Process process = 2;
   if (this->has_process()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *process_);
   }
 
   // .eve_launcher.pdm.OS os = 3;
   if (this->has_os()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *os_);
   }
 
   // .eve_launcher.pdm.Machine machine = 4;
   if (this->has_machine()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *machine_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void Attributes::MergeFrom(const ::google::protobuf::Message& from) {
+void Attributes::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:eve_launcher.pdm.Attributes)
   GOOGLE_DCHECK_NE(&from, this);
   const Attributes* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Attributes>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Attributes>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_launcher.pdm.Attributes)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_launcher.pdm.Attributes)
     MergeFrom(*source);
@@ -6423,25 +5305,25 @@ void Attributes::MergeFrom(const ::google::protobuf::Message& from) {
 void Attributes::MergeFrom(const Attributes& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:eve_launcher.pdm.Attributes)
   GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_application()) {
-    mutable_application()->::eve_launcher::pdm::Application::MergeFrom(from.application());
+    _internal_mutable_application()->::eve_launcher::pdm::Application::MergeFrom(from._internal_application());
   }
   if (from.has_process()) {
-    mutable_process()->::eve_launcher::pdm::Process::MergeFrom(from.process());
+    _internal_mutable_process()->::eve_launcher::pdm::Process::MergeFrom(from._internal_process());
   }
   if (from.has_os()) {
-    mutable_os()->::eve_launcher::pdm::OS::MergeFrom(from.os());
+    _internal_mutable_os()->::eve_launcher::pdm::OS::MergeFrom(from._internal_os());
   }
   if (from.has_machine()) {
-    mutable_machine()->::eve_launcher::pdm::Machine::MergeFrom(from.machine());
+    _internal_mutable_machine()->::eve_launcher::pdm::Machine::MergeFrom(from._internal_machine());
   }
 }
 
-void Attributes::CopyFrom(const ::google::protobuf::Message& from) {
+void Attributes::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:eve_launcher.pdm.Attributes)
   if (&from == this) return;
   Clear();
@@ -6459,73 +5341,69 @@ bool Attributes::IsInitialized() const {
   return true;
 }
 
-void Attributes::Swap(Attributes* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Attributes::InternalSwap(Attributes* other) {
   using std::swap;
-  swap(application_, other->application_);
-  swap(process_, other->process_);
-  swap(os_, other->os_);
-  swap(machine_, other->machine_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Attributes, machine_)
+      + sizeof(Attributes::machine_)
+      - PROTOBUF_FIELD_OFFSET(Attributes, application_)>(
+          reinterpret_cast<char*>(&application_),
+          reinterpret_cast<char*>(&other->application_));
 }
 
-::google::protobuf::Metadata Attributes::GetMetadata() const {
-  protobuf_pdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_pdm_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Attributes::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace pdm
 }  // namespace eve_launcher
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Application* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Application >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Application >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Application* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Application >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Application >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Process* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Process >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Process >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Process* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Process >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Process >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties* Arena::CreateMaybeMessage< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties* Arena::CreateMaybeMessage< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::OS_GraphicsAPIs* Arena::CreateMaybeMessage< ::eve_launcher::pdm::OS_GraphicsAPIs >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::OS_GraphicsAPIs >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::OS_GraphicsAPIs* Arena::CreateMaybeMessage< ::eve_launcher::pdm::OS_GraphicsAPIs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::OS_GraphicsAPIs >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::OS_Wine* Arena::CreateMaybeMessage< ::eve_launcher::pdm::OS_Wine >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::OS_Wine >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::OS_Wine* Arena::CreateMaybeMessage< ::eve_launcher::pdm::OS_Wine >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::OS_Wine >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::OS* Arena::CreateMaybeMessage< ::eve_launcher::pdm::OS >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::OS >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::OS* Arena::CreateMaybeMessage< ::eve_launcher::pdm::OS >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::OS >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Machine_CPU* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_CPU >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Machine_CPU >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Machine_CPU* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_CPU >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Machine_CPU >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Machine_VM* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_VM >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Machine_VM >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Machine_VM* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_VM >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Machine_VM >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Machine_Monitor* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_Monitor >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Machine_Monitor >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Machine_Monitor* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_Monitor >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Machine_Monitor >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Machine_GPU_Driver* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_GPU_Driver >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Machine_GPU_Driver >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Machine_GPU_Driver* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_GPU_Driver >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Machine_GPU_Driver >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Machine_GPU* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_GPU >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Machine_GPU >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Machine_GPU* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_GPU >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Machine_GPU >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Machine_NetworkAdapter* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_NetworkAdapter >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Machine_NetworkAdapter >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Machine_NetworkAdapter* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine_NetworkAdapter >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Machine_NetworkAdapter >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Machine* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Machine >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Machine* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Machine >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Machine >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_launcher::pdm::Attributes* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Attributes >(Arena* arena) {
-  return Arena::CreateInternal< ::eve_launcher::pdm::Attributes >(arena);
+template<> PROTOBUF_NOINLINE ::eve_launcher::pdm::Attributes* Arena::CreateMaybeMessage< ::eve_launcher::pdm::Attributes >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::eve_launcher::pdm::Attributes >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>
