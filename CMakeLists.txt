@@ -6,7 +6,7 @@ include(FetchContent)
 FetchContent_Populate(
   protobuf
   SOURCE_DIR protobuf
-  GIT_REPOSITORY "https://github.com/protocolbuffers/protobuf.git"
+  URL https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protobuf-cpp-3.13.0.tar.gz
 )
 add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/protobuf/cmake)
 find_package(protobuf REQUIRED)
