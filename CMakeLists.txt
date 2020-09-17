@@ -13,7 +13,7 @@ find_package(protobuf REQUIRED)
 
 FetchContent_Declare(
   pdm
-  GIT_REPOSITORY https://github.com/ccpgames/platform-pdm.git
+  GIT_REPOSITORY git@github.com:ccpgames/platform-pdm.git
   GIT_TAG        395ecaf6b7abddc7391f0282c1c1a50b777ae9c6
 )
 FetchContent_MakeAvailable(pdm)
