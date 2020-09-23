@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 project(platform_pdm_proto_wrapper)
 
+add_subdirectory(platform-pdm)
+
 include(FetchContent)
 
 FetchContent_Populate(
@@ -10,13 +12,6 @@ FetchContent_Populate(
 )
 add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/protobuf/cmake)
 find_package(protobuf REQUIRED)
-
-FetchContent_Declare(
-  pdm
-  GIT_REPOSITORY git@github.com:ccpgames/platform-pdm.git
-  GIT_TAG        395ecaf6b7abddc7391f0282c1c1a50b777ae9c6
-)
-FetchContent_MakeAvailable(pdm)
 
 add_library(platform_pdm_proto_wrapper SHARED src/protobuf.cpp include/pdm/protobuf.h generated/pdm.pb.cc)
 target_link_libraries(platform_pdm_proto_wrapper PUBLIC pdm protobuf::libprotobuf)
