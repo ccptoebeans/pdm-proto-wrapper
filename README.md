@@ -14,7 +14,9 @@ cmake --build .build
 
 #### with cmake
 
-1. fill in the instructions ;-)
+1. Place the source code somewhere in your project, f.e. a `vendor/pdm-protobuf` folder
+2. Use `add_subdirectory(vendor/pdm-protobuf)` to add it to your project
+3. Link this with your project: `target_link_libraries(mytarget PUBLIC platform_pdm_proto_wrapper)`
 
 #### without cmake
 
@@ -22,6 +24,10 @@ cmake --build .build
 2. somewhere in your code do this:
 ```c++
 #include <pdm/protobuf.h>
-// call the method we yet have to write that returns you the protobuf object
+
+void foo() {
+    auto bar = pdm::GetData();
+    // bar is now an instance of the protobuf encoded details.
+}
 ```
 3. Add `pdm_protobuf.lib` to your linker libraries
