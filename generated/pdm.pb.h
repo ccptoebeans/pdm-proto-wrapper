@@ -274,11 +274,12 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kVulkanHighestSupportedVersionFieldNumber = 2,
-    kD3DHighestSupportedVersionFieldNumber = 3,
+    kVulkanHighestSupportedVersionFieldNumber = 3,
+    kD3DHighestSupportedVersionFieldNumber = 4,
     kMetalSupportedFieldNumber = 1,
+    kVulkanSupportedFieldNumber = 2,
   };
-  // string vulkan_highest_supported_version = 2;
+  // string vulkan_highest_supported_version = 3;
   void clear_vulkan_highest_supported_version();
   const std::string& vulkan_highest_supported_version() const;
   void set_vulkan_highest_supported_version(const std::string& value);
@@ -294,7 +295,7 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
   std::string* _internal_mutable_vulkan_highest_supported_version();
   public:
 
-  // string d3d_highest_supported_version = 3;
+  // string d3d_highest_supported_version = 4;
   void clear_d3d_highest_supported_version();
   const std::string& d3d_highest_supported_version() const;
   void set_d3d_highest_supported_version(const std::string& value);
@@ -319,6 +320,15 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
   void _internal_set_metal_supported(bool value);
   public:
 
+  // bool vulkan_supported = 2;
+  void clear_vulkan_supported();
+  bool vulkan_supported() const;
+  void set_vulkan_supported(bool value);
+  private:
+  bool _internal_vulkan_supported() const;
+  void _internal_set_vulkan_supported(bool value);
+  public:
+
   // @@protoc_insertion_point(class_scope:platform_detection_module.OS.GraphicsAPIs)
  private:
   class _Internal;
@@ -329,6 +339,7 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vulkan_highest_supported_version_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr d3d_highest_supported_version_;
   bool metal_supported_;
+  bool vulkan_supported_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_pdm_2eproto;
 };
@@ -2573,7 +2584,27 @@ inline void OS_GraphicsAPIs::set_metal_supported(bool value) {
   // @@protoc_insertion_point(field_set:platform_detection_module.OS.GraphicsAPIs.metal_supported)
 }
 
-// string vulkan_highest_supported_version = 2;
+// bool vulkan_supported = 2;
+inline void OS_GraphicsAPIs::clear_vulkan_supported() {
+  vulkan_supported_ = false;
+}
+inline bool OS_GraphicsAPIs::_internal_vulkan_supported() const {
+  return vulkan_supported_;
+}
+inline bool OS_GraphicsAPIs::vulkan_supported() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.GraphicsAPIs.vulkan_supported)
+  return _internal_vulkan_supported();
+}
+inline void OS_GraphicsAPIs::_internal_set_vulkan_supported(bool value) {
+  
+  vulkan_supported_ = value;
+}
+inline void OS_GraphicsAPIs::set_vulkan_supported(bool value) {
+  _internal_set_vulkan_supported(value);
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.GraphicsAPIs.vulkan_supported)
+}
+
+// string vulkan_highest_supported_version = 3;
 inline void OS_GraphicsAPIs::clear_vulkan_highest_supported_version() {
   vulkan_highest_supported_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -2635,7 +2666,7 @@ inline void OS_GraphicsAPIs::set_allocated_vulkan_highest_supported_version(std:
   // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
 
-// string d3d_highest_supported_version = 3;
+// string d3d_highest_supported_version = 4;
 inline void OS_GraphicsAPIs::clear_d3d_highest_supported_version() {
   d3d_highest_supported_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
