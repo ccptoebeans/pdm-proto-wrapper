@@ -15,6 +15,7 @@ find_package(protobuf REQUIRED)
 
 add_library(platform_pdm_proto_wrapper SHARED src/protobuf.cpp include/pdm/protobuf.h generated/pdm.pb.cc)
 target_link_libraries(platform_pdm_proto_wrapper PUBLIC pdm protobuf::libprotobuf)
+target_include_directories(platform_pdm_proto_wrapper PUBLIC generated)
 
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_STANDARD 17)
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_STANDARD_REQUIRED ON)

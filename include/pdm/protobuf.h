@@ -1,7 +1,6 @@
 #pragma once
 
-#include "../pdm/protobuf.h"
-#include "../../generated/pdm.pb.h"
+#include "pdm.pb.h"
 
 #if _WIN32
 #define DllExport __declspec( dllexport )
