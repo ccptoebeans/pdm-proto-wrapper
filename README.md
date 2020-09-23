@@ -2,9 +2,16 @@ platform-pdm-proto-wrapper
 ===
 > A C++ library to wrap platform-pdm output in protobuf
 
+### Acquiring
+
+platform-pdm-proto-wrapper depends on the platform-pdm git submodule. So you should clone the repository with the following command:
+```
+git clone git@github.com:ccpgames/platform-pdm-proto-wrapper.git --recurse-submodules
+```
+
 ### Building
 
-Assuming that you have the google protobuf SDK in your environment it is as trivial as this:
+CMake and git should take care of downloading dependencies. So building is as trivial as this:
 ```
 cmake -S . -B .build
 cmake --build .build
