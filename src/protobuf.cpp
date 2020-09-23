@@ -48,7 +48,7 @@ std::string VulkanSupportToProto(const PDM::VulkanProperties& raw)
 
 namespace PDMProtobuf
 {
-	pdmproto::PlatformInformation GetData()
+	DllExport pdmproto::PlatformInformation GetData()
 	{
 		pdmproto::PlatformInformation data;
 
