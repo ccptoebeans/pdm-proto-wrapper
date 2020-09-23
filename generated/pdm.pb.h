@@ -49,21 +49,14 @@ struct TableStruct_pdm_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[14]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[11]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_pdm_2eproto;
-namespace eve_launcher {
-namespace pdm {
-class Application;
-class ApplicationDefaultTypeInternal;
-extern ApplicationDefaultTypeInternal _Application_default_instance_;
-class Attributes;
-class AttributesDefaultTypeInternal;
-extern AttributesDefaultTypeInternal _Attributes_default_instance_;
+namespace platform_detection_module {
 class Machine;
 class MachineDefaultTypeInternal;
 extern MachineDefaultTypeInternal _Machine_default_instance_;
@@ -91,62 +84,28 @@ extern OSDefaultTypeInternal _OS_default_instance_;
 class OS_GraphicsAPIs;
 class OS_GraphicsAPIsDefaultTypeInternal;
 extern OS_GraphicsAPIsDefaultTypeInternal _OS_GraphicsAPIs_default_instance_;
-class OS_GraphicsAPIs_VulkanProperties;
-class OS_GraphicsAPIs_VulkanPropertiesDefaultTypeInternal;
-extern OS_GraphicsAPIs_VulkanPropertiesDefaultTypeInternal _OS_GraphicsAPIs_VulkanProperties_default_instance_;
 class OS_Wine;
 class OS_WineDefaultTypeInternal;
 extern OS_WineDefaultTypeInternal _OS_Wine_default_instance_;
-class Process;
-class ProcessDefaultTypeInternal;
-extern ProcessDefaultTypeInternal _Process_default_instance_;
-}  // namespace pdm
-}  // namespace eve_launcher
+class PlatformInformation;
+class PlatformInformationDefaultTypeInternal;
+extern PlatformInformationDefaultTypeInternal _PlatformInformation_default_instance_;
+}  // namespace platform_detection_module
 PROTOBUF_NAMESPACE_OPEN
-template<> ::eve_launcher::pdm::Application* Arena::CreateMaybeMessage<::eve_launcher::pdm::Application>(Arena*);
-template<> ::eve_launcher::pdm::Attributes* Arena::CreateMaybeMessage<::eve_launcher::pdm::Attributes>(Arena*);
-template<> ::eve_launcher::pdm::Machine* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine>(Arena*);
-template<> ::eve_launcher::pdm::Machine_CPU* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_CPU>(Arena*);
-template<> ::eve_launcher::pdm::Machine_GPU* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_GPU>(Arena*);
-template<> ::eve_launcher::pdm::Machine_GPU_Driver* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_GPU_Driver>(Arena*);
-template<> ::eve_launcher::pdm::Machine_Monitor* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_Monitor>(Arena*);
-template<> ::eve_launcher::pdm::Machine_NetworkAdapter* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_NetworkAdapter>(Arena*);
-template<> ::eve_launcher::pdm::Machine_VM* Arena::CreateMaybeMessage<::eve_launcher::pdm::Machine_VM>(Arena*);
-template<> ::eve_launcher::pdm::OS* Arena::CreateMaybeMessage<::eve_launcher::pdm::OS>(Arena*);
-template<> ::eve_launcher::pdm::OS_GraphicsAPIs* Arena::CreateMaybeMessage<::eve_launcher::pdm::OS_GraphicsAPIs>(Arena*);
-template<> ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties* Arena::CreateMaybeMessage<::eve_launcher::pdm::OS_GraphicsAPIs_VulkanProperties>(Arena*);
-template<> ::eve_launcher::pdm::OS_Wine* Arena::CreateMaybeMessage<::eve_launcher::pdm::OS_Wine>(Arena*);
-template<> ::eve_launcher::pdm::Process* Arena::CreateMaybeMessage<::eve_launcher::pdm::Process>(Arena*);
+template<> ::platform_detection_module::Machine* Arena::CreateMaybeMessage<::platform_detection_module::Machine>(Arena*);
+template<> ::platform_detection_module::Machine_CPU* Arena::CreateMaybeMessage<::platform_detection_module::Machine_CPU>(Arena*);
+template<> ::platform_detection_module::Machine_GPU* Arena::CreateMaybeMessage<::platform_detection_module::Machine_GPU>(Arena*);
+template<> ::platform_detection_module::Machine_GPU_Driver* Arena::CreateMaybeMessage<::platform_detection_module::Machine_GPU_Driver>(Arena*);
+template<> ::platform_detection_module::Machine_Monitor* Arena::CreateMaybeMessage<::platform_detection_module::Machine_Monitor>(Arena*);
+template<> ::platform_detection_module::Machine_NetworkAdapter* Arena::CreateMaybeMessage<::platform_detection_module::Machine_NetworkAdapter>(Arena*);
+template<> ::platform_detection_module::Machine_VM* Arena::CreateMaybeMessage<::platform_detection_module::Machine_VM>(Arena*);
+template<> ::platform_detection_module::OS* Arena::CreateMaybeMessage<::platform_detection_module::OS>(Arena*);
+template<> ::platform_detection_module::OS_GraphicsAPIs* Arena::CreateMaybeMessage<::platform_detection_module::OS_GraphicsAPIs>(Arena*);
+template<> ::platform_detection_module::OS_Wine* Arena::CreateMaybeMessage<::platform_detection_module::OS_Wine>(Arena*);
+template<> ::platform_detection_module::PlatformInformation* Arena::CreateMaybeMessage<::platform_detection_module::PlatformInformation>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace eve_launcher {
-namespace pdm {
+namespace platform_detection_module {
 
-enum OS_GraphicsAPIs_VulkanSupport : int {
-  OS_GraphicsAPIs_VulkanSupport_UNKNOWN = 0,
-  OS_GraphicsAPIs_VulkanSupport_SUPPORTED = 1,
-  OS_GraphicsAPIs_VulkanSupport_UNSUPPORTED = 2,
-  OS_GraphicsAPIs_VulkanSupport_OS_GraphicsAPIs_VulkanSupport_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
-  OS_GraphicsAPIs_VulkanSupport_OS_GraphicsAPIs_VulkanSupport_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
-};
-bool OS_GraphicsAPIs_VulkanSupport_IsValid(int value);
-constexpr OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MIN = OS_GraphicsAPIs_VulkanSupport_UNKNOWN;
-constexpr OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MAX = OS_GraphicsAPIs_VulkanSupport_UNSUPPORTED;
-constexpr int OS_GraphicsAPIs_VulkanSupport_VulkanSupport_ARRAYSIZE = OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MAX + 1;
-
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* OS_GraphicsAPIs_VulkanSupport_descriptor();
-template<typename T>
-inline const std::string& OS_GraphicsAPIs_VulkanSupport_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, OS_GraphicsAPIs_VulkanSupport>::value ||
-    ::std::is_integral<T>::value,
-    "Incorrect type passed to function OS_GraphicsAPIs_VulkanSupport_Name.");
-  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    OS_GraphicsAPIs_VulkanSupport_descriptor(), enum_t_value);
-}
-inline bool OS_GraphicsAPIs_VulkanSupport_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, OS_GraphicsAPIs_VulkanSupport* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<OS_GraphicsAPIs_VulkanSupport>(
-    OS_GraphicsAPIs_VulkanSupport_descriptor(), name, value);
-}
 enum OS_Kind : int {
   OS_Kind_UNKNOWN = 0,
   OS_Kind_WINDOWS = 1,
@@ -202,500 +161,8 @@ inline bool Bitness_Parse(
 }
 // ===================================================================
 
-class Application PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Application) */ {
- public:
-  inline Application() : Application(nullptr) {}
-  virtual ~Application();
-
-  Application(const Application& from);
-  Application(Application&& from) noexcept
-    : Application() {
-    *this = ::std::move(from);
-  }
-
-  inline Application& operator=(const Application& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Application& operator=(Application&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Application& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Application* internal_default_instance() {
-    return reinterpret_cast<const Application*>(
-               &_Application_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    0;
-
-  friend void swap(Application& a, Application& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Application* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Application* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Application* New() const final {
-    return CreateMaybeMessage<Application>(nullptr);
-  }
-
-  Application* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Application>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Application& from);
-  void MergeFrom(const Application& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Application* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Application";
-  }
-  protected:
-  explicit Application(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_pdm_2eproto);
-    return ::descriptor_table_pdm_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kNameFieldNumber = 1,
-    kVersionFieldNumber = 2,
-  };
-  // string name = 1;
-  void clear_name();
-  const std::string& name() const;
-  void set_name(const std::string& value);
-  void set_name(std::string&& value);
-  void set_name(const char* value);
-  void set_name(const char* value, size_t size);
-  std::string* mutable_name();
-  std::string* release_name();
-  void set_allocated_name(std::string* name);
-  private:
-  const std::string& _internal_name() const;
-  void _internal_set_name(const std::string& value);
-  std::string* _internal_mutable_name();
-  public:
-
-  // string version = 2;
-  void clear_version();
-  const std::string& version() const;
-  void set_version(const std::string& value);
-  void set_version(std::string&& value);
-  void set_version(const char* value);
-  void set_version(const char* value, size_t size);
-  std::string* mutable_version();
-  std::string* release_version();
-  void set_allocated_version(std::string* version);
-  private:
-  const std::string& _internal_version() const;
-  void _internal_set_version(const std::string& value);
-  std::string* _internal_mutable_version();
-  public:
-
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Application)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_pdm_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Process PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Process) */ {
- public:
-  inline Process() : Process(nullptr) {}
-  virtual ~Process();
-
-  Process(const Process& from);
-  Process(Process&& from) noexcept
-    : Process() {
-    *this = ::std::move(from);
-  }
-
-  inline Process& operator=(const Process& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Process& operator=(Process&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Process& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Process* internal_default_instance() {
-    return reinterpret_cast<const Process*>(
-               &_Process_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    1;
-
-  friend void swap(Process& a, Process& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Process* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Process* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Process* New() const final {
-    return CreateMaybeMessage<Process>(nullptr);
-  }
-
-  Process* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Process>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Process& from);
-  void MergeFrom(const Process& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Process* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Process";
-  }
-  protected:
-  explicit Process(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_pdm_2eproto);
-    return ::descriptor_table_pdm_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kVersionFieldNumber = 1,
-    kTimestampFieldNumber = 2,
-    kBitnessFieldNumber = 3,
-  };
-  // string version = 1;
-  void clear_version();
-  const std::string& version() const;
-  void set_version(const std::string& value);
-  void set_version(std::string&& value);
-  void set_version(const char* value);
-  void set_version(const char* value, size_t size);
-  std::string* mutable_version();
-  std::string* release_version();
-  void set_allocated_version(std::string* version);
-  private:
-  const std::string& _internal_version() const;
-  void _internal_set_version(const std::string& value);
-  std::string* _internal_mutable_version();
-  public:
-
-  // .google.protobuf.Timestamp timestamp = 2;
-  bool has_timestamp() const;
-  private:
-  bool _internal_has_timestamp() const;
-  public:
-  void clear_timestamp();
-  const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp() const;
-  PROTOBUF_NAMESPACE_ID::Timestamp* release_timestamp();
-  PROTOBUF_NAMESPACE_ID::Timestamp* mutable_timestamp();
-  void set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
-  private:
-  const PROTOBUF_NAMESPACE_ID::Timestamp& _internal_timestamp() const;
-  PROTOBUF_NAMESPACE_ID::Timestamp* _internal_mutable_timestamp();
-  public:
-  void unsafe_arena_set_allocated_timestamp(
-      PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
-  PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_timestamp();
-
-  // .eve_launcher.pdm.Bitness bitness = 3;
-  void clear_bitness();
-  ::eve_launcher::pdm::Bitness bitness() const;
-  void set_bitness(::eve_launcher::pdm::Bitness value);
-  private:
-  ::eve_launcher::pdm::Bitness _internal_bitness() const;
-  void _internal_set_bitness(::eve_launcher::pdm::Bitness value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Process)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_;
-  PROTOBUF_NAMESPACE_ID::Timestamp* timestamp_;
-  int bitness_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_pdm_2eproto;
-};
-// -------------------------------------------------------------------
-
-class OS_GraphicsAPIs_VulkanProperties PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties) */ {
- public:
-  inline OS_GraphicsAPIs_VulkanProperties() : OS_GraphicsAPIs_VulkanProperties(nullptr) {}
-  virtual ~OS_GraphicsAPIs_VulkanProperties();
-
-  OS_GraphicsAPIs_VulkanProperties(const OS_GraphicsAPIs_VulkanProperties& from);
-  OS_GraphicsAPIs_VulkanProperties(OS_GraphicsAPIs_VulkanProperties&& from) noexcept
-    : OS_GraphicsAPIs_VulkanProperties() {
-    *this = ::std::move(from);
-  }
-
-  inline OS_GraphicsAPIs_VulkanProperties& operator=(const OS_GraphicsAPIs_VulkanProperties& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline OS_GraphicsAPIs_VulkanProperties& operator=(OS_GraphicsAPIs_VulkanProperties&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const OS_GraphicsAPIs_VulkanProperties& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const OS_GraphicsAPIs_VulkanProperties* internal_default_instance() {
-    return reinterpret_cast<const OS_GraphicsAPIs_VulkanProperties*>(
-               &_OS_GraphicsAPIs_VulkanProperties_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    2;
-
-  friend void swap(OS_GraphicsAPIs_VulkanProperties& a, OS_GraphicsAPIs_VulkanProperties& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(OS_GraphicsAPIs_VulkanProperties* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(OS_GraphicsAPIs_VulkanProperties* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline OS_GraphicsAPIs_VulkanProperties* New() const final {
-    return CreateMaybeMessage<OS_GraphicsAPIs_VulkanProperties>(nullptr);
-  }
-
-  OS_GraphicsAPIs_VulkanProperties* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<OS_GraphicsAPIs_VulkanProperties>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const OS_GraphicsAPIs_VulkanProperties& from);
-  void MergeFrom(const OS_GraphicsAPIs_VulkanProperties& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(OS_GraphicsAPIs_VulkanProperties* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties";
-  }
-  protected:
-  explicit OS_GraphicsAPIs_VulkanProperties(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_pdm_2eproto);
-    return ::descriptor_table_pdm_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kVersionFieldNumber = 2,
-    kSupportFieldNumber = 1,
-  };
-  // string version = 2;
-  void clear_version();
-  const std::string& version() const;
-  void set_version(const std::string& value);
-  void set_version(std::string&& value);
-  void set_version(const char* value);
-  void set_version(const char* value, size_t size);
-  std::string* mutable_version();
-  std::string* release_version();
-  void set_allocated_version(std::string* version);
-  private:
-  const std::string& _internal_version() const;
-  void _internal_set_version(const std::string& value);
-  std::string* _internal_mutable_version();
-  public:
-
-  // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport support = 1;
-  void clear_support();
-  ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport support() const;
-  void set_support(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value);
-  private:
-  ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport _internal_support() const;
-  void _internal_set_support(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_;
-  int support_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_pdm_2eproto;
-};
-// -------------------------------------------------------------------
-
 class OS_GraphicsAPIs PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.OS.GraphicsAPIs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.OS.GraphicsAPIs) */ {
  public:
   inline OS_GraphicsAPIs() : OS_GraphicsAPIs(nullptr) {}
   virtual ~OS_GraphicsAPIs();
@@ -736,7 +203,7 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
                &_OS_GraphicsAPIs_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    0;
 
   friend void swap(OS_GraphicsAPIs& a, OS_GraphicsAPIs& b) {
     a.Swap(&b);
@@ -784,7 +251,7 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
   void InternalSwap(OS_GraphicsAPIs* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.OS.GraphicsAPIs";
+    return "platform_detection_module.OS.GraphicsAPIs";
   }
   protected:
   explicit OS_GraphicsAPIs(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -804,78 +271,43 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
-  typedef OS_GraphicsAPIs_VulkanProperties VulkanProperties;
-
-  typedef OS_GraphicsAPIs_VulkanSupport VulkanSupport;
-  static constexpr VulkanSupport UNKNOWN =
-    OS_GraphicsAPIs_VulkanSupport_UNKNOWN;
-  static constexpr VulkanSupport SUPPORTED =
-    OS_GraphicsAPIs_VulkanSupport_SUPPORTED;
-  static constexpr VulkanSupport UNSUPPORTED =
-    OS_GraphicsAPIs_VulkanSupport_UNSUPPORTED;
-  static inline bool VulkanSupport_IsValid(int value) {
-    return OS_GraphicsAPIs_VulkanSupport_IsValid(value);
-  }
-  static constexpr VulkanSupport VulkanSupport_MIN =
-    OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MIN;
-  static constexpr VulkanSupport VulkanSupport_MAX =
-    OS_GraphicsAPIs_VulkanSupport_VulkanSupport_MAX;
-  static constexpr int VulkanSupport_ARRAYSIZE =
-    OS_GraphicsAPIs_VulkanSupport_VulkanSupport_ARRAYSIZE;
-  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
-  VulkanSupport_descriptor() {
-    return OS_GraphicsAPIs_VulkanSupport_descriptor();
-  }
-  template<typename T>
-  static inline const std::string& VulkanSupport_Name(T enum_t_value) {
-    static_assert(::std::is_same<T, VulkanSupport>::value ||
-      ::std::is_integral<T>::value,
-      "Incorrect type passed to function VulkanSupport_Name.");
-    return OS_GraphicsAPIs_VulkanSupport_Name(enum_t_value);
-  }
-  static inline bool VulkanSupport_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
-      VulkanSupport* value) {
-    return OS_GraphicsAPIs_VulkanSupport_Parse(name, value);
-  }
-
   // accessors -------------------------------------------------------
 
   enum : int {
-    kVulkanHighestSupportFieldNumber = 3,
-    kD3DHighestSupportFieldNumber = 4,
+    kVulkanHighestSupportedVersionFieldNumber = 2,
+    kD3DHighestSupportedVersionFieldNumber = 3,
     kMetalSupportedFieldNumber = 1,
-    kVulkanSupportedFieldNumber = 2,
   };
-  // string vulkan_highest_support = 3;
-  void clear_vulkan_highest_support();
-  const std::string& vulkan_highest_support() const;
-  void set_vulkan_highest_support(const std::string& value);
-  void set_vulkan_highest_support(std::string&& value);
-  void set_vulkan_highest_support(const char* value);
-  void set_vulkan_highest_support(const char* value, size_t size);
-  std::string* mutable_vulkan_highest_support();
-  std::string* release_vulkan_highest_support();
-  void set_allocated_vulkan_highest_support(std::string* vulkan_highest_support);
+  // string vulkan_highest_supported_version = 2;
+  void clear_vulkan_highest_supported_version();
+  const std::string& vulkan_highest_supported_version() const;
+  void set_vulkan_highest_supported_version(const std::string& value);
+  void set_vulkan_highest_supported_version(std::string&& value);
+  void set_vulkan_highest_supported_version(const char* value);
+  void set_vulkan_highest_supported_version(const char* value, size_t size);
+  std::string* mutable_vulkan_highest_supported_version();
+  std::string* release_vulkan_highest_supported_version();
+  void set_allocated_vulkan_highest_supported_version(std::string* vulkan_highest_supported_version);
   private:
-  const std::string& _internal_vulkan_highest_support() const;
-  void _internal_set_vulkan_highest_support(const std::string& value);
-  std::string* _internal_mutable_vulkan_highest_support();
+  const std::string& _internal_vulkan_highest_supported_version() const;
+  void _internal_set_vulkan_highest_supported_version(const std::string& value);
+  std::string* _internal_mutable_vulkan_highest_supported_version();
   public:
 
-  // string d3d_highest_support = 4;
-  void clear_d3d_highest_support();
-  const std::string& d3d_highest_support() const;
-  void set_d3d_highest_support(const std::string& value);
-  void set_d3d_highest_support(std::string&& value);
-  void set_d3d_highest_support(const char* value);
-  void set_d3d_highest_support(const char* value, size_t size);
-  std::string* mutable_d3d_highest_support();
-  std::string* release_d3d_highest_support();
-  void set_allocated_d3d_highest_support(std::string* d3d_highest_support);
+  // string d3d_highest_supported_version = 3;
+  void clear_d3d_highest_supported_version();
+  const std::string& d3d_highest_supported_version() const;
+  void set_d3d_highest_supported_version(const std::string& value);
+  void set_d3d_highest_supported_version(std::string&& value);
+  void set_d3d_highest_supported_version(const char* value);
+  void set_d3d_highest_supported_version(const char* value, size_t size);
+  std::string* mutable_d3d_highest_supported_version();
+  std::string* release_d3d_highest_supported_version();
+  void set_allocated_d3d_highest_supported_version(std::string* d3d_highest_supported_version);
   private:
-  const std::string& _internal_d3d_highest_support() const;
-  void _internal_set_d3d_highest_support(const std::string& value);
-  std::string* _internal_mutable_d3d_highest_support();
+  const std::string& _internal_d3d_highest_supported_version() const;
+  void _internal_set_d3d_highest_supported_version(const std::string& value);
+  std::string* _internal_mutable_d3d_highest_supported_version();
   public:
 
   // bool metal_supported = 1;
@@ -887,33 +319,23 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
   void _internal_set_metal_supported(bool value);
   public:
 
-  // .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport vulkan_supported = 2;
-  void clear_vulkan_supported();
-  ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport vulkan_supported() const;
-  void set_vulkan_supported(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value);
-  private:
-  ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport _internal_vulkan_supported() const;
-  void _internal_set_vulkan_supported(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.OS.GraphicsAPIs)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.OS.GraphicsAPIs)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vulkan_highest_support_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr d3d_highest_support_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vulkan_highest_supported_version_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr d3d_highest_supported_version_;
   bool metal_supported_;
-  int vulkan_supported_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_pdm_2eproto;
 };
 // -------------------------------------------------------------------
 
 class OS_Wine PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.OS.Wine) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.OS.Wine) */ {
  public:
   inline OS_Wine() : OS_Wine(nullptr) {}
   virtual ~OS_Wine();
@@ -954,7 +376,7 @@ class OS_Wine PROTOBUF_FINAL :
                &_OS_Wine_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    1;
 
   friend void swap(OS_Wine& a, OS_Wine& b) {
     a.Swap(&b);
@@ -1002,7 +424,7 @@ class OS_Wine PROTOBUF_FINAL :
   void InternalSwap(OS_Wine* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.OS.Wine";
+    return "platform_detection_module.OS.Wine";
   }
   protected:
   explicit OS_Wine(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1060,7 +482,7 @@ class OS_Wine PROTOBUF_FINAL :
   std::string* _internal_mutable_host_os();
   public:
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.OS.Wine)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.OS.Wine)
  private:
   class _Internal;
 
@@ -1075,7 +497,7 @@ class OS_Wine PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class OS PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.OS) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.OS) */ {
  public:
   inline OS() : OS(nullptr) {}
   virtual ~OS();
@@ -1116,7 +538,7 @@ class OS PROTOBUF_FINAL :
                &_OS_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    2;
 
   friend void swap(OS& a, OS& b) {
     a.Swap(&b);
@@ -1164,7 +586,7 @@ class OS PROTOBUF_FINAL :
   void InternalSwap(OS* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.OS";
+    return "platform_detection_module.OS";
   }
   protected:
   explicit OS(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1233,7 +655,7 @@ class OS PROTOBUF_FINAL :
     kUserLocaleFieldNumber = 9,
     kGraphicsApisFieldNumber = 11,
     kWineFieldNumber = 12,
-    kKindFieldNumber = 1,
+    kTypeFieldNumber = 1,
     kBitnessFieldNumber = 3,
     kIsRemoteSessionFieldNumber = 10,
   };
@@ -1349,58 +771,58 @@ class OS PROTOBUF_FINAL :
   std::string* _internal_mutable_user_locale();
   public:
 
-  // .eve_launcher.pdm.OS.GraphicsAPIs graphics_apis = 11;
+  // .platform_detection_module.OS.GraphicsAPIs graphics_apis = 11;
   bool has_graphics_apis() const;
   private:
   bool _internal_has_graphics_apis() const;
   public:
   void clear_graphics_apis();
-  const ::eve_launcher::pdm::OS_GraphicsAPIs& graphics_apis() const;
-  ::eve_launcher::pdm::OS_GraphicsAPIs* release_graphics_apis();
-  ::eve_launcher::pdm::OS_GraphicsAPIs* mutable_graphics_apis();
-  void set_allocated_graphics_apis(::eve_launcher::pdm::OS_GraphicsAPIs* graphics_apis);
+  const ::platform_detection_module::OS_GraphicsAPIs& graphics_apis() const;
+  ::platform_detection_module::OS_GraphicsAPIs* release_graphics_apis();
+  ::platform_detection_module::OS_GraphicsAPIs* mutable_graphics_apis();
+  void set_allocated_graphics_apis(::platform_detection_module::OS_GraphicsAPIs* graphics_apis);
   private:
-  const ::eve_launcher::pdm::OS_GraphicsAPIs& _internal_graphics_apis() const;
-  ::eve_launcher::pdm::OS_GraphicsAPIs* _internal_mutable_graphics_apis();
+  const ::platform_detection_module::OS_GraphicsAPIs& _internal_graphics_apis() const;
+  ::platform_detection_module::OS_GraphicsAPIs* _internal_mutable_graphics_apis();
   public:
   void unsafe_arena_set_allocated_graphics_apis(
-      ::eve_launcher::pdm::OS_GraphicsAPIs* graphics_apis);
-  ::eve_launcher::pdm::OS_GraphicsAPIs* unsafe_arena_release_graphics_apis();
+      ::platform_detection_module::OS_GraphicsAPIs* graphics_apis);
+  ::platform_detection_module::OS_GraphicsAPIs* unsafe_arena_release_graphics_apis();
 
-  // .eve_launcher.pdm.OS.Wine wine = 12;
+  // .platform_detection_module.OS.Wine wine = 12;
   bool has_wine() const;
   private:
   bool _internal_has_wine() const;
   public:
   void clear_wine();
-  const ::eve_launcher::pdm::OS_Wine& wine() const;
-  ::eve_launcher::pdm::OS_Wine* release_wine();
-  ::eve_launcher::pdm::OS_Wine* mutable_wine();
-  void set_allocated_wine(::eve_launcher::pdm::OS_Wine* wine);
+  const ::platform_detection_module::OS_Wine& wine() const;
+  ::platform_detection_module::OS_Wine* release_wine();
+  ::platform_detection_module::OS_Wine* mutable_wine();
+  void set_allocated_wine(::platform_detection_module::OS_Wine* wine);
   private:
-  const ::eve_launcher::pdm::OS_Wine& _internal_wine() const;
-  ::eve_launcher::pdm::OS_Wine* _internal_mutable_wine();
+  const ::platform_detection_module::OS_Wine& _internal_wine() const;
+  ::platform_detection_module::OS_Wine* _internal_mutable_wine();
   public:
   void unsafe_arena_set_allocated_wine(
-      ::eve_launcher::pdm::OS_Wine* wine);
-  ::eve_launcher::pdm::OS_Wine* unsafe_arena_release_wine();
+      ::platform_detection_module::OS_Wine* wine);
+  ::platform_detection_module::OS_Wine* unsafe_arena_release_wine();
 
-  // .eve_launcher.pdm.OS.Kind kind = 1;
-  void clear_kind();
-  ::eve_launcher::pdm::OS_Kind kind() const;
-  void set_kind(::eve_launcher::pdm::OS_Kind value);
+  // .platform_detection_module.OS.Kind type = 1;
+  void clear_type();
+  ::platform_detection_module::OS_Kind type() const;
+  void set_type(::platform_detection_module::OS_Kind value);
   private:
-  ::eve_launcher::pdm::OS_Kind _internal_kind() const;
-  void _internal_set_kind(::eve_launcher::pdm::OS_Kind value);
+  ::platform_detection_module::OS_Kind _internal_type() const;
+  void _internal_set_type(::platform_detection_module::OS_Kind value);
   public:
 
-  // .eve_launcher.pdm.Bitness bitness = 3;
+  // .platform_detection_module.Bitness bitness = 3;
   void clear_bitness();
-  ::eve_launcher::pdm::Bitness bitness() const;
-  void set_bitness(::eve_launcher::pdm::Bitness value);
+  ::platform_detection_module::Bitness bitness() const;
+  void set_bitness(::platform_detection_module::Bitness value);
   private:
-  ::eve_launcher::pdm::Bitness _internal_bitness() const;
-  void _internal_set_bitness(::eve_launcher::pdm::Bitness value);
+  ::platform_detection_module::Bitness _internal_bitness() const;
+  void _internal_set_bitness(::platform_detection_module::Bitness value);
   public:
 
   // bool is_remote_session = 10;
@@ -1412,7 +834,7 @@ class OS PROTOBUF_FINAL :
   void _internal_set_is_remote_session(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.OS)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.OS)
  private:
   class _Internal;
 
@@ -1426,9 +848,9 @@ class OS PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr kernel_version_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_locale_;
-  ::eve_launcher::pdm::OS_GraphicsAPIs* graphics_apis_;
-  ::eve_launcher::pdm::OS_Wine* wine_;
-  int kind_;
+  ::platform_detection_module::OS_GraphicsAPIs* graphics_apis_;
+  ::platform_detection_module::OS_Wine* wine_;
+  int type_;
   int bitness_;
   bool is_remote_session_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1437,7 +859,7 @@ class OS PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_CPU PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.CPU) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.CPU) */ {
  public:
   inline Machine_CPU() : Machine_CPU(nullptr) {}
   virtual ~Machine_CPU();
@@ -1478,7 +900,7 @@ class Machine_CPU PROTOBUF_FINAL :
                &_Machine_CPU_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    3;
 
   friend void swap(Machine_CPU& a, Machine_CPU& b) {
     a.Swap(&b);
@@ -1526,7 +948,7 @@ class Machine_CPU PROTOBUF_FINAL :
   void InternalSwap(Machine_CPU* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Machine.CPU";
+    return "platform_detection_module.Machine.CPU";
   }
   protected:
   explicit Machine_CPU(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1588,13 +1010,13 @@ class Machine_CPU PROTOBUF_FINAL :
   std::string* _internal_mutable_vendor();
   public:
 
-  // .eve_launcher.pdm.Bitness bitness = 1;
+  // .platform_detection_module.Bitness bitness = 1;
   void clear_bitness();
-  ::eve_launcher::pdm::Bitness bitness() const;
-  void set_bitness(::eve_launcher::pdm::Bitness value);
+  ::platform_detection_module::Bitness bitness() const;
+  void set_bitness(::platform_detection_module::Bitness value);
   private:
-  ::eve_launcher::pdm::Bitness _internal_bitness() const;
-  void _internal_set_bitness(::eve_launcher::pdm::Bitness value);
+  ::platform_detection_module::Bitness _internal_bitness() const;
+  void _internal_set_bitness(::platform_detection_module::Bitness value);
   public:
 
   // int32 logical_core_count = 2;
@@ -1624,7 +1046,7 @@ class Machine_CPU PROTOBUF_FINAL :
   void _internal_set_stepping(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.CPU)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.CPU)
  private:
   class _Internal;
 
@@ -1643,7 +1065,7 @@ class Machine_CPU PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_VM PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.VM) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.VM) */ {
  public:
   inline Machine_VM() : Machine_VM(nullptr) {}
   virtual ~Machine_VM();
@@ -1684,7 +1106,7 @@ class Machine_VM PROTOBUF_FINAL :
                &_Machine_VM_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    4;
 
   friend void swap(Machine_VM& a, Machine_VM& b) {
     a.Swap(&b);
@@ -1732,7 +1154,7 @@ class Machine_VM PROTOBUF_FINAL :
   void InternalSwap(Machine_VM* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Machine.VM";
+    return "platform_detection_module.Machine.VM";
   }
   protected:
   explicit Machine_VM(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1813,7 +1235,7 @@ class Machine_VM PROTOBUF_FINAL :
   void _internal_set_has_vm_execution_timing(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.VM)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.VM)
  private:
   class _Internal;
 
@@ -1831,7 +1253,7 @@ class Machine_VM PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_Monitor PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.Monitor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.Monitor) */ {
  public:
   inline Machine_Monitor() : Machine_Monitor(nullptr) {}
   virtual ~Machine_Monitor();
@@ -1872,7 +1294,7 @@ class Machine_Monitor PROTOBUF_FINAL :
                &_Machine_Monitor_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    5;
 
   friend void swap(Machine_Monitor& a, Machine_Monitor& b) {
     a.Swap(&b);
@@ -1920,7 +1342,7 @@ class Machine_Monitor PROTOBUF_FINAL :
   void InternalSwap(Machine_Monitor* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Machine.Monitor";
+    return "platform_detection_module.Machine.Monitor";
   }
   protected:
   explicit Machine_Monitor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2011,7 +1433,7 @@ class Machine_Monitor PROTOBUF_FINAL :
   void _internal_set_dpi_scaling_percent(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.Monitor)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.Monitor)
  private:
   class _Internal;
 
@@ -2030,7 +1452,7 @@ class Machine_Monitor PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_GPU_Driver PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.GPU.Driver) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.GPU.Driver) */ {
  public:
   inline Machine_GPU_Driver() : Machine_GPU_Driver(nullptr) {}
   virtual ~Machine_GPU_Driver();
@@ -2071,7 +1493,7 @@ class Machine_GPU_Driver PROTOBUF_FINAL :
                &_Machine_GPU_Driver_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    6;
 
   friend void swap(Machine_GPU_Driver& a, Machine_GPU_Driver& b) {
     a.Swap(&b);
@@ -2119,7 +1541,7 @@ class Machine_GPU_Driver PROTOBUF_FINAL :
   void InternalSwap(Machine_GPU_Driver* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Machine.GPU.Driver";
+    return "platform_detection_module.Machine.GPU.Driver";
   }
   protected:
   explicit Machine_GPU_Driver(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2194,7 +1616,7 @@ class Machine_GPU_Driver PROTOBUF_FINAL :
   std::string* _internal_mutable_version();
   public:
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.GPU.Driver)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.GPU.Driver)
  private:
   class _Internal;
 
@@ -2210,7 +1632,7 @@ class Machine_GPU_Driver PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_GPU PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.GPU) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.GPU) */ {
  public:
   inline Machine_GPU() : Machine_GPU(nullptr) {}
   virtual ~Machine_GPU();
@@ -2251,7 +1673,7 @@ class Machine_GPU PROTOBUF_FINAL :
                &_Machine_GPU_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    7;
 
   friend void swap(Machine_GPU& a, Machine_GPU& b) {
     a.Swap(&b);
@@ -2299,7 +1721,7 @@ class Machine_GPU PROTOBUF_FINAL :
   void InternalSwap(Machine_GPU* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Machine.GPU";
+    return "platform_detection_module.Machine.GPU";
   }
   protected:
   explicit Machine_GPU(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2347,23 +1769,23 @@ class Machine_GPU PROTOBUF_FINAL :
   std::string* _internal_mutable_description();
   public:
 
-  // .eve_launcher.pdm.Machine.GPU.Driver driver = 6;
+  // .platform_detection_module.Machine.GPU.Driver driver = 6;
   bool has_driver() const;
   private:
   bool _internal_has_driver() const;
   public:
   void clear_driver();
-  const ::eve_launcher::pdm::Machine_GPU_Driver& driver() const;
-  ::eve_launcher::pdm::Machine_GPU_Driver* release_driver();
-  ::eve_launcher::pdm::Machine_GPU_Driver* mutable_driver();
-  void set_allocated_driver(::eve_launcher::pdm::Machine_GPU_Driver* driver);
+  const ::platform_detection_module::Machine_GPU_Driver& driver() const;
+  ::platform_detection_module::Machine_GPU_Driver* release_driver();
+  ::platform_detection_module::Machine_GPU_Driver* mutable_driver();
+  void set_allocated_driver(::platform_detection_module::Machine_GPU_Driver* driver);
   private:
-  const ::eve_launcher::pdm::Machine_GPU_Driver& _internal_driver() const;
-  ::eve_launcher::pdm::Machine_GPU_Driver* _internal_mutable_driver();
+  const ::platform_detection_module::Machine_GPU_Driver& _internal_driver() const;
+  ::platform_detection_module::Machine_GPU_Driver* _internal_mutable_driver();
   public:
   void unsafe_arena_set_allocated_driver(
-      ::eve_launcher::pdm::Machine_GPU_Driver* driver);
-  ::eve_launcher::pdm::Machine_GPU_Driver* unsafe_arena_release_driver();
+      ::platform_detection_module::Machine_GPU_Driver* driver);
+  ::platform_detection_module::Machine_GPU_Driver* unsafe_arena_release_driver();
 
   // int32 vendor_id = 2;
   void clear_vendor_id();
@@ -2401,7 +1823,7 @@ class Machine_GPU PROTOBUF_FINAL :
   void _internal_set_revision(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.GPU)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.GPU)
  private:
   class _Internal;
 
@@ -2409,7 +1831,7 @@ class Machine_GPU PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
-  ::eve_launcher::pdm::Machine_GPU_Driver* driver_;
+  ::platform_detection_module::Machine_GPU_Driver* driver_;
   ::PROTOBUF_NAMESPACE_ID::int32 vendor_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 device_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 video_memory_;
@@ -2420,7 +1842,7 @@ class Machine_GPU PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_NetworkAdapter PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine.NetworkAdapter) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.NetworkAdapter) */ {
  public:
   inline Machine_NetworkAdapter() : Machine_NetworkAdapter(nullptr) {}
   virtual ~Machine_NetworkAdapter();
@@ -2461,7 +1883,7 @@ class Machine_NetworkAdapter PROTOBUF_FINAL :
                &_Machine_NetworkAdapter_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    8;
 
   friend void swap(Machine_NetworkAdapter& a, Machine_NetworkAdapter& b) {
     a.Swap(&b);
@@ -2509,7 +1931,7 @@ class Machine_NetworkAdapter PROTOBUF_FINAL :
   void InternalSwap(Machine_NetworkAdapter* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Machine.NetworkAdapter";
+    return "platform_detection_module.Machine.NetworkAdapter";
   }
   protected:
   explicit Machine_NetworkAdapter(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2584,7 +2006,7 @@ class Machine_NetworkAdapter PROTOBUF_FINAL :
   std::string* _internal_mutable_uuid();
   public:
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine.NetworkAdapter)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.NetworkAdapter)
  private:
   class _Internal;
 
@@ -2600,7 +2022,7 @@ class Machine_NetworkAdapter PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Machine) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine) */ {
  public:
   inline Machine() : Machine(nullptr) {}
   virtual ~Machine();
@@ -2641,7 +2063,7 @@ class Machine PROTOBUF_FINAL :
                &_Machine_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    9;
 
   friend void swap(Machine& a, Machine& b) {
     a.Swap(&b);
@@ -2689,7 +2111,7 @@ class Machine PROTOBUF_FINAL :
   void InternalSwap(Machine* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Machine";
+    return "platform_detection_module.Machine";
   }
   protected:
   explicit Machine(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2729,58 +2151,58 @@ class Machine PROTOBUF_FINAL :
     kTotalMemoryFieldNumber = 4,
     kMonitorCountFieldNumber = 5,
   };
-  // repeated .eve_launcher.pdm.Machine.Monitor monitors = 8;
+  // repeated .platform_detection_module.Machine.Monitor monitors = 8;
   int monitors_size() const;
   private:
   int _internal_monitors_size() const;
   public:
   void clear_monitors();
-  ::eve_launcher::pdm::Machine_Monitor* mutable_monitors(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor >*
+  ::platform_detection_module::Machine_Monitor* mutable_monitors(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor >*
       mutable_monitors();
   private:
-  const ::eve_launcher::pdm::Machine_Monitor& _internal_monitors(int index) const;
-  ::eve_launcher::pdm::Machine_Monitor* _internal_add_monitors();
+  const ::platform_detection_module::Machine_Monitor& _internal_monitors(int index) const;
+  ::platform_detection_module::Machine_Monitor* _internal_add_monitors();
   public:
-  const ::eve_launcher::pdm::Machine_Monitor& monitors(int index) const;
-  ::eve_launcher::pdm::Machine_Monitor* add_monitors();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor >&
+  const ::platform_detection_module::Machine_Monitor& monitors(int index) const;
+  ::platform_detection_module::Machine_Monitor* add_monitors();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor >&
       monitors() const;
 
-  // repeated .eve_launcher.pdm.Machine.GPU gpus = 9;
+  // repeated .platform_detection_module.Machine.GPU gpus = 9;
   int gpus_size() const;
   private:
   int _internal_gpus_size() const;
   public:
   void clear_gpus();
-  ::eve_launcher::pdm::Machine_GPU* mutable_gpus(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU >*
+  ::platform_detection_module::Machine_GPU* mutable_gpus(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU >*
       mutable_gpus();
   private:
-  const ::eve_launcher::pdm::Machine_GPU& _internal_gpus(int index) const;
-  ::eve_launcher::pdm::Machine_GPU* _internal_add_gpus();
+  const ::platform_detection_module::Machine_GPU& _internal_gpus(int index) const;
+  ::platform_detection_module::Machine_GPU* _internal_add_gpus();
   public:
-  const ::eve_launcher::pdm::Machine_GPU& gpus(int index) const;
-  ::eve_launcher::pdm::Machine_GPU* add_gpus();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU >&
+  const ::platform_detection_module::Machine_GPU& gpus(int index) const;
+  ::platform_detection_module::Machine_GPU* add_gpus();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU >&
       gpus() const;
 
-  // repeated .eve_launcher.pdm.Machine.NetworkAdapter network_adapters = 10;
+  // repeated .platform_detection_module.Machine.NetworkAdapter network_adapters = 10;
   int network_adapters_size() const;
   private:
   int _internal_network_adapters_size() const;
   public:
   void clear_network_adapters();
-  ::eve_launcher::pdm::Machine_NetworkAdapter* mutable_network_adapters(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter >*
+  ::platform_detection_module::Machine_NetworkAdapter* mutable_network_adapters(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter >*
       mutable_network_adapters();
   private:
-  const ::eve_launcher::pdm::Machine_NetworkAdapter& _internal_network_adapters(int index) const;
-  ::eve_launcher::pdm::Machine_NetworkAdapter* _internal_add_network_adapters();
+  const ::platform_detection_module::Machine_NetworkAdapter& _internal_network_adapters(int index) const;
+  ::platform_detection_module::Machine_NetworkAdapter* _internal_add_network_adapters();
   public:
-  const ::eve_launcher::pdm::Machine_NetworkAdapter& network_adapters(int index) const;
-  ::eve_launcher::pdm::Machine_NetworkAdapter* add_network_adapters();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter >&
+  const ::platform_detection_module::Machine_NetworkAdapter& network_adapters(int index) const;
+  ::platform_detection_module::Machine_NetworkAdapter* add_network_adapters();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter >&
       network_adapters() const;
 
   // string model = 1;
@@ -2831,41 +2253,41 @@ class Machine PROTOBUF_FINAL :
   std::string* _internal_mutable_uuid();
   public:
 
-  // .eve_launcher.pdm.Machine.CPU cpu = 6;
+  // .platform_detection_module.Machine.CPU cpu = 6;
   bool has_cpu() const;
   private:
   bool _internal_has_cpu() const;
   public:
   void clear_cpu();
-  const ::eve_launcher::pdm::Machine_CPU& cpu() const;
-  ::eve_launcher::pdm::Machine_CPU* release_cpu();
-  ::eve_launcher::pdm::Machine_CPU* mutable_cpu();
-  void set_allocated_cpu(::eve_launcher::pdm::Machine_CPU* cpu);
+  const ::platform_detection_module::Machine_CPU& cpu() const;
+  ::platform_detection_module::Machine_CPU* release_cpu();
+  ::platform_detection_module::Machine_CPU* mutable_cpu();
+  void set_allocated_cpu(::platform_detection_module::Machine_CPU* cpu);
   private:
-  const ::eve_launcher::pdm::Machine_CPU& _internal_cpu() const;
-  ::eve_launcher::pdm::Machine_CPU* _internal_mutable_cpu();
+  const ::platform_detection_module::Machine_CPU& _internal_cpu() const;
+  ::platform_detection_module::Machine_CPU* _internal_mutable_cpu();
   public:
   void unsafe_arena_set_allocated_cpu(
-      ::eve_launcher::pdm::Machine_CPU* cpu);
-  ::eve_launcher::pdm::Machine_CPU* unsafe_arena_release_cpu();
+      ::platform_detection_module::Machine_CPU* cpu);
+  ::platform_detection_module::Machine_CPU* unsafe_arena_release_cpu();
 
-  // .eve_launcher.pdm.Machine.VM vm = 7;
+  // .platform_detection_module.Machine.VM vm = 7;
   bool has_vm() const;
   private:
   bool _internal_has_vm() const;
   public:
   void clear_vm();
-  const ::eve_launcher::pdm::Machine_VM& vm() const;
-  ::eve_launcher::pdm::Machine_VM* release_vm();
-  ::eve_launcher::pdm::Machine_VM* mutable_vm();
-  void set_allocated_vm(::eve_launcher::pdm::Machine_VM* vm);
+  const ::platform_detection_module::Machine_VM& vm() const;
+  ::platform_detection_module::Machine_VM* release_vm();
+  ::platform_detection_module::Machine_VM* mutable_vm();
+  void set_allocated_vm(::platform_detection_module::Machine_VM* vm);
   private:
-  const ::eve_launcher::pdm::Machine_VM& _internal_vm() const;
-  ::eve_launcher::pdm::Machine_VM* _internal_mutable_vm();
+  const ::platform_detection_module::Machine_VM& _internal_vm() const;
+  ::platform_detection_module::Machine_VM* _internal_mutable_vm();
   public:
   void unsafe_arena_set_allocated_vm(
-      ::eve_launcher::pdm::Machine_VM* vm);
-  ::eve_launcher::pdm::Machine_VM* unsafe_arena_release_vm();
+      ::platform_detection_module::Machine_VM* vm);
+  ::platform_detection_module::Machine_VM* unsafe_arena_release_vm();
 
   // int64 total_memory = 4;
   void clear_total_memory();
@@ -2885,21 +2307,21 @@ class Machine PROTOBUF_FINAL :
   void _internal_set_monitor_count(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Machine)
+  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor > monitors_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU > gpus_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter > network_adapters_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor > monitors_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU > gpus_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter > network_adapters_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr model_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
-  ::eve_launcher::pdm::Machine_CPU* cpu_;
-  ::eve_launcher::pdm::Machine_VM* vm_;
+  ::platform_detection_module::Machine_CPU* cpu_;
+  ::platform_detection_module::Machine_VM* vm_;
   ::PROTOBUF_NAMESPACE_ID::int64 total_memory_;
   ::PROTOBUF_NAMESPACE_ID::int32 monitor_count_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -2907,23 +2329,23 @@ class Machine PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
-class Attributes PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:eve_launcher.pdm.Attributes) */ {
+class PlatformInformation PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.PlatformInformation) */ {
  public:
-  inline Attributes() : Attributes(nullptr) {}
-  virtual ~Attributes();
+  inline PlatformInformation() : PlatformInformation(nullptr) {}
+  virtual ~PlatformInformation();
 
-  Attributes(const Attributes& from);
-  Attributes(Attributes&& from) noexcept
-    : Attributes() {
+  PlatformInformation(const PlatformInformation& from);
+  PlatformInformation(PlatformInformation&& from) noexcept
+    : PlatformInformation() {
     *this = ::std::move(from);
   }
 
-  inline Attributes& operator=(const Attributes& from) {
+  inline PlatformInformation& operator=(const PlatformInformation& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Attributes& operator=(Attributes&& from) noexcept {
+  inline PlatformInformation& operator=(PlatformInformation&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -2941,20 +2363,20 @@ class Attributes PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const Attributes& default_instance();
+  static const PlatformInformation& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Attributes* internal_default_instance() {
-    return reinterpret_cast<const Attributes*>(
-               &_Attributes_default_instance_);
+  static inline const PlatformInformation* internal_default_instance() {
+    return reinterpret_cast<const PlatformInformation*>(
+               &_PlatformInformation_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    10;
 
-  friend void swap(Attributes& a, Attributes& b) {
+  friend void swap(PlatformInformation& a, PlatformInformation& b) {
     a.Swap(&b);
   }
-  inline void Swap(Attributes* other) {
+  inline void Swap(PlatformInformation* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -2962,7 +2384,7 @@ class Attributes PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Attributes* other) {
+  void UnsafeArenaSwap(PlatformInformation* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -2970,17 +2392,17 @@ class Attributes PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline Attributes* New() const final {
-    return CreateMaybeMessage<Attributes>(nullptr);
+  inline PlatformInformation* New() const final {
+    return CreateMaybeMessage<PlatformInformation>(nullptr);
   }
 
-  Attributes* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Attributes>(arena);
+  PlatformInformation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<PlatformInformation>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Attributes& from);
-  void MergeFrom(const Attributes& from);
+  void CopyFrom(const PlatformInformation& from);
+  void MergeFrom(const PlatformInformation& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2994,13 +2416,13 @@ class Attributes PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Attributes* other);
+  void InternalSwap(PlatformInformation* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "eve_launcher.pdm.Attributes";
+    return "platform_detection_module.PlatformInformation";
   }
   protected:
-  explicit Attributes(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit PlatformInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -3020,94 +2442,103 @@ class Attributes PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kApplicationFieldNumber = 1,
-    kProcessFieldNumber = 2,
-    kOsFieldNumber = 3,
-    kMachineFieldNumber = 4,
+    kVersionFieldNumber = 1,
+    kTimestampFieldNumber = 2,
+    kOsFieldNumber = 4,
+    kMachineFieldNumber = 5,
+    kProcessBitnessFieldNumber = 3,
   };
-  // .eve_launcher.pdm.Application application = 1;
-  bool has_application() const;
+  // string version = 1;
+  void clear_version();
+  const std::string& version() const;
+  void set_version(const std::string& value);
+  void set_version(std::string&& value);
+  void set_version(const char* value);
+  void set_version(const char* value, size_t size);
+  std::string* mutable_version();
+  std::string* release_version();
+  void set_allocated_version(std::string* version);
   private:
-  bool _internal_has_application() const;
+  const std::string& _internal_version() const;
+  void _internal_set_version(const std::string& value);
+  std::string* _internal_mutable_version();
   public:
-  void clear_application();
-  const ::eve_launcher::pdm::Application& application() const;
-  ::eve_launcher::pdm::Application* release_application();
-  ::eve_launcher::pdm::Application* mutable_application();
-  void set_allocated_application(::eve_launcher::pdm::Application* application);
-  private:
-  const ::eve_launcher::pdm::Application& _internal_application() const;
-  ::eve_launcher::pdm::Application* _internal_mutable_application();
-  public:
-  void unsafe_arena_set_allocated_application(
-      ::eve_launcher::pdm::Application* application);
-  ::eve_launcher::pdm::Application* unsafe_arena_release_application();
 
-  // .eve_launcher.pdm.Process process = 2;
-  bool has_process() const;
+  // .google.protobuf.Timestamp timestamp = 2;
+  bool has_timestamp() const;
   private:
-  bool _internal_has_process() const;
+  bool _internal_has_timestamp() const;
   public:
-  void clear_process();
-  const ::eve_launcher::pdm::Process& process() const;
-  ::eve_launcher::pdm::Process* release_process();
-  ::eve_launcher::pdm::Process* mutable_process();
-  void set_allocated_process(::eve_launcher::pdm::Process* process);
+  void clear_timestamp();
+  const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp() const;
+  PROTOBUF_NAMESPACE_ID::Timestamp* release_timestamp();
+  PROTOBUF_NAMESPACE_ID::Timestamp* mutable_timestamp();
+  void set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
   private:
-  const ::eve_launcher::pdm::Process& _internal_process() const;
-  ::eve_launcher::pdm::Process* _internal_mutable_process();
+  const PROTOBUF_NAMESPACE_ID::Timestamp& _internal_timestamp() const;
+  PROTOBUF_NAMESPACE_ID::Timestamp* _internal_mutable_timestamp();
   public:
-  void unsafe_arena_set_allocated_process(
-      ::eve_launcher::pdm::Process* process);
-  ::eve_launcher::pdm::Process* unsafe_arena_release_process();
+  void unsafe_arena_set_allocated_timestamp(
+      PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
+  PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_timestamp();
 
-  // .eve_launcher.pdm.OS os = 3;
+  // .platform_detection_module.OS os = 4;
   bool has_os() const;
   private:
   bool _internal_has_os() const;
   public:
   void clear_os();
-  const ::eve_launcher::pdm::OS& os() const;
-  ::eve_launcher::pdm::OS* release_os();
-  ::eve_launcher::pdm::OS* mutable_os();
-  void set_allocated_os(::eve_launcher::pdm::OS* os);
+  const ::platform_detection_module::OS& os() const;
+  ::platform_detection_module::OS* release_os();
+  ::platform_detection_module::OS* mutable_os();
+  void set_allocated_os(::platform_detection_module::OS* os);
   private:
-  const ::eve_launcher::pdm::OS& _internal_os() const;
-  ::eve_launcher::pdm::OS* _internal_mutable_os();
+  const ::platform_detection_module::OS& _internal_os() const;
+  ::platform_detection_module::OS* _internal_mutable_os();
   public:
   void unsafe_arena_set_allocated_os(
-      ::eve_launcher::pdm::OS* os);
-  ::eve_launcher::pdm::OS* unsafe_arena_release_os();
+      ::platform_detection_module::OS* os);
+  ::platform_detection_module::OS* unsafe_arena_release_os();
 
-  // .eve_launcher.pdm.Machine machine = 4;
+  // .platform_detection_module.Machine machine = 5;
   bool has_machine() const;
   private:
   bool _internal_has_machine() const;
   public:
   void clear_machine();
-  const ::eve_launcher::pdm::Machine& machine() const;
-  ::eve_launcher::pdm::Machine* release_machine();
-  ::eve_launcher::pdm::Machine* mutable_machine();
-  void set_allocated_machine(::eve_launcher::pdm::Machine* machine);
+  const ::platform_detection_module::Machine& machine() const;
+  ::platform_detection_module::Machine* release_machine();
+  ::platform_detection_module::Machine* mutable_machine();
+  void set_allocated_machine(::platform_detection_module::Machine* machine);
   private:
-  const ::eve_launcher::pdm::Machine& _internal_machine() const;
-  ::eve_launcher::pdm::Machine* _internal_mutable_machine();
+  const ::platform_detection_module::Machine& _internal_machine() const;
+  ::platform_detection_module::Machine* _internal_mutable_machine();
   public:
   void unsafe_arena_set_allocated_machine(
-      ::eve_launcher::pdm::Machine* machine);
-  ::eve_launcher::pdm::Machine* unsafe_arena_release_machine();
+      ::platform_detection_module::Machine* machine);
+  ::platform_detection_module::Machine* unsafe_arena_release_machine();
 
-  // @@protoc_insertion_point(class_scope:eve_launcher.pdm.Attributes)
+  // .platform_detection_module.Bitness process_bitness = 3;
+  void clear_process_bitness();
+  ::platform_detection_module::Bitness process_bitness() const;
+  void set_process_bitness(::platform_detection_module::Bitness value);
+  private:
+  ::platform_detection_module::Bitness _internal_process_bitness() const;
+  void _internal_set_process_bitness(::platform_detection_module::Bitness value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:platform_detection_module.PlatformInformation)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::eve_launcher::pdm::Application* application_;
-  ::eve_launcher::pdm::Process* process_;
-  ::eve_launcher::pdm::OS* os_;
-  ::eve_launcher::pdm::Machine* machine_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_;
+  PROTOBUF_NAMESPACE_ID::Timestamp* timestamp_;
+  ::platform_detection_module::OS* os_;
+  ::platform_detection_module::Machine* machine_;
+  int process_bitness_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_pdm_2eproto;
 };
@@ -3120,383 +2551,6 @@ class Attributes PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// Application
-
-// string name = 1;
-inline void Application::clear_name() {
-  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline const std::string& Application::name() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Application.name)
-  return _internal_name();
-}
-inline void Application::set_name(const std::string& value) {
-  _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Application.name)
-}
-inline std::string* Application::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Application.name)
-  return _internal_mutable_name();
-}
-inline const std::string& Application::_internal_name() const {
-  return name_.Get();
-}
-inline void Application::_internal_set_name(const std::string& value) {
-  
-  name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void Application::set_name(std::string&& value) {
-  
-  name_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Application.name)
-}
-inline void Application::set_name(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Application.name)
-}
-inline void Application::set_name(const char* value,
-    size_t size) {
-  
-  name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Application.name)
-}
-inline std::string* Application::_internal_mutable_name() {
-  
-  return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* Application::release_name() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Application.name)
-  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Application::set_allocated_name(std::string* name) {
-  if (name != nullptr) {
-    
-  } else {
-    
-  }
-  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Application.name)
-}
-
-// string version = 2;
-inline void Application::clear_version() {
-  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline const std::string& Application::version() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Application.version)
-  return _internal_version();
-}
-inline void Application::set_version(const std::string& value) {
-  _internal_set_version(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Application.version)
-}
-inline std::string* Application::mutable_version() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Application.version)
-  return _internal_mutable_version();
-}
-inline const std::string& Application::_internal_version() const {
-  return version_.Get();
-}
-inline void Application::_internal_set_version(const std::string& value) {
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void Application::set_version(std::string&& value) {
-  
-  version_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Application.version)
-}
-inline void Application::set_version(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Application.version)
-}
-inline void Application::set_version(const char* value,
-    size_t size) {
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Application.version)
-}
-inline std::string* Application::_internal_mutable_version() {
-  
-  return version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* Application::release_version() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Application.version)
-  return version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Application::set_allocated_version(std::string* version) {
-  if (version != nullptr) {
-    
-  } else {
-    
-  }
-  version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Application.version)
-}
-
-// -------------------------------------------------------------------
-
-// Process
-
-// string version = 1;
-inline void Process::clear_version() {
-  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline const std::string& Process::version() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Process.version)
-  return _internal_version();
-}
-inline void Process::set_version(const std::string& value) {
-  _internal_set_version(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Process.version)
-}
-inline std::string* Process::mutable_version() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Process.version)
-  return _internal_mutable_version();
-}
-inline const std::string& Process::_internal_version() const {
-  return version_.Get();
-}
-inline void Process::_internal_set_version(const std::string& value) {
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void Process::set_version(std::string&& value) {
-  
-  version_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Process.version)
-}
-inline void Process::set_version(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Process.version)
-}
-inline void Process::set_version(const char* value,
-    size_t size) {
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Process.version)
-}
-inline std::string* Process::_internal_mutable_version() {
-  
-  return version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* Process::release_version() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Process.version)
-  return version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Process::set_allocated_version(std::string* version) {
-  if (version != nullptr) {
-    
-  } else {
-    
-  }
-  version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Process.version)
-}
-
-// .google.protobuf.Timestamp timestamp = 2;
-inline bool Process::_internal_has_timestamp() const {
-  return this != internal_default_instance() && timestamp_ != nullptr;
-}
-inline bool Process::has_timestamp() const {
-  return _internal_has_timestamp();
-}
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& Process::_internal_timestamp() const {
-  const PROTOBUF_NAMESPACE_ID::Timestamp* p = timestamp_;
-  return p != nullptr ? *p : *reinterpret_cast<const PROTOBUF_NAMESPACE_ID::Timestamp*>(
-      &PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
-}
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& Process::timestamp() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Process.timestamp)
-  return _internal_timestamp();
-}
-inline void Process::unsafe_arena_set_allocated_timestamp(
-    PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
-  if (GetArena() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
-  }
-  timestamp_ = timestamp;
-  if (timestamp) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.Process.timestamp)
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Process::release_timestamp() {
-  
-  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
-  timestamp_ = nullptr;
-  if (GetArena() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-  return temp;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Process::unsafe_arena_release_timestamp() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Process.timestamp)
-  
-  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
-  timestamp_ = nullptr;
-  return temp;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Process::_internal_mutable_timestamp() {
-  
-  if (timestamp_ == nullptr) {
-    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::Timestamp>(GetArena());
-    timestamp_ = p;
-  }
-  return timestamp_;
-}
-inline PROTOBUF_NAMESPACE_ID::Timestamp* Process::mutable_timestamp() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Process.timestamp)
-  return _internal_mutable_timestamp();
-}
-inline void Process::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
-  }
-  if (timestamp) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp)->GetArena();
-    if (message_arena != submessage_arena) {
-      timestamp = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, timestamp, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  timestamp_ = timestamp;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Process.timestamp)
-}
-
-// .eve_launcher.pdm.Bitness bitness = 3;
-inline void Process::clear_bitness() {
-  bitness_ = 0;
-}
-inline ::eve_launcher::pdm::Bitness Process::_internal_bitness() const {
-  return static_cast< ::eve_launcher::pdm::Bitness >(bitness_);
-}
-inline ::eve_launcher::pdm::Bitness Process::bitness() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Process.bitness)
-  return _internal_bitness();
-}
-inline void Process::_internal_set_bitness(::eve_launcher::pdm::Bitness value) {
-  
-  bitness_ = value;
-}
-inline void Process::set_bitness(::eve_launcher::pdm::Bitness value) {
-  _internal_set_bitness(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Process.bitness)
-}
-
-// -------------------------------------------------------------------
-
-// OS_GraphicsAPIs_VulkanProperties
-
-// .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport support = 1;
-inline void OS_GraphicsAPIs_VulkanProperties::clear_support() {
-  support_ = 0;
-}
-inline ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs_VulkanProperties::_internal_support() const {
-  return static_cast< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport >(support_);
-}
-inline ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs_VulkanProperties::support() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.support)
-  return _internal_support();
-}
-inline void OS_GraphicsAPIs_VulkanProperties::_internal_set_support(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value) {
-  
-  support_ = value;
-}
-inline void OS_GraphicsAPIs_VulkanProperties::set_support(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value) {
-  _internal_set_support(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.support)
-}
-
-// string version = 2;
-inline void OS_GraphicsAPIs_VulkanProperties::clear_version() {
-  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline const std::string& OS_GraphicsAPIs_VulkanProperties::version() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
-  return _internal_version();
-}
-inline void OS_GraphicsAPIs_VulkanProperties::set_version(const std::string& value) {
-  _internal_set_version(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
-}
-inline std::string* OS_GraphicsAPIs_VulkanProperties::mutable_version() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
-  return _internal_mutable_version();
-}
-inline const std::string& OS_GraphicsAPIs_VulkanProperties::_internal_version() const {
-  return version_.Get();
-}
-inline void OS_GraphicsAPIs_VulkanProperties::_internal_set_version(const std::string& value) {
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void OS_GraphicsAPIs_VulkanProperties::set_version(std::string&& value) {
-  
-  version_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
-}
-inline void OS_GraphicsAPIs_VulkanProperties::set_version(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
-}
-inline void OS_GraphicsAPIs_VulkanProperties::set_version(const char* value,
-    size_t size) {
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
-}
-inline std::string* OS_GraphicsAPIs_VulkanProperties::_internal_mutable_version() {
-  
-  return version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* OS_GraphicsAPIs_VulkanProperties::release_version() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
-  return version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void OS_GraphicsAPIs_VulkanProperties::set_allocated_version(std::string* version) {
-  if (version != nullptr) {
-    
-  } else {
-    
-  }
-  version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.GraphicsAPIs.VulkanProperties.version)
-}
-
-// -------------------------------------------------------------------
-
 // OS_GraphicsAPIs
 
 // bool metal_supported = 1;
@@ -3507,7 +2561,7 @@ inline bool OS_GraphicsAPIs::_internal_metal_supported() const {
   return metal_supported_;
 }
 inline bool OS_GraphicsAPIs::metal_supported() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.metal_supported)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.GraphicsAPIs.metal_supported)
   return _internal_metal_supported();
 }
 inline void OS_GraphicsAPIs::_internal_set_metal_supported(bool value) {
@@ -3516,151 +2570,131 @@ inline void OS_GraphicsAPIs::_internal_set_metal_supported(bool value) {
 }
 inline void OS_GraphicsAPIs::set_metal_supported(bool value) {
   _internal_set_metal_supported(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.metal_supported)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.GraphicsAPIs.metal_supported)
 }
 
-// .eve_launcher.pdm.OS.GraphicsAPIs.VulkanSupport vulkan_supported = 2;
-inline void OS_GraphicsAPIs::clear_vulkan_supported() {
-  vulkan_supported_ = 0;
+// string vulkan_highest_supported_version = 2;
+inline void OS_GraphicsAPIs::clear_vulkan_highest_supported_version() {
+  vulkan_highest_supported_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::_internal_vulkan_supported() const {
-  return static_cast< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport >(vulkan_supported_);
+inline const std::string& OS_GraphicsAPIs::vulkan_highest_supported_version() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  return _internal_vulkan_highest_supported_version();
 }
-inline ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport OS_GraphicsAPIs::vulkan_supported() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_supported)
-  return _internal_vulkan_supported();
+inline void OS_GraphicsAPIs::set_vulkan_highest_supported_version(const std::string& value) {
+  _internal_set_vulkan_highest_supported_version(value);
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
-inline void OS_GraphicsAPIs::_internal_set_vulkan_supported(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value) {
+inline std::string* OS_GraphicsAPIs::mutable_vulkan_highest_supported_version() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  return _internal_mutable_vulkan_highest_supported_version();
+}
+inline const std::string& OS_GraphicsAPIs::_internal_vulkan_highest_supported_version() const {
+  return vulkan_highest_supported_version_.Get();
+}
+inline void OS_GraphicsAPIs::_internal_set_vulkan_highest_supported_version(const std::string& value) {
   
-  vulkan_supported_ = value;
+  vulkan_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void OS_GraphicsAPIs::set_vulkan_supported(::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport value) {
-  _internal_set_vulkan_supported(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_supported)
-}
-
-// string vulkan_highest_support = 3;
-inline void OS_GraphicsAPIs::clear_vulkan_highest_support() {
-  vulkan_highest_support_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline const std::string& OS_GraphicsAPIs::vulkan_highest_support() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
-  return _internal_vulkan_highest_support();
-}
-inline void OS_GraphicsAPIs::set_vulkan_highest_support(const std::string& value) {
-  _internal_set_vulkan_highest_support(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
-}
-inline std::string* OS_GraphicsAPIs::mutable_vulkan_highest_support() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
-  return _internal_mutable_vulkan_highest_support();
-}
-inline const std::string& OS_GraphicsAPIs::_internal_vulkan_highest_support() const {
-  return vulkan_highest_support_.Get();
-}
-inline void OS_GraphicsAPIs::_internal_set_vulkan_highest_support(const std::string& value) {
+inline void OS_GraphicsAPIs::set_vulkan_highest_supported_version(std::string&& value) {
   
-  vulkan_highest_support_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void OS_GraphicsAPIs::set_vulkan_highest_support(std::string&& value) {
-  
-  vulkan_highest_support_.Set(
+  vulkan_highest_supported_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
-inline void OS_GraphicsAPIs::set_vulkan_highest_support(const char* value) {
+inline void OS_GraphicsAPIs::set_vulkan_highest_supported_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  vulkan_highest_support_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+  vulkan_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
-inline void OS_GraphicsAPIs::set_vulkan_highest_support(const char* value,
+inline void OS_GraphicsAPIs::set_vulkan_highest_supported_version(const char* value,
     size_t size) {
   
-  vulkan_highest_support_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+  vulkan_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
-inline std::string* OS_GraphicsAPIs::_internal_mutable_vulkan_highest_support() {
+inline std::string* OS_GraphicsAPIs::_internal_mutable_vulkan_highest_supported_version() {
   
-  return vulkan_highest_support_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return vulkan_highest_supported_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* OS_GraphicsAPIs::release_vulkan_highest_support() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
-  return vulkan_highest_support_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* OS_GraphicsAPIs::release_vulkan_highest_supported_version() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  return vulkan_highest_supported_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void OS_GraphicsAPIs::set_allocated_vulkan_highest_support(std::string* vulkan_highest_support) {
-  if (vulkan_highest_support != nullptr) {
+inline void OS_GraphicsAPIs::set_allocated_vulkan_highest_supported_version(std::string* vulkan_highest_supported_version) {
+  if (vulkan_highest_supported_version != nullptr) {
     
   } else {
     
   }
-  vulkan_highest_support_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), vulkan_highest_support,
+  vulkan_highest_supported_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), vulkan_highest_supported_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.GraphicsAPIs.vulkan_highest_support)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
 
-// string d3d_highest_support = 4;
-inline void OS_GraphicsAPIs::clear_d3d_highest_support() {
-  d3d_highest_support_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// string d3d_highest_supported_version = 3;
+inline void OS_GraphicsAPIs::clear_d3d_highest_supported_version() {
+  d3d_highest_supported_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline const std::string& OS_GraphicsAPIs::d3d_highest_support() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
-  return _internal_d3d_highest_support();
+inline const std::string& OS_GraphicsAPIs::d3d_highest_supported_version() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  return _internal_d3d_highest_supported_version();
 }
-inline void OS_GraphicsAPIs::set_d3d_highest_support(const std::string& value) {
-  _internal_set_d3d_highest_support(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+inline void OS_GraphicsAPIs::set_d3d_highest_supported_version(const std::string& value) {
+  _internal_set_d3d_highest_supported_version(value);
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
-inline std::string* OS_GraphicsAPIs::mutable_d3d_highest_support() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
-  return _internal_mutable_d3d_highest_support();
+inline std::string* OS_GraphicsAPIs::mutable_d3d_highest_supported_version() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  return _internal_mutable_d3d_highest_supported_version();
 }
-inline const std::string& OS_GraphicsAPIs::_internal_d3d_highest_support() const {
-  return d3d_highest_support_.Get();
+inline const std::string& OS_GraphicsAPIs::_internal_d3d_highest_supported_version() const {
+  return d3d_highest_supported_version_.Get();
 }
-inline void OS_GraphicsAPIs::_internal_set_d3d_highest_support(const std::string& value) {
+inline void OS_GraphicsAPIs::_internal_set_d3d_highest_supported_version(const std::string& value) {
   
-  d3d_highest_support_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+  d3d_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void OS_GraphicsAPIs::set_d3d_highest_support(std::string&& value) {
+inline void OS_GraphicsAPIs::set_d3d_highest_supported_version(std::string&& value) {
   
-  d3d_highest_support_.Set(
+  d3d_highest_supported_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
-inline void OS_GraphicsAPIs::set_d3d_highest_support(const char* value) {
+inline void OS_GraphicsAPIs::set_d3d_highest_supported_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  d3d_highest_support_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+  d3d_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
-inline void OS_GraphicsAPIs::set_d3d_highest_support(const char* value,
+inline void OS_GraphicsAPIs::set_d3d_highest_supported_version(const char* value,
     size_t size) {
   
-  d3d_highest_support_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+  d3d_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
-inline std::string* OS_GraphicsAPIs::_internal_mutable_d3d_highest_support() {
+inline std::string* OS_GraphicsAPIs::_internal_mutable_d3d_highest_supported_version() {
   
-  return d3d_highest_support_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return d3d_highest_supported_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* OS_GraphicsAPIs::release_d3d_highest_support() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
-  return d3d_highest_support_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* OS_GraphicsAPIs::release_d3d_highest_supported_version() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  return d3d_highest_supported_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void OS_GraphicsAPIs::set_allocated_d3d_highest_support(std::string* d3d_highest_support) {
-  if (d3d_highest_support != nullptr) {
+inline void OS_GraphicsAPIs::set_allocated_d3d_highest_supported_version(std::string* d3d_highest_supported_version) {
+  if (d3d_highest_supported_version != nullptr) {
     
   } else {
     
   }
-  d3d_highest_support_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), d3d_highest_support,
+  d3d_highest_supported_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), d3d_highest_supported_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.GraphicsAPIs.d3d_highest_support)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
 
 // -------------------------------------------------------------------
@@ -3672,15 +2706,15 @@ inline void OS_Wine::clear_version() {
   version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS_Wine::version() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.Wine.version)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.Wine.version)
   return _internal_version();
 }
 inline void OS_Wine::set_version(const std::string& value) {
   _internal_set_version(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.Wine.version)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.Wine.version)
 }
 inline std::string* OS_Wine::mutable_version() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.Wine.version)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.Wine.version)
   return _internal_mutable_version();
 }
 inline const std::string& OS_Wine::_internal_version() const {
@@ -3694,28 +2728,28 @@ inline void OS_Wine::set_version(std::string&& value) {
   
   version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.Wine.version)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.Wine.version)
 }
 inline void OS_Wine::set_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.Wine.version)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.Wine.version)
 }
 inline void OS_Wine::set_version(const char* value,
     size_t size) {
   
   version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.Wine.version)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.Wine.version)
 }
 inline std::string* OS_Wine::_internal_mutable_version() {
   
   return version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS_Wine::release_version() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.Wine.version)
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.Wine.version)
   return version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS_Wine::set_allocated_version(std::string* version) {
@@ -3726,7 +2760,7 @@ inline void OS_Wine::set_allocated_version(std::string* version) {
   }
   version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.Wine.version)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.Wine.version)
 }
 
 // string host_os = 2;
@@ -3734,15 +2768,15 @@ inline void OS_Wine::clear_host_os() {
   host_os_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS_Wine::host_os() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.Wine.host_os)
   return _internal_host_os();
 }
 inline void OS_Wine::set_host_os(const std::string& value) {
   _internal_set_host_os(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.Wine.host_os)
 }
 inline std::string* OS_Wine::mutable_host_os() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.Wine.host_os)
   return _internal_mutable_host_os();
 }
 inline const std::string& OS_Wine::_internal_host_os() const {
@@ -3756,28 +2790,28 @@ inline void OS_Wine::set_host_os(std::string&& value) {
   
   host_os_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.Wine.host_os)
 }
 inline void OS_Wine::set_host_os(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   host_os_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.Wine.host_os)
 }
 inline void OS_Wine::set_host_os(const char* value,
     size_t size) {
   
   host_os_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.Wine.host_os)
 }
 inline std::string* OS_Wine::_internal_mutable_host_os() {
   
   return host_os_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS_Wine::release_host_os() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.Wine.host_os)
   return host_os_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS_Wine::set_allocated_host_os(std::string* host_os) {
@@ -3788,31 +2822,31 @@ inline void OS_Wine::set_allocated_host_os(std::string* host_os) {
   }
   host_os_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), host_os,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.Wine.host_os)
 }
 
 // -------------------------------------------------------------------
 
 // OS
 
-// .eve_launcher.pdm.OS.Kind kind = 1;
-inline void OS::clear_kind() {
-  kind_ = 0;
+// .platform_detection_module.OS.Kind type = 1;
+inline void OS::clear_type() {
+  type_ = 0;
 }
-inline ::eve_launcher::pdm::OS_Kind OS::_internal_kind() const {
-  return static_cast< ::eve_launcher::pdm::OS_Kind >(kind_);
+inline ::platform_detection_module::OS_Kind OS::_internal_type() const {
+  return static_cast< ::platform_detection_module::OS_Kind >(type_);
 }
-inline ::eve_launcher::pdm::OS_Kind OS::kind() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.kind)
-  return _internal_kind();
+inline ::platform_detection_module::OS_Kind OS::type() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.type)
+  return _internal_type();
 }
-inline void OS::_internal_set_kind(::eve_launcher::pdm::OS_Kind value) {
+inline void OS::_internal_set_type(::platform_detection_module::OS_Kind value) {
   
-  kind_ = value;
+  type_ = value;
 }
-inline void OS::set_kind(::eve_launcher::pdm::OS_Kind value) {
-  _internal_set_kind(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.kind)
+inline void OS::set_type(::platform_detection_module::OS_Kind value) {
+  _internal_set_type(value);
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.type)
 }
 
 // string name = 2;
@@ -3820,15 +2854,15 @@ inline void OS::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::name() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.name)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.name)
   return _internal_name();
 }
 inline void OS::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.name)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.name)
 }
 inline std::string* OS::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.name)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.name)
   return _internal_mutable_name();
 }
 inline const std::string& OS::_internal_name() const {
@@ -3842,28 +2876,28 @@ inline void OS::set_name(std::string&& value) {
   
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.name)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.name)
 }
 inline void OS::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.name)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.name)
 }
 inline void OS::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.name)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.name)
 }
 inline std::string* OS::_internal_mutable_name() {
   
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_name() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.name)
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_name(std::string* name) {
@@ -3874,27 +2908,27 @@ inline void OS::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.name)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.name)
 }
 
-// .eve_launcher.pdm.Bitness bitness = 3;
+// .platform_detection_module.Bitness bitness = 3;
 inline void OS::clear_bitness() {
   bitness_ = 0;
 }
-inline ::eve_launcher::pdm::Bitness OS::_internal_bitness() const {
-  return static_cast< ::eve_launcher::pdm::Bitness >(bitness_);
+inline ::platform_detection_module::Bitness OS::_internal_bitness() const {
+  return static_cast< ::platform_detection_module::Bitness >(bitness_);
 }
-inline ::eve_launcher::pdm::Bitness OS::bitness() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.bitness)
+inline ::platform_detection_module::Bitness OS::bitness() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.bitness)
   return _internal_bitness();
 }
-inline void OS::_internal_set_bitness(::eve_launcher::pdm::Bitness value) {
+inline void OS::_internal_set_bitness(::platform_detection_module::Bitness value) {
   
   bitness_ = value;
 }
-inline void OS::set_bitness(::eve_launcher::pdm::Bitness value) {
+inline void OS::set_bitness(::platform_detection_module::Bitness value) {
   _internal_set_bitness(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.bitness)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.bitness)
 }
 
 // string major_version = 4;
@@ -3902,15 +2936,15 @@ inline void OS::clear_major_version() {
   major_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::major_version() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.major_version)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.major_version)
   return _internal_major_version();
 }
 inline void OS::set_major_version(const std::string& value) {
   _internal_set_major_version(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.major_version)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.major_version)
 }
 inline std::string* OS::mutable_major_version() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.major_version)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.major_version)
   return _internal_mutable_major_version();
 }
 inline const std::string& OS::_internal_major_version() const {
@@ -3924,28 +2958,28 @@ inline void OS::set_major_version(std::string&& value) {
   
   major_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.major_version)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.major_version)
 }
 inline void OS::set_major_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   major_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.major_version)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.major_version)
 }
 inline void OS::set_major_version(const char* value,
     size_t size) {
   
   major_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.major_version)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.major_version)
 }
 inline std::string* OS::_internal_mutable_major_version() {
   
   return major_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_major_version() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.major_version)
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.major_version)
   return major_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_major_version(std::string* major_version) {
@@ -3956,7 +2990,7 @@ inline void OS::set_allocated_major_version(std::string* major_version) {
   }
   major_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), major_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.major_version)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.major_version)
 }
 
 // string minor_version = 5;
@@ -3964,15 +2998,15 @@ inline void OS::clear_minor_version() {
   minor_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::minor_version() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.minor_version)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.minor_version)
   return _internal_minor_version();
 }
 inline void OS::set_minor_version(const std::string& value) {
   _internal_set_minor_version(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.minor_version)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.minor_version)
 }
 inline std::string* OS::mutable_minor_version() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.minor_version)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.minor_version)
   return _internal_mutable_minor_version();
 }
 inline const std::string& OS::_internal_minor_version() const {
@@ -3986,28 +3020,28 @@ inline void OS::set_minor_version(std::string&& value) {
   
   minor_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.minor_version)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.minor_version)
 }
 inline void OS::set_minor_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   minor_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.minor_version)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.minor_version)
 }
 inline void OS::set_minor_version(const char* value,
     size_t size) {
   
   minor_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.minor_version)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.minor_version)
 }
 inline std::string* OS::_internal_mutable_minor_version() {
   
   return minor_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_minor_version() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.minor_version)
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.minor_version)
   return minor_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_minor_version(std::string* minor_version) {
@@ -4018,7 +3052,7 @@ inline void OS::set_allocated_minor_version(std::string* minor_version) {
   }
   minor_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), minor_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.minor_version)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.minor_version)
 }
 
 // string build_number = 6;
@@ -4026,15 +3060,15 @@ inline void OS::clear_build_number() {
   build_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::build_number() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.build_number)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.build_number)
   return _internal_build_number();
 }
 inline void OS::set_build_number(const std::string& value) {
   _internal_set_build_number(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.build_number)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.build_number)
 }
 inline std::string* OS::mutable_build_number() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.build_number)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.build_number)
   return _internal_mutable_build_number();
 }
 inline const std::string& OS::_internal_build_number() const {
@@ -4048,28 +3082,28 @@ inline void OS::set_build_number(std::string&& value) {
   
   build_number_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.build_number)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.build_number)
 }
 inline void OS::set_build_number(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   build_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.build_number)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.build_number)
 }
 inline void OS::set_build_number(const char* value,
     size_t size) {
   
   build_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.build_number)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.build_number)
 }
 inline std::string* OS::_internal_mutable_build_number() {
   
   return build_number_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_build_number() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.build_number)
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.build_number)
   return build_number_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_build_number(std::string* build_number) {
@@ -4080,7 +3114,7 @@ inline void OS::set_allocated_build_number(std::string* build_number) {
   }
   build_number_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), build_number,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.build_number)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.build_number)
 }
 
 // string kernel_version = 7;
@@ -4088,15 +3122,15 @@ inline void OS::clear_kernel_version() {
   kernel_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::kernel_version() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.kernel_version)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.kernel_version)
   return _internal_kernel_version();
 }
 inline void OS::set_kernel_version(const std::string& value) {
   _internal_set_kernel_version(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.kernel_version)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.kernel_version)
 }
 inline std::string* OS::mutable_kernel_version() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.kernel_version)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.kernel_version)
   return _internal_mutable_kernel_version();
 }
 inline const std::string& OS::_internal_kernel_version() const {
@@ -4110,28 +3144,28 @@ inline void OS::set_kernel_version(std::string&& value) {
   
   kernel_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.kernel_version)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.kernel_version)
 }
 inline void OS::set_kernel_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   kernel_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.kernel_version)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.kernel_version)
 }
 inline void OS::set_kernel_version(const char* value,
     size_t size) {
   
   kernel_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.kernel_version)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.kernel_version)
 }
 inline std::string* OS::_internal_mutable_kernel_version() {
   
   return kernel_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_kernel_version() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.kernel_version)
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.kernel_version)
   return kernel_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_kernel_version(std::string* kernel_version) {
@@ -4142,7 +3176,7 @@ inline void OS::set_allocated_kernel_version(std::string* kernel_version) {
   }
   kernel_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), kernel_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.kernel_version)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.kernel_version)
 }
 
 // string username = 8;
@@ -4150,15 +3184,15 @@ inline void OS::clear_username() {
   username_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::username() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.username)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.username)
   return _internal_username();
 }
 inline void OS::set_username(const std::string& value) {
   _internal_set_username(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.username)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.username)
 }
 inline std::string* OS::mutable_username() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.username)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.username)
   return _internal_mutable_username();
 }
 inline const std::string& OS::_internal_username() const {
@@ -4172,28 +3206,28 @@ inline void OS::set_username(std::string&& value) {
   
   username_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.username)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.username)
 }
 inline void OS::set_username(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   username_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.username)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.username)
 }
 inline void OS::set_username(const char* value,
     size_t size) {
   
   username_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.username)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.username)
 }
 inline std::string* OS::_internal_mutable_username() {
   
   return username_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_username() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.username)
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.username)
   return username_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_username(std::string* username) {
@@ -4204,7 +3238,7 @@ inline void OS::set_allocated_username(std::string* username) {
   }
   username_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), username,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.username)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.username)
 }
 
 // string user_locale = 9;
@@ -4212,15 +3246,15 @@ inline void OS::clear_user_locale() {
   user_locale_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::user_locale() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.user_locale)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.user_locale)
   return _internal_user_locale();
 }
 inline void OS::set_user_locale(const std::string& value) {
   _internal_set_user_locale(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.user_locale)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.user_locale)
 }
 inline std::string* OS::mutable_user_locale() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.user_locale)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.user_locale)
   return _internal_mutable_user_locale();
 }
 inline const std::string& OS::_internal_user_locale() const {
@@ -4234,28 +3268,28 @@ inline void OS::set_user_locale(std::string&& value) {
   
   user_locale_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.OS.user_locale)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.user_locale)
 }
 inline void OS::set_user_locale(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   user_locale_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.OS.user_locale)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.user_locale)
 }
 inline void OS::set_user_locale(const char* value,
     size_t size) {
   
   user_locale_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.OS.user_locale)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.user_locale)
 }
 inline std::string* OS::_internal_mutable_user_locale() {
   
   return user_locale_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_user_locale() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.user_locale)
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.user_locale)
   return user_locale_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_user_locale(std::string* user_locale) {
@@ -4266,7 +3300,7 @@ inline void OS::set_allocated_user_locale(std::string* user_locale) {
   }
   user_locale_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_locale,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.user_locale)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.user_locale)
 }
 
 // bool is_remote_session = 10;
@@ -4277,7 +3311,7 @@ inline bool OS::_internal_is_remote_session() const {
   return is_remote_session_;
 }
 inline bool OS::is_remote_session() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.is_remote_session)
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.is_remote_session)
   return _internal_is_remote_session();
 }
 inline void OS::_internal_set_is_remote_session(bool value) {
@@ -4286,10 +3320,10 @@ inline void OS::_internal_set_is_remote_session(bool value) {
 }
 inline void OS::set_is_remote_session(bool value) {
   _internal_set_is_remote_session(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.OS.is_remote_session)
+  // @@protoc_insertion_point(field_set:platform_detection_module.OS.is_remote_session)
 }
 
-// .eve_launcher.pdm.OS.GraphicsAPIs graphics_apis = 11;
+// .platform_detection_module.OS.GraphicsAPIs graphics_apis = 11;
 inline bool OS::_internal_has_graphics_apis() const {
   return this != internal_default_instance() && graphics_apis_ != nullptr;
 }
@@ -4302,17 +3336,17 @@ inline void OS::clear_graphics_apis() {
   }
   graphics_apis_ = nullptr;
 }
-inline const ::eve_launcher::pdm::OS_GraphicsAPIs& OS::_internal_graphics_apis() const {
-  const ::eve_launcher::pdm::OS_GraphicsAPIs* p = graphics_apis_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::eve_launcher::pdm::OS_GraphicsAPIs*>(
-      &::eve_launcher::pdm::_OS_GraphicsAPIs_default_instance_);
+inline const ::platform_detection_module::OS_GraphicsAPIs& OS::_internal_graphics_apis() const {
+  const ::platform_detection_module::OS_GraphicsAPIs* p = graphics_apis_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::OS_GraphicsAPIs*>(
+      &::platform_detection_module::_OS_GraphicsAPIs_default_instance_);
 }
-inline const ::eve_launcher::pdm::OS_GraphicsAPIs& OS::graphics_apis() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.graphics_apis)
+inline const ::platform_detection_module::OS_GraphicsAPIs& OS::graphics_apis() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.graphics_apis)
   return _internal_graphics_apis();
 }
 inline void OS::unsafe_arena_set_allocated_graphics_apis(
-    ::eve_launcher::pdm::OS_GraphicsAPIs* graphics_apis) {
+    ::platform_detection_module::OS_GraphicsAPIs* graphics_apis) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(graphics_apis_);
   }
@@ -4322,37 +3356,37 @@ inline void OS::unsafe_arena_set_allocated_graphics_apis(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.OS.graphics_apis)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.OS.graphics_apis)
 }
-inline ::eve_launcher::pdm::OS_GraphicsAPIs* OS::release_graphics_apis() {
+inline ::platform_detection_module::OS_GraphicsAPIs* OS::release_graphics_apis() {
   
-  ::eve_launcher::pdm::OS_GraphicsAPIs* temp = graphics_apis_;
+  ::platform_detection_module::OS_GraphicsAPIs* temp = graphics_apis_;
   graphics_apis_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::eve_launcher::pdm::OS_GraphicsAPIs* OS::unsafe_arena_release_graphics_apis() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.graphics_apis)
+inline ::platform_detection_module::OS_GraphicsAPIs* OS::unsafe_arena_release_graphics_apis() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.graphics_apis)
   
-  ::eve_launcher::pdm::OS_GraphicsAPIs* temp = graphics_apis_;
+  ::platform_detection_module::OS_GraphicsAPIs* temp = graphics_apis_;
   graphics_apis_ = nullptr;
   return temp;
 }
-inline ::eve_launcher::pdm::OS_GraphicsAPIs* OS::_internal_mutable_graphics_apis() {
+inline ::platform_detection_module::OS_GraphicsAPIs* OS::_internal_mutable_graphics_apis() {
   
   if (graphics_apis_ == nullptr) {
-    auto* p = CreateMaybeMessage<::eve_launcher::pdm::OS_GraphicsAPIs>(GetArena());
+    auto* p = CreateMaybeMessage<::platform_detection_module::OS_GraphicsAPIs>(GetArena());
     graphics_apis_ = p;
   }
   return graphics_apis_;
 }
-inline ::eve_launcher::pdm::OS_GraphicsAPIs* OS::mutable_graphics_apis() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.graphics_apis)
+inline ::platform_detection_module::OS_GraphicsAPIs* OS::mutable_graphics_apis() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.graphics_apis)
   return _internal_mutable_graphics_apis();
 }
-inline void OS::set_allocated_graphics_apis(::eve_launcher::pdm::OS_GraphicsAPIs* graphics_apis) {
+inline void OS::set_allocated_graphics_apis(::platform_detection_module::OS_GraphicsAPIs* graphics_apis) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete graphics_apis_;
@@ -4369,10 +3403,10 @@ inline void OS::set_allocated_graphics_apis(::eve_launcher::pdm::OS_GraphicsAPIs
     
   }
   graphics_apis_ = graphics_apis;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.graphics_apis)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.graphics_apis)
 }
 
-// .eve_launcher.pdm.OS.Wine wine = 12;
+// .platform_detection_module.OS.Wine wine = 12;
 inline bool OS::_internal_has_wine() const {
   return this != internal_default_instance() && wine_ != nullptr;
 }
@@ -4385,17 +3419,17 @@ inline void OS::clear_wine() {
   }
   wine_ = nullptr;
 }
-inline const ::eve_launcher::pdm::OS_Wine& OS::_internal_wine() const {
-  const ::eve_launcher::pdm::OS_Wine* p = wine_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::eve_launcher::pdm::OS_Wine*>(
-      &::eve_launcher::pdm::_OS_Wine_default_instance_);
+inline const ::platform_detection_module::OS_Wine& OS::_internal_wine() const {
+  const ::platform_detection_module::OS_Wine* p = wine_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::OS_Wine*>(
+      &::platform_detection_module::_OS_Wine_default_instance_);
 }
-inline const ::eve_launcher::pdm::OS_Wine& OS::wine() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.OS.wine)
+inline const ::platform_detection_module::OS_Wine& OS::wine() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.OS.wine)
   return _internal_wine();
 }
 inline void OS::unsafe_arena_set_allocated_wine(
-    ::eve_launcher::pdm::OS_Wine* wine) {
+    ::platform_detection_module::OS_Wine* wine) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(wine_);
   }
@@ -4405,37 +3439,37 @@ inline void OS::unsafe_arena_set_allocated_wine(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.OS.wine)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.OS.wine)
 }
-inline ::eve_launcher::pdm::OS_Wine* OS::release_wine() {
+inline ::platform_detection_module::OS_Wine* OS::release_wine() {
   
-  ::eve_launcher::pdm::OS_Wine* temp = wine_;
+  ::platform_detection_module::OS_Wine* temp = wine_;
   wine_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::eve_launcher::pdm::OS_Wine* OS::unsafe_arena_release_wine() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.OS.wine)
+inline ::platform_detection_module::OS_Wine* OS::unsafe_arena_release_wine() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.OS.wine)
   
-  ::eve_launcher::pdm::OS_Wine* temp = wine_;
+  ::platform_detection_module::OS_Wine* temp = wine_;
   wine_ = nullptr;
   return temp;
 }
-inline ::eve_launcher::pdm::OS_Wine* OS::_internal_mutable_wine() {
+inline ::platform_detection_module::OS_Wine* OS::_internal_mutable_wine() {
   
   if (wine_ == nullptr) {
-    auto* p = CreateMaybeMessage<::eve_launcher::pdm::OS_Wine>(GetArena());
+    auto* p = CreateMaybeMessage<::platform_detection_module::OS_Wine>(GetArena());
     wine_ = p;
   }
   return wine_;
 }
-inline ::eve_launcher::pdm::OS_Wine* OS::mutable_wine() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.OS.wine)
+inline ::platform_detection_module::OS_Wine* OS::mutable_wine() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.wine)
   return _internal_mutable_wine();
 }
-inline void OS::set_allocated_wine(::eve_launcher::pdm::OS_Wine* wine) {
+inline void OS::set_allocated_wine(::platform_detection_module::OS_Wine* wine) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete wine_;
@@ -4452,31 +3486,31 @@ inline void OS::set_allocated_wine(::eve_launcher::pdm::OS_Wine* wine) {
     
   }
   wine_ = wine;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.OS.wine)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.wine)
 }
 
 // -------------------------------------------------------------------
 
 // Machine_CPU
 
-// .eve_launcher.pdm.Bitness bitness = 1;
+// .platform_detection_module.Bitness bitness = 1;
 inline void Machine_CPU::clear_bitness() {
   bitness_ = 0;
 }
-inline ::eve_launcher::pdm::Bitness Machine_CPU::_internal_bitness() const {
-  return static_cast< ::eve_launcher::pdm::Bitness >(bitness_);
+inline ::platform_detection_module::Bitness Machine_CPU::_internal_bitness() const {
+  return static_cast< ::platform_detection_module::Bitness >(bitness_);
 }
-inline ::eve_launcher::pdm::Bitness Machine_CPU::bitness() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.bitness)
+inline ::platform_detection_module::Bitness Machine_CPU::bitness() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.bitness)
   return _internal_bitness();
 }
-inline void Machine_CPU::_internal_set_bitness(::eve_launcher::pdm::Bitness value) {
+inline void Machine_CPU::_internal_set_bitness(::platform_detection_module::Bitness value) {
   
   bitness_ = value;
 }
-inline void Machine_CPU::set_bitness(::eve_launcher::pdm::Bitness value) {
+inline void Machine_CPU::set_bitness(::platform_detection_module::Bitness value) {
   _internal_set_bitness(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.bitness)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.bitness)
 }
 
 // int32 logical_core_count = 2;
@@ -4487,7 +3521,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::_internal_logical_core_count(
   return logical_core_count_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::logical_core_count() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.logical_core_count)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.logical_core_count)
   return _internal_logical_core_count();
 }
 inline void Machine_CPU::_internal_set_logical_core_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4496,7 +3530,7 @@ inline void Machine_CPU::_internal_set_logical_core_count(::PROTOBUF_NAMESPACE_I
 }
 inline void Machine_CPU::set_logical_core_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_logical_core_count(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.logical_core_count)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.logical_core_count)
 }
 
 // string brand = 3;
@@ -4504,15 +3538,15 @@ inline void Machine_CPU::clear_brand() {
   brand_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_CPU::brand() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.brand)
   return _internal_brand();
 }
 inline void Machine_CPU::set_brand(const std::string& value) {
   _internal_set_brand(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.brand)
 }
 inline std::string* Machine_CPU::mutable_brand() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.CPU.brand)
   return _internal_mutable_brand();
 }
 inline const std::string& Machine_CPU::_internal_brand() const {
@@ -4526,28 +3560,28 @@ inline void Machine_CPU::set_brand(std::string&& value) {
   
   brand_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.CPU.brand)
 }
 inline void Machine_CPU::set_brand(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   brand_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.CPU.brand)
 }
 inline void Machine_CPU::set_brand(const char* value,
     size_t size) {
   
   brand_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.CPU.brand)
 }
 inline std::string* Machine_CPU::_internal_mutable_brand() {
   
   return brand_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_CPU::release_brand() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.CPU.brand)
   return brand_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_CPU::set_allocated_brand(std::string* brand) {
@@ -4558,7 +3592,7 @@ inline void Machine_CPU::set_allocated_brand(std::string* brand) {
   }
   brand_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), brand,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.CPU.brand)
 }
 
 // string vendor = 4;
@@ -4566,15 +3600,15 @@ inline void Machine_CPU::clear_vendor() {
   vendor_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_CPU::vendor() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.vendor)
   return _internal_vendor();
 }
 inline void Machine_CPU::set_vendor(const std::string& value) {
   _internal_set_vendor(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.vendor)
 }
 inline std::string* Machine_CPU::mutable_vendor() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.CPU.vendor)
   return _internal_mutable_vendor();
 }
 inline const std::string& Machine_CPU::_internal_vendor() const {
@@ -4588,28 +3622,28 @@ inline void Machine_CPU::set_vendor(std::string&& value) {
   
   vendor_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.CPU.vendor)
 }
 inline void Machine_CPU::set_vendor(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.CPU.vendor)
 }
 inline void Machine_CPU::set_vendor(const char* value,
     size_t size) {
   
   vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.CPU.vendor)
 }
 inline std::string* Machine_CPU::_internal_mutable_vendor() {
   
   return vendor_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_CPU::release_vendor() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.CPU.vendor)
   return vendor_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_CPU::set_allocated_vendor(std::string* vendor) {
@@ -4620,7 +3654,7 @@ inline void Machine_CPU::set_allocated_vendor(std::string* vendor) {
   }
   vendor_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), vendor,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.CPU.vendor)
 }
 
 // int32 model = 5;
@@ -4631,7 +3665,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::_internal_model() const {
   return model_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::model() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.model)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.model)
   return _internal_model();
 }
 inline void Machine_CPU::_internal_set_model(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4640,7 +3674,7 @@ inline void Machine_CPU::_internal_set_model(::PROTOBUF_NAMESPACE_ID::int32 valu
 }
 inline void Machine_CPU::set_model(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_model(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.model)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.model)
 }
 
 // int32 stepping = 6;
@@ -4651,7 +3685,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::_internal_stepping() const {
   return stepping_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::stepping() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.CPU.stepping)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.stepping)
   return _internal_stepping();
 }
 inline void Machine_CPU::_internal_set_stepping(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4660,7 +3694,7 @@ inline void Machine_CPU::_internal_set_stepping(::PROTOBUF_NAMESPACE_ID::int32 v
 }
 inline void Machine_CPU::set_stepping(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_stepping(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.CPU.stepping)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.stepping)
 }
 
 // -------------------------------------------------------------------
@@ -4675,7 +3709,7 @@ inline bool Machine_VM::_internal_is_suspected_vm() const {
   return is_suspected_vm_;
 }
 inline bool Machine_VM::is_suspected_vm() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.is_suspected_vm)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.is_suspected_vm)
   return _internal_is_suspected_vm();
 }
 inline void Machine_VM::_internal_set_is_suspected_vm(bool value) {
@@ -4684,7 +3718,7 @@ inline void Machine_VM::_internal_set_is_suspected_vm(bool value) {
 }
 inline void Machine_VM::set_is_suspected_vm(bool value) {
   _internal_set_is_suspected_vm(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.is_suspected_vm)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.is_suspected_vm)
 }
 
 // bool has_hypervisor_bit = 2;
@@ -4695,7 +3729,7 @@ inline bool Machine_VM::_internal_has_hypervisor_bit() const {
   return has_hypervisor_bit_;
 }
 inline bool Machine_VM::has_hypervisor_bit() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.has_hypervisor_bit)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.has_hypervisor_bit)
   return _internal_has_hypervisor_bit();
 }
 inline void Machine_VM::_internal_set_has_hypervisor_bit(bool value) {
@@ -4704,7 +3738,7 @@ inline void Machine_VM::_internal_set_has_hypervisor_bit(bool value) {
 }
 inline void Machine_VM::set_has_hypervisor_bit(bool value) {
   _internal_set_has_hypervisor_bit(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.has_hypervisor_bit)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.has_hypervisor_bit)
 }
 
 // string hypervisor_name = 3;
@@ -4712,15 +3746,15 @@ inline void Machine_VM::clear_hypervisor_name() {
   hypervisor_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_VM::hypervisor_name() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.hypervisor_name)
   return _internal_hypervisor_name();
 }
 inline void Machine_VM::set_hypervisor_name(const std::string& value) {
   _internal_set_hypervisor_name(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.hypervisor_name)
 }
 inline std::string* Machine_VM::mutable_hypervisor_name() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.VM.hypervisor_name)
   return _internal_mutable_hypervisor_name();
 }
 inline const std::string& Machine_VM::_internal_hypervisor_name() const {
@@ -4734,28 +3768,28 @@ inline void Machine_VM::set_hypervisor_name(std::string&& value) {
   
   hypervisor_name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.VM.hypervisor_name)
 }
 inline void Machine_VM::set_hypervisor_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   hypervisor_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.VM.hypervisor_name)
 }
 inline void Machine_VM::set_hypervisor_name(const char* value,
     size_t size) {
   
   hypervisor_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.VM.hypervisor_name)
 }
 inline std::string* Machine_VM::_internal_mutable_hypervisor_name() {
   
   return hypervisor_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_VM::release_hypervisor_name() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.VM.hypervisor_name)
   return hypervisor_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_VM::set_allocated_hypervisor_name(std::string* hypervisor_name) {
@@ -4766,7 +3800,7 @@ inline void Machine_VM::set_allocated_hypervisor_name(std::string* hypervisor_na
   }
   hypervisor_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), hypervisor_name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.VM.hypervisor_name)
 }
 
 // bool is_hypervisor_guest_os = 4;
@@ -4777,7 +3811,7 @@ inline bool Machine_VM::_internal_is_hypervisor_guest_os() const {
   return is_hypervisor_guest_os_;
 }
 inline bool Machine_VM::is_hypervisor_guest_os() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.is_hypervisor_guest_os)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.is_hypervisor_guest_os)
   return _internal_is_hypervisor_guest_os();
 }
 inline void Machine_VM::_internal_set_is_hypervisor_guest_os(bool value) {
@@ -4786,7 +3820,7 @@ inline void Machine_VM::_internal_set_is_hypervisor_guest_os(bool value) {
 }
 inline void Machine_VM::set_is_hypervisor_guest_os(bool value) {
   _internal_set_is_hypervisor_guest_os(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.is_hypervisor_guest_os)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.is_hypervisor_guest_os)
 }
 
 // bool has_vm_execution_timing = 5;
@@ -4797,7 +3831,7 @@ inline bool Machine_VM::_internal_has_vm_execution_timing() const {
   return has_vm_execution_timing_;
 }
 inline bool Machine_VM::has_vm_execution_timing() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.VM.has_vm_execution_timing)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.has_vm_execution_timing)
   return _internal_has_vm_execution_timing();
 }
 inline void Machine_VM::_internal_set_has_vm_execution_timing(bool value) {
@@ -4806,7 +3840,7 @@ inline void Machine_VM::_internal_set_has_vm_execution_timing(bool value) {
 }
 inline void Machine_VM::set_has_vm_execution_timing(bool value) {
   _internal_set_has_vm_execution_timing(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.VM.has_vm_execution_timing)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.has_vm_execution_timing)
 }
 
 // -------------------------------------------------------------------
@@ -4818,15 +3852,15 @@ inline void Machine_Monitor::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_Monitor::name() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.name)
   return _internal_name();
 }
 inline void Machine_Monitor::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.name)
 }
 inline std::string* Machine_Monitor::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.Monitor.name)
   return _internal_mutable_name();
 }
 inline const std::string& Machine_Monitor::_internal_name() const {
@@ -4840,28 +3874,28 @@ inline void Machine_Monitor::set_name(std::string&& value) {
   
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.Monitor.name)
 }
 inline void Machine_Monitor::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.Monitor.name)
 }
 inline void Machine_Monitor::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.Monitor.name)
 }
 inline std::string* Machine_Monitor::_internal_mutable_name() {
   
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_Monitor::release_name() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.Monitor.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_Monitor::set_allocated_name(std::string* name) {
@@ -4872,7 +3906,7 @@ inline void Machine_Monitor::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.Monitor.name)
 }
 
 // int32 horizontal_resolution = 2;
@@ -4883,7 +3917,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_horizontal_reso
   return horizontal_resolution_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::horizontal_resolution() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.horizontal_resolution)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.horizontal_resolution)
   return _internal_horizontal_resolution();
 }
 inline void Machine_Monitor::_internal_set_horizontal_resolution(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4892,7 +3926,7 @@ inline void Machine_Monitor::_internal_set_horizontal_resolution(::PROTOBUF_NAME
 }
 inline void Machine_Monitor::set_horizontal_resolution(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_horizontal_resolution(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.horizontal_resolution)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.horizontal_resolution)
 }
 
 // int32 vertical_resolution = 3;
@@ -4903,7 +3937,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_vertical_resolu
   return vertical_resolution_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::vertical_resolution() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.vertical_resolution)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.vertical_resolution)
   return _internal_vertical_resolution();
 }
 inline void Machine_Monitor::_internal_set_vertical_resolution(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4912,7 +3946,7 @@ inline void Machine_Monitor::_internal_set_vertical_resolution(::PROTOBUF_NAMESP
 }
 inline void Machine_Monitor::set_vertical_resolution(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_vertical_resolution(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.vertical_resolution)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.vertical_resolution)
 }
 
 // int32 bits_per_color = 4;
@@ -4923,7 +3957,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_bits_per_color(
   return bits_per_color_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::bits_per_color() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.bits_per_color)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.bits_per_color)
   return _internal_bits_per_color();
 }
 inline void Machine_Monitor::_internal_set_bits_per_color(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4932,7 +3966,7 @@ inline void Machine_Monitor::_internal_set_bits_per_color(::PROTOBUF_NAMESPACE_I
 }
 inline void Machine_Monitor::set_bits_per_color(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_bits_per_color(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.bits_per_color)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.bits_per_color)
 }
 
 // int32 refresh_rate = 5;
@@ -4943,7 +3977,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_refresh_rate() 
   return refresh_rate_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::refresh_rate() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.refresh_rate)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.refresh_rate)
   return _internal_refresh_rate();
 }
 inline void Machine_Monitor::_internal_set_refresh_rate(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4952,7 +3986,7 @@ inline void Machine_Monitor::_internal_set_refresh_rate(::PROTOBUF_NAMESPACE_ID:
 }
 inline void Machine_Monitor::set_refresh_rate(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_refresh_rate(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.refresh_rate)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.refresh_rate)
 }
 
 // int32 dpi_scaling_percent = 6;
@@ -4963,7 +3997,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_dpi_scaling_per
   return dpi_scaling_percent_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::dpi_scaling_percent() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.Monitor.dpi_scaling_percent)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.dpi_scaling_percent)
   return _internal_dpi_scaling_percent();
 }
 inline void Machine_Monitor::_internal_set_dpi_scaling_percent(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4972,7 +4006,7 @@ inline void Machine_Monitor::_internal_set_dpi_scaling_percent(::PROTOBUF_NAMESP
 }
 inline void Machine_Monitor::set_dpi_scaling_percent(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_dpi_scaling_percent(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.Monitor.dpi_scaling_percent)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.dpi_scaling_percent)
 }
 
 // -------------------------------------------------------------------
@@ -4984,15 +4018,15 @@ inline void Machine_GPU_Driver::clear_date() {
   date_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_GPU_Driver::date() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.Driver.date)
   return _internal_date();
 }
 inline void Machine_GPU_Driver::set_date(const std::string& value) {
   _internal_set_date(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.Driver.date)
 }
 inline std::string* Machine_GPU_Driver::mutable_date() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.Driver.date)
   return _internal_mutable_date();
 }
 inline const std::string& Machine_GPU_Driver::_internal_date() const {
@@ -5006,28 +4040,28 @@ inline void Machine_GPU_Driver::set_date(std::string&& value) {
   
   date_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.GPU.Driver.date)
 }
 inline void Machine_GPU_Driver::set_date(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   date_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.GPU.Driver.date)
 }
 inline void Machine_GPU_Driver::set_date(const char* value,
     size_t size) {
   
   date_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.GPU.Driver.date)
 }
 inline std::string* Machine_GPU_Driver::_internal_mutable_date() {
   
   return date_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_GPU_Driver::release_date() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.Driver.date)
   return date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_GPU_Driver::set_allocated_date(std::string* date) {
@@ -5038,7 +4072,7 @@ inline void Machine_GPU_Driver::set_allocated_date(std::string* date) {
   }
   date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), date,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.Driver.date)
 }
 
 // string vendor = 2;
@@ -5046,15 +4080,15 @@ inline void Machine_GPU_Driver::clear_vendor() {
   vendor_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_GPU_Driver::vendor() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.Driver.vendor)
   return _internal_vendor();
 }
 inline void Machine_GPU_Driver::set_vendor(const std::string& value) {
   _internal_set_vendor(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.Driver.vendor)
 }
 inline std::string* Machine_GPU_Driver::mutable_vendor() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.Driver.vendor)
   return _internal_mutable_vendor();
 }
 inline const std::string& Machine_GPU_Driver::_internal_vendor() const {
@@ -5068,28 +4102,28 @@ inline void Machine_GPU_Driver::set_vendor(std::string&& value) {
   
   vendor_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.GPU.Driver.vendor)
 }
 inline void Machine_GPU_Driver::set_vendor(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.GPU.Driver.vendor)
 }
 inline void Machine_GPU_Driver::set_vendor(const char* value,
     size_t size) {
   
   vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.GPU.Driver.vendor)
 }
 inline std::string* Machine_GPU_Driver::_internal_mutable_vendor() {
   
   return vendor_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_GPU_Driver::release_vendor() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.Driver.vendor)
   return vendor_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_GPU_Driver::set_allocated_vendor(std::string* vendor) {
@@ -5100,7 +4134,7 @@ inline void Machine_GPU_Driver::set_allocated_vendor(std::string* vendor) {
   }
   vendor_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), vendor,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.Driver.vendor)
 }
 
 // string version = 3;
@@ -5108,15 +4142,15 @@ inline void Machine_GPU_Driver::clear_version() {
   version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_GPU_Driver::version() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.Driver.version)
   return _internal_version();
 }
 inline void Machine_GPU_Driver::set_version(const std::string& value) {
   _internal_set_version(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.Driver.version)
 }
 inline std::string* Machine_GPU_Driver::mutable_version() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.Driver.version)
   return _internal_mutable_version();
 }
 inline const std::string& Machine_GPU_Driver::_internal_version() const {
@@ -5130,28 +4164,28 @@ inline void Machine_GPU_Driver::set_version(std::string&& value) {
   
   version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.GPU.Driver.version)
 }
 inline void Machine_GPU_Driver::set_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.GPU.Driver.version)
 }
 inline void Machine_GPU_Driver::set_version(const char* value,
     size_t size) {
   
   version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.GPU.Driver.version)
 }
 inline std::string* Machine_GPU_Driver::_internal_mutable_version() {
   
   return version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_GPU_Driver::release_version() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.Driver.version)
   return version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_GPU_Driver::set_allocated_version(std::string* version) {
@@ -5162,7 +4196,7 @@ inline void Machine_GPU_Driver::set_allocated_version(std::string* version) {
   }
   version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.Driver.version)
 }
 
 // -------------------------------------------------------------------
@@ -5174,15 +4208,15 @@ inline void Machine_GPU::clear_description() {
   description_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_GPU::description() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.description)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.description)
   return _internal_description();
 }
 inline void Machine_GPU::set_description(const std::string& value) {
   _internal_set_description(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.description)
 }
 inline std::string* Machine_GPU::mutable_description() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.description)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.description)
   return _internal_mutable_description();
 }
 inline const std::string& Machine_GPU::_internal_description() const {
@@ -5196,28 +4230,28 @@ inline void Machine_GPU::set_description(std::string&& value) {
   
   description_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.GPU.description)
 }
 inline void Machine_GPU::set_description(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   description_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.GPU.description)
 }
 inline void Machine_GPU::set_description(const char* value,
     size_t size) {
   
   description_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.GPU.description)
 }
 inline std::string* Machine_GPU::_internal_mutable_description() {
   
   return description_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_GPU::release_description() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.description)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.description)
   return description_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_GPU::set_allocated_description(std::string* description) {
@@ -5228,7 +4262,7 @@ inline void Machine_GPU::set_allocated_description(std::string* description) {
   }
   description_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), description,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.description)
 }
 
 // int32 vendor_id = 2;
@@ -5239,7 +4273,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::_internal_vendor_id() const {
   return vendor_id_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::vendor_id() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.vendor_id)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.vendor_id)
   return _internal_vendor_id();
 }
 inline void Machine_GPU::_internal_set_vendor_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5248,7 +4282,7 @@ inline void Machine_GPU::_internal_set_vendor_id(::PROTOBUF_NAMESPACE_ID::int32 
 }
 inline void Machine_GPU::set_vendor_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_vendor_id(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.vendor_id)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.vendor_id)
 }
 
 // int32 device_id = 3;
@@ -5259,7 +4293,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::_internal_device_id() const {
   return device_id_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::device_id() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.device_id)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.device_id)
   return _internal_device_id();
 }
 inline void Machine_GPU::_internal_set_device_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5268,7 +4302,7 @@ inline void Machine_GPU::_internal_set_device_id(::PROTOBUF_NAMESPACE_ID::int32 
 }
 inline void Machine_GPU::set_device_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_device_id(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.device_id)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.device_id)
 }
 
 // int32 revision = 4;
@@ -5279,7 +4313,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::_internal_revision() const {
   return revision_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::revision() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.revision)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.revision)
   return _internal_revision();
 }
 inline void Machine_GPU::_internal_set_revision(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5288,7 +4322,7 @@ inline void Machine_GPU::_internal_set_revision(::PROTOBUF_NAMESPACE_ID::int32 v
 }
 inline void Machine_GPU::set_revision(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_revision(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.revision)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.revision)
 }
 
 // int64 video_memory = 5;
@@ -5299,7 +4333,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 Machine_GPU::_internal_video_memory() cons
   return video_memory_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 Machine_GPU::video_memory() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.video_memory)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.video_memory)
   return _internal_video_memory();
 }
 inline void Machine_GPU::_internal_set_video_memory(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -5308,10 +4342,10 @@ inline void Machine_GPU::_internal_set_video_memory(::PROTOBUF_NAMESPACE_ID::int
 }
 inline void Machine_GPU::set_video_memory(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_video_memory(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.GPU.video_memory)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.video_memory)
 }
 
-// .eve_launcher.pdm.Machine.GPU.Driver driver = 6;
+// .platform_detection_module.Machine.GPU.Driver driver = 6;
 inline bool Machine_GPU::_internal_has_driver() const {
   return this != internal_default_instance() && driver_ != nullptr;
 }
@@ -5324,17 +4358,17 @@ inline void Machine_GPU::clear_driver() {
   }
   driver_ = nullptr;
 }
-inline const ::eve_launcher::pdm::Machine_GPU_Driver& Machine_GPU::_internal_driver() const {
-  const ::eve_launcher::pdm::Machine_GPU_Driver* p = driver_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Machine_GPU_Driver*>(
-      &::eve_launcher::pdm::_Machine_GPU_Driver_default_instance_);
+inline const ::platform_detection_module::Machine_GPU_Driver& Machine_GPU::_internal_driver() const {
+  const ::platform_detection_module::Machine_GPU_Driver* p = driver_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::Machine_GPU_Driver*>(
+      &::platform_detection_module::_Machine_GPU_Driver_default_instance_);
 }
-inline const ::eve_launcher::pdm::Machine_GPU_Driver& Machine_GPU::driver() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.GPU.driver)
+inline const ::platform_detection_module::Machine_GPU_Driver& Machine_GPU::driver() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.driver)
   return _internal_driver();
 }
 inline void Machine_GPU::unsafe_arena_set_allocated_driver(
-    ::eve_launcher::pdm::Machine_GPU_Driver* driver) {
+    ::platform_detection_module::Machine_GPU_Driver* driver) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(driver_);
   }
@@ -5344,37 +4378,37 @@ inline void Machine_GPU::unsafe_arena_set_allocated_driver(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.Machine.GPU.driver)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.Machine.GPU.driver)
 }
-inline ::eve_launcher::pdm::Machine_GPU_Driver* Machine_GPU::release_driver() {
+inline ::platform_detection_module::Machine_GPU_Driver* Machine_GPU::release_driver() {
   
-  ::eve_launcher::pdm::Machine_GPU_Driver* temp = driver_;
+  ::platform_detection_module::Machine_GPU_Driver* temp = driver_;
   driver_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::eve_launcher::pdm::Machine_GPU_Driver* Machine_GPU::unsafe_arena_release_driver() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.GPU.driver)
+inline ::platform_detection_module::Machine_GPU_Driver* Machine_GPU::unsafe_arena_release_driver() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.driver)
   
-  ::eve_launcher::pdm::Machine_GPU_Driver* temp = driver_;
+  ::platform_detection_module::Machine_GPU_Driver* temp = driver_;
   driver_ = nullptr;
   return temp;
 }
-inline ::eve_launcher::pdm::Machine_GPU_Driver* Machine_GPU::_internal_mutable_driver() {
+inline ::platform_detection_module::Machine_GPU_Driver* Machine_GPU::_internal_mutable_driver() {
   
   if (driver_ == nullptr) {
-    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Machine_GPU_Driver>(GetArena());
+    auto* p = CreateMaybeMessage<::platform_detection_module::Machine_GPU_Driver>(GetArena());
     driver_ = p;
   }
   return driver_;
 }
-inline ::eve_launcher::pdm::Machine_GPU_Driver* Machine_GPU::mutable_driver() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.GPU.driver)
+inline ::platform_detection_module::Machine_GPU_Driver* Machine_GPU::mutable_driver() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.driver)
   return _internal_mutable_driver();
 }
-inline void Machine_GPU::set_allocated_driver(::eve_launcher::pdm::Machine_GPU_Driver* driver) {
+inline void Machine_GPU::set_allocated_driver(::platform_detection_module::Machine_GPU_Driver* driver) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete driver_;
@@ -5391,7 +4425,7 @@ inline void Machine_GPU::set_allocated_driver(::eve_launcher::pdm::Machine_GPU_D
     
   }
   driver_ = driver;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.GPU.driver)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.driver)
 }
 
 // -------------------------------------------------------------------
@@ -5403,15 +4437,15 @@ inline void Machine_NetworkAdapter::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_NetworkAdapter::name() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.NetworkAdapter.name)
   return _internal_name();
 }
 inline void Machine_NetworkAdapter::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.NetworkAdapter.name)
 }
 inline std::string* Machine_NetworkAdapter::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.NetworkAdapter.name)
   return _internal_mutable_name();
 }
 inline const std::string& Machine_NetworkAdapter::_internal_name() const {
@@ -5425,28 +4459,28 @@ inline void Machine_NetworkAdapter::set_name(std::string&& value) {
   
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.NetworkAdapter.name)
 }
 inline void Machine_NetworkAdapter::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.NetworkAdapter.name)
 }
 inline void Machine_NetworkAdapter::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.NetworkAdapter.name)
 }
 inline std::string* Machine_NetworkAdapter::_internal_mutable_name() {
   
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_NetworkAdapter::release_name() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.NetworkAdapter.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_NetworkAdapter::set_allocated_name(std::string* name) {
@@ -5457,7 +4491,7 @@ inline void Machine_NetworkAdapter::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.NetworkAdapter.name)
 }
 
 // bytes mac_address = 2;
@@ -5465,15 +4499,15 @@ inline void Machine_NetworkAdapter::clear_mac_address() {
   mac_address_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_NetworkAdapter::mac_address() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.NetworkAdapter.mac_address)
   return _internal_mac_address();
 }
 inline void Machine_NetworkAdapter::set_mac_address(const std::string& value) {
   _internal_set_mac_address(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.NetworkAdapter.mac_address)
 }
 inline std::string* Machine_NetworkAdapter::mutable_mac_address() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.NetworkAdapter.mac_address)
   return _internal_mutable_mac_address();
 }
 inline const std::string& Machine_NetworkAdapter::_internal_mac_address() const {
@@ -5487,28 +4521,28 @@ inline void Machine_NetworkAdapter::set_mac_address(std::string&& value) {
   
   mac_address_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.NetworkAdapter.mac_address)
 }
 inline void Machine_NetworkAdapter::set_mac_address(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   mac_address_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.NetworkAdapter.mac_address)
 }
 inline void Machine_NetworkAdapter::set_mac_address(const void* value,
     size_t size) {
   
   mac_address_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.NetworkAdapter.mac_address)
 }
 inline std::string* Machine_NetworkAdapter::_internal_mutable_mac_address() {
   
   return mac_address_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_NetworkAdapter::release_mac_address() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.NetworkAdapter.mac_address)
   return mac_address_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_NetworkAdapter::set_allocated_mac_address(std::string* mac_address) {
@@ -5519,7 +4553,7 @@ inline void Machine_NetworkAdapter::set_allocated_mac_address(std::string* mac_a
   }
   mac_address_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), mac_address,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.NetworkAdapter.mac_address)
 }
 
 // bytes uuid = 3;
@@ -5527,15 +4561,15 @@ inline void Machine_NetworkAdapter::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_NetworkAdapter::uuid() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.NetworkAdapter.uuid)
   return _internal_uuid();
 }
 inline void Machine_NetworkAdapter::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.NetworkAdapter.uuid)
 }
 inline std::string* Machine_NetworkAdapter::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.NetworkAdapter.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& Machine_NetworkAdapter::_internal_uuid() const {
@@ -5549,28 +4583,28 @@ inline void Machine_NetworkAdapter::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.NetworkAdapter.uuid)
 }
 inline void Machine_NetworkAdapter::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.NetworkAdapter.uuid)
 }
 inline void Machine_NetworkAdapter::set_uuid(const void* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.NetworkAdapter.uuid)
 }
 inline std::string* Machine_NetworkAdapter::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_NetworkAdapter::release_uuid() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.NetworkAdapter.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_NetworkAdapter::set_allocated_uuid(std::string* uuid) {
@@ -5581,7 +4615,7 @@ inline void Machine_NetworkAdapter::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.NetworkAdapter.uuid)
 }
 
 // -------------------------------------------------------------------
@@ -5593,15 +4627,15 @@ inline void Machine::clear_model() {
   model_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine::model() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.model)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.model)
   return _internal_model();
 }
 inline void Machine::set_model(const std::string& value) {
   _internal_set_model(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.model)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.model)
 }
 inline std::string* Machine::mutable_model() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.model)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.model)
   return _internal_mutable_model();
 }
 inline const std::string& Machine::_internal_model() const {
@@ -5615,28 +4649,28 @@ inline void Machine::set_model(std::string&& value) {
   
   model_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.model)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.model)
 }
 inline void Machine::set_model(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   model_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.model)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.model)
 }
 inline void Machine::set_model(const char* value,
     size_t size) {
   
   model_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.model)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.model)
 }
 inline std::string* Machine::_internal_mutable_model() {
   
   return model_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine::release_model() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.model)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.model)
   return model_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine::set_allocated_model(std::string* model) {
@@ -5647,7 +4681,7 @@ inline void Machine::set_allocated_model(std::string* model) {
   }
   model_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), model,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.model)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.model)
 }
 
 // string name = 2;
@@ -5655,15 +4689,15 @@ inline void Machine::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine::name() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.name)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.name)
   return _internal_name();
 }
 inline void Machine::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.name)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.name)
 }
 inline std::string* Machine::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.name)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.name)
   return _internal_mutable_name();
 }
 inline const std::string& Machine::_internal_name() const {
@@ -5677,28 +4711,28 @@ inline void Machine::set_name(std::string&& value) {
   
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.name)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.name)
 }
 inline void Machine::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.name)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.name)
 }
 inline void Machine::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.name)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.name)
 }
 inline std::string* Machine::_internal_mutable_name() {
   
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine::release_name() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.name)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine::set_allocated_name(std::string* name) {
@@ -5709,7 +4743,7 @@ inline void Machine::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.name)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.name)
 }
 
 // bytes uuid = 3;
@@ -5717,15 +4751,15 @@ inline void Machine::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine::uuid() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.uuid)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.uuid)
   return _internal_uuid();
 }
 inline void Machine::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.uuid)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.uuid)
 }
 inline std::string* Machine::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.uuid)
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& Machine::_internal_uuid() const {
@@ -5739,28 +4773,28 @@ inline void Machine::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:eve_launcher.pdm.Machine.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.uuid)
 }
 inline void Machine::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:eve_launcher.pdm.Machine.uuid)
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.uuid)
 }
 inline void Machine::set_uuid(const void* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:eve_launcher.pdm.Machine.uuid)
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.uuid)
 }
 inline std::string* Machine::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine::release_uuid() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.uuid)
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine::set_allocated_uuid(std::string* uuid) {
@@ -5771,7 +4805,7 @@ inline void Machine::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.uuid)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.uuid)
 }
 
 // int64 total_memory = 4;
@@ -5782,7 +4816,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 Machine::_internal_total_memory() const {
   return total_memory_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 Machine::total_memory() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.total_memory)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.total_memory)
   return _internal_total_memory();
 }
 inline void Machine::_internal_set_total_memory(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -5791,7 +4825,7 @@ inline void Machine::_internal_set_total_memory(::PROTOBUF_NAMESPACE_ID::int64 v
 }
 inline void Machine::set_total_memory(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_total_memory(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.total_memory)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.total_memory)
 }
 
 // int32 monitor_count = 5;
@@ -5802,7 +4836,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine::_internal_monitor_count() const {
   return monitor_count_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine::monitor_count() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.monitor_count)
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.monitor_count)
   return _internal_monitor_count();
 }
 inline void Machine::_internal_set_monitor_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5811,10 +4845,10 @@ inline void Machine::_internal_set_monitor_count(::PROTOBUF_NAMESPACE_ID::int32 
 }
 inline void Machine::set_monitor_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_monitor_count(value);
-  // @@protoc_insertion_point(field_set:eve_launcher.pdm.Machine.monitor_count)
+  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.monitor_count)
 }
 
-// .eve_launcher.pdm.Machine.CPU cpu = 6;
+// .platform_detection_module.Machine.CPU cpu = 6;
 inline bool Machine::_internal_has_cpu() const {
   return this != internal_default_instance() && cpu_ != nullptr;
 }
@@ -5827,17 +4861,17 @@ inline void Machine::clear_cpu() {
   }
   cpu_ = nullptr;
 }
-inline const ::eve_launcher::pdm::Machine_CPU& Machine::_internal_cpu() const {
-  const ::eve_launcher::pdm::Machine_CPU* p = cpu_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Machine_CPU*>(
-      &::eve_launcher::pdm::_Machine_CPU_default_instance_);
+inline const ::platform_detection_module::Machine_CPU& Machine::_internal_cpu() const {
+  const ::platform_detection_module::Machine_CPU* p = cpu_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::Machine_CPU*>(
+      &::platform_detection_module::_Machine_CPU_default_instance_);
 }
-inline const ::eve_launcher::pdm::Machine_CPU& Machine::cpu() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.cpu)
+inline const ::platform_detection_module::Machine_CPU& Machine::cpu() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.cpu)
   return _internal_cpu();
 }
 inline void Machine::unsafe_arena_set_allocated_cpu(
-    ::eve_launcher::pdm::Machine_CPU* cpu) {
+    ::platform_detection_module::Machine_CPU* cpu) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cpu_);
   }
@@ -5847,37 +4881,37 @@ inline void Machine::unsafe_arena_set_allocated_cpu(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.Machine.cpu)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.Machine.cpu)
 }
-inline ::eve_launcher::pdm::Machine_CPU* Machine::release_cpu() {
+inline ::platform_detection_module::Machine_CPU* Machine::release_cpu() {
   
-  ::eve_launcher::pdm::Machine_CPU* temp = cpu_;
+  ::platform_detection_module::Machine_CPU* temp = cpu_;
   cpu_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::eve_launcher::pdm::Machine_CPU* Machine::unsafe_arena_release_cpu() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.cpu)
+inline ::platform_detection_module::Machine_CPU* Machine::unsafe_arena_release_cpu() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.cpu)
   
-  ::eve_launcher::pdm::Machine_CPU* temp = cpu_;
+  ::platform_detection_module::Machine_CPU* temp = cpu_;
   cpu_ = nullptr;
   return temp;
 }
-inline ::eve_launcher::pdm::Machine_CPU* Machine::_internal_mutable_cpu() {
+inline ::platform_detection_module::Machine_CPU* Machine::_internal_mutable_cpu() {
   
   if (cpu_ == nullptr) {
-    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Machine_CPU>(GetArena());
+    auto* p = CreateMaybeMessage<::platform_detection_module::Machine_CPU>(GetArena());
     cpu_ = p;
   }
   return cpu_;
 }
-inline ::eve_launcher::pdm::Machine_CPU* Machine::mutable_cpu() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.cpu)
+inline ::platform_detection_module::Machine_CPU* Machine::mutable_cpu() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.cpu)
   return _internal_mutable_cpu();
 }
-inline void Machine::set_allocated_cpu(::eve_launcher::pdm::Machine_CPU* cpu) {
+inline void Machine::set_allocated_cpu(::platform_detection_module::Machine_CPU* cpu) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete cpu_;
@@ -5894,10 +4928,10 @@ inline void Machine::set_allocated_cpu(::eve_launcher::pdm::Machine_CPU* cpu) {
     
   }
   cpu_ = cpu;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.cpu)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.cpu)
 }
 
-// .eve_launcher.pdm.Machine.VM vm = 7;
+// .platform_detection_module.Machine.VM vm = 7;
 inline bool Machine::_internal_has_vm() const {
   return this != internal_default_instance() && vm_ != nullptr;
 }
@@ -5910,17 +4944,17 @@ inline void Machine::clear_vm() {
   }
   vm_ = nullptr;
 }
-inline const ::eve_launcher::pdm::Machine_VM& Machine::_internal_vm() const {
-  const ::eve_launcher::pdm::Machine_VM* p = vm_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Machine_VM*>(
-      &::eve_launcher::pdm::_Machine_VM_default_instance_);
+inline const ::platform_detection_module::Machine_VM& Machine::_internal_vm() const {
+  const ::platform_detection_module::Machine_VM* p = vm_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::Machine_VM*>(
+      &::platform_detection_module::_Machine_VM_default_instance_);
 }
-inline const ::eve_launcher::pdm::Machine_VM& Machine::vm() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.vm)
+inline const ::platform_detection_module::Machine_VM& Machine::vm() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.vm)
   return _internal_vm();
 }
 inline void Machine::unsafe_arena_set_allocated_vm(
-    ::eve_launcher::pdm::Machine_VM* vm) {
+    ::platform_detection_module::Machine_VM* vm) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(vm_);
   }
@@ -5930,37 +4964,37 @@ inline void Machine::unsafe_arena_set_allocated_vm(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.Machine.vm)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.Machine.vm)
 }
-inline ::eve_launcher::pdm::Machine_VM* Machine::release_vm() {
+inline ::platform_detection_module::Machine_VM* Machine::release_vm() {
   
-  ::eve_launcher::pdm::Machine_VM* temp = vm_;
+  ::platform_detection_module::Machine_VM* temp = vm_;
   vm_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::eve_launcher::pdm::Machine_VM* Machine::unsafe_arena_release_vm() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Machine.vm)
+inline ::platform_detection_module::Machine_VM* Machine::unsafe_arena_release_vm() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.vm)
   
-  ::eve_launcher::pdm::Machine_VM* temp = vm_;
+  ::platform_detection_module::Machine_VM* temp = vm_;
   vm_ = nullptr;
   return temp;
 }
-inline ::eve_launcher::pdm::Machine_VM* Machine::_internal_mutable_vm() {
+inline ::platform_detection_module::Machine_VM* Machine::_internal_mutable_vm() {
   
   if (vm_ == nullptr) {
-    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Machine_VM>(GetArena());
+    auto* p = CreateMaybeMessage<::platform_detection_module::Machine_VM>(GetArena());
     vm_ = p;
   }
   return vm_;
 }
-inline ::eve_launcher::pdm::Machine_VM* Machine::mutable_vm() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.vm)
+inline ::platform_detection_module::Machine_VM* Machine::mutable_vm() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.vm)
   return _internal_mutable_vm();
 }
-inline void Machine::set_allocated_vm(::eve_launcher::pdm::Machine_VM* vm) {
+inline void Machine::set_allocated_vm(::platform_detection_module::Machine_VM* vm) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete vm_;
@@ -5977,10 +5011,10 @@ inline void Machine::set_allocated_vm(::eve_launcher::pdm::Machine_VM* vm) {
     
   }
   vm_ = vm;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Machine.vm)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.vm)
 }
 
-// repeated .eve_launcher.pdm.Machine.Monitor monitors = 8;
+// repeated .platform_detection_module.Machine.Monitor monitors = 8;
 inline int Machine::_internal_monitors_size() const {
   return monitors_.size();
 }
@@ -5990,36 +5024,36 @@ inline int Machine::monitors_size() const {
 inline void Machine::clear_monitors() {
   monitors_.Clear();
 }
-inline ::eve_launcher::pdm::Machine_Monitor* Machine::mutable_monitors(int index) {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.monitors)
+inline ::platform_detection_module::Machine_Monitor* Machine::mutable_monitors(int index) {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.monitors)
   return monitors_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor >*
 Machine::mutable_monitors() {
-  // @@protoc_insertion_point(field_mutable_list:eve_launcher.pdm.Machine.monitors)
+  // @@protoc_insertion_point(field_mutable_list:platform_detection_module.Machine.monitors)
   return &monitors_;
 }
-inline const ::eve_launcher::pdm::Machine_Monitor& Machine::_internal_monitors(int index) const {
+inline const ::platform_detection_module::Machine_Monitor& Machine::_internal_monitors(int index) const {
   return monitors_.Get(index);
 }
-inline const ::eve_launcher::pdm::Machine_Monitor& Machine::monitors(int index) const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.monitors)
+inline const ::platform_detection_module::Machine_Monitor& Machine::monitors(int index) const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.monitors)
   return _internal_monitors(index);
 }
-inline ::eve_launcher::pdm::Machine_Monitor* Machine::_internal_add_monitors() {
+inline ::platform_detection_module::Machine_Monitor* Machine::_internal_add_monitors() {
   return monitors_.Add();
 }
-inline ::eve_launcher::pdm::Machine_Monitor* Machine::add_monitors() {
-  // @@protoc_insertion_point(field_add:eve_launcher.pdm.Machine.monitors)
+inline ::platform_detection_module::Machine_Monitor* Machine::add_monitors() {
+  // @@protoc_insertion_point(field_add:platform_detection_module.Machine.monitors)
   return _internal_add_monitors();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_Monitor >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor >&
 Machine::monitors() const {
-  // @@protoc_insertion_point(field_list:eve_launcher.pdm.Machine.monitors)
+  // @@protoc_insertion_point(field_list:platform_detection_module.Machine.monitors)
   return monitors_;
 }
 
-// repeated .eve_launcher.pdm.Machine.GPU gpus = 9;
+// repeated .platform_detection_module.Machine.GPU gpus = 9;
 inline int Machine::_internal_gpus_size() const {
   return gpus_.size();
 }
@@ -6029,36 +5063,36 @@ inline int Machine::gpus_size() const {
 inline void Machine::clear_gpus() {
   gpus_.Clear();
 }
-inline ::eve_launcher::pdm::Machine_GPU* Machine::mutable_gpus(int index) {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.gpus)
+inline ::platform_detection_module::Machine_GPU* Machine::mutable_gpus(int index) {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.gpus)
   return gpus_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU >*
 Machine::mutable_gpus() {
-  // @@protoc_insertion_point(field_mutable_list:eve_launcher.pdm.Machine.gpus)
+  // @@protoc_insertion_point(field_mutable_list:platform_detection_module.Machine.gpus)
   return &gpus_;
 }
-inline const ::eve_launcher::pdm::Machine_GPU& Machine::_internal_gpus(int index) const {
+inline const ::platform_detection_module::Machine_GPU& Machine::_internal_gpus(int index) const {
   return gpus_.Get(index);
 }
-inline const ::eve_launcher::pdm::Machine_GPU& Machine::gpus(int index) const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.gpus)
+inline const ::platform_detection_module::Machine_GPU& Machine::gpus(int index) const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.gpus)
   return _internal_gpus(index);
 }
-inline ::eve_launcher::pdm::Machine_GPU* Machine::_internal_add_gpus() {
+inline ::platform_detection_module::Machine_GPU* Machine::_internal_add_gpus() {
   return gpus_.Add();
 }
-inline ::eve_launcher::pdm::Machine_GPU* Machine::add_gpus() {
-  // @@protoc_insertion_point(field_add:eve_launcher.pdm.Machine.gpus)
+inline ::platform_detection_module::Machine_GPU* Machine::add_gpus() {
+  // @@protoc_insertion_point(field_add:platform_detection_module.Machine.gpus)
   return _internal_add_gpus();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_GPU >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU >&
 Machine::gpus() const {
-  // @@protoc_insertion_point(field_list:eve_launcher.pdm.Machine.gpus)
+  // @@protoc_insertion_point(field_list:platform_detection_module.Machine.gpus)
   return gpus_;
 }
 
-// repeated .eve_launcher.pdm.Machine.NetworkAdapter network_adapters = 10;
+// repeated .platform_detection_module.Machine.NetworkAdapter network_adapters = 10;
 inline int Machine::_internal_network_adapters_size() const {
   return network_adapters_.size();
 }
@@ -6068,229 +5102,222 @@ inline int Machine::network_adapters_size() const {
 inline void Machine::clear_network_adapters() {
   network_adapters_.Clear();
 }
-inline ::eve_launcher::pdm::Machine_NetworkAdapter* Machine::mutable_network_adapters(int index) {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Machine.network_adapters)
+inline ::platform_detection_module::Machine_NetworkAdapter* Machine::mutable_network_adapters(int index) {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.network_adapters)
   return network_adapters_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter >*
 Machine::mutable_network_adapters() {
-  // @@protoc_insertion_point(field_mutable_list:eve_launcher.pdm.Machine.network_adapters)
+  // @@protoc_insertion_point(field_mutable_list:platform_detection_module.Machine.network_adapters)
   return &network_adapters_;
 }
-inline const ::eve_launcher::pdm::Machine_NetworkAdapter& Machine::_internal_network_adapters(int index) const {
+inline const ::platform_detection_module::Machine_NetworkAdapter& Machine::_internal_network_adapters(int index) const {
   return network_adapters_.Get(index);
 }
-inline const ::eve_launcher::pdm::Machine_NetworkAdapter& Machine::network_adapters(int index) const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Machine.network_adapters)
+inline const ::platform_detection_module::Machine_NetworkAdapter& Machine::network_adapters(int index) const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.network_adapters)
   return _internal_network_adapters(index);
 }
-inline ::eve_launcher::pdm::Machine_NetworkAdapter* Machine::_internal_add_network_adapters() {
+inline ::platform_detection_module::Machine_NetworkAdapter* Machine::_internal_add_network_adapters() {
   return network_adapters_.Add();
 }
-inline ::eve_launcher::pdm::Machine_NetworkAdapter* Machine::add_network_adapters() {
-  // @@protoc_insertion_point(field_add:eve_launcher.pdm.Machine.network_adapters)
+inline ::platform_detection_module::Machine_NetworkAdapter* Machine::add_network_adapters() {
+  // @@protoc_insertion_point(field_add:platform_detection_module.Machine.network_adapters)
   return _internal_add_network_adapters();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::eve_launcher::pdm::Machine_NetworkAdapter >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter >&
 Machine::network_adapters() const {
-  // @@protoc_insertion_point(field_list:eve_launcher.pdm.Machine.network_adapters)
+  // @@protoc_insertion_point(field_list:platform_detection_module.Machine.network_adapters)
   return network_adapters_;
 }
 
 // -------------------------------------------------------------------
 
-// Attributes
+// PlatformInformation
 
-// .eve_launcher.pdm.Application application = 1;
-inline bool Attributes::_internal_has_application() const {
-  return this != internal_default_instance() && application_ != nullptr;
+// string version = 1;
+inline void PlatformInformation::clear_version() {
+  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline bool Attributes::has_application() const {
-  return _internal_has_application();
+inline const std::string& PlatformInformation::version() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.version)
+  return _internal_version();
 }
-inline void Attributes::clear_application() {
-  if (GetArena() == nullptr && application_ != nullptr) {
-    delete application_;
-  }
-  application_ = nullptr;
+inline void PlatformInformation::set_version(const std::string& value) {
+  _internal_set_version(value);
+  // @@protoc_insertion_point(field_set:platform_detection_module.PlatformInformation.version)
 }
-inline const ::eve_launcher::pdm::Application& Attributes::_internal_application() const {
-  const ::eve_launcher::pdm::Application* p = application_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Application*>(
-      &::eve_launcher::pdm::_Application_default_instance_);
+inline std::string* PlatformInformation::mutable_version() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.PlatformInformation.version)
+  return _internal_mutable_version();
 }
-inline const ::eve_launcher::pdm::Application& Attributes::application() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Attributes.application)
-  return _internal_application();
+inline const std::string& PlatformInformation::_internal_version() const {
+  return version_.Get();
 }
-inline void Attributes::unsafe_arena_set_allocated_application(
-    ::eve_launcher::pdm::Application* application) {
-  if (GetArena() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(application_);
-  }
-  application_ = application;
-  if (application) {
+inline void PlatformInformation::_internal_set_version(const std::string& value) {
+  
+  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void PlatformInformation::set_version(std::string&& value) {
+  
+  version_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.PlatformInformation.version)
+}
+inline void PlatformInformation::set_version(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:platform_detection_module.PlatformInformation.version)
+}
+inline void PlatformInformation::set_version(const char* value,
+    size_t size) {
+  
+  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.PlatformInformation.version)
+}
+inline std::string* PlatformInformation::_internal_mutable_version() {
+  
+  return version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* PlatformInformation::release_version() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.PlatformInformation.version)
+  return version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void PlatformInformation::set_allocated_version(std::string* version) {
+  if (version != nullptr) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.Attributes.application)
+  version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.PlatformInformation.version)
 }
-inline ::eve_launcher::pdm::Application* Attributes::release_application() {
+
+// .google.protobuf.Timestamp timestamp = 2;
+inline bool PlatformInformation::_internal_has_timestamp() const {
+  return this != internal_default_instance() && timestamp_ != nullptr;
+}
+inline bool PlatformInformation::has_timestamp() const {
+  return _internal_has_timestamp();
+}
+inline const PROTOBUF_NAMESPACE_ID::Timestamp& PlatformInformation::_internal_timestamp() const {
+  const PROTOBUF_NAMESPACE_ID::Timestamp* p = timestamp_;
+  return p != nullptr ? *p : *reinterpret_cast<const PROTOBUF_NAMESPACE_ID::Timestamp*>(
+      &PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::Timestamp& PlatformInformation::timestamp() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.timestamp)
+  return _internal_timestamp();
+}
+inline void PlatformInformation::unsafe_arena_set_allocated_timestamp(
+    PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
+  }
+  timestamp_ = timestamp;
+  if (timestamp) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.PlatformInformation.timestamp)
+}
+inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::release_timestamp() {
   
-  ::eve_launcher::pdm::Application* temp = application_;
-  application_ = nullptr;
+  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
+  timestamp_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::eve_launcher::pdm::Application* Attributes::unsafe_arena_release_application() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Attributes.application)
+inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::unsafe_arena_release_timestamp() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.PlatformInformation.timestamp)
   
-  ::eve_launcher::pdm::Application* temp = application_;
-  application_ = nullptr;
+  PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
+  timestamp_ = nullptr;
   return temp;
 }
-inline ::eve_launcher::pdm::Application* Attributes::_internal_mutable_application() {
+inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::_internal_mutable_timestamp() {
   
-  if (application_ == nullptr) {
-    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Application>(GetArena());
-    application_ = p;
+  if (timestamp_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::Timestamp>(GetArena());
+    timestamp_ = p;
   }
-  return application_;
+  return timestamp_;
 }
-inline ::eve_launcher::pdm::Application* Attributes::mutable_application() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Attributes.application)
-  return _internal_mutable_application();
+inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::mutable_timestamp() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.PlatformInformation.timestamp)
+  return _internal_mutable_timestamp();
 }
-inline void Attributes::set_allocated_application(::eve_launcher::pdm::Application* application) {
+inline void PlatformInformation::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
-    delete application_;
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
   }
-  if (application) {
+  if (timestamp) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(application);
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp)->GetArena();
     if (message_arena != submessage_arena) {
-      application = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, application, submessage_arena);
+      timestamp = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, timestamp, submessage_arena);
     }
     
   } else {
     
   }
-  application_ = application;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Attributes.application)
+  timestamp_ = timestamp;
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.PlatformInformation.timestamp)
 }
 
-// .eve_launcher.pdm.Process process = 2;
-inline bool Attributes::_internal_has_process() const {
-  return this != internal_default_instance() && process_ != nullptr;
+// .platform_detection_module.Bitness process_bitness = 3;
+inline void PlatformInformation::clear_process_bitness() {
+  process_bitness_ = 0;
 }
-inline bool Attributes::has_process() const {
-  return _internal_has_process();
+inline ::platform_detection_module::Bitness PlatformInformation::_internal_process_bitness() const {
+  return static_cast< ::platform_detection_module::Bitness >(process_bitness_);
 }
-inline void Attributes::clear_process() {
-  if (GetArena() == nullptr && process_ != nullptr) {
-    delete process_;
-  }
-  process_ = nullptr;
+inline ::platform_detection_module::Bitness PlatformInformation::process_bitness() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.process_bitness)
+  return _internal_process_bitness();
 }
-inline const ::eve_launcher::pdm::Process& Attributes::_internal_process() const {
-  const ::eve_launcher::pdm::Process* p = process_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Process*>(
-      &::eve_launcher::pdm::_Process_default_instance_);
-}
-inline const ::eve_launcher::pdm::Process& Attributes::process() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Attributes.process)
-  return _internal_process();
-}
-inline void Attributes::unsafe_arena_set_allocated_process(
-    ::eve_launcher::pdm::Process* process) {
-  if (GetArena() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(process_);
-  }
-  process_ = process;
-  if (process) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.Attributes.process)
-}
-inline ::eve_launcher::pdm::Process* Attributes::release_process() {
+inline void PlatformInformation::_internal_set_process_bitness(::platform_detection_module::Bitness value) {
   
-  ::eve_launcher::pdm::Process* temp = process_;
-  process_ = nullptr;
-  if (GetArena() != nullptr) {
-    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  }
-  return temp;
+  process_bitness_ = value;
 }
-inline ::eve_launcher::pdm::Process* Attributes::unsafe_arena_release_process() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Attributes.process)
-  
-  ::eve_launcher::pdm::Process* temp = process_;
-  process_ = nullptr;
-  return temp;
-}
-inline ::eve_launcher::pdm::Process* Attributes::_internal_mutable_process() {
-  
-  if (process_ == nullptr) {
-    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Process>(GetArena());
-    process_ = p;
-  }
-  return process_;
-}
-inline ::eve_launcher::pdm::Process* Attributes::mutable_process() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Attributes.process)
-  return _internal_mutable_process();
-}
-inline void Attributes::set_allocated_process(::eve_launcher::pdm::Process* process) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
-  if (message_arena == nullptr) {
-    delete process_;
-  }
-  if (process) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(process);
-    if (message_arena != submessage_arena) {
-      process = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, process, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  process_ = process;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Attributes.process)
+inline void PlatformInformation::set_process_bitness(::platform_detection_module::Bitness value) {
+  _internal_set_process_bitness(value);
+  // @@protoc_insertion_point(field_set:platform_detection_module.PlatformInformation.process_bitness)
 }
 
-// .eve_launcher.pdm.OS os = 3;
-inline bool Attributes::_internal_has_os() const {
+// .platform_detection_module.OS os = 4;
+inline bool PlatformInformation::_internal_has_os() const {
   return this != internal_default_instance() && os_ != nullptr;
 }
-inline bool Attributes::has_os() const {
+inline bool PlatformInformation::has_os() const {
   return _internal_has_os();
 }
-inline void Attributes::clear_os() {
+inline void PlatformInformation::clear_os() {
   if (GetArena() == nullptr && os_ != nullptr) {
     delete os_;
   }
   os_ = nullptr;
 }
-inline const ::eve_launcher::pdm::OS& Attributes::_internal_os() const {
-  const ::eve_launcher::pdm::OS* p = os_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::eve_launcher::pdm::OS*>(
-      &::eve_launcher::pdm::_OS_default_instance_);
+inline const ::platform_detection_module::OS& PlatformInformation::_internal_os() const {
+  const ::platform_detection_module::OS* p = os_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::OS*>(
+      &::platform_detection_module::_OS_default_instance_);
 }
-inline const ::eve_launcher::pdm::OS& Attributes::os() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Attributes.os)
+inline const ::platform_detection_module::OS& PlatformInformation::os() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.os)
   return _internal_os();
 }
-inline void Attributes::unsafe_arena_set_allocated_os(
-    ::eve_launcher::pdm::OS* os) {
+inline void PlatformInformation::unsafe_arena_set_allocated_os(
+    ::platform_detection_module::OS* os) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(os_);
   }
@@ -6300,37 +5327,37 @@ inline void Attributes::unsafe_arena_set_allocated_os(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.Attributes.os)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.PlatformInformation.os)
 }
-inline ::eve_launcher::pdm::OS* Attributes::release_os() {
+inline ::platform_detection_module::OS* PlatformInformation::release_os() {
   
-  ::eve_launcher::pdm::OS* temp = os_;
+  ::platform_detection_module::OS* temp = os_;
   os_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::eve_launcher::pdm::OS* Attributes::unsafe_arena_release_os() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Attributes.os)
+inline ::platform_detection_module::OS* PlatformInformation::unsafe_arena_release_os() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.PlatformInformation.os)
   
-  ::eve_launcher::pdm::OS* temp = os_;
+  ::platform_detection_module::OS* temp = os_;
   os_ = nullptr;
   return temp;
 }
-inline ::eve_launcher::pdm::OS* Attributes::_internal_mutable_os() {
+inline ::platform_detection_module::OS* PlatformInformation::_internal_mutable_os() {
   
   if (os_ == nullptr) {
-    auto* p = CreateMaybeMessage<::eve_launcher::pdm::OS>(GetArena());
+    auto* p = CreateMaybeMessage<::platform_detection_module::OS>(GetArena());
     os_ = p;
   }
   return os_;
 }
-inline ::eve_launcher::pdm::OS* Attributes::mutable_os() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Attributes.os)
+inline ::platform_detection_module::OS* PlatformInformation::mutable_os() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.PlatformInformation.os)
   return _internal_mutable_os();
 }
-inline void Attributes::set_allocated_os(::eve_launcher::pdm::OS* os) {
+inline void PlatformInformation::set_allocated_os(::platform_detection_module::OS* os) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete os_;
@@ -6347,33 +5374,33 @@ inline void Attributes::set_allocated_os(::eve_launcher::pdm::OS* os) {
     
   }
   os_ = os;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Attributes.os)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.PlatformInformation.os)
 }
 
-// .eve_launcher.pdm.Machine machine = 4;
-inline bool Attributes::_internal_has_machine() const {
+// .platform_detection_module.Machine machine = 5;
+inline bool PlatformInformation::_internal_has_machine() const {
   return this != internal_default_instance() && machine_ != nullptr;
 }
-inline bool Attributes::has_machine() const {
+inline bool PlatformInformation::has_machine() const {
   return _internal_has_machine();
 }
-inline void Attributes::clear_machine() {
+inline void PlatformInformation::clear_machine() {
   if (GetArena() == nullptr && machine_ != nullptr) {
     delete machine_;
   }
   machine_ = nullptr;
 }
-inline const ::eve_launcher::pdm::Machine& Attributes::_internal_machine() const {
-  const ::eve_launcher::pdm::Machine* p = machine_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::eve_launcher::pdm::Machine*>(
-      &::eve_launcher::pdm::_Machine_default_instance_);
+inline const ::platform_detection_module::Machine& PlatformInformation::_internal_machine() const {
+  const ::platform_detection_module::Machine* p = machine_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::Machine*>(
+      &::platform_detection_module::_Machine_default_instance_);
 }
-inline const ::eve_launcher::pdm::Machine& Attributes::machine() const {
-  // @@protoc_insertion_point(field_get:eve_launcher.pdm.Attributes.machine)
+inline const ::platform_detection_module::Machine& PlatformInformation::machine() const {
+  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.machine)
   return _internal_machine();
 }
-inline void Attributes::unsafe_arena_set_allocated_machine(
-    ::eve_launcher::pdm::Machine* machine) {
+inline void PlatformInformation::unsafe_arena_set_allocated_machine(
+    ::platform_detection_module::Machine* machine) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(machine_);
   }
@@ -6383,37 +5410,37 @@ inline void Attributes::unsafe_arena_set_allocated_machine(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:eve_launcher.pdm.Attributes.machine)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.PlatformInformation.machine)
 }
-inline ::eve_launcher::pdm::Machine* Attributes::release_machine() {
+inline ::platform_detection_module::Machine* PlatformInformation::release_machine() {
   
-  ::eve_launcher::pdm::Machine* temp = machine_;
+  ::platform_detection_module::Machine* temp = machine_;
   machine_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::eve_launcher::pdm::Machine* Attributes::unsafe_arena_release_machine() {
-  // @@protoc_insertion_point(field_release:eve_launcher.pdm.Attributes.machine)
+inline ::platform_detection_module::Machine* PlatformInformation::unsafe_arena_release_machine() {
+  // @@protoc_insertion_point(field_release:platform_detection_module.PlatformInformation.machine)
   
-  ::eve_launcher::pdm::Machine* temp = machine_;
+  ::platform_detection_module::Machine* temp = machine_;
   machine_ = nullptr;
   return temp;
 }
-inline ::eve_launcher::pdm::Machine* Attributes::_internal_mutable_machine() {
+inline ::platform_detection_module::Machine* PlatformInformation::_internal_mutable_machine() {
   
   if (machine_ == nullptr) {
-    auto* p = CreateMaybeMessage<::eve_launcher::pdm::Machine>(GetArena());
+    auto* p = CreateMaybeMessage<::platform_detection_module::Machine>(GetArena());
     machine_ = p;
   }
   return machine_;
 }
-inline ::eve_launcher::pdm::Machine* Attributes::mutable_machine() {
-  // @@protoc_insertion_point(field_mutable:eve_launcher.pdm.Attributes.machine)
+inline ::platform_detection_module::Machine* PlatformInformation::mutable_machine() {
+  // @@protoc_insertion_point(field_mutable:platform_detection_module.PlatformInformation.machine)
   return _internal_mutable_machine();
 }
-inline void Attributes::set_allocated_machine(::eve_launcher::pdm::Machine* machine) {
+inline void PlatformInformation::set_allocated_machine(::platform_detection_module::Machine* machine) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete machine_;
@@ -6430,7 +5457,7 @@ inline void Attributes::set_allocated_machine(::eve_launcher::pdm::Machine* mach
     
   }
   machine_ = machine;
-  // @@protoc_insertion_point(field_set_allocated:eve_launcher.pdm.Attributes.machine)
+  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.PlatformInformation.machine)
 }
 
 #ifdef __GNUC__
@@ -6456,34 +5483,22 @@ inline void Attributes::set_allocated_machine(::eve_launcher::pdm::Machine* mach
 
 // -------------------------------------------------------------------
 
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace pdm
-}  // namespace eve_launcher
+}  // namespace platform_detection_module
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport> : ::std::true_type {};
+template <> struct is_proto_enum< ::platform_detection_module::OS_Kind> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport>() {
-  return ::eve_launcher::pdm::OS_GraphicsAPIs_VulkanSupport_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::platform_detection_module::OS_Kind>() {
+  return ::platform_detection_module::OS_Kind_descriptor();
 }
-template <> struct is_proto_enum< ::eve_launcher::pdm::OS_Kind> : ::std::true_type {};
+template <> struct is_proto_enum< ::platform_detection_module::Bitness> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::eve_launcher::pdm::OS_Kind>() {
-  return ::eve_launcher::pdm::OS_Kind_descriptor();
-}
-template <> struct is_proto_enum< ::eve_launcher::pdm::Bitness> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::eve_launcher::pdm::Bitness>() {
-  return ::eve_launcher::pdm::Bitness_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::platform_detection_module::Bitness>() {
+  return ::platform_detection_module::Bitness_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

@@ -11,5 +11,5 @@
 
 namespace pdm
 {
-    DllExport eve_launcher::pdm::Attributes GetData(const std::string& applicationName, const std::string& applicationVersion);
+    DllExport platform_detection_module::PlatformInformation GetData();
 }

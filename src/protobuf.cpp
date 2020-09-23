@@ -2,24 +2,23 @@
 #include "pdm.h"
 #include <google/protobuf/util/time_util.h>
 
-namespace pdmproto = eve_launcher::pdm;
+namespace pdmproto = platform_detection_module;
 
-constexpr pdmproto::Bitness BitnessToProto(PDM::Bitness bitness)
+pdmproto::Bitness BitnessToProto(PDM::Bitness bitness)
 {
 	switch(bitness)
 	{
-	case PDM::Bitness::BITNESS_UNKNOWN:
-		return pdmproto::BITNESS_UNKNOWN;
 	case PDM::Bitness::BITNESS_32:
 		return pdmproto::BITNESS_32;
 	case PDM::Bitness::BITNESS_64:
 		return pdmproto::BITNESS_64;
+    case PDM::Bitness::BITNESS_UNKNOWN:
 	default:
-		throw std::invalid_argument("Invalid bitness");
+        return pdmproto::BITNESS_UNKNOWN;
 	}
 }
 
-constexpr pdmproto::OS::Kind OSKindToProto(PDM::OS osKind)
+pdmproto::OS::Kind OSKindToProto(PDM::OS osKind)
 {
 	switch(osKind)
 	{
@@ -36,38 +35,29 @@ constexpr pdmproto::OS::Kind OSKindToProto(PDM::OS osKind)
 	}
 }
 
-constexpr pdmproto::OS_GraphicsAPIs_VulkanSupport VulkanSupportToProto(PDM::VulkanSupport support)
+std::string VulkanSupportToProto(const PDM::VulkanProperties& raw)
 {
-	switch(support)
-	{
-	case PDM::VulkanSupport::UNKNOWN:
-		return pdmproto::OS_GraphicsAPIs_VulkanSupport::OS_GraphicsAPIs_VulkanSupport_UNKNOWN;
-	case PDM::VulkanSupport::SUPPORTED:
-		return pdmproto::OS_GraphicsAPIs_VulkanSupport::OS_GraphicsAPIs_VulkanSupport_SUPPORTED;
-	case PDM::VulkanSupport::UNSUPPORTED:
-		return pdmproto::OS_GraphicsAPIs_VulkanSupport::OS_GraphicsAPIs_VulkanSupport_UNSUPPORTED;
-	default:
-		throw std::invalid_argument("Invalid vulkanSupport");
-	}
+    if (raw.support == PDM::VulkanSupport::UNKNOWN)
+        return "UNKNOWN";
+
+    if (raw.support == PDM::VulkanSupport::UNSUPPORTED)
+        return "UNSUPPORTED";
+
+    return raw.version;
 }
 
 namespace PDMProtobuf
 {
-	pdmproto::Attributes GetData(const std::string& applicationName, const std::string& applicationVersion)
+	pdmproto::PlatformInformation GetData()
 	{
-		pdmproto::Attributes data;
+		pdmproto::PlatformInformation data;
 
-		auto application = data.mutable_application();
-		application->set_name(applicationName.c_str());
-		application->set_version(applicationVersion.c_str());
-
-		auto process = data.mutable_process();
-		process->set_version(PDM::GetPDMVersion());
-		*process->mutable_timestamp() = google::protobuf::util::TimeUtil::GetCurrentTime();
-		process->set_bitness(BitnessToProto(PDM::GetProcessBitness()));
+		data.set_version(PDM::GetPDMVersion());
+		*data.mutable_timestamp() = google::protobuf::util::TimeUtil::GetCurrentTime();
+		data.set_process_bitness(BitnessToProto(PDM::GetProcessBitness()));
 
 		auto os = data.mutable_os();
-		os->set_kind(OSKindToProto(PDM::GetOSType()));
+		os->set_type(OSKindToProto(PDM::GetOSType()));
 		os->set_name(PDM::GetOSName());
 		os->set_bitness(BitnessToProto(PDM::GetOSBitness()));
 		os->set_major_version(PDM::GetOSMajorVersion());
@@ -80,9 +70,8 @@ namespace PDMProtobuf
 
 		auto graphicsAPIs = os->mutable_graphics_apis();
 		graphicsAPIs->set_metal_supported(PDM::GetMetalSupported());
-		graphicsAPIs->set_vulkan_supported(VulkanSupportToProto(PDM::GetVulkanProperties().support));
-		graphicsAPIs->set_vulkan_highest_support(PDM::GetVulkanProperties().version);
-		graphicsAPIs->set_d3d_highest_support(PDM::GetD3DHighestSupport());
+		graphicsAPIs->set_vulkan_highest_supported_version(VulkanSupportToProto(PDM::GetVulkanProperties()));
+		graphicsAPIs->set_d3d_highest_supported_version(PDM::GetD3DHighestSupport());
 
 		auto wine = os->mutable_wine();
 		wine->set_version(PDM::GetWineVersion());
@@ -111,7 +100,7 @@ namespace PDMProtobuf
 		vm->set_is_hypervisor_guest_os(PDM::IsHyperVGuestOS());
 		vm->set_has_vm_execution_timing(PDM::HasVMExecutionTiming());
 
-		for(auto monitorData : PDM::GetMonitorsInfo())
+		for(const auto& monitorData : PDM::GetMonitorsInfo())
 		{
 			auto monitor = machine->add_monitors();
 			monitor->set_name(monitorData.name);
@@ -122,7 +111,7 @@ namespace PDMProtobuf
 			monitor->set_dpi_scaling_percent(monitorData.dpiScaling);
 		}
 
-		for(auto gpuData : PDM::GetGPUInfo())
+		for(const auto& gpuData : PDM::GetGPUInfo())
 		{
 			auto gpu = machine->add_gpus();
 			gpu->set_description(gpuData.description);
@@ -137,7 +126,7 @@ namespace PDMProtobuf
 			driver->set_version(gpuData.driverVersionString);
 		}
 
-		for(auto networkAdapterData : PDM::GetNetworkAdapterInfo())
+		for(const auto& networkAdapterData : PDM::GetNetworkAdapterInfo())
 		{
 			auto networkAdapter = machine->add_network_adapters();
 			networkAdapter->set_name(networkAdapterData.name);
