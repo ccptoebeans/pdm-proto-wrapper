@@ -247,6 +247,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_pdm_2eproto::offsets[] PROTOBU
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_GraphicsAPIs, metal_supported_),
+  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_GraphicsAPIs, vulkan_supported_),
   PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_GraphicsAPIs, vulkan_highest_supported_version_),
   PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_GraphicsAPIs, d3d_highest_supported_version_),
   ~0u,  // no _has_bits_
@@ -360,16 +361,16 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_pdm_2eproto::offsets[] PROTOBU
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::platform_detection_module::OS_GraphicsAPIs)},
-  { 8, -1, sizeof(::platform_detection_module::OS_Wine)},
-  { 15, -1, sizeof(::platform_detection_module::OS)},
-  { 32, -1, sizeof(::platform_detection_module::Machine_CPU)},
-  { 43, -1, sizeof(::platform_detection_module::Machine_VM)},
-  { 53, -1, sizeof(::platform_detection_module::Machine_Monitor)},
-  { 64, -1, sizeof(::platform_detection_module::Machine_GPU_Driver)},
-  { 72, -1, sizeof(::platform_detection_module::Machine_GPU)},
-  { 83, -1, sizeof(::platform_detection_module::Machine_NetworkAdapter)},
-  { 91, -1, sizeof(::platform_detection_module::Machine)},
-  { 106, -1, sizeof(::platform_detection_module::PlatformInformation)},
+  { 9, -1, sizeof(::platform_detection_module::OS_Wine)},
+  { 16, -1, sizeof(::platform_detection_module::OS)},
+  { 33, -1, sizeof(::platform_detection_module::Machine_CPU)},
+  { 44, -1, sizeof(::platform_detection_module::Machine_VM)},
+  { 54, -1, sizeof(::platform_detection_module::Machine_Monitor)},
+  { 65, -1, sizeof(::platform_detection_module::Machine_GPU_Driver)},
+  { 73, -1, sizeof(::platform_detection_module::Machine_GPU)},
+  { 84, -1, sizeof(::platform_detection_module::Machine_NetworkAdapter)},
+  { 92, -1, sizeof(::platform_detection_module::Machine)},
+  { 107, -1, sizeof(::platform_detection_module::PlatformInformation)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -388,7 +389,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_pdm_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\tpdm.proto\022\031platform_detection_module\032\037"
-  "google/protobuf/timestamp.proto\"\347\004\n\002OS\0220"
+  "google/protobuf/timestamp.proto\"\202\005\n\002OS\0220"
   "\n\004type\030\001 \001(\0162\".platform_detection_module"
   ".OS.Kind\022\014\n\004name\030\002 \001(\t\0223\n\007bitness\030\003 \001(\0162"
   "\".platform_detection_module.Bitness\022\025\n\rm"
@@ -398,51 +399,52 @@ const char descriptor_table_protodef_pdm_2eproto[] PROTOBUF_SECTION_VARIABLE(pro
   "\030\t \001(\t\022\031\n\021is_remote_session\030\n \001(\010\022A\n\rgra"
   "phics_apis\030\013 \001(\0132*.platform_detection_mo"
   "dule.OS.GraphicsAPIs\0220\n\004wine\030\014 \001(\0132\".pla"
-  "tform_detection_module.OS.Wine\032x\n\014Graphi"
-  "csAPIs\022\027\n\017metal_supported\030\001 \001(\010\022(\n vulka"
-  "n_highest_supported_version\030\002 \001(\t\022%\n\035d3d"
-  "_highest_supported_version\030\003 \001(\t\032(\n\004Wine"
-  "\022\017\n\007version\030\001 \001(\t\022\017\n\007host_os\030\002 \001(\t\"5\n\004Ki"
-  "nd\022\013\n\007UNKNOWN\020\000\022\013\n\007WINDOWS\020\001\022\t\n\005MACOS\020\002\022"
-  "\010\n\004WINE\020\003\"\200\t\n\007Machine\022\r\n\005model\030\001 \001(\t\022\014\n\004"
-  "name\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\014\022\024\n\014total_memory"
-  "\030\004 \001(\003\022\025\n\rmonitor_count\030\005 \001(\005\0223\n\003cpu\030\006 \001"
-  "(\0132&.platform_detection_module.Machine.C"
-  "PU\0221\n\002vm\030\007 \001(\0132%.platform_detection_modu"
-  "le.Machine.VM\022<\n\010monitors\030\010 \003(\0132*.platfo"
-  "rm_detection_module.Machine.Monitor\0224\n\004g"
-  "pus\030\t \003(\0132&.platform_detection_module.Ma"
-  "chine.GPU\022K\n\020network_adapters\030\n \003(\01321.pl"
-  "atform_detection_module.Machine.NetworkA"
-  "dapter\032\226\001\n\003CPU\0223\n\007bitness\030\001 \001(\0162\".platfo"
-  "rm_detection_module.Bitness\022\032\n\022logical_c"
-  "ore_count\030\002 \001(\005\022\r\n\005brand\030\003 \001(\t\022\016\n\006vendor"
-  "\030\004 \001(\t\022\r\n\005model\030\005 \001(\005\022\020\n\010stepping\030\006 \001(\005\032"
-  "\223\001\n\002VM\022\027\n\017is_suspected_vm\030\001 \001(\010\022\032\n\022has_h"
-  "ypervisor_bit\030\002 \001(\010\022\027\n\017hypervisor_name\030\003"
-  " \001(\t\022\036\n\026is_hypervisor_guest_os\030\004 \001(\010\022\037\n\027"
-  "has_vm_execution_timing\030\005 \001(\010\032\236\001\n\007Monito"
-  "r\022\014\n\004name\030\001 \001(\t\022\035\n\025horizontal_resolution"
-  "\030\002 \001(\005\022\033\n\023vertical_resolution\030\003 \001(\005\022\026\n\016b"
-  "its_per_color\030\004 \001(\005\022\024\n\014refresh_rate\030\005 \001("
-  "\005\022\033\n\023dpi_scaling_percent\030\006 \001(\005\032\340\001\n\003GPU\022\023"
-  "\n\013description\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001(\005\022\021"
-  "\n\tdevice_id\030\003 \001(\005\022\020\n\010revision\030\004 \001(\005\022\024\n\014v"
-  "ideo_memory\030\005 \001(\003\022=\n\006driver\030\006 \001(\0132-.plat"
-  "form_detection_module.Machine.GPU.Driver"
-  "\0327\n\006Driver\022\014\n\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t"
-  "\022\017\n\007version\030\003 \001(\t\032A\n\016NetworkAdapter\022\014\n\004n"
-  "ame\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\014\022\014\n\004uuid\030\003"
-  " \001(\014\"\362\001\n\023PlatformInformation\022\017\n\007version\030"
-  "\001 \001(\t\022-\n\ttimestamp\030\002 \001(\0132\032.google.protob"
-  "uf.Timestamp\022;\n\017process_bitness\030\003 \001(\0162\"."
-  "platform_detection_module.Bitness\022)\n\002os\030"
-  "\004 \001(\0132\035.platform_detection_module.OS\0223\n\007"
-  "machine\030\005 \001(\0132\".platform_detection_modul"
-  "e.Machine*>\n\007Bitness\022\023\n\017BITNESS_UNKNOWN\020"
-  "\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBITNESS_64\020\002BFZDgit"
-  "hub.com/ccpgames/eve-proto-go/generated/"
-  "platform_detection_moduleb\006proto3"
+  "tform_detection_module.OS.Wine\032\222\001\n\014Graph"
+  "icsAPIs\022\027\n\017metal_supported\030\001 \001(\010\022\030\n\020vulk"
+  "an_supported\030\002 \001(\010\022(\n vulkan_highest_sup"
+  "ported_version\030\003 \001(\t\022%\n\035d3d_highest_supp"
+  "orted_version\030\004 \001(\t\032(\n\004Wine\022\017\n\007version\030\001"
+  " \001(\t\022\017\n\007host_os\030\002 \001(\t\"5\n\004Kind\022\013\n\007UNKNOWN"
+  "\020\000\022\013\n\007WINDOWS\020\001\022\t\n\005MACOS\020\002\022\010\n\004WINE\020\003\"\200\t\n"
+  "\007Machine\022\r\n\005model\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n"
+  "\004uuid\030\003 \001(\014\022\024\n\014total_memory\030\004 \001(\003\022\025\n\rmon"
+  "itor_count\030\005 \001(\005\0223\n\003cpu\030\006 \001(\0132&.platform"
+  "_detection_module.Machine.CPU\0221\n\002vm\030\007 \001("
+  "\0132%.platform_detection_module.Machine.VM"
+  "\022<\n\010monitors\030\010 \003(\0132*.platform_detection_"
+  "module.Machine.Monitor\0224\n\004gpus\030\t \003(\0132&.p"
+  "latform_detection_module.Machine.GPU\022K\n\020"
+  "network_adapters\030\n \003(\01321.platform_detect"
+  "ion_module.Machine.NetworkAdapter\032\226\001\n\003CP"
+  "U\0223\n\007bitness\030\001 \001(\0162\".platform_detection_"
+  "module.Bitness\022\032\n\022logical_core_count\030\002 \001"
+  "(\005\022\r\n\005brand\030\003 \001(\t\022\016\n\006vendor\030\004 \001(\t\022\r\n\005mod"
+  "el\030\005 \001(\005\022\020\n\010stepping\030\006 \001(\005\032\223\001\n\002VM\022\027\n\017is_"
+  "suspected_vm\030\001 \001(\010\022\032\n\022has_hypervisor_bit"
+  "\030\002 \001(\010\022\027\n\017hypervisor_name\030\003 \001(\t\022\036\n\026is_hy"
+  "pervisor_guest_os\030\004 \001(\010\022\037\n\027has_vm_execut"
+  "ion_timing\030\005 \001(\010\032\236\001\n\007Monitor\022\014\n\004name\030\001 \001"
+  "(\t\022\035\n\025horizontal_resolution\030\002 \001(\005\022\033\n\023ver"
+  "tical_resolution\030\003 \001(\005\022\026\n\016bits_per_color"
+  "\030\004 \001(\005\022\024\n\014refresh_rate\030\005 \001(\005\022\033\n\023dpi_scal"
+  "ing_percent\030\006 \001(\005\032\340\001\n\003GPU\022\023\n\013description"
+  "\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001(\005\022\021\n\tdevice_id\030\003"
+  " \001(\005\022\020\n\010revision\030\004 \001(\005\022\024\n\014video_memory\030\005"
+  " \001(\003\022=\n\006driver\030\006 \001(\0132-.platform_detectio"
+  "n_module.Machine.GPU.Driver\0327\n\006Driver\022\014\n"
+  "\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017\n\007version\030\003"
+  " \001(\t\032A\n\016NetworkAdapter\022\014\n\004name\030\001 \001(\t\022\023\n\013"
+  "mac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"\362\001\n\023Plat"
+  "formInformation\022\017\n\007version\030\001 \001(\t\022-\n\ttime"
+  "stamp\030\002 \001(\0132\032.google.protobuf.Timestamp\022"
+  ";\n\017process_bitness\030\003 \001(\0162\".platform_dete"
+  "ction_module.Bitness\022)\n\002os\030\004 \001(\0132\035.platf"
+  "orm_detection_module.OS\0223\n\007machine\030\005 \001(\013"
+  "2\".platform_detection_module.Machine*>\n\007"
+  "Bitness\022\023\n\017BITNESS_UNKNOWN\020\000\022\016\n\nBITNESS_"
+  "32\020\001\022\016\n\nBITNESS_64\020\002BFZDgithub.com/ccpga"
+  "mes/eve-proto-go/generated/platform_dete"
+  "ction_moduleb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_pdm_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
@@ -462,7 +464,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pdm
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_pdm_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_pdm_2eproto = {
-  false, false, descriptor_table_protodef_pdm_2eproto, "pdm.proto", 2233,
+  false, false, descriptor_table_protodef_pdm_2eproto, "pdm.proto", 2260,
   &descriptor_table_pdm_2eproto_once, descriptor_table_pdm_2eproto_sccs, descriptor_table_pdm_2eproto_deps, 11, 1,
   schemas, file_default_instances, TableStruct_pdm_2eproto::offsets,
   file_level_metadata_pdm_2eproto, 11, file_level_enum_descriptors_pdm_2eproto, file_level_service_descriptors_pdm_2eproto,
@@ -539,7 +541,9 @@ OS_GraphicsAPIs::OS_GraphicsAPIs(const OS_GraphicsAPIs& from)
     d3d_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_d3d_highest_supported_version(),
       GetArena());
   }
-  metal_supported_ = from.metal_supported_;
+  ::memcpy(&metal_supported_, &from.metal_supported_,
+    static_cast<size_t>(reinterpret_cast<char*>(&vulkan_supported_) -
+    reinterpret_cast<char*>(&metal_supported_)) + sizeof(vulkan_supported_));
   // @@protoc_insertion_point(copy_constructor:platform_detection_module.OS.GraphicsAPIs)
 }
 
@@ -547,7 +551,9 @@ void OS_GraphicsAPIs::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_OS_GraphicsAPIs_pdm_2eproto.base);
   vulkan_highest_supported_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   d3d_highest_supported_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  metal_supported_ = false;
+  ::memset(&metal_supported_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&vulkan_supported_) -
+      reinterpret_cast<char*>(&metal_supported_)) + sizeof(vulkan_supported_));
 }
 
 OS_GraphicsAPIs::~OS_GraphicsAPIs() {
@@ -585,7 +591,9 @@ void OS_GraphicsAPIs::Clear() {
 
   vulkan_highest_supported_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   d3d_highest_supported_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  metal_supported_ = false;
+  ::memset(&metal_supported_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&vulkan_supported_) -
+      reinterpret_cast<char*>(&metal_supported_)) + sizeof(vulkan_supported_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -604,18 +612,25 @@ const char* OS_GraphicsAPIs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string vulkan_highest_supported_version = 2;
+      // bool vulkan_supported = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          vulkan_supported_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string vulkan_highest_supported_version = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_vulkan_highest_supported_version();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string d3d_highest_supported_version = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+      // string d3d_highest_supported_version = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_d3d_highest_supported_version();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version"));
@@ -656,24 +671,30 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_metal_supported(), target);
   }
 
-  // string vulkan_highest_supported_version = 2;
+  // bool vulkan_supported = 2;
+  if (this->vulkan_supported() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(2, this->_internal_vulkan_supported(), target);
+  }
+
+  // string vulkan_highest_supported_version = 3;
   if (this->vulkan_highest_supported_version().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vulkan_highest_supported_version().data(), static_cast<int>(this->_internal_vulkan_highest_supported_version().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_vulkan_highest_supported_version(), target);
+        3, this->_internal_vulkan_highest_supported_version(), target);
   }
 
-  // string d3d_highest_supported_version = 3;
+  // string d3d_highest_supported_version = 4;
   if (this->d3d_highest_supported_version().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_d3d_highest_supported_version().data(), static_cast<int>(this->_internal_d3d_highest_supported_version().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version");
     target = stream->WriteStringMaybeAliased(
-        3, this->_internal_d3d_highest_supported_version(), target);
+        4, this->_internal_d3d_highest_supported_version(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -692,14 +713,14 @@ size_t OS_GraphicsAPIs::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string vulkan_highest_supported_version = 2;
+  // string vulkan_highest_supported_version = 3;
   if (this->vulkan_highest_supported_version().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_vulkan_highest_supported_version());
   }
 
-  // string d3d_highest_supported_version = 3;
+  // string d3d_highest_supported_version = 4;
   if (this->d3d_highest_supported_version().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -708,6 +729,11 @@ size_t OS_GraphicsAPIs::ByteSizeLong() const {
 
   // bool metal_supported = 1;
   if (this->metal_supported() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool vulkan_supported = 2;
+  if (this->vulkan_supported() != 0) {
     total_size += 1 + 1;
   }
 
@@ -751,6 +777,9 @@ void OS_GraphicsAPIs::MergeFrom(const OS_GraphicsAPIs& from) {
   if (from.metal_supported() != 0) {
     _internal_set_metal_supported(from._internal_metal_supported());
   }
+  if (from.vulkan_supported() != 0) {
+    _internal_set_vulkan_supported(from._internal_vulkan_supported());
+  }
 }
 
 void OS_GraphicsAPIs::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -776,7 +805,12 @@ void OS_GraphicsAPIs::InternalSwap(OS_GraphicsAPIs* other) {
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   vulkan_highest_supported_version_.Swap(&other->vulkan_highest_supported_version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   d3d_highest_supported_version_.Swap(&other->d3d_highest_supported_version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(metal_supported_, other->metal_supported_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(OS_GraphicsAPIs, vulkan_supported_)
+      + sizeof(OS_GraphicsAPIs::vulkan_supported_)
+      - PROTOBUF_FIELD_OFFSET(OS_GraphicsAPIs, metal_supported_)>(
+          reinterpret_cast<char*>(&metal_supported_),
+          reinterpret_cast<char*>(&other->metal_supported_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata OS_GraphicsAPIs::GetMetadata() const {

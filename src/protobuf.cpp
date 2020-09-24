@@ -70,7 +70,9 @@ namespace PDMProtobuf
 
 		auto graphicsAPIs = os->mutable_graphics_apis();
 		graphicsAPIs->set_metal_supported(PDM::GetMetalSupported());
-		graphicsAPIs->set_vulkan_highest_supported_version(VulkanSupportToProto(PDM::GetVulkanProperties()));
+		auto vulkan = PDM::GetVulkanProperties();
+		graphicsAPIs->set_vulkan_supported(vulkan.support == PDM::VulkanSupport::SUPPORTED);
+		graphicsAPIs->set_vulkan_highest_supported_version(vulkan.version);
 		graphicsAPIs->set_d3d_highest_supported_version(PDM::GetD3DHighestSupport());
 
 		auto wine = os->mutable_wine();
