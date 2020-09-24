@@ -13,7 +13,7 @@ FetchContent_Populate(
 add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/protobuf/cmake)
 find_package(protobuf REQUIRED)
 
-add_library(platform_pdm_proto_wrapper SHARED src/protobuf.cpp src/export.cpp include/pdm/protobuf.h generated/pdm.pb.cc)
+add_library(platform_pdm_proto_wrapper SHARED src/protobuf.cpp include/pdm/protobuf.h generated/pdm.pb.cc)
 target_link_libraries(platform_pdm_proto_wrapper PUBLIC pdm protobuf::libprotobuf)
 target_include_directories(platform_pdm_proto_wrapper PUBLIC generated)
 
