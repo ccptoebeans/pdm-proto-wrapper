@@ -49,14 +49,17 @@ struct TableStruct_pdm_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[11]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[12]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_pdm_2eproto;
-namespace platform_detection_module {
+namespace platform {
+class Information;
+class InformationDefaultTypeInternal;
+extern InformationDefaultTypeInternal _Information_default_instance_;
 class Machine;
 class MachineDefaultTypeInternal;
 extern MachineDefaultTypeInternal _Machine_default_instance_;
@@ -87,24 +90,25 @@ extern OS_GraphicsAPIsDefaultTypeInternal _OS_GraphicsAPIs_default_instance_;
 class OS_Wine;
 class OS_WineDefaultTypeInternal;
 extern OS_WineDefaultTypeInternal _OS_Wine_default_instance_;
-class PlatformInformation;
-class PlatformInformationDefaultTypeInternal;
-extern PlatformInformationDefaultTypeInternal _PlatformInformation_default_instance_;
-}  // namespace platform_detection_module
+class SemanticVersion;
+class SemanticVersionDefaultTypeInternal;
+extern SemanticVersionDefaultTypeInternal _SemanticVersion_default_instance_;
+}  // namespace platform
 PROTOBUF_NAMESPACE_OPEN
-template<> ::platform_detection_module::Machine* Arena::CreateMaybeMessage<::platform_detection_module::Machine>(Arena*);
-template<> ::platform_detection_module::Machine_CPU* Arena::CreateMaybeMessage<::platform_detection_module::Machine_CPU>(Arena*);
-template<> ::platform_detection_module::Machine_GPU* Arena::CreateMaybeMessage<::platform_detection_module::Machine_GPU>(Arena*);
-template<> ::platform_detection_module::Machine_GPU_Driver* Arena::CreateMaybeMessage<::platform_detection_module::Machine_GPU_Driver>(Arena*);
-template<> ::platform_detection_module::Machine_Monitor* Arena::CreateMaybeMessage<::platform_detection_module::Machine_Monitor>(Arena*);
-template<> ::platform_detection_module::Machine_NetworkAdapter* Arena::CreateMaybeMessage<::platform_detection_module::Machine_NetworkAdapter>(Arena*);
-template<> ::platform_detection_module::Machine_VM* Arena::CreateMaybeMessage<::platform_detection_module::Machine_VM>(Arena*);
-template<> ::platform_detection_module::OS* Arena::CreateMaybeMessage<::platform_detection_module::OS>(Arena*);
-template<> ::platform_detection_module::OS_GraphicsAPIs* Arena::CreateMaybeMessage<::platform_detection_module::OS_GraphicsAPIs>(Arena*);
-template<> ::platform_detection_module::OS_Wine* Arena::CreateMaybeMessage<::platform_detection_module::OS_Wine>(Arena*);
-template<> ::platform_detection_module::PlatformInformation* Arena::CreateMaybeMessage<::platform_detection_module::PlatformInformation>(Arena*);
+template<> ::platform::Information* Arena::CreateMaybeMessage<::platform::Information>(Arena*);
+template<> ::platform::Machine* Arena::CreateMaybeMessage<::platform::Machine>(Arena*);
+template<> ::platform::Machine_CPU* Arena::CreateMaybeMessage<::platform::Machine_CPU>(Arena*);
+template<> ::platform::Machine_GPU* Arena::CreateMaybeMessage<::platform::Machine_GPU>(Arena*);
+template<> ::platform::Machine_GPU_Driver* Arena::CreateMaybeMessage<::platform::Machine_GPU_Driver>(Arena*);
+template<> ::platform::Machine_Monitor* Arena::CreateMaybeMessage<::platform::Machine_Monitor>(Arena*);
+template<> ::platform::Machine_NetworkAdapter* Arena::CreateMaybeMessage<::platform::Machine_NetworkAdapter>(Arena*);
+template<> ::platform::Machine_VM* Arena::CreateMaybeMessage<::platform::Machine_VM>(Arena*);
+template<> ::platform::OS* Arena::CreateMaybeMessage<::platform::OS>(Arena*);
+template<> ::platform::OS_GraphicsAPIs* Arena::CreateMaybeMessage<::platform::OS_GraphicsAPIs>(Arena*);
+template<> ::platform::OS_Wine* Arena::CreateMaybeMessage<::platform::OS_Wine>(Arena*);
+template<> ::platform::SemanticVersion* Arena::CreateMaybeMessage<::platform::SemanticVersion>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace platform_detection_module {
+namespace platform {
 
 enum OS_Kind : int {
   OS_Kind_UNKNOWN = 0,
@@ -161,8 +165,203 @@ inline bool Bitness_Parse(
 }
 // ===================================================================
 
+class SemanticVersion PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.SemanticVersion) */ {
+ public:
+  inline SemanticVersion() : SemanticVersion(nullptr) {}
+  virtual ~SemanticVersion();
+
+  SemanticVersion(const SemanticVersion& from);
+  SemanticVersion(SemanticVersion&& from) noexcept
+    : SemanticVersion() {
+    *this = ::std::move(from);
+  }
+
+  inline SemanticVersion& operator=(const SemanticVersion& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SemanticVersion& operator=(SemanticVersion&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const SemanticVersion& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SemanticVersion* internal_default_instance() {
+    return reinterpret_cast<const SemanticVersion*>(
+               &_SemanticVersion_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  friend void swap(SemanticVersion& a, SemanticVersion& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SemanticVersion* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SemanticVersion* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SemanticVersion* New() const final {
+    return CreateMaybeMessage<SemanticVersion>(nullptr);
+  }
+
+  SemanticVersion* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<SemanticVersion>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const SemanticVersion& from);
+  void MergeFrom(const SemanticVersion& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SemanticVersion* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "platform.SemanticVersion";
+  }
+  protected:
+  explicit SemanticVersion(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_pdm_2eproto);
+    return ::descriptor_table_pdm_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPrereleaseFieldNumber = 4,
+    kBuildFieldNumber = 5,
+    kMajorFieldNumber = 1,
+    kMinorFieldNumber = 2,
+    kPatchFieldNumber = 3,
+  };
+  // string prerelease = 4;
+  void clear_prerelease();
+  const std::string& prerelease() const;
+  void set_prerelease(const std::string& value);
+  void set_prerelease(std::string&& value);
+  void set_prerelease(const char* value);
+  void set_prerelease(const char* value, size_t size);
+  std::string* mutable_prerelease();
+  std::string* release_prerelease();
+  void set_allocated_prerelease(std::string* prerelease);
+  private:
+  const std::string& _internal_prerelease() const;
+  void _internal_set_prerelease(const std::string& value);
+  std::string* _internal_mutable_prerelease();
+  public:
+
+  // string build = 5;
+  void clear_build();
+  const std::string& build() const;
+  void set_build(const std::string& value);
+  void set_build(std::string&& value);
+  void set_build(const char* value);
+  void set_build(const char* value, size_t size);
+  std::string* mutable_build();
+  std::string* release_build();
+  void set_allocated_build(std::string* build);
+  private:
+  const std::string& _internal_build() const;
+  void _internal_set_build(const std::string& value);
+  std::string* _internal_mutable_build();
+  public:
+
+  // uint32 major = 1;
+  void clear_major();
+  ::PROTOBUF_NAMESPACE_ID::uint32 major() const;
+  void set_major(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_major() const;
+  void _internal_set_major(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // uint32 minor = 2;
+  void clear_minor();
+  ::PROTOBUF_NAMESPACE_ID::uint32 minor() const;
+  void set_minor(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_minor() const;
+  void _internal_set_minor(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // uint32 patch = 3;
+  void clear_patch();
+  ::PROTOBUF_NAMESPACE_ID::uint32 patch() const;
+  void set_patch(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_patch() const;
+  void _internal_set_patch(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:platform.SemanticVersion)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr prerelease_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr build_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 major_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 minor_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 patch_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_pdm_2eproto;
+};
+// -------------------------------------------------------------------
+
 class OS_GraphicsAPIs PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.OS.GraphicsAPIs) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.OS.GraphicsAPIs) */ {
  public:
   inline OS_GraphicsAPIs() : OS_GraphicsAPIs(nullptr) {}
   virtual ~OS_GraphicsAPIs();
@@ -203,7 +402,7 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
                &_OS_GraphicsAPIs_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    1;
 
   friend void swap(OS_GraphicsAPIs& a, OS_GraphicsAPIs& b) {
     a.Swap(&b);
@@ -251,7 +450,7 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
   void InternalSwap(OS_GraphicsAPIs* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.OS.GraphicsAPIs";
+    return "platform.OS.GraphicsAPIs";
   }
   protected:
   explicit OS_GraphicsAPIs(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -329,7 +528,7 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
   void _internal_set_vulkan_supported(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.OS.GraphicsAPIs)
+  // @@protoc_insertion_point(class_scope:platform.OS.GraphicsAPIs)
  private:
   class _Internal;
 
@@ -346,7 +545,7 @@ class OS_GraphicsAPIs PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class OS_Wine PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.OS.Wine) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.OS.Wine) */ {
  public:
   inline OS_Wine() : OS_Wine(nullptr) {}
   virtual ~OS_Wine();
@@ -387,7 +586,7 @@ class OS_Wine PROTOBUF_FINAL :
                &_OS_Wine_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(OS_Wine& a, OS_Wine& b) {
     a.Swap(&b);
@@ -435,7 +634,7 @@ class OS_Wine PROTOBUF_FINAL :
   void InternalSwap(OS_Wine* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.OS.Wine";
+    return "platform.OS.Wine";
   }
   protected:
   explicit OS_Wine(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -493,7 +692,7 @@ class OS_Wine PROTOBUF_FINAL :
   std::string* _internal_mutable_host_os();
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.OS.Wine)
+  // @@protoc_insertion_point(class_scope:platform.OS.Wine)
  private:
   class _Internal;
 
@@ -508,7 +707,7 @@ class OS_Wine PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class OS PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.OS) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.OS) */ {
  public:
   inline OS() : OS(nullptr) {}
   virtual ~OS();
@@ -549,7 +748,7 @@ class OS PROTOBUF_FINAL :
                &_OS_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
   friend void swap(OS& a, OS& b) {
     a.Swap(&b);
@@ -597,7 +796,7 @@ class OS PROTOBUF_FINAL :
   void InternalSwap(OS* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.OS";
+    return "platform.OS";
   }
   protected:
   explicit OS(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -782,58 +981,58 @@ class OS PROTOBUF_FINAL :
   std::string* _internal_mutable_user_locale();
   public:
 
-  // .platform_detection_module.OS.GraphicsAPIs graphics_apis = 11;
+  // .platform.OS.GraphicsAPIs graphics_apis = 11;
   bool has_graphics_apis() const;
   private:
   bool _internal_has_graphics_apis() const;
   public:
   void clear_graphics_apis();
-  const ::platform_detection_module::OS_GraphicsAPIs& graphics_apis() const;
-  ::platform_detection_module::OS_GraphicsAPIs* release_graphics_apis();
-  ::platform_detection_module::OS_GraphicsAPIs* mutable_graphics_apis();
-  void set_allocated_graphics_apis(::platform_detection_module::OS_GraphicsAPIs* graphics_apis);
+  const ::platform::OS_GraphicsAPIs& graphics_apis() const;
+  ::platform::OS_GraphicsAPIs* release_graphics_apis();
+  ::platform::OS_GraphicsAPIs* mutable_graphics_apis();
+  void set_allocated_graphics_apis(::platform::OS_GraphicsAPIs* graphics_apis);
   private:
-  const ::platform_detection_module::OS_GraphicsAPIs& _internal_graphics_apis() const;
-  ::platform_detection_module::OS_GraphicsAPIs* _internal_mutable_graphics_apis();
+  const ::platform::OS_GraphicsAPIs& _internal_graphics_apis() const;
+  ::platform::OS_GraphicsAPIs* _internal_mutable_graphics_apis();
   public:
   void unsafe_arena_set_allocated_graphics_apis(
-      ::platform_detection_module::OS_GraphicsAPIs* graphics_apis);
-  ::platform_detection_module::OS_GraphicsAPIs* unsafe_arena_release_graphics_apis();
+      ::platform::OS_GraphicsAPIs* graphics_apis);
+  ::platform::OS_GraphicsAPIs* unsafe_arena_release_graphics_apis();
 
-  // .platform_detection_module.OS.Wine wine = 12;
+  // .platform.OS.Wine wine = 12;
   bool has_wine() const;
   private:
   bool _internal_has_wine() const;
   public:
   void clear_wine();
-  const ::platform_detection_module::OS_Wine& wine() const;
-  ::platform_detection_module::OS_Wine* release_wine();
-  ::platform_detection_module::OS_Wine* mutable_wine();
-  void set_allocated_wine(::platform_detection_module::OS_Wine* wine);
+  const ::platform::OS_Wine& wine() const;
+  ::platform::OS_Wine* release_wine();
+  ::platform::OS_Wine* mutable_wine();
+  void set_allocated_wine(::platform::OS_Wine* wine);
   private:
-  const ::platform_detection_module::OS_Wine& _internal_wine() const;
-  ::platform_detection_module::OS_Wine* _internal_mutable_wine();
+  const ::platform::OS_Wine& _internal_wine() const;
+  ::platform::OS_Wine* _internal_mutable_wine();
   public:
   void unsafe_arena_set_allocated_wine(
-      ::platform_detection_module::OS_Wine* wine);
-  ::platform_detection_module::OS_Wine* unsafe_arena_release_wine();
+      ::platform::OS_Wine* wine);
+  ::platform::OS_Wine* unsafe_arena_release_wine();
 
-  // .platform_detection_module.OS.Kind type = 1;
+  // .platform.OS.Kind type = 1;
   void clear_type();
-  ::platform_detection_module::OS_Kind type() const;
-  void set_type(::platform_detection_module::OS_Kind value);
+  ::platform::OS_Kind type() const;
+  void set_type(::platform::OS_Kind value);
   private:
-  ::platform_detection_module::OS_Kind _internal_type() const;
-  void _internal_set_type(::platform_detection_module::OS_Kind value);
+  ::platform::OS_Kind _internal_type() const;
+  void _internal_set_type(::platform::OS_Kind value);
   public:
 
-  // .platform_detection_module.Bitness bitness = 3;
+  // .platform.Bitness bitness = 3;
   void clear_bitness();
-  ::platform_detection_module::Bitness bitness() const;
-  void set_bitness(::platform_detection_module::Bitness value);
+  ::platform::Bitness bitness() const;
+  void set_bitness(::platform::Bitness value);
   private:
-  ::platform_detection_module::Bitness _internal_bitness() const;
-  void _internal_set_bitness(::platform_detection_module::Bitness value);
+  ::platform::Bitness _internal_bitness() const;
+  void _internal_set_bitness(::platform::Bitness value);
   public:
 
   // bool is_remote_session = 10;
@@ -845,7 +1044,7 @@ class OS PROTOBUF_FINAL :
   void _internal_set_is_remote_session(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.OS)
+  // @@protoc_insertion_point(class_scope:platform.OS)
  private:
   class _Internal;
 
@@ -859,8 +1058,8 @@ class OS PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr kernel_version_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr user_locale_;
-  ::platform_detection_module::OS_GraphicsAPIs* graphics_apis_;
-  ::platform_detection_module::OS_Wine* wine_;
+  ::platform::OS_GraphicsAPIs* graphics_apis_;
+  ::platform::OS_Wine* wine_;
   int type_;
   int bitness_;
   bool is_remote_session_;
@@ -870,7 +1069,7 @@ class OS PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_CPU PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.CPU) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.Machine.CPU) */ {
  public:
   inline Machine_CPU() : Machine_CPU(nullptr) {}
   virtual ~Machine_CPU();
@@ -911,7 +1110,7 @@ class Machine_CPU PROTOBUF_FINAL :
                &_Machine_CPU_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   friend void swap(Machine_CPU& a, Machine_CPU& b) {
     a.Swap(&b);
@@ -959,7 +1158,7 @@ class Machine_CPU PROTOBUF_FINAL :
   void InternalSwap(Machine_CPU* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.Machine.CPU";
+    return "platform.Machine.CPU";
   }
   protected:
   explicit Machine_CPU(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1021,13 +1220,13 @@ class Machine_CPU PROTOBUF_FINAL :
   std::string* _internal_mutable_vendor();
   public:
 
-  // .platform_detection_module.Bitness bitness = 1;
+  // .platform.Bitness bitness = 1;
   void clear_bitness();
-  ::platform_detection_module::Bitness bitness() const;
-  void set_bitness(::platform_detection_module::Bitness value);
+  ::platform::Bitness bitness() const;
+  void set_bitness(::platform::Bitness value);
   private:
-  ::platform_detection_module::Bitness _internal_bitness() const;
-  void _internal_set_bitness(::platform_detection_module::Bitness value);
+  ::platform::Bitness _internal_bitness() const;
+  void _internal_set_bitness(::platform::Bitness value);
   public:
 
   // int32 logical_core_count = 2;
@@ -1057,7 +1256,7 @@ class Machine_CPU PROTOBUF_FINAL :
   void _internal_set_stepping(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.CPU)
+  // @@protoc_insertion_point(class_scope:platform.Machine.CPU)
  private:
   class _Internal;
 
@@ -1076,7 +1275,7 @@ class Machine_CPU PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_VM PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.VM) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.Machine.VM) */ {
  public:
   inline Machine_VM() : Machine_VM(nullptr) {}
   virtual ~Machine_VM();
@@ -1117,7 +1316,7 @@ class Machine_VM PROTOBUF_FINAL :
                &_Machine_VM_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    5;
 
   friend void swap(Machine_VM& a, Machine_VM& b) {
     a.Swap(&b);
@@ -1165,7 +1364,7 @@ class Machine_VM PROTOBUF_FINAL :
   void InternalSwap(Machine_VM* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.Machine.VM";
+    return "platform.Machine.VM";
   }
   protected:
   explicit Machine_VM(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1246,7 +1445,7 @@ class Machine_VM PROTOBUF_FINAL :
   void _internal_set_has_vm_execution_timing(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.VM)
+  // @@protoc_insertion_point(class_scope:platform.Machine.VM)
  private:
   class _Internal;
 
@@ -1264,7 +1463,7 @@ class Machine_VM PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_Monitor PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.Monitor) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.Machine.Monitor) */ {
  public:
   inline Machine_Monitor() : Machine_Monitor(nullptr) {}
   virtual ~Machine_Monitor();
@@ -1305,7 +1504,7 @@ class Machine_Monitor PROTOBUF_FINAL :
                &_Machine_Monitor_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    6;
 
   friend void swap(Machine_Monitor& a, Machine_Monitor& b) {
     a.Swap(&b);
@@ -1353,7 +1552,7 @@ class Machine_Monitor PROTOBUF_FINAL :
   void InternalSwap(Machine_Monitor* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.Machine.Monitor";
+    return "platform.Machine.Monitor";
   }
   protected:
   explicit Machine_Monitor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1444,7 +1643,7 @@ class Machine_Monitor PROTOBUF_FINAL :
   void _internal_set_dpi_scaling_percent(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.Monitor)
+  // @@protoc_insertion_point(class_scope:platform.Machine.Monitor)
  private:
   class _Internal;
 
@@ -1463,7 +1662,7 @@ class Machine_Monitor PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_GPU_Driver PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.GPU.Driver) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.Machine.GPU.Driver) */ {
  public:
   inline Machine_GPU_Driver() : Machine_GPU_Driver(nullptr) {}
   virtual ~Machine_GPU_Driver();
@@ -1504,7 +1703,7 @@ class Machine_GPU_Driver PROTOBUF_FINAL :
                &_Machine_GPU_Driver_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    7;
 
   friend void swap(Machine_GPU_Driver& a, Machine_GPU_Driver& b) {
     a.Swap(&b);
@@ -1552,7 +1751,7 @@ class Machine_GPU_Driver PROTOBUF_FINAL :
   void InternalSwap(Machine_GPU_Driver* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.Machine.GPU.Driver";
+    return "platform.Machine.GPU.Driver";
   }
   protected:
   explicit Machine_GPU_Driver(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1627,7 +1826,7 @@ class Machine_GPU_Driver PROTOBUF_FINAL :
   std::string* _internal_mutable_version();
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.GPU.Driver)
+  // @@protoc_insertion_point(class_scope:platform.Machine.GPU.Driver)
  private:
   class _Internal;
 
@@ -1643,7 +1842,7 @@ class Machine_GPU_Driver PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_GPU PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.GPU) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.Machine.GPU) */ {
  public:
   inline Machine_GPU() : Machine_GPU(nullptr) {}
   virtual ~Machine_GPU();
@@ -1684,7 +1883,7 @@ class Machine_GPU PROTOBUF_FINAL :
                &_Machine_GPU_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    8;
 
   friend void swap(Machine_GPU& a, Machine_GPU& b) {
     a.Swap(&b);
@@ -1732,7 +1931,7 @@ class Machine_GPU PROTOBUF_FINAL :
   void InternalSwap(Machine_GPU* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.Machine.GPU";
+    return "platform.Machine.GPU";
   }
   protected:
   explicit Machine_GPU(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -1780,23 +1979,23 @@ class Machine_GPU PROTOBUF_FINAL :
   std::string* _internal_mutable_description();
   public:
 
-  // .platform_detection_module.Machine.GPU.Driver driver = 6;
+  // .platform.Machine.GPU.Driver driver = 6;
   bool has_driver() const;
   private:
   bool _internal_has_driver() const;
   public:
   void clear_driver();
-  const ::platform_detection_module::Machine_GPU_Driver& driver() const;
-  ::platform_detection_module::Machine_GPU_Driver* release_driver();
-  ::platform_detection_module::Machine_GPU_Driver* mutable_driver();
-  void set_allocated_driver(::platform_detection_module::Machine_GPU_Driver* driver);
+  const ::platform::Machine_GPU_Driver& driver() const;
+  ::platform::Machine_GPU_Driver* release_driver();
+  ::platform::Machine_GPU_Driver* mutable_driver();
+  void set_allocated_driver(::platform::Machine_GPU_Driver* driver);
   private:
-  const ::platform_detection_module::Machine_GPU_Driver& _internal_driver() const;
-  ::platform_detection_module::Machine_GPU_Driver* _internal_mutable_driver();
+  const ::platform::Machine_GPU_Driver& _internal_driver() const;
+  ::platform::Machine_GPU_Driver* _internal_mutable_driver();
   public:
   void unsafe_arena_set_allocated_driver(
-      ::platform_detection_module::Machine_GPU_Driver* driver);
-  ::platform_detection_module::Machine_GPU_Driver* unsafe_arena_release_driver();
+      ::platform::Machine_GPU_Driver* driver);
+  ::platform::Machine_GPU_Driver* unsafe_arena_release_driver();
 
   // int32 vendor_id = 2;
   void clear_vendor_id();
@@ -1834,7 +2033,7 @@ class Machine_GPU PROTOBUF_FINAL :
   void _internal_set_revision(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.GPU)
+  // @@protoc_insertion_point(class_scope:platform.Machine.GPU)
  private:
   class _Internal;
 
@@ -1842,7 +2041,7 @@ class Machine_GPU PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
-  ::platform_detection_module::Machine_GPU_Driver* driver_;
+  ::platform::Machine_GPU_Driver* driver_;
   ::PROTOBUF_NAMESPACE_ID::int32 vendor_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 device_id_;
   ::PROTOBUF_NAMESPACE_ID::int64 video_memory_;
@@ -1853,7 +2052,7 @@ class Machine_GPU PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine_NetworkAdapter PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine.NetworkAdapter) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.Machine.NetworkAdapter) */ {
  public:
   inline Machine_NetworkAdapter() : Machine_NetworkAdapter(nullptr) {}
   virtual ~Machine_NetworkAdapter();
@@ -1894,7 +2093,7 @@ class Machine_NetworkAdapter PROTOBUF_FINAL :
                &_Machine_NetworkAdapter_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    9;
 
   friend void swap(Machine_NetworkAdapter& a, Machine_NetworkAdapter& b) {
     a.Swap(&b);
@@ -1942,7 +2141,7 @@ class Machine_NetworkAdapter PROTOBUF_FINAL :
   void InternalSwap(Machine_NetworkAdapter* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.Machine.NetworkAdapter";
+    return "platform.Machine.NetworkAdapter";
   }
   protected:
   explicit Machine_NetworkAdapter(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2017,7 +2216,7 @@ class Machine_NetworkAdapter PROTOBUF_FINAL :
   std::string* _internal_mutable_uuid();
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine.NetworkAdapter)
+  // @@protoc_insertion_point(class_scope:platform.Machine.NetworkAdapter)
  private:
   class _Internal;
 
@@ -2033,7 +2232,7 @@ class Machine_NetworkAdapter PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class Machine PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.Machine) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.Machine) */ {
  public:
   inline Machine() : Machine(nullptr) {}
   virtual ~Machine();
@@ -2074,7 +2273,7 @@ class Machine PROTOBUF_FINAL :
                &_Machine_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    10;
 
   friend void swap(Machine& a, Machine& b) {
     a.Swap(&b);
@@ -2122,7 +2321,7 @@ class Machine PROTOBUF_FINAL :
   void InternalSwap(Machine* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.Machine";
+    return "platform.Machine";
   }
   protected:
   explicit Machine(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2162,58 +2361,58 @@ class Machine PROTOBUF_FINAL :
     kTotalMemoryFieldNumber = 4,
     kMonitorCountFieldNumber = 5,
   };
-  // repeated .platform_detection_module.Machine.Monitor monitors = 8;
+  // repeated .platform.Machine.Monitor monitors = 8;
   int monitors_size() const;
   private:
   int _internal_monitors_size() const;
   public:
   void clear_monitors();
-  ::platform_detection_module::Machine_Monitor* mutable_monitors(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor >*
+  ::platform::Machine_Monitor* mutable_monitors(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_Monitor >*
       mutable_monitors();
   private:
-  const ::platform_detection_module::Machine_Monitor& _internal_monitors(int index) const;
-  ::platform_detection_module::Machine_Monitor* _internal_add_monitors();
+  const ::platform::Machine_Monitor& _internal_monitors(int index) const;
+  ::platform::Machine_Monitor* _internal_add_monitors();
   public:
-  const ::platform_detection_module::Machine_Monitor& monitors(int index) const;
-  ::platform_detection_module::Machine_Monitor* add_monitors();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor >&
+  const ::platform::Machine_Monitor& monitors(int index) const;
+  ::platform::Machine_Monitor* add_monitors();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_Monitor >&
       monitors() const;
 
-  // repeated .platform_detection_module.Machine.GPU gpus = 9;
+  // repeated .platform.Machine.GPU gpus = 9;
   int gpus_size() const;
   private:
   int _internal_gpus_size() const;
   public:
   void clear_gpus();
-  ::platform_detection_module::Machine_GPU* mutable_gpus(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU >*
+  ::platform::Machine_GPU* mutable_gpus(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_GPU >*
       mutable_gpus();
   private:
-  const ::platform_detection_module::Machine_GPU& _internal_gpus(int index) const;
-  ::platform_detection_module::Machine_GPU* _internal_add_gpus();
+  const ::platform::Machine_GPU& _internal_gpus(int index) const;
+  ::platform::Machine_GPU* _internal_add_gpus();
   public:
-  const ::platform_detection_module::Machine_GPU& gpus(int index) const;
-  ::platform_detection_module::Machine_GPU* add_gpus();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU >&
+  const ::platform::Machine_GPU& gpus(int index) const;
+  ::platform::Machine_GPU* add_gpus();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_GPU >&
       gpus() const;
 
-  // repeated .platform_detection_module.Machine.NetworkAdapter network_adapters = 10;
+  // repeated .platform.Machine.NetworkAdapter network_adapters = 10;
   int network_adapters_size() const;
   private:
   int _internal_network_adapters_size() const;
   public:
   void clear_network_adapters();
-  ::platform_detection_module::Machine_NetworkAdapter* mutable_network_adapters(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter >*
+  ::platform::Machine_NetworkAdapter* mutable_network_adapters(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_NetworkAdapter >*
       mutable_network_adapters();
   private:
-  const ::platform_detection_module::Machine_NetworkAdapter& _internal_network_adapters(int index) const;
-  ::platform_detection_module::Machine_NetworkAdapter* _internal_add_network_adapters();
+  const ::platform::Machine_NetworkAdapter& _internal_network_adapters(int index) const;
+  ::platform::Machine_NetworkAdapter* _internal_add_network_adapters();
   public:
-  const ::platform_detection_module::Machine_NetworkAdapter& network_adapters(int index) const;
-  ::platform_detection_module::Machine_NetworkAdapter* add_network_adapters();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter >&
+  const ::platform::Machine_NetworkAdapter& network_adapters(int index) const;
+  ::platform::Machine_NetworkAdapter* add_network_adapters();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_NetworkAdapter >&
       network_adapters() const;
 
   // string model = 1;
@@ -2264,41 +2463,41 @@ class Machine PROTOBUF_FINAL :
   std::string* _internal_mutable_uuid();
   public:
 
-  // .platform_detection_module.Machine.CPU cpu = 6;
+  // .platform.Machine.CPU cpu = 6;
   bool has_cpu() const;
   private:
   bool _internal_has_cpu() const;
   public:
   void clear_cpu();
-  const ::platform_detection_module::Machine_CPU& cpu() const;
-  ::platform_detection_module::Machine_CPU* release_cpu();
-  ::platform_detection_module::Machine_CPU* mutable_cpu();
-  void set_allocated_cpu(::platform_detection_module::Machine_CPU* cpu);
+  const ::platform::Machine_CPU& cpu() const;
+  ::platform::Machine_CPU* release_cpu();
+  ::platform::Machine_CPU* mutable_cpu();
+  void set_allocated_cpu(::platform::Machine_CPU* cpu);
   private:
-  const ::platform_detection_module::Machine_CPU& _internal_cpu() const;
-  ::platform_detection_module::Machine_CPU* _internal_mutable_cpu();
+  const ::platform::Machine_CPU& _internal_cpu() const;
+  ::platform::Machine_CPU* _internal_mutable_cpu();
   public:
   void unsafe_arena_set_allocated_cpu(
-      ::platform_detection_module::Machine_CPU* cpu);
-  ::platform_detection_module::Machine_CPU* unsafe_arena_release_cpu();
+      ::platform::Machine_CPU* cpu);
+  ::platform::Machine_CPU* unsafe_arena_release_cpu();
 
-  // .platform_detection_module.Machine.VM vm = 7;
+  // .platform.Machine.VM vm = 7;
   bool has_vm() const;
   private:
   bool _internal_has_vm() const;
   public:
   void clear_vm();
-  const ::platform_detection_module::Machine_VM& vm() const;
-  ::platform_detection_module::Machine_VM* release_vm();
-  ::platform_detection_module::Machine_VM* mutable_vm();
-  void set_allocated_vm(::platform_detection_module::Machine_VM* vm);
+  const ::platform::Machine_VM& vm() const;
+  ::platform::Machine_VM* release_vm();
+  ::platform::Machine_VM* mutable_vm();
+  void set_allocated_vm(::platform::Machine_VM* vm);
   private:
-  const ::platform_detection_module::Machine_VM& _internal_vm() const;
-  ::platform_detection_module::Machine_VM* _internal_mutable_vm();
+  const ::platform::Machine_VM& _internal_vm() const;
+  ::platform::Machine_VM* _internal_mutable_vm();
   public:
   void unsafe_arena_set_allocated_vm(
-      ::platform_detection_module::Machine_VM* vm);
-  ::platform_detection_module::Machine_VM* unsafe_arena_release_vm();
+      ::platform::Machine_VM* vm);
+  ::platform::Machine_VM* unsafe_arena_release_vm();
 
   // int64 total_memory = 4;
   void clear_total_memory();
@@ -2318,21 +2517,21 @@ class Machine PROTOBUF_FINAL :
   void _internal_set_monitor_count(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.Machine)
+  // @@protoc_insertion_point(class_scope:platform.Machine)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor > monitors_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU > gpus_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter > network_adapters_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_Monitor > monitors_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_GPU > gpus_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_NetworkAdapter > network_adapters_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr model_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
-  ::platform_detection_module::Machine_CPU* cpu_;
-  ::platform_detection_module::Machine_VM* vm_;
+  ::platform::Machine_CPU* cpu_;
+  ::platform::Machine_VM* vm_;
   ::PROTOBUF_NAMESPACE_ID::int64 total_memory_;
   ::PROTOBUF_NAMESPACE_ID::int32 monitor_count_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -2340,23 +2539,23 @@ class Machine PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
-class PlatformInformation PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform_detection_module.PlatformInformation) */ {
+class Information PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:platform.Information) */ {
  public:
-  inline PlatformInformation() : PlatformInformation(nullptr) {}
-  virtual ~PlatformInformation();
+  inline Information() : Information(nullptr) {}
+  virtual ~Information();
 
-  PlatformInformation(const PlatformInformation& from);
-  PlatformInformation(PlatformInformation&& from) noexcept
-    : PlatformInformation() {
+  Information(const Information& from);
+  Information(Information&& from) noexcept
+    : Information() {
     *this = ::std::move(from);
   }
 
-  inline PlatformInformation& operator=(const PlatformInformation& from) {
+  inline Information& operator=(const Information& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PlatformInformation& operator=(PlatformInformation&& from) noexcept {
+  inline Information& operator=(Information&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -2374,20 +2573,20 @@ class PlatformInformation PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const PlatformInformation& default_instance();
+  static const Information& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const PlatformInformation* internal_default_instance() {
-    return reinterpret_cast<const PlatformInformation*>(
-               &_PlatformInformation_default_instance_);
+  static inline const Information* internal_default_instance() {
+    return reinterpret_cast<const Information*>(
+               &_Information_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    11;
 
-  friend void swap(PlatformInformation& a, PlatformInformation& b) {
+  friend void swap(Information& a, Information& b) {
     a.Swap(&b);
   }
-  inline void Swap(PlatformInformation* other) {
+  inline void Swap(Information* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -2395,7 +2594,7 @@ class PlatformInformation PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PlatformInformation* other) {
+  void UnsafeArenaSwap(Information* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -2403,17 +2602,17 @@ class PlatformInformation PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline PlatformInformation* New() const final {
-    return CreateMaybeMessage<PlatformInformation>(nullptr);
+  inline Information* New() const final {
+    return CreateMaybeMessage<Information>(nullptr);
   }
 
-  PlatformInformation* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<PlatformInformation>(arena);
+  Information* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Information>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const PlatformInformation& from);
-  void MergeFrom(const PlatformInformation& from);
+  void CopyFrom(const Information& from);
+  void MergeFrom(const Information& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -2427,13 +2626,13 @@ class PlatformInformation PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PlatformInformation* other);
+  void InternalSwap(Information* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "platform_detection_module.PlatformInformation";
+    return "platform.Information";
   }
   protected:
-  explicit PlatformInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit Information(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -2459,21 +2658,23 @@ class PlatformInformation PROTOBUF_FINAL :
     kMachineFieldNumber = 5,
     kProcessBitnessFieldNumber = 3,
   };
-  // string version = 1;
-  void clear_version();
-  const std::string& version() const;
-  void set_version(const std::string& value);
-  void set_version(std::string&& value);
-  void set_version(const char* value);
-  void set_version(const char* value, size_t size);
-  std::string* mutable_version();
-  std::string* release_version();
-  void set_allocated_version(std::string* version);
+  // .platform.SemanticVersion version = 1;
+  bool has_version() const;
   private:
-  const std::string& _internal_version() const;
-  void _internal_set_version(const std::string& value);
-  std::string* _internal_mutable_version();
+  bool _internal_has_version() const;
   public:
+  void clear_version();
+  const ::platform::SemanticVersion& version() const;
+  ::platform::SemanticVersion* release_version();
+  ::platform::SemanticVersion* mutable_version();
+  void set_allocated_version(::platform::SemanticVersion* version);
+  private:
+  const ::platform::SemanticVersion& _internal_version() const;
+  ::platform::SemanticVersion* _internal_mutable_version();
+  public:
+  void unsafe_arena_set_allocated_version(
+      ::platform::SemanticVersion* version);
+  ::platform::SemanticVersion* unsafe_arena_release_version();
 
   // .google.protobuf.Timestamp timestamp = 2;
   bool has_timestamp() const;
@@ -2493,62 +2694,62 @@ class PlatformInformation PROTOBUF_FINAL :
       PROTOBUF_NAMESPACE_ID::Timestamp* timestamp);
   PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_timestamp();
 
-  // .platform_detection_module.OS os = 4;
+  // .platform.OS os = 4;
   bool has_os() const;
   private:
   bool _internal_has_os() const;
   public:
   void clear_os();
-  const ::platform_detection_module::OS& os() const;
-  ::platform_detection_module::OS* release_os();
-  ::platform_detection_module::OS* mutable_os();
-  void set_allocated_os(::platform_detection_module::OS* os);
+  const ::platform::OS& os() const;
+  ::platform::OS* release_os();
+  ::platform::OS* mutable_os();
+  void set_allocated_os(::platform::OS* os);
   private:
-  const ::platform_detection_module::OS& _internal_os() const;
-  ::platform_detection_module::OS* _internal_mutable_os();
+  const ::platform::OS& _internal_os() const;
+  ::platform::OS* _internal_mutable_os();
   public:
   void unsafe_arena_set_allocated_os(
-      ::platform_detection_module::OS* os);
-  ::platform_detection_module::OS* unsafe_arena_release_os();
+      ::platform::OS* os);
+  ::platform::OS* unsafe_arena_release_os();
 
-  // .platform_detection_module.Machine machine = 5;
+  // .platform.Machine machine = 5;
   bool has_machine() const;
   private:
   bool _internal_has_machine() const;
   public:
   void clear_machine();
-  const ::platform_detection_module::Machine& machine() const;
-  ::platform_detection_module::Machine* release_machine();
-  ::platform_detection_module::Machine* mutable_machine();
-  void set_allocated_machine(::platform_detection_module::Machine* machine);
+  const ::platform::Machine& machine() const;
+  ::platform::Machine* release_machine();
+  ::platform::Machine* mutable_machine();
+  void set_allocated_machine(::platform::Machine* machine);
   private:
-  const ::platform_detection_module::Machine& _internal_machine() const;
-  ::platform_detection_module::Machine* _internal_mutable_machine();
+  const ::platform::Machine& _internal_machine() const;
+  ::platform::Machine* _internal_mutable_machine();
   public:
   void unsafe_arena_set_allocated_machine(
-      ::platform_detection_module::Machine* machine);
-  ::platform_detection_module::Machine* unsafe_arena_release_machine();
+      ::platform::Machine* machine);
+  ::platform::Machine* unsafe_arena_release_machine();
 
-  // .platform_detection_module.Bitness process_bitness = 3;
+  // .platform.Bitness process_bitness = 3;
   void clear_process_bitness();
-  ::platform_detection_module::Bitness process_bitness() const;
-  void set_process_bitness(::platform_detection_module::Bitness value);
+  ::platform::Bitness process_bitness() const;
+  void set_process_bitness(::platform::Bitness value);
   private:
-  ::platform_detection_module::Bitness _internal_process_bitness() const;
-  void _internal_set_process_bitness(::platform_detection_module::Bitness value);
+  ::platform::Bitness _internal_process_bitness() const;
+  void _internal_set_process_bitness(::platform::Bitness value);
   public:
 
-  // @@protoc_insertion_point(class_scope:platform_detection_module.PlatformInformation)
+  // @@protoc_insertion_point(class_scope:platform.Information)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_;
+  ::platform::SemanticVersion* version_;
   PROTOBUF_NAMESPACE_ID::Timestamp* timestamp_;
-  ::platform_detection_module::OS* os_;
-  ::platform_detection_module::Machine* machine_;
+  ::platform::OS* os_;
+  ::platform::Machine* machine_;
   int process_bitness_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_pdm_2eproto;
@@ -2562,6 +2763,194 @@ class PlatformInformation PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// SemanticVersion
+
+// uint32 major = 1;
+inline void SemanticVersion::clear_major() {
+  major_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SemanticVersion::_internal_major() const {
+  return major_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SemanticVersion::major() const {
+  // @@protoc_insertion_point(field_get:platform.SemanticVersion.major)
+  return _internal_major();
+}
+inline void SemanticVersion::_internal_set_major(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  major_ = value;
+}
+inline void SemanticVersion::set_major(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_major(value);
+  // @@protoc_insertion_point(field_set:platform.SemanticVersion.major)
+}
+
+// uint32 minor = 2;
+inline void SemanticVersion::clear_minor() {
+  minor_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SemanticVersion::_internal_minor() const {
+  return minor_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SemanticVersion::minor() const {
+  // @@protoc_insertion_point(field_get:platform.SemanticVersion.minor)
+  return _internal_minor();
+}
+inline void SemanticVersion::_internal_set_minor(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  minor_ = value;
+}
+inline void SemanticVersion::set_minor(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_minor(value);
+  // @@protoc_insertion_point(field_set:platform.SemanticVersion.minor)
+}
+
+// uint32 patch = 3;
+inline void SemanticVersion::clear_patch() {
+  patch_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SemanticVersion::_internal_patch() const {
+  return patch_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SemanticVersion::patch() const {
+  // @@protoc_insertion_point(field_get:platform.SemanticVersion.patch)
+  return _internal_patch();
+}
+inline void SemanticVersion::_internal_set_patch(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  patch_ = value;
+}
+inline void SemanticVersion::set_patch(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_patch(value);
+  // @@protoc_insertion_point(field_set:platform.SemanticVersion.patch)
+}
+
+// string prerelease = 4;
+inline void SemanticVersion::clear_prerelease() {
+  prerelease_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SemanticVersion::prerelease() const {
+  // @@protoc_insertion_point(field_get:platform.SemanticVersion.prerelease)
+  return _internal_prerelease();
+}
+inline void SemanticVersion::set_prerelease(const std::string& value) {
+  _internal_set_prerelease(value);
+  // @@protoc_insertion_point(field_set:platform.SemanticVersion.prerelease)
+}
+inline std::string* SemanticVersion::mutable_prerelease() {
+  // @@protoc_insertion_point(field_mutable:platform.SemanticVersion.prerelease)
+  return _internal_mutable_prerelease();
+}
+inline const std::string& SemanticVersion::_internal_prerelease() const {
+  return prerelease_.Get();
+}
+inline void SemanticVersion::_internal_set_prerelease(const std::string& value) {
+  
+  prerelease_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SemanticVersion::set_prerelease(std::string&& value) {
+  
+  prerelease_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:platform.SemanticVersion.prerelease)
+}
+inline void SemanticVersion::set_prerelease(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  prerelease_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:platform.SemanticVersion.prerelease)
+}
+inline void SemanticVersion::set_prerelease(const char* value,
+    size_t size) {
+  
+  prerelease_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:platform.SemanticVersion.prerelease)
+}
+inline std::string* SemanticVersion::_internal_mutable_prerelease() {
+  
+  return prerelease_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SemanticVersion::release_prerelease() {
+  // @@protoc_insertion_point(field_release:platform.SemanticVersion.prerelease)
+  return prerelease_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SemanticVersion::set_allocated_prerelease(std::string* prerelease) {
+  if (prerelease != nullptr) {
+    
+  } else {
+    
+  }
+  prerelease_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), prerelease,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:platform.SemanticVersion.prerelease)
+}
+
+// string build = 5;
+inline void SemanticVersion::clear_build() {
+  build_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SemanticVersion::build() const {
+  // @@protoc_insertion_point(field_get:platform.SemanticVersion.build)
+  return _internal_build();
+}
+inline void SemanticVersion::set_build(const std::string& value) {
+  _internal_set_build(value);
+  // @@protoc_insertion_point(field_set:platform.SemanticVersion.build)
+}
+inline std::string* SemanticVersion::mutable_build() {
+  // @@protoc_insertion_point(field_mutable:platform.SemanticVersion.build)
+  return _internal_mutable_build();
+}
+inline const std::string& SemanticVersion::_internal_build() const {
+  return build_.Get();
+}
+inline void SemanticVersion::_internal_set_build(const std::string& value) {
+  
+  build_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SemanticVersion::set_build(std::string&& value) {
+  
+  build_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:platform.SemanticVersion.build)
+}
+inline void SemanticVersion::set_build(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  build_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:platform.SemanticVersion.build)
+}
+inline void SemanticVersion::set_build(const char* value,
+    size_t size) {
+  
+  build_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:platform.SemanticVersion.build)
+}
+inline std::string* SemanticVersion::_internal_mutable_build() {
+  
+  return build_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SemanticVersion::release_build() {
+  // @@protoc_insertion_point(field_release:platform.SemanticVersion.build)
+  return build_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SemanticVersion::set_allocated_build(std::string* build) {
+  if (build != nullptr) {
+    
+  } else {
+    
+  }
+  build_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), build,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:platform.SemanticVersion.build)
+}
+
+// -------------------------------------------------------------------
+
 // OS_GraphicsAPIs
 
 // bool metal_supported = 1;
@@ -2572,7 +2961,7 @@ inline bool OS_GraphicsAPIs::_internal_metal_supported() const {
   return metal_supported_;
 }
 inline bool OS_GraphicsAPIs::metal_supported() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.GraphicsAPIs.metal_supported)
+  // @@protoc_insertion_point(field_get:platform.OS.GraphicsAPIs.metal_supported)
   return _internal_metal_supported();
 }
 inline void OS_GraphicsAPIs::_internal_set_metal_supported(bool value) {
@@ -2581,7 +2970,7 @@ inline void OS_GraphicsAPIs::_internal_set_metal_supported(bool value) {
 }
 inline void OS_GraphicsAPIs::set_metal_supported(bool value) {
   _internal_set_metal_supported(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.GraphicsAPIs.metal_supported)
+  // @@protoc_insertion_point(field_set:platform.OS.GraphicsAPIs.metal_supported)
 }
 
 // bool vulkan_supported = 2;
@@ -2592,7 +2981,7 @@ inline bool OS_GraphicsAPIs::_internal_vulkan_supported() const {
   return vulkan_supported_;
 }
 inline bool OS_GraphicsAPIs::vulkan_supported() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.GraphicsAPIs.vulkan_supported)
+  // @@protoc_insertion_point(field_get:platform.OS.GraphicsAPIs.vulkan_supported)
   return _internal_vulkan_supported();
 }
 inline void OS_GraphicsAPIs::_internal_set_vulkan_supported(bool value) {
@@ -2601,7 +2990,7 @@ inline void OS_GraphicsAPIs::_internal_set_vulkan_supported(bool value) {
 }
 inline void OS_GraphicsAPIs::set_vulkan_supported(bool value) {
   _internal_set_vulkan_supported(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.GraphicsAPIs.vulkan_supported)
+  // @@protoc_insertion_point(field_set:platform.OS.GraphicsAPIs.vulkan_supported)
 }
 
 // string vulkan_highest_supported_version = 3;
@@ -2609,15 +2998,15 @@ inline void OS_GraphicsAPIs::clear_vulkan_highest_supported_version() {
   vulkan_highest_supported_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS_GraphicsAPIs::vulkan_highest_supported_version() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  // @@protoc_insertion_point(field_get:platform.OS.GraphicsAPIs.vulkan_highest_supported_version)
   return _internal_vulkan_highest_supported_version();
 }
 inline void OS_GraphicsAPIs::set_vulkan_highest_supported_version(const std::string& value) {
   _internal_set_vulkan_highest_supported_version(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  // @@protoc_insertion_point(field_set:platform.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
 inline std::string* OS_GraphicsAPIs::mutable_vulkan_highest_supported_version() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  // @@protoc_insertion_point(field_mutable:platform.OS.GraphicsAPIs.vulkan_highest_supported_version)
   return _internal_mutable_vulkan_highest_supported_version();
 }
 inline const std::string& OS_GraphicsAPIs::_internal_vulkan_highest_supported_version() const {
@@ -2631,28 +3020,28 @@ inline void OS_GraphicsAPIs::set_vulkan_highest_supported_version(std::string&& 
   
   vulkan_highest_supported_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
 inline void OS_GraphicsAPIs::set_vulkan_highest_supported_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   vulkan_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  // @@protoc_insertion_point(field_set_char:platform.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
 inline void OS_GraphicsAPIs::set_vulkan_highest_supported_version(const char* value,
     size_t size) {
   
   vulkan_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
 inline std::string* OS_GraphicsAPIs::_internal_mutable_vulkan_highest_supported_version() {
   
   return vulkan_highest_supported_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS_GraphicsAPIs::release_vulkan_highest_supported_version() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  // @@protoc_insertion_point(field_release:platform.OS.GraphicsAPIs.vulkan_highest_supported_version)
   return vulkan_highest_supported_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS_GraphicsAPIs::set_allocated_vulkan_highest_supported_version(std::string* vulkan_highest_supported_version) {
@@ -2663,7 +3052,7 @@ inline void OS_GraphicsAPIs::set_allocated_vulkan_highest_supported_version(std:
   }
   vulkan_highest_supported_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), vulkan_highest_supported_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.GraphicsAPIs.vulkan_highest_supported_version)
 }
 
 // string d3d_highest_supported_version = 4;
@@ -2671,15 +3060,15 @@ inline void OS_GraphicsAPIs::clear_d3d_highest_supported_version() {
   d3d_highest_supported_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS_GraphicsAPIs::d3d_highest_supported_version() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  // @@protoc_insertion_point(field_get:platform.OS.GraphicsAPIs.d3d_highest_supported_version)
   return _internal_d3d_highest_supported_version();
 }
 inline void OS_GraphicsAPIs::set_d3d_highest_supported_version(const std::string& value) {
   _internal_set_d3d_highest_supported_version(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  // @@protoc_insertion_point(field_set:platform.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
 inline std::string* OS_GraphicsAPIs::mutable_d3d_highest_supported_version() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  // @@protoc_insertion_point(field_mutable:platform.OS.GraphicsAPIs.d3d_highest_supported_version)
   return _internal_mutable_d3d_highest_supported_version();
 }
 inline const std::string& OS_GraphicsAPIs::_internal_d3d_highest_supported_version() const {
@@ -2693,28 +3082,28 @@ inline void OS_GraphicsAPIs::set_d3d_highest_supported_version(std::string&& val
   
   d3d_highest_supported_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
 inline void OS_GraphicsAPIs::set_d3d_highest_supported_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   d3d_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  // @@protoc_insertion_point(field_set_char:platform.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
 inline void OS_GraphicsAPIs::set_d3d_highest_supported_version(const char* value,
     size_t size) {
   
   d3d_highest_supported_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
 inline std::string* OS_GraphicsAPIs::_internal_mutable_d3d_highest_supported_version() {
   
   return d3d_highest_supported_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS_GraphicsAPIs::release_d3d_highest_supported_version() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  // @@protoc_insertion_point(field_release:platform.OS.GraphicsAPIs.d3d_highest_supported_version)
   return d3d_highest_supported_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS_GraphicsAPIs::set_allocated_d3d_highest_supported_version(std::string* d3d_highest_supported_version) {
@@ -2725,7 +3114,7 @@ inline void OS_GraphicsAPIs::set_allocated_d3d_highest_supported_version(std::st
   }
   d3d_highest_supported_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), d3d_highest_supported_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.GraphicsAPIs.d3d_highest_supported_version)
 }
 
 // -------------------------------------------------------------------
@@ -2737,15 +3126,15 @@ inline void OS_Wine::clear_version() {
   version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS_Wine::version() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.Wine.version)
+  // @@protoc_insertion_point(field_get:platform.OS.Wine.version)
   return _internal_version();
 }
 inline void OS_Wine::set_version(const std::string& value) {
   _internal_set_version(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.Wine.version)
+  // @@protoc_insertion_point(field_set:platform.OS.Wine.version)
 }
 inline std::string* OS_Wine::mutable_version() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.Wine.version)
+  // @@protoc_insertion_point(field_mutable:platform.OS.Wine.version)
   return _internal_mutable_version();
 }
 inline const std::string& OS_Wine::_internal_version() const {
@@ -2759,28 +3148,28 @@ inline void OS_Wine::set_version(std::string&& value) {
   
   version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.Wine.version)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.Wine.version)
 }
 inline void OS_Wine::set_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.Wine.version)
+  // @@protoc_insertion_point(field_set_char:platform.OS.Wine.version)
 }
 inline void OS_Wine::set_version(const char* value,
     size_t size) {
   
   version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.Wine.version)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.Wine.version)
 }
 inline std::string* OS_Wine::_internal_mutable_version() {
   
   return version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS_Wine::release_version() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.Wine.version)
+  // @@protoc_insertion_point(field_release:platform.OS.Wine.version)
   return version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS_Wine::set_allocated_version(std::string* version) {
@@ -2791,7 +3180,7 @@ inline void OS_Wine::set_allocated_version(std::string* version) {
   }
   version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.Wine.version)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.Wine.version)
 }
 
 // string host_os = 2;
@@ -2799,15 +3188,15 @@ inline void OS_Wine::clear_host_os() {
   host_os_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS_Wine::host_os() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_get:platform.OS.Wine.host_os)
   return _internal_host_os();
 }
 inline void OS_Wine::set_host_os(const std::string& value) {
   _internal_set_host_os(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set:platform.OS.Wine.host_os)
 }
 inline std::string* OS_Wine::mutable_host_os() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_mutable:platform.OS.Wine.host_os)
   return _internal_mutable_host_os();
 }
 inline const std::string& OS_Wine::_internal_host_os() const {
@@ -2821,28 +3210,28 @@ inline void OS_Wine::set_host_os(std::string&& value) {
   
   host_os_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.Wine.host_os)
 }
 inline void OS_Wine::set_host_os(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   host_os_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set_char:platform.OS.Wine.host_os)
 }
 inline void OS_Wine::set_host_os(const char* value,
     size_t size) {
   
   host_os_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.Wine.host_os)
 }
 inline std::string* OS_Wine::_internal_mutable_host_os() {
   
   return host_os_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS_Wine::release_host_os() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_release:platform.OS.Wine.host_os)
   return host_os_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS_Wine::set_allocated_host_os(std::string* host_os) {
@@ -2853,31 +3242,31 @@ inline void OS_Wine::set_allocated_host_os(std::string* host_os) {
   }
   host_os_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), host_os,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.Wine.host_os)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.Wine.host_os)
 }
 
 // -------------------------------------------------------------------
 
 // OS
 
-// .platform_detection_module.OS.Kind type = 1;
+// .platform.OS.Kind type = 1;
 inline void OS::clear_type() {
   type_ = 0;
 }
-inline ::platform_detection_module::OS_Kind OS::_internal_type() const {
-  return static_cast< ::platform_detection_module::OS_Kind >(type_);
+inline ::platform::OS_Kind OS::_internal_type() const {
+  return static_cast< ::platform::OS_Kind >(type_);
 }
-inline ::platform_detection_module::OS_Kind OS::type() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.type)
+inline ::platform::OS_Kind OS::type() const {
+  // @@protoc_insertion_point(field_get:platform.OS.type)
   return _internal_type();
 }
-inline void OS::_internal_set_type(::platform_detection_module::OS_Kind value) {
+inline void OS::_internal_set_type(::platform::OS_Kind value) {
   
   type_ = value;
 }
-inline void OS::set_type(::platform_detection_module::OS_Kind value) {
+inline void OS::set_type(::platform::OS_Kind value) {
   _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.type)
+  // @@protoc_insertion_point(field_set:platform.OS.type)
 }
 
 // string name = 2;
@@ -2885,15 +3274,15 @@ inline void OS::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::name() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.name)
+  // @@protoc_insertion_point(field_get:platform.OS.name)
   return _internal_name();
 }
 inline void OS::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.name)
+  // @@protoc_insertion_point(field_set:platform.OS.name)
 }
 inline std::string* OS::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.name)
+  // @@protoc_insertion_point(field_mutable:platform.OS.name)
   return _internal_mutable_name();
 }
 inline const std::string& OS::_internal_name() const {
@@ -2907,28 +3296,28 @@ inline void OS::set_name(std::string&& value) {
   
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.name)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.name)
 }
 inline void OS::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.name)
+  // @@protoc_insertion_point(field_set_char:platform.OS.name)
 }
 inline void OS::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.name)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.name)
 }
 inline std::string* OS::_internal_mutable_name() {
   
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_name() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.name)
+  // @@protoc_insertion_point(field_release:platform.OS.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_name(std::string* name) {
@@ -2939,27 +3328,27 @@ inline void OS::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.name)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.name)
 }
 
-// .platform_detection_module.Bitness bitness = 3;
+// .platform.Bitness bitness = 3;
 inline void OS::clear_bitness() {
   bitness_ = 0;
 }
-inline ::platform_detection_module::Bitness OS::_internal_bitness() const {
-  return static_cast< ::platform_detection_module::Bitness >(bitness_);
+inline ::platform::Bitness OS::_internal_bitness() const {
+  return static_cast< ::platform::Bitness >(bitness_);
 }
-inline ::platform_detection_module::Bitness OS::bitness() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.bitness)
+inline ::platform::Bitness OS::bitness() const {
+  // @@protoc_insertion_point(field_get:platform.OS.bitness)
   return _internal_bitness();
 }
-inline void OS::_internal_set_bitness(::platform_detection_module::Bitness value) {
+inline void OS::_internal_set_bitness(::platform::Bitness value) {
   
   bitness_ = value;
 }
-inline void OS::set_bitness(::platform_detection_module::Bitness value) {
+inline void OS::set_bitness(::platform::Bitness value) {
   _internal_set_bitness(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.bitness)
+  // @@protoc_insertion_point(field_set:platform.OS.bitness)
 }
 
 // string major_version = 4;
@@ -2967,15 +3356,15 @@ inline void OS::clear_major_version() {
   major_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::major_version() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.major_version)
+  // @@protoc_insertion_point(field_get:platform.OS.major_version)
   return _internal_major_version();
 }
 inline void OS::set_major_version(const std::string& value) {
   _internal_set_major_version(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.major_version)
+  // @@protoc_insertion_point(field_set:platform.OS.major_version)
 }
 inline std::string* OS::mutable_major_version() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.major_version)
+  // @@protoc_insertion_point(field_mutable:platform.OS.major_version)
   return _internal_mutable_major_version();
 }
 inline const std::string& OS::_internal_major_version() const {
@@ -2989,28 +3378,28 @@ inline void OS::set_major_version(std::string&& value) {
   
   major_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.major_version)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.major_version)
 }
 inline void OS::set_major_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   major_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.major_version)
+  // @@protoc_insertion_point(field_set_char:platform.OS.major_version)
 }
 inline void OS::set_major_version(const char* value,
     size_t size) {
   
   major_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.major_version)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.major_version)
 }
 inline std::string* OS::_internal_mutable_major_version() {
   
   return major_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_major_version() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.major_version)
+  // @@protoc_insertion_point(field_release:platform.OS.major_version)
   return major_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_major_version(std::string* major_version) {
@@ -3021,7 +3410,7 @@ inline void OS::set_allocated_major_version(std::string* major_version) {
   }
   major_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), major_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.major_version)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.major_version)
 }
 
 // string minor_version = 5;
@@ -3029,15 +3418,15 @@ inline void OS::clear_minor_version() {
   minor_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::minor_version() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.minor_version)
+  // @@protoc_insertion_point(field_get:platform.OS.minor_version)
   return _internal_minor_version();
 }
 inline void OS::set_minor_version(const std::string& value) {
   _internal_set_minor_version(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.minor_version)
+  // @@protoc_insertion_point(field_set:platform.OS.minor_version)
 }
 inline std::string* OS::mutable_minor_version() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.minor_version)
+  // @@protoc_insertion_point(field_mutable:platform.OS.minor_version)
   return _internal_mutable_minor_version();
 }
 inline const std::string& OS::_internal_minor_version() const {
@@ -3051,28 +3440,28 @@ inline void OS::set_minor_version(std::string&& value) {
   
   minor_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.minor_version)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.minor_version)
 }
 inline void OS::set_minor_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   minor_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.minor_version)
+  // @@protoc_insertion_point(field_set_char:platform.OS.minor_version)
 }
 inline void OS::set_minor_version(const char* value,
     size_t size) {
   
   minor_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.minor_version)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.minor_version)
 }
 inline std::string* OS::_internal_mutable_minor_version() {
   
   return minor_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_minor_version() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.minor_version)
+  // @@protoc_insertion_point(field_release:platform.OS.minor_version)
   return minor_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_minor_version(std::string* minor_version) {
@@ -3083,7 +3472,7 @@ inline void OS::set_allocated_minor_version(std::string* minor_version) {
   }
   minor_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), minor_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.minor_version)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.minor_version)
 }
 
 // string build_number = 6;
@@ -3091,15 +3480,15 @@ inline void OS::clear_build_number() {
   build_number_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::build_number() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.build_number)
+  // @@protoc_insertion_point(field_get:platform.OS.build_number)
   return _internal_build_number();
 }
 inline void OS::set_build_number(const std::string& value) {
   _internal_set_build_number(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.build_number)
+  // @@protoc_insertion_point(field_set:platform.OS.build_number)
 }
 inline std::string* OS::mutable_build_number() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.build_number)
+  // @@protoc_insertion_point(field_mutable:platform.OS.build_number)
   return _internal_mutable_build_number();
 }
 inline const std::string& OS::_internal_build_number() const {
@@ -3113,28 +3502,28 @@ inline void OS::set_build_number(std::string&& value) {
   
   build_number_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.build_number)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.build_number)
 }
 inline void OS::set_build_number(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   build_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.build_number)
+  // @@protoc_insertion_point(field_set_char:platform.OS.build_number)
 }
 inline void OS::set_build_number(const char* value,
     size_t size) {
   
   build_number_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.build_number)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.build_number)
 }
 inline std::string* OS::_internal_mutable_build_number() {
   
   return build_number_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_build_number() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.build_number)
+  // @@protoc_insertion_point(field_release:platform.OS.build_number)
   return build_number_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_build_number(std::string* build_number) {
@@ -3145,7 +3534,7 @@ inline void OS::set_allocated_build_number(std::string* build_number) {
   }
   build_number_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), build_number,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.build_number)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.build_number)
 }
 
 // string kernel_version = 7;
@@ -3153,15 +3542,15 @@ inline void OS::clear_kernel_version() {
   kernel_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::kernel_version() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.kernel_version)
+  // @@protoc_insertion_point(field_get:platform.OS.kernel_version)
   return _internal_kernel_version();
 }
 inline void OS::set_kernel_version(const std::string& value) {
   _internal_set_kernel_version(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.kernel_version)
+  // @@protoc_insertion_point(field_set:platform.OS.kernel_version)
 }
 inline std::string* OS::mutable_kernel_version() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.kernel_version)
+  // @@protoc_insertion_point(field_mutable:platform.OS.kernel_version)
   return _internal_mutable_kernel_version();
 }
 inline const std::string& OS::_internal_kernel_version() const {
@@ -3175,28 +3564,28 @@ inline void OS::set_kernel_version(std::string&& value) {
   
   kernel_version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.kernel_version)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.kernel_version)
 }
 inline void OS::set_kernel_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   kernel_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.kernel_version)
+  // @@protoc_insertion_point(field_set_char:platform.OS.kernel_version)
 }
 inline void OS::set_kernel_version(const char* value,
     size_t size) {
   
   kernel_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.kernel_version)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.kernel_version)
 }
 inline std::string* OS::_internal_mutable_kernel_version() {
   
   return kernel_version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_kernel_version() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.kernel_version)
+  // @@protoc_insertion_point(field_release:platform.OS.kernel_version)
   return kernel_version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_kernel_version(std::string* kernel_version) {
@@ -3207,7 +3596,7 @@ inline void OS::set_allocated_kernel_version(std::string* kernel_version) {
   }
   kernel_version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), kernel_version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.kernel_version)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.kernel_version)
 }
 
 // string username = 8;
@@ -3215,15 +3604,15 @@ inline void OS::clear_username() {
   username_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::username() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.username)
+  // @@protoc_insertion_point(field_get:platform.OS.username)
   return _internal_username();
 }
 inline void OS::set_username(const std::string& value) {
   _internal_set_username(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.username)
+  // @@protoc_insertion_point(field_set:platform.OS.username)
 }
 inline std::string* OS::mutable_username() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.username)
+  // @@protoc_insertion_point(field_mutable:platform.OS.username)
   return _internal_mutable_username();
 }
 inline const std::string& OS::_internal_username() const {
@@ -3237,28 +3626,28 @@ inline void OS::set_username(std::string&& value) {
   
   username_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.username)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.username)
 }
 inline void OS::set_username(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   username_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.username)
+  // @@protoc_insertion_point(field_set_char:platform.OS.username)
 }
 inline void OS::set_username(const char* value,
     size_t size) {
   
   username_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.username)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.username)
 }
 inline std::string* OS::_internal_mutable_username() {
   
   return username_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_username() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.username)
+  // @@protoc_insertion_point(field_release:platform.OS.username)
   return username_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_username(std::string* username) {
@@ -3269,7 +3658,7 @@ inline void OS::set_allocated_username(std::string* username) {
   }
   username_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), username,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.username)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.username)
 }
 
 // string user_locale = 9;
@@ -3277,15 +3666,15 @@ inline void OS::clear_user_locale() {
   user_locale_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& OS::user_locale() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.user_locale)
+  // @@protoc_insertion_point(field_get:platform.OS.user_locale)
   return _internal_user_locale();
 }
 inline void OS::set_user_locale(const std::string& value) {
   _internal_set_user_locale(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.user_locale)
+  // @@protoc_insertion_point(field_set:platform.OS.user_locale)
 }
 inline std::string* OS::mutable_user_locale() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.user_locale)
+  // @@protoc_insertion_point(field_mutable:platform.OS.user_locale)
   return _internal_mutable_user_locale();
 }
 inline const std::string& OS::_internal_user_locale() const {
@@ -3299,28 +3688,28 @@ inline void OS::set_user_locale(std::string&& value) {
   
   user_locale_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.OS.user_locale)
+  // @@protoc_insertion_point(field_set_rvalue:platform.OS.user_locale)
 }
 inline void OS::set_user_locale(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   user_locale_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.OS.user_locale)
+  // @@protoc_insertion_point(field_set_char:platform.OS.user_locale)
 }
 inline void OS::set_user_locale(const char* value,
     size_t size) {
   
   user_locale_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.OS.user_locale)
+  // @@protoc_insertion_point(field_set_pointer:platform.OS.user_locale)
 }
 inline std::string* OS::_internal_mutable_user_locale() {
   
   return user_locale_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* OS::release_user_locale() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.user_locale)
+  // @@protoc_insertion_point(field_release:platform.OS.user_locale)
   return user_locale_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void OS::set_allocated_user_locale(std::string* user_locale) {
@@ -3331,7 +3720,7 @@ inline void OS::set_allocated_user_locale(std::string* user_locale) {
   }
   user_locale_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), user_locale,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.user_locale)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.user_locale)
 }
 
 // bool is_remote_session = 10;
@@ -3342,7 +3731,7 @@ inline bool OS::_internal_is_remote_session() const {
   return is_remote_session_;
 }
 inline bool OS::is_remote_session() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.is_remote_session)
+  // @@protoc_insertion_point(field_get:platform.OS.is_remote_session)
   return _internal_is_remote_session();
 }
 inline void OS::_internal_set_is_remote_session(bool value) {
@@ -3351,10 +3740,10 @@ inline void OS::_internal_set_is_remote_session(bool value) {
 }
 inline void OS::set_is_remote_session(bool value) {
   _internal_set_is_remote_session(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.OS.is_remote_session)
+  // @@protoc_insertion_point(field_set:platform.OS.is_remote_session)
 }
 
-// .platform_detection_module.OS.GraphicsAPIs graphics_apis = 11;
+// .platform.OS.GraphicsAPIs graphics_apis = 11;
 inline bool OS::_internal_has_graphics_apis() const {
   return this != internal_default_instance() && graphics_apis_ != nullptr;
 }
@@ -3367,17 +3756,17 @@ inline void OS::clear_graphics_apis() {
   }
   graphics_apis_ = nullptr;
 }
-inline const ::platform_detection_module::OS_GraphicsAPIs& OS::_internal_graphics_apis() const {
-  const ::platform_detection_module::OS_GraphicsAPIs* p = graphics_apis_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::OS_GraphicsAPIs*>(
-      &::platform_detection_module::_OS_GraphicsAPIs_default_instance_);
+inline const ::platform::OS_GraphicsAPIs& OS::_internal_graphics_apis() const {
+  const ::platform::OS_GraphicsAPIs* p = graphics_apis_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform::OS_GraphicsAPIs*>(
+      &::platform::_OS_GraphicsAPIs_default_instance_);
 }
-inline const ::platform_detection_module::OS_GraphicsAPIs& OS::graphics_apis() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.graphics_apis)
+inline const ::platform::OS_GraphicsAPIs& OS::graphics_apis() const {
+  // @@protoc_insertion_point(field_get:platform.OS.graphics_apis)
   return _internal_graphics_apis();
 }
 inline void OS::unsafe_arena_set_allocated_graphics_apis(
-    ::platform_detection_module::OS_GraphicsAPIs* graphics_apis) {
+    ::platform::OS_GraphicsAPIs* graphics_apis) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(graphics_apis_);
   }
@@ -3387,37 +3776,37 @@ inline void OS::unsafe_arena_set_allocated_graphics_apis(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.OS.graphics_apis)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform.OS.graphics_apis)
 }
-inline ::platform_detection_module::OS_GraphicsAPIs* OS::release_graphics_apis() {
+inline ::platform::OS_GraphicsAPIs* OS::release_graphics_apis() {
   
-  ::platform_detection_module::OS_GraphicsAPIs* temp = graphics_apis_;
+  ::platform::OS_GraphicsAPIs* temp = graphics_apis_;
   graphics_apis_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::platform_detection_module::OS_GraphicsAPIs* OS::unsafe_arena_release_graphics_apis() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.graphics_apis)
+inline ::platform::OS_GraphicsAPIs* OS::unsafe_arena_release_graphics_apis() {
+  // @@protoc_insertion_point(field_release:platform.OS.graphics_apis)
   
-  ::platform_detection_module::OS_GraphicsAPIs* temp = graphics_apis_;
+  ::platform::OS_GraphicsAPIs* temp = graphics_apis_;
   graphics_apis_ = nullptr;
   return temp;
 }
-inline ::platform_detection_module::OS_GraphicsAPIs* OS::_internal_mutable_graphics_apis() {
+inline ::platform::OS_GraphicsAPIs* OS::_internal_mutable_graphics_apis() {
   
   if (graphics_apis_ == nullptr) {
-    auto* p = CreateMaybeMessage<::platform_detection_module::OS_GraphicsAPIs>(GetArena());
+    auto* p = CreateMaybeMessage<::platform::OS_GraphicsAPIs>(GetArena());
     graphics_apis_ = p;
   }
   return graphics_apis_;
 }
-inline ::platform_detection_module::OS_GraphicsAPIs* OS::mutable_graphics_apis() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.graphics_apis)
+inline ::platform::OS_GraphicsAPIs* OS::mutable_graphics_apis() {
+  // @@protoc_insertion_point(field_mutable:platform.OS.graphics_apis)
   return _internal_mutable_graphics_apis();
 }
-inline void OS::set_allocated_graphics_apis(::platform_detection_module::OS_GraphicsAPIs* graphics_apis) {
+inline void OS::set_allocated_graphics_apis(::platform::OS_GraphicsAPIs* graphics_apis) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete graphics_apis_;
@@ -3434,10 +3823,10 @@ inline void OS::set_allocated_graphics_apis(::platform_detection_module::OS_Grap
     
   }
   graphics_apis_ = graphics_apis;
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.graphics_apis)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.graphics_apis)
 }
 
-// .platform_detection_module.OS.Wine wine = 12;
+// .platform.OS.Wine wine = 12;
 inline bool OS::_internal_has_wine() const {
   return this != internal_default_instance() && wine_ != nullptr;
 }
@@ -3450,17 +3839,17 @@ inline void OS::clear_wine() {
   }
   wine_ = nullptr;
 }
-inline const ::platform_detection_module::OS_Wine& OS::_internal_wine() const {
-  const ::platform_detection_module::OS_Wine* p = wine_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::OS_Wine*>(
-      &::platform_detection_module::_OS_Wine_default_instance_);
+inline const ::platform::OS_Wine& OS::_internal_wine() const {
+  const ::platform::OS_Wine* p = wine_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform::OS_Wine*>(
+      &::platform::_OS_Wine_default_instance_);
 }
-inline const ::platform_detection_module::OS_Wine& OS::wine() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.OS.wine)
+inline const ::platform::OS_Wine& OS::wine() const {
+  // @@protoc_insertion_point(field_get:platform.OS.wine)
   return _internal_wine();
 }
 inline void OS::unsafe_arena_set_allocated_wine(
-    ::platform_detection_module::OS_Wine* wine) {
+    ::platform::OS_Wine* wine) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(wine_);
   }
@@ -3470,37 +3859,37 @@ inline void OS::unsafe_arena_set_allocated_wine(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.OS.wine)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform.OS.wine)
 }
-inline ::platform_detection_module::OS_Wine* OS::release_wine() {
+inline ::platform::OS_Wine* OS::release_wine() {
   
-  ::platform_detection_module::OS_Wine* temp = wine_;
+  ::platform::OS_Wine* temp = wine_;
   wine_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::platform_detection_module::OS_Wine* OS::unsafe_arena_release_wine() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.OS.wine)
+inline ::platform::OS_Wine* OS::unsafe_arena_release_wine() {
+  // @@protoc_insertion_point(field_release:platform.OS.wine)
   
-  ::platform_detection_module::OS_Wine* temp = wine_;
+  ::platform::OS_Wine* temp = wine_;
   wine_ = nullptr;
   return temp;
 }
-inline ::platform_detection_module::OS_Wine* OS::_internal_mutable_wine() {
+inline ::platform::OS_Wine* OS::_internal_mutable_wine() {
   
   if (wine_ == nullptr) {
-    auto* p = CreateMaybeMessage<::platform_detection_module::OS_Wine>(GetArena());
+    auto* p = CreateMaybeMessage<::platform::OS_Wine>(GetArena());
     wine_ = p;
   }
   return wine_;
 }
-inline ::platform_detection_module::OS_Wine* OS::mutable_wine() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.OS.wine)
+inline ::platform::OS_Wine* OS::mutable_wine() {
+  // @@protoc_insertion_point(field_mutable:platform.OS.wine)
   return _internal_mutable_wine();
 }
-inline void OS::set_allocated_wine(::platform_detection_module::OS_Wine* wine) {
+inline void OS::set_allocated_wine(::platform::OS_Wine* wine) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete wine_;
@@ -3517,31 +3906,31 @@ inline void OS::set_allocated_wine(::platform_detection_module::OS_Wine* wine) {
     
   }
   wine_ = wine;
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.OS.wine)
+  // @@protoc_insertion_point(field_set_allocated:platform.OS.wine)
 }
 
 // -------------------------------------------------------------------
 
 // Machine_CPU
 
-// .platform_detection_module.Bitness bitness = 1;
+// .platform.Bitness bitness = 1;
 inline void Machine_CPU::clear_bitness() {
   bitness_ = 0;
 }
-inline ::platform_detection_module::Bitness Machine_CPU::_internal_bitness() const {
-  return static_cast< ::platform_detection_module::Bitness >(bitness_);
+inline ::platform::Bitness Machine_CPU::_internal_bitness() const {
+  return static_cast< ::platform::Bitness >(bitness_);
 }
-inline ::platform_detection_module::Bitness Machine_CPU::bitness() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.bitness)
+inline ::platform::Bitness Machine_CPU::bitness() const {
+  // @@protoc_insertion_point(field_get:platform.Machine.CPU.bitness)
   return _internal_bitness();
 }
-inline void Machine_CPU::_internal_set_bitness(::platform_detection_module::Bitness value) {
+inline void Machine_CPU::_internal_set_bitness(::platform::Bitness value) {
   
   bitness_ = value;
 }
-inline void Machine_CPU::set_bitness(::platform_detection_module::Bitness value) {
+inline void Machine_CPU::set_bitness(::platform::Bitness value) {
   _internal_set_bitness(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.bitness)
+  // @@protoc_insertion_point(field_set:platform.Machine.CPU.bitness)
 }
 
 // int32 logical_core_count = 2;
@@ -3552,7 +3941,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::_internal_logical_core_count(
   return logical_core_count_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::logical_core_count() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.logical_core_count)
+  // @@protoc_insertion_point(field_get:platform.Machine.CPU.logical_core_count)
   return _internal_logical_core_count();
 }
 inline void Machine_CPU::_internal_set_logical_core_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -3561,7 +3950,7 @@ inline void Machine_CPU::_internal_set_logical_core_count(::PROTOBUF_NAMESPACE_I
 }
 inline void Machine_CPU::set_logical_core_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_logical_core_count(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.logical_core_count)
+  // @@protoc_insertion_point(field_set:platform.Machine.CPU.logical_core_count)
 }
 
 // string brand = 3;
@@ -3569,15 +3958,15 @@ inline void Machine_CPU::clear_brand() {
   brand_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_CPU::brand() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_get:platform.Machine.CPU.brand)
   return _internal_brand();
 }
 inline void Machine_CPU::set_brand(const std::string& value) {
   _internal_set_brand(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set:platform.Machine.CPU.brand)
 }
 inline std::string* Machine_CPU::mutable_brand() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.CPU.brand)
   return _internal_mutable_brand();
 }
 inline const std::string& Machine_CPU::_internal_brand() const {
@@ -3591,28 +3980,28 @@ inline void Machine_CPU::set_brand(std::string&& value) {
   
   brand_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.CPU.brand)
 }
 inline void Machine_CPU::set_brand(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   brand_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.CPU.brand)
 }
 inline void Machine_CPU::set_brand(const char* value,
     size_t size) {
   
   brand_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.CPU.brand)
 }
 inline std::string* Machine_CPU::_internal_mutable_brand() {
   
   return brand_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_CPU::release_brand() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_release:platform.Machine.CPU.brand)
   return brand_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_CPU::set_allocated_brand(std::string* brand) {
@@ -3623,7 +4012,7 @@ inline void Machine_CPU::set_allocated_brand(std::string* brand) {
   }
   brand_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), brand,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.CPU.brand)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.CPU.brand)
 }
 
 // string vendor = 4;
@@ -3631,15 +4020,15 @@ inline void Machine_CPU::clear_vendor() {
   vendor_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_CPU::vendor() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_get:platform.Machine.CPU.vendor)
   return _internal_vendor();
 }
 inline void Machine_CPU::set_vendor(const std::string& value) {
   _internal_set_vendor(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set:platform.Machine.CPU.vendor)
 }
 inline std::string* Machine_CPU::mutable_vendor() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.CPU.vendor)
   return _internal_mutable_vendor();
 }
 inline const std::string& Machine_CPU::_internal_vendor() const {
@@ -3653,28 +4042,28 @@ inline void Machine_CPU::set_vendor(std::string&& value) {
   
   vendor_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.CPU.vendor)
 }
 inline void Machine_CPU::set_vendor(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.CPU.vendor)
 }
 inline void Machine_CPU::set_vendor(const char* value,
     size_t size) {
   
   vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.CPU.vendor)
 }
 inline std::string* Machine_CPU::_internal_mutable_vendor() {
   
   return vendor_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_CPU::release_vendor() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_release:platform.Machine.CPU.vendor)
   return vendor_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_CPU::set_allocated_vendor(std::string* vendor) {
@@ -3685,7 +4074,7 @@ inline void Machine_CPU::set_allocated_vendor(std::string* vendor) {
   }
   vendor_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), vendor,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.CPU.vendor)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.CPU.vendor)
 }
 
 // int32 model = 5;
@@ -3696,7 +4085,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::_internal_model() const {
   return model_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::model() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.model)
+  // @@protoc_insertion_point(field_get:platform.Machine.CPU.model)
   return _internal_model();
 }
 inline void Machine_CPU::_internal_set_model(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -3705,7 +4094,7 @@ inline void Machine_CPU::_internal_set_model(::PROTOBUF_NAMESPACE_ID::int32 valu
 }
 inline void Machine_CPU::set_model(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_model(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.model)
+  // @@protoc_insertion_point(field_set:platform.Machine.CPU.model)
 }
 
 // int32 stepping = 6;
@@ -3716,7 +4105,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::_internal_stepping() const {
   return stepping_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_CPU::stepping() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.CPU.stepping)
+  // @@protoc_insertion_point(field_get:platform.Machine.CPU.stepping)
   return _internal_stepping();
 }
 inline void Machine_CPU::_internal_set_stepping(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -3725,7 +4114,7 @@ inline void Machine_CPU::_internal_set_stepping(::PROTOBUF_NAMESPACE_ID::int32 v
 }
 inline void Machine_CPU::set_stepping(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_stepping(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.CPU.stepping)
+  // @@protoc_insertion_point(field_set:platform.Machine.CPU.stepping)
 }
 
 // -------------------------------------------------------------------
@@ -3740,7 +4129,7 @@ inline bool Machine_VM::_internal_is_suspected_vm() const {
   return is_suspected_vm_;
 }
 inline bool Machine_VM::is_suspected_vm() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.is_suspected_vm)
+  // @@protoc_insertion_point(field_get:platform.Machine.VM.is_suspected_vm)
   return _internal_is_suspected_vm();
 }
 inline void Machine_VM::_internal_set_is_suspected_vm(bool value) {
@@ -3749,7 +4138,7 @@ inline void Machine_VM::_internal_set_is_suspected_vm(bool value) {
 }
 inline void Machine_VM::set_is_suspected_vm(bool value) {
   _internal_set_is_suspected_vm(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.is_suspected_vm)
+  // @@protoc_insertion_point(field_set:platform.Machine.VM.is_suspected_vm)
 }
 
 // bool has_hypervisor_bit = 2;
@@ -3760,7 +4149,7 @@ inline bool Machine_VM::_internal_has_hypervisor_bit() const {
   return has_hypervisor_bit_;
 }
 inline bool Machine_VM::has_hypervisor_bit() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.has_hypervisor_bit)
+  // @@protoc_insertion_point(field_get:platform.Machine.VM.has_hypervisor_bit)
   return _internal_has_hypervisor_bit();
 }
 inline void Machine_VM::_internal_set_has_hypervisor_bit(bool value) {
@@ -3769,7 +4158,7 @@ inline void Machine_VM::_internal_set_has_hypervisor_bit(bool value) {
 }
 inline void Machine_VM::set_has_hypervisor_bit(bool value) {
   _internal_set_has_hypervisor_bit(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.has_hypervisor_bit)
+  // @@protoc_insertion_point(field_set:platform.Machine.VM.has_hypervisor_bit)
 }
 
 // string hypervisor_name = 3;
@@ -3777,15 +4166,15 @@ inline void Machine_VM::clear_hypervisor_name() {
   hypervisor_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_VM::hypervisor_name() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_get:platform.Machine.VM.hypervisor_name)
   return _internal_hypervisor_name();
 }
 inline void Machine_VM::set_hypervisor_name(const std::string& value) {
   _internal_set_hypervisor_name(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set:platform.Machine.VM.hypervisor_name)
 }
 inline std::string* Machine_VM::mutable_hypervisor_name() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.VM.hypervisor_name)
   return _internal_mutable_hypervisor_name();
 }
 inline const std::string& Machine_VM::_internal_hypervisor_name() const {
@@ -3799,28 +4188,28 @@ inline void Machine_VM::set_hypervisor_name(std::string&& value) {
   
   hypervisor_name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.VM.hypervisor_name)
 }
 inline void Machine_VM::set_hypervisor_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   hypervisor_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.VM.hypervisor_name)
 }
 inline void Machine_VM::set_hypervisor_name(const char* value,
     size_t size) {
   
   hypervisor_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.VM.hypervisor_name)
 }
 inline std::string* Machine_VM::_internal_mutable_hypervisor_name() {
   
   return hypervisor_name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_VM::release_hypervisor_name() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_release:platform.Machine.VM.hypervisor_name)
   return hypervisor_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_VM::set_allocated_hypervisor_name(std::string* hypervisor_name) {
@@ -3831,7 +4220,7 @@ inline void Machine_VM::set_allocated_hypervisor_name(std::string* hypervisor_na
   }
   hypervisor_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), hypervisor_name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.VM.hypervisor_name)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.VM.hypervisor_name)
 }
 
 // bool is_hypervisor_guest_os = 4;
@@ -3842,7 +4231,7 @@ inline bool Machine_VM::_internal_is_hypervisor_guest_os() const {
   return is_hypervisor_guest_os_;
 }
 inline bool Machine_VM::is_hypervisor_guest_os() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.is_hypervisor_guest_os)
+  // @@protoc_insertion_point(field_get:platform.Machine.VM.is_hypervisor_guest_os)
   return _internal_is_hypervisor_guest_os();
 }
 inline void Machine_VM::_internal_set_is_hypervisor_guest_os(bool value) {
@@ -3851,7 +4240,7 @@ inline void Machine_VM::_internal_set_is_hypervisor_guest_os(bool value) {
 }
 inline void Machine_VM::set_is_hypervisor_guest_os(bool value) {
   _internal_set_is_hypervisor_guest_os(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.is_hypervisor_guest_os)
+  // @@protoc_insertion_point(field_set:platform.Machine.VM.is_hypervisor_guest_os)
 }
 
 // bool has_vm_execution_timing = 5;
@@ -3862,7 +4251,7 @@ inline bool Machine_VM::_internal_has_vm_execution_timing() const {
   return has_vm_execution_timing_;
 }
 inline bool Machine_VM::has_vm_execution_timing() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.VM.has_vm_execution_timing)
+  // @@protoc_insertion_point(field_get:platform.Machine.VM.has_vm_execution_timing)
   return _internal_has_vm_execution_timing();
 }
 inline void Machine_VM::_internal_set_has_vm_execution_timing(bool value) {
@@ -3871,7 +4260,7 @@ inline void Machine_VM::_internal_set_has_vm_execution_timing(bool value) {
 }
 inline void Machine_VM::set_has_vm_execution_timing(bool value) {
   _internal_set_has_vm_execution_timing(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.VM.has_vm_execution_timing)
+  // @@protoc_insertion_point(field_set:platform.Machine.VM.has_vm_execution_timing)
 }
 
 // -------------------------------------------------------------------
@@ -3883,15 +4272,15 @@ inline void Machine_Monitor::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_Monitor::name() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_get:platform.Machine.Monitor.name)
   return _internal_name();
 }
 inline void Machine_Monitor::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set:platform.Machine.Monitor.name)
 }
 inline std::string* Machine_Monitor::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.Monitor.name)
   return _internal_mutable_name();
 }
 inline const std::string& Machine_Monitor::_internal_name() const {
@@ -3905,28 +4294,28 @@ inline void Machine_Monitor::set_name(std::string&& value) {
   
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.Monitor.name)
 }
 inline void Machine_Monitor::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.Monitor.name)
 }
 inline void Machine_Monitor::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.Monitor.name)
 }
 inline std::string* Machine_Monitor::_internal_mutable_name() {
   
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_Monitor::release_name() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_release:platform.Machine.Monitor.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_Monitor::set_allocated_name(std::string* name) {
@@ -3937,7 +4326,7 @@ inline void Machine_Monitor::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.Monitor.name)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.Monitor.name)
 }
 
 // int32 horizontal_resolution = 2;
@@ -3948,7 +4337,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_horizontal_reso
   return horizontal_resolution_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::horizontal_resolution() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.horizontal_resolution)
+  // @@protoc_insertion_point(field_get:platform.Machine.Monitor.horizontal_resolution)
   return _internal_horizontal_resolution();
 }
 inline void Machine_Monitor::_internal_set_horizontal_resolution(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -3957,7 +4346,7 @@ inline void Machine_Monitor::_internal_set_horizontal_resolution(::PROTOBUF_NAME
 }
 inline void Machine_Monitor::set_horizontal_resolution(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_horizontal_resolution(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.horizontal_resolution)
+  // @@protoc_insertion_point(field_set:platform.Machine.Monitor.horizontal_resolution)
 }
 
 // int32 vertical_resolution = 3;
@@ -3968,7 +4357,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_vertical_resolu
   return vertical_resolution_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::vertical_resolution() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.vertical_resolution)
+  // @@protoc_insertion_point(field_get:platform.Machine.Monitor.vertical_resolution)
   return _internal_vertical_resolution();
 }
 inline void Machine_Monitor::_internal_set_vertical_resolution(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -3977,7 +4366,7 @@ inline void Machine_Monitor::_internal_set_vertical_resolution(::PROTOBUF_NAMESP
 }
 inline void Machine_Monitor::set_vertical_resolution(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_vertical_resolution(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.vertical_resolution)
+  // @@protoc_insertion_point(field_set:platform.Machine.Monitor.vertical_resolution)
 }
 
 // int32 bits_per_color = 4;
@@ -3988,7 +4377,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_bits_per_color(
   return bits_per_color_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::bits_per_color() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.bits_per_color)
+  // @@protoc_insertion_point(field_get:platform.Machine.Monitor.bits_per_color)
   return _internal_bits_per_color();
 }
 inline void Machine_Monitor::_internal_set_bits_per_color(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -3997,7 +4386,7 @@ inline void Machine_Monitor::_internal_set_bits_per_color(::PROTOBUF_NAMESPACE_I
 }
 inline void Machine_Monitor::set_bits_per_color(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_bits_per_color(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.bits_per_color)
+  // @@protoc_insertion_point(field_set:platform.Machine.Monitor.bits_per_color)
 }
 
 // int32 refresh_rate = 5;
@@ -4008,7 +4397,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_refresh_rate() 
   return refresh_rate_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::refresh_rate() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.refresh_rate)
+  // @@protoc_insertion_point(field_get:platform.Machine.Monitor.refresh_rate)
   return _internal_refresh_rate();
 }
 inline void Machine_Monitor::_internal_set_refresh_rate(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4017,7 +4406,7 @@ inline void Machine_Monitor::_internal_set_refresh_rate(::PROTOBUF_NAMESPACE_ID:
 }
 inline void Machine_Monitor::set_refresh_rate(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_refresh_rate(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.refresh_rate)
+  // @@protoc_insertion_point(field_set:platform.Machine.Monitor.refresh_rate)
 }
 
 // int32 dpi_scaling_percent = 6;
@@ -4028,7 +4417,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::_internal_dpi_scaling_per
   return dpi_scaling_percent_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_Monitor::dpi_scaling_percent() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.Monitor.dpi_scaling_percent)
+  // @@protoc_insertion_point(field_get:platform.Machine.Monitor.dpi_scaling_percent)
   return _internal_dpi_scaling_percent();
 }
 inline void Machine_Monitor::_internal_set_dpi_scaling_percent(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4037,7 +4426,7 @@ inline void Machine_Monitor::_internal_set_dpi_scaling_percent(::PROTOBUF_NAMESP
 }
 inline void Machine_Monitor::set_dpi_scaling_percent(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_dpi_scaling_percent(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.Monitor.dpi_scaling_percent)
+  // @@protoc_insertion_point(field_set:platform.Machine.Monitor.dpi_scaling_percent)
 }
 
 // -------------------------------------------------------------------
@@ -4049,15 +4438,15 @@ inline void Machine_GPU_Driver::clear_date() {
   date_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_GPU_Driver::date() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_get:platform.Machine.GPU.Driver.date)
   return _internal_date();
 }
 inline void Machine_GPU_Driver::set_date(const std::string& value) {
   _internal_set_date(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set:platform.Machine.GPU.Driver.date)
 }
 inline std::string* Machine_GPU_Driver::mutable_date() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.GPU.Driver.date)
   return _internal_mutable_date();
 }
 inline const std::string& Machine_GPU_Driver::_internal_date() const {
@@ -4071,28 +4460,28 @@ inline void Machine_GPU_Driver::set_date(std::string&& value) {
   
   date_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.GPU.Driver.date)
 }
 inline void Machine_GPU_Driver::set_date(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   date_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.GPU.Driver.date)
 }
 inline void Machine_GPU_Driver::set_date(const char* value,
     size_t size) {
   
   date_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.GPU.Driver.date)
 }
 inline std::string* Machine_GPU_Driver::_internal_mutable_date() {
   
   return date_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_GPU_Driver::release_date() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_release:platform.Machine.GPU.Driver.date)
   return date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_GPU_Driver::set_allocated_date(std::string* date) {
@@ -4103,7 +4492,7 @@ inline void Machine_GPU_Driver::set_allocated_date(std::string* date) {
   }
   date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), date,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.Driver.date)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.GPU.Driver.date)
 }
 
 // string vendor = 2;
@@ -4111,15 +4500,15 @@ inline void Machine_GPU_Driver::clear_vendor() {
   vendor_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_GPU_Driver::vendor() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_get:platform.Machine.GPU.Driver.vendor)
   return _internal_vendor();
 }
 inline void Machine_GPU_Driver::set_vendor(const std::string& value) {
   _internal_set_vendor(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set:platform.Machine.GPU.Driver.vendor)
 }
 inline std::string* Machine_GPU_Driver::mutable_vendor() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.GPU.Driver.vendor)
   return _internal_mutable_vendor();
 }
 inline const std::string& Machine_GPU_Driver::_internal_vendor() const {
@@ -4133,28 +4522,28 @@ inline void Machine_GPU_Driver::set_vendor(std::string&& value) {
   
   vendor_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.GPU.Driver.vendor)
 }
 inline void Machine_GPU_Driver::set_vendor(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.GPU.Driver.vendor)
 }
 inline void Machine_GPU_Driver::set_vendor(const char* value,
     size_t size) {
   
   vendor_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.GPU.Driver.vendor)
 }
 inline std::string* Machine_GPU_Driver::_internal_mutable_vendor() {
   
   return vendor_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_GPU_Driver::release_vendor() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_release:platform.Machine.GPU.Driver.vendor)
   return vendor_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_GPU_Driver::set_allocated_vendor(std::string* vendor) {
@@ -4165,7 +4554,7 @@ inline void Machine_GPU_Driver::set_allocated_vendor(std::string* vendor) {
   }
   vendor_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), vendor,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.Driver.vendor)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.GPU.Driver.vendor)
 }
 
 // string version = 3;
@@ -4173,15 +4562,15 @@ inline void Machine_GPU_Driver::clear_version() {
   version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_GPU_Driver::version() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_get:platform.Machine.GPU.Driver.version)
   return _internal_version();
 }
 inline void Machine_GPU_Driver::set_version(const std::string& value) {
   _internal_set_version(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set:platform.Machine.GPU.Driver.version)
 }
 inline std::string* Machine_GPU_Driver::mutable_version() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.GPU.Driver.version)
   return _internal_mutable_version();
 }
 inline const std::string& Machine_GPU_Driver::_internal_version() const {
@@ -4195,28 +4584,28 @@ inline void Machine_GPU_Driver::set_version(std::string&& value) {
   
   version_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.GPU.Driver.version)
 }
 inline void Machine_GPU_Driver::set_version(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.GPU.Driver.version)
 }
 inline void Machine_GPU_Driver::set_version(const char* value,
     size_t size) {
   
   version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.GPU.Driver.version)
 }
 inline std::string* Machine_GPU_Driver::_internal_mutable_version() {
   
   return version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_GPU_Driver::release_version() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_release:platform.Machine.GPU.Driver.version)
   return version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_GPU_Driver::set_allocated_version(std::string* version) {
@@ -4227,7 +4616,7 @@ inline void Machine_GPU_Driver::set_allocated_version(std::string* version) {
   }
   version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.Driver.version)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.GPU.Driver.version)
 }
 
 // -------------------------------------------------------------------
@@ -4239,15 +4628,15 @@ inline void Machine_GPU::clear_description() {
   description_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_GPU::description() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.description)
+  // @@protoc_insertion_point(field_get:platform.Machine.GPU.description)
   return _internal_description();
 }
 inline void Machine_GPU::set_description(const std::string& value) {
   _internal_set_description(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set:platform.Machine.GPU.description)
 }
 inline std::string* Machine_GPU::mutable_description() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.description)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.GPU.description)
   return _internal_mutable_description();
 }
 inline const std::string& Machine_GPU::_internal_description() const {
@@ -4261,28 +4650,28 @@ inline void Machine_GPU::set_description(std::string&& value) {
   
   description_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.GPU.description)
 }
 inline void Machine_GPU::set_description(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   description_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.GPU.description)
 }
 inline void Machine_GPU::set_description(const char* value,
     size_t size) {
   
   description_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.GPU.description)
 }
 inline std::string* Machine_GPU::_internal_mutable_description() {
   
   return description_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_GPU::release_description() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.description)
+  // @@protoc_insertion_point(field_release:platform.Machine.GPU.description)
   return description_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_GPU::set_allocated_description(std::string* description) {
@@ -4293,7 +4682,7 @@ inline void Machine_GPU::set_allocated_description(std::string* description) {
   }
   description_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), description,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.description)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.GPU.description)
 }
 
 // int32 vendor_id = 2;
@@ -4304,7 +4693,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::_internal_vendor_id() const {
   return vendor_id_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::vendor_id() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.vendor_id)
+  // @@protoc_insertion_point(field_get:platform.Machine.GPU.vendor_id)
   return _internal_vendor_id();
 }
 inline void Machine_GPU::_internal_set_vendor_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4313,7 +4702,7 @@ inline void Machine_GPU::_internal_set_vendor_id(::PROTOBUF_NAMESPACE_ID::int32 
 }
 inline void Machine_GPU::set_vendor_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_vendor_id(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.vendor_id)
+  // @@protoc_insertion_point(field_set:platform.Machine.GPU.vendor_id)
 }
 
 // int32 device_id = 3;
@@ -4324,7 +4713,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::_internal_device_id() const {
   return device_id_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::device_id() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.device_id)
+  // @@protoc_insertion_point(field_get:platform.Machine.GPU.device_id)
   return _internal_device_id();
 }
 inline void Machine_GPU::_internal_set_device_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4333,7 +4722,7 @@ inline void Machine_GPU::_internal_set_device_id(::PROTOBUF_NAMESPACE_ID::int32 
 }
 inline void Machine_GPU::set_device_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_device_id(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.device_id)
+  // @@protoc_insertion_point(field_set:platform.Machine.GPU.device_id)
 }
 
 // int32 revision = 4;
@@ -4344,7 +4733,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::_internal_revision() const {
   return revision_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine_GPU::revision() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.revision)
+  // @@protoc_insertion_point(field_get:platform.Machine.GPU.revision)
   return _internal_revision();
 }
 inline void Machine_GPU::_internal_set_revision(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4353,7 +4742,7 @@ inline void Machine_GPU::_internal_set_revision(::PROTOBUF_NAMESPACE_ID::int32 v
 }
 inline void Machine_GPU::set_revision(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_revision(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.revision)
+  // @@protoc_insertion_point(field_set:platform.Machine.GPU.revision)
 }
 
 // int64 video_memory = 5;
@@ -4364,7 +4753,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 Machine_GPU::_internal_video_memory() cons
   return video_memory_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 Machine_GPU::video_memory() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.video_memory)
+  // @@protoc_insertion_point(field_get:platform.Machine.GPU.video_memory)
   return _internal_video_memory();
 }
 inline void Machine_GPU::_internal_set_video_memory(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -4373,10 +4762,10 @@ inline void Machine_GPU::_internal_set_video_memory(::PROTOBUF_NAMESPACE_ID::int
 }
 inline void Machine_GPU::set_video_memory(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_video_memory(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.GPU.video_memory)
+  // @@protoc_insertion_point(field_set:platform.Machine.GPU.video_memory)
 }
 
-// .platform_detection_module.Machine.GPU.Driver driver = 6;
+// .platform.Machine.GPU.Driver driver = 6;
 inline bool Machine_GPU::_internal_has_driver() const {
   return this != internal_default_instance() && driver_ != nullptr;
 }
@@ -4389,17 +4778,17 @@ inline void Machine_GPU::clear_driver() {
   }
   driver_ = nullptr;
 }
-inline const ::platform_detection_module::Machine_GPU_Driver& Machine_GPU::_internal_driver() const {
-  const ::platform_detection_module::Machine_GPU_Driver* p = driver_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::Machine_GPU_Driver*>(
-      &::platform_detection_module::_Machine_GPU_Driver_default_instance_);
+inline const ::platform::Machine_GPU_Driver& Machine_GPU::_internal_driver() const {
+  const ::platform::Machine_GPU_Driver* p = driver_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform::Machine_GPU_Driver*>(
+      &::platform::_Machine_GPU_Driver_default_instance_);
 }
-inline const ::platform_detection_module::Machine_GPU_Driver& Machine_GPU::driver() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.GPU.driver)
+inline const ::platform::Machine_GPU_Driver& Machine_GPU::driver() const {
+  // @@protoc_insertion_point(field_get:platform.Machine.GPU.driver)
   return _internal_driver();
 }
 inline void Machine_GPU::unsafe_arena_set_allocated_driver(
-    ::platform_detection_module::Machine_GPU_Driver* driver) {
+    ::platform::Machine_GPU_Driver* driver) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(driver_);
   }
@@ -4409,37 +4798,37 @@ inline void Machine_GPU::unsafe_arena_set_allocated_driver(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.Machine.GPU.driver)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform.Machine.GPU.driver)
 }
-inline ::platform_detection_module::Machine_GPU_Driver* Machine_GPU::release_driver() {
+inline ::platform::Machine_GPU_Driver* Machine_GPU::release_driver() {
   
-  ::platform_detection_module::Machine_GPU_Driver* temp = driver_;
+  ::platform::Machine_GPU_Driver* temp = driver_;
   driver_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::platform_detection_module::Machine_GPU_Driver* Machine_GPU::unsafe_arena_release_driver() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.GPU.driver)
+inline ::platform::Machine_GPU_Driver* Machine_GPU::unsafe_arena_release_driver() {
+  // @@protoc_insertion_point(field_release:platform.Machine.GPU.driver)
   
-  ::platform_detection_module::Machine_GPU_Driver* temp = driver_;
+  ::platform::Machine_GPU_Driver* temp = driver_;
   driver_ = nullptr;
   return temp;
 }
-inline ::platform_detection_module::Machine_GPU_Driver* Machine_GPU::_internal_mutable_driver() {
+inline ::platform::Machine_GPU_Driver* Machine_GPU::_internal_mutable_driver() {
   
   if (driver_ == nullptr) {
-    auto* p = CreateMaybeMessage<::platform_detection_module::Machine_GPU_Driver>(GetArena());
+    auto* p = CreateMaybeMessage<::platform::Machine_GPU_Driver>(GetArena());
     driver_ = p;
   }
   return driver_;
 }
-inline ::platform_detection_module::Machine_GPU_Driver* Machine_GPU::mutable_driver() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.GPU.driver)
+inline ::platform::Machine_GPU_Driver* Machine_GPU::mutable_driver() {
+  // @@protoc_insertion_point(field_mutable:platform.Machine.GPU.driver)
   return _internal_mutable_driver();
 }
-inline void Machine_GPU::set_allocated_driver(::platform_detection_module::Machine_GPU_Driver* driver) {
+inline void Machine_GPU::set_allocated_driver(::platform::Machine_GPU_Driver* driver) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete driver_;
@@ -4456,7 +4845,7 @@ inline void Machine_GPU::set_allocated_driver(::platform_detection_module::Machi
     
   }
   driver_ = driver;
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.GPU.driver)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.GPU.driver)
 }
 
 // -------------------------------------------------------------------
@@ -4468,15 +4857,15 @@ inline void Machine_NetworkAdapter::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_NetworkAdapter::name() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_get:platform.Machine.NetworkAdapter.name)
   return _internal_name();
 }
 inline void Machine_NetworkAdapter::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set:platform.Machine.NetworkAdapter.name)
 }
 inline std::string* Machine_NetworkAdapter::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.NetworkAdapter.name)
   return _internal_mutable_name();
 }
 inline const std::string& Machine_NetworkAdapter::_internal_name() const {
@@ -4490,28 +4879,28 @@ inline void Machine_NetworkAdapter::set_name(std::string&& value) {
   
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.NetworkAdapter.name)
 }
 inline void Machine_NetworkAdapter::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.NetworkAdapter.name)
 }
 inline void Machine_NetworkAdapter::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.NetworkAdapter.name)
 }
 inline std::string* Machine_NetworkAdapter::_internal_mutable_name() {
   
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_NetworkAdapter::release_name() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_release:platform.Machine.NetworkAdapter.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_NetworkAdapter::set_allocated_name(std::string* name) {
@@ -4522,7 +4911,7 @@ inline void Machine_NetworkAdapter::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.NetworkAdapter.name)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.NetworkAdapter.name)
 }
 
 // bytes mac_address = 2;
@@ -4530,15 +4919,15 @@ inline void Machine_NetworkAdapter::clear_mac_address() {
   mac_address_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_NetworkAdapter::mac_address() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_get:platform.Machine.NetworkAdapter.mac_address)
   return _internal_mac_address();
 }
 inline void Machine_NetworkAdapter::set_mac_address(const std::string& value) {
   _internal_set_mac_address(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set:platform.Machine.NetworkAdapter.mac_address)
 }
 inline std::string* Machine_NetworkAdapter::mutable_mac_address() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.NetworkAdapter.mac_address)
   return _internal_mutable_mac_address();
 }
 inline const std::string& Machine_NetworkAdapter::_internal_mac_address() const {
@@ -4552,28 +4941,28 @@ inline void Machine_NetworkAdapter::set_mac_address(std::string&& value) {
   
   mac_address_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.NetworkAdapter.mac_address)
 }
 inline void Machine_NetworkAdapter::set_mac_address(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   mac_address_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.NetworkAdapter.mac_address)
 }
 inline void Machine_NetworkAdapter::set_mac_address(const void* value,
     size_t size) {
   
   mac_address_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.NetworkAdapter.mac_address)
 }
 inline std::string* Machine_NetworkAdapter::_internal_mutable_mac_address() {
   
   return mac_address_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_NetworkAdapter::release_mac_address() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_release:platform.Machine.NetworkAdapter.mac_address)
   return mac_address_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_NetworkAdapter::set_allocated_mac_address(std::string* mac_address) {
@@ -4584,7 +4973,7 @@ inline void Machine_NetworkAdapter::set_allocated_mac_address(std::string* mac_a
   }
   mac_address_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), mac_address,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.NetworkAdapter.mac_address)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.NetworkAdapter.mac_address)
 }
 
 // bytes uuid = 3;
@@ -4592,15 +4981,15 @@ inline void Machine_NetworkAdapter::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine_NetworkAdapter::uuid() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_get:platform.Machine.NetworkAdapter.uuid)
   return _internal_uuid();
 }
 inline void Machine_NetworkAdapter::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set:platform.Machine.NetworkAdapter.uuid)
 }
 inline std::string* Machine_NetworkAdapter::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.NetworkAdapter.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& Machine_NetworkAdapter::_internal_uuid() const {
@@ -4614,28 +5003,28 @@ inline void Machine_NetworkAdapter::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.NetworkAdapter.uuid)
 }
 inline void Machine_NetworkAdapter::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.NetworkAdapter.uuid)
 }
 inline void Machine_NetworkAdapter::set_uuid(const void* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.NetworkAdapter.uuid)
 }
 inline std::string* Machine_NetworkAdapter::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine_NetworkAdapter::release_uuid() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_release:platform.Machine.NetworkAdapter.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine_NetworkAdapter::set_allocated_uuid(std::string* uuid) {
@@ -4646,7 +5035,7 @@ inline void Machine_NetworkAdapter::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.NetworkAdapter.uuid)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.NetworkAdapter.uuid)
 }
 
 // -------------------------------------------------------------------
@@ -4658,15 +5047,15 @@ inline void Machine::clear_model() {
   model_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine::model() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.model)
+  // @@protoc_insertion_point(field_get:platform.Machine.model)
   return _internal_model();
 }
 inline void Machine::set_model(const std::string& value) {
   _internal_set_model(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.model)
+  // @@protoc_insertion_point(field_set:platform.Machine.model)
 }
 inline std::string* Machine::mutable_model() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.model)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.model)
   return _internal_mutable_model();
 }
 inline const std::string& Machine::_internal_model() const {
@@ -4680,28 +5069,28 @@ inline void Machine::set_model(std::string&& value) {
   
   model_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.model)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.model)
 }
 inline void Machine::set_model(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   model_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.model)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.model)
 }
 inline void Machine::set_model(const char* value,
     size_t size) {
   
   model_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.model)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.model)
 }
 inline std::string* Machine::_internal_mutable_model() {
   
   return model_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine::release_model() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.model)
+  // @@protoc_insertion_point(field_release:platform.Machine.model)
   return model_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine::set_allocated_model(std::string* model) {
@@ -4712,7 +5101,7 @@ inline void Machine::set_allocated_model(std::string* model) {
   }
   model_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), model,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.model)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.model)
 }
 
 // string name = 2;
@@ -4720,15 +5109,15 @@ inline void Machine::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine::name() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.name)
+  // @@protoc_insertion_point(field_get:platform.Machine.name)
   return _internal_name();
 }
 inline void Machine::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.name)
+  // @@protoc_insertion_point(field_set:platform.Machine.name)
 }
 inline std::string* Machine::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.name)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.name)
   return _internal_mutable_name();
 }
 inline const std::string& Machine::_internal_name() const {
@@ -4742,28 +5131,28 @@ inline void Machine::set_name(std::string&& value) {
   
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.name)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.name)
 }
 inline void Machine::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.name)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.name)
 }
 inline void Machine::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.name)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.name)
 }
 inline std::string* Machine::_internal_mutable_name() {
   
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine::release_name() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.name)
+  // @@protoc_insertion_point(field_release:platform.Machine.name)
   return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine::set_allocated_name(std::string* name) {
@@ -4774,7 +5163,7 @@ inline void Machine::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.name)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.name)
 }
 
 // bytes uuid = 3;
@@ -4782,15 +5171,15 @@ inline void Machine::clear_uuid() {
   uuid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline const std::string& Machine::uuid() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.uuid)
+  // @@protoc_insertion_point(field_get:platform.Machine.uuid)
   return _internal_uuid();
 }
 inline void Machine::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.uuid)
+  // @@protoc_insertion_point(field_set:platform.Machine.uuid)
 }
 inline std::string* Machine::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.uuid)
+  // @@protoc_insertion_point(field_mutable:platform.Machine.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& Machine::_internal_uuid() const {
@@ -4804,28 +5193,28 @@ inline void Machine::set_uuid(std::string&& value) {
   
   uuid_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.Machine.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:platform.Machine.uuid)
 }
 inline void Machine::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.Machine.uuid)
+  // @@protoc_insertion_point(field_set_char:platform.Machine.uuid)
 }
 inline void Machine::set_uuid(const void* value,
     size_t size) {
   
   uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.Machine.uuid)
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.uuid)
 }
 inline std::string* Machine::_internal_mutable_uuid() {
   
   return uuid_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline std::string* Machine::release_uuid() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.uuid)
+  // @@protoc_insertion_point(field_release:platform.Machine.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void Machine::set_allocated_uuid(std::string* uuid) {
@@ -4836,7 +5225,7 @@ inline void Machine::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.uuid)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.uuid)
 }
 
 // int64 total_memory = 4;
@@ -4847,7 +5236,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int64 Machine::_internal_total_memory() const {
   return total_memory_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int64 Machine::total_memory() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.total_memory)
+  // @@protoc_insertion_point(field_get:platform.Machine.total_memory)
   return _internal_total_memory();
 }
 inline void Machine::_internal_set_total_memory(::PROTOBUF_NAMESPACE_ID::int64 value) {
@@ -4856,7 +5245,7 @@ inline void Machine::_internal_set_total_memory(::PROTOBUF_NAMESPACE_ID::int64 v
 }
 inline void Machine::set_total_memory(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_total_memory(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.total_memory)
+  // @@protoc_insertion_point(field_set:platform.Machine.total_memory)
 }
 
 // int32 monitor_count = 5;
@@ -4867,7 +5256,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Machine::_internal_monitor_count() const {
   return monitor_count_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Machine::monitor_count() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.monitor_count)
+  // @@protoc_insertion_point(field_get:platform.Machine.monitor_count)
   return _internal_monitor_count();
 }
 inline void Machine::_internal_set_monitor_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -4876,10 +5265,10 @@ inline void Machine::_internal_set_monitor_count(::PROTOBUF_NAMESPACE_ID::int32 
 }
 inline void Machine::set_monitor_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_monitor_count(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.Machine.monitor_count)
+  // @@protoc_insertion_point(field_set:platform.Machine.monitor_count)
 }
 
-// .platform_detection_module.Machine.CPU cpu = 6;
+// .platform.Machine.CPU cpu = 6;
 inline bool Machine::_internal_has_cpu() const {
   return this != internal_default_instance() && cpu_ != nullptr;
 }
@@ -4892,17 +5281,17 @@ inline void Machine::clear_cpu() {
   }
   cpu_ = nullptr;
 }
-inline const ::platform_detection_module::Machine_CPU& Machine::_internal_cpu() const {
-  const ::platform_detection_module::Machine_CPU* p = cpu_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::Machine_CPU*>(
-      &::platform_detection_module::_Machine_CPU_default_instance_);
+inline const ::platform::Machine_CPU& Machine::_internal_cpu() const {
+  const ::platform::Machine_CPU* p = cpu_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform::Machine_CPU*>(
+      &::platform::_Machine_CPU_default_instance_);
 }
-inline const ::platform_detection_module::Machine_CPU& Machine::cpu() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.cpu)
+inline const ::platform::Machine_CPU& Machine::cpu() const {
+  // @@protoc_insertion_point(field_get:platform.Machine.cpu)
   return _internal_cpu();
 }
 inline void Machine::unsafe_arena_set_allocated_cpu(
-    ::platform_detection_module::Machine_CPU* cpu) {
+    ::platform::Machine_CPU* cpu) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cpu_);
   }
@@ -4912,37 +5301,37 @@ inline void Machine::unsafe_arena_set_allocated_cpu(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.Machine.cpu)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform.Machine.cpu)
 }
-inline ::platform_detection_module::Machine_CPU* Machine::release_cpu() {
+inline ::platform::Machine_CPU* Machine::release_cpu() {
   
-  ::platform_detection_module::Machine_CPU* temp = cpu_;
+  ::platform::Machine_CPU* temp = cpu_;
   cpu_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::platform_detection_module::Machine_CPU* Machine::unsafe_arena_release_cpu() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.cpu)
+inline ::platform::Machine_CPU* Machine::unsafe_arena_release_cpu() {
+  // @@protoc_insertion_point(field_release:platform.Machine.cpu)
   
-  ::platform_detection_module::Machine_CPU* temp = cpu_;
+  ::platform::Machine_CPU* temp = cpu_;
   cpu_ = nullptr;
   return temp;
 }
-inline ::platform_detection_module::Machine_CPU* Machine::_internal_mutable_cpu() {
+inline ::platform::Machine_CPU* Machine::_internal_mutable_cpu() {
   
   if (cpu_ == nullptr) {
-    auto* p = CreateMaybeMessage<::platform_detection_module::Machine_CPU>(GetArena());
+    auto* p = CreateMaybeMessage<::platform::Machine_CPU>(GetArena());
     cpu_ = p;
   }
   return cpu_;
 }
-inline ::platform_detection_module::Machine_CPU* Machine::mutable_cpu() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.cpu)
+inline ::platform::Machine_CPU* Machine::mutable_cpu() {
+  // @@protoc_insertion_point(field_mutable:platform.Machine.cpu)
   return _internal_mutable_cpu();
 }
-inline void Machine::set_allocated_cpu(::platform_detection_module::Machine_CPU* cpu) {
+inline void Machine::set_allocated_cpu(::platform::Machine_CPU* cpu) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete cpu_;
@@ -4959,10 +5348,10 @@ inline void Machine::set_allocated_cpu(::platform_detection_module::Machine_CPU*
     
   }
   cpu_ = cpu;
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.cpu)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.cpu)
 }
 
-// .platform_detection_module.Machine.VM vm = 7;
+// .platform.Machine.VM vm = 7;
 inline bool Machine::_internal_has_vm() const {
   return this != internal_default_instance() && vm_ != nullptr;
 }
@@ -4975,17 +5364,17 @@ inline void Machine::clear_vm() {
   }
   vm_ = nullptr;
 }
-inline const ::platform_detection_module::Machine_VM& Machine::_internal_vm() const {
-  const ::platform_detection_module::Machine_VM* p = vm_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::Machine_VM*>(
-      &::platform_detection_module::_Machine_VM_default_instance_);
+inline const ::platform::Machine_VM& Machine::_internal_vm() const {
+  const ::platform::Machine_VM* p = vm_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform::Machine_VM*>(
+      &::platform::_Machine_VM_default_instance_);
 }
-inline const ::platform_detection_module::Machine_VM& Machine::vm() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.vm)
+inline const ::platform::Machine_VM& Machine::vm() const {
+  // @@protoc_insertion_point(field_get:platform.Machine.vm)
   return _internal_vm();
 }
 inline void Machine::unsafe_arena_set_allocated_vm(
-    ::platform_detection_module::Machine_VM* vm) {
+    ::platform::Machine_VM* vm) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(vm_);
   }
@@ -4995,37 +5384,37 @@ inline void Machine::unsafe_arena_set_allocated_vm(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.Machine.vm)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform.Machine.vm)
 }
-inline ::platform_detection_module::Machine_VM* Machine::release_vm() {
+inline ::platform::Machine_VM* Machine::release_vm() {
   
-  ::platform_detection_module::Machine_VM* temp = vm_;
+  ::platform::Machine_VM* temp = vm_;
   vm_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::platform_detection_module::Machine_VM* Machine::unsafe_arena_release_vm() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.Machine.vm)
+inline ::platform::Machine_VM* Machine::unsafe_arena_release_vm() {
+  // @@protoc_insertion_point(field_release:platform.Machine.vm)
   
-  ::platform_detection_module::Machine_VM* temp = vm_;
+  ::platform::Machine_VM* temp = vm_;
   vm_ = nullptr;
   return temp;
 }
-inline ::platform_detection_module::Machine_VM* Machine::_internal_mutable_vm() {
+inline ::platform::Machine_VM* Machine::_internal_mutable_vm() {
   
   if (vm_ == nullptr) {
-    auto* p = CreateMaybeMessage<::platform_detection_module::Machine_VM>(GetArena());
+    auto* p = CreateMaybeMessage<::platform::Machine_VM>(GetArena());
     vm_ = p;
   }
   return vm_;
 }
-inline ::platform_detection_module::Machine_VM* Machine::mutable_vm() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.vm)
+inline ::platform::Machine_VM* Machine::mutable_vm() {
+  // @@protoc_insertion_point(field_mutable:platform.Machine.vm)
   return _internal_mutable_vm();
 }
-inline void Machine::set_allocated_vm(::platform_detection_module::Machine_VM* vm) {
+inline void Machine::set_allocated_vm(::platform::Machine_VM* vm) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete vm_;
@@ -5042,10 +5431,10 @@ inline void Machine::set_allocated_vm(::platform_detection_module::Machine_VM* v
     
   }
   vm_ = vm;
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.Machine.vm)
+  // @@protoc_insertion_point(field_set_allocated:platform.Machine.vm)
 }
 
-// repeated .platform_detection_module.Machine.Monitor monitors = 8;
+// repeated .platform.Machine.Monitor monitors = 8;
 inline int Machine::_internal_monitors_size() const {
   return monitors_.size();
 }
@@ -5055,36 +5444,36 @@ inline int Machine::monitors_size() const {
 inline void Machine::clear_monitors() {
   monitors_.Clear();
 }
-inline ::platform_detection_module::Machine_Monitor* Machine::mutable_monitors(int index) {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.monitors)
+inline ::platform::Machine_Monitor* Machine::mutable_monitors(int index) {
+  // @@protoc_insertion_point(field_mutable:platform.Machine.monitors)
   return monitors_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_Monitor >*
 Machine::mutable_monitors() {
-  // @@protoc_insertion_point(field_mutable_list:platform_detection_module.Machine.monitors)
+  // @@protoc_insertion_point(field_mutable_list:platform.Machine.monitors)
   return &monitors_;
 }
-inline const ::platform_detection_module::Machine_Monitor& Machine::_internal_monitors(int index) const {
+inline const ::platform::Machine_Monitor& Machine::_internal_monitors(int index) const {
   return monitors_.Get(index);
 }
-inline const ::platform_detection_module::Machine_Monitor& Machine::monitors(int index) const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.monitors)
+inline const ::platform::Machine_Monitor& Machine::monitors(int index) const {
+  // @@protoc_insertion_point(field_get:platform.Machine.monitors)
   return _internal_monitors(index);
 }
-inline ::platform_detection_module::Machine_Monitor* Machine::_internal_add_monitors() {
+inline ::platform::Machine_Monitor* Machine::_internal_add_monitors() {
   return monitors_.Add();
 }
-inline ::platform_detection_module::Machine_Monitor* Machine::add_monitors() {
-  // @@protoc_insertion_point(field_add:platform_detection_module.Machine.monitors)
+inline ::platform::Machine_Monitor* Machine::add_monitors() {
+  // @@protoc_insertion_point(field_add:platform.Machine.monitors)
   return _internal_add_monitors();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_Monitor >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_Monitor >&
 Machine::monitors() const {
-  // @@protoc_insertion_point(field_list:platform_detection_module.Machine.monitors)
+  // @@protoc_insertion_point(field_list:platform.Machine.monitors)
   return monitors_;
 }
 
-// repeated .platform_detection_module.Machine.GPU gpus = 9;
+// repeated .platform.Machine.GPU gpus = 9;
 inline int Machine::_internal_gpus_size() const {
   return gpus_.size();
 }
@@ -5094,36 +5483,36 @@ inline int Machine::gpus_size() const {
 inline void Machine::clear_gpus() {
   gpus_.Clear();
 }
-inline ::platform_detection_module::Machine_GPU* Machine::mutable_gpus(int index) {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.gpus)
+inline ::platform::Machine_GPU* Machine::mutable_gpus(int index) {
+  // @@protoc_insertion_point(field_mutable:platform.Machine.gpus)
   return gpus_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_GPU >*
 Machine::mutable_gpus() {
-  // @@protoc_insertion_point(field_mutable_list:platform_detection_module.Machine.gpus)
+  // @@protoc_insertion_point(field_mutable_list:platform.Machine.gpus)
   return &gpus_;
 }
-inline const ::platform_detection_module::Machine_GPU& Machine::_internal_gpus(int index) const {
+inline const ::platform::Machine_GPU& Machine::_internal_gpus(int index) const {
   return gpus_.Get(index);
 }
-inline const ::platform_detection_module::Machine_GPU& Machine::gpus(int index) const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.gpus)
+inline const ::platform::Machine_GPU& Machine::gpus(int index) const {
+  // @@protoc_insertion_point(field_get:platform.Machine.gpus)
   return _internal_gpus(index);
 }
-inline ::platform_detection_module::Machine_GPU* Machine::_internal_add_gpus() {
+inline ::platform::Machine_GPU* Machine::_internal_add_gpus() {
   return gpus_.Add();
 }
-inline ::platform_detection_module::Machine_GPU* Machine::add_gpus() {
-  // @@protoc_insertion_point(field_add:platform_detection_module.Machine.gpus)
+inline ::platform::Machine_GPU* Machine::add_gpus() {
+  // @@protoc_insertion_point(field_add:platform.Machine.gpus)
   return _internal_add_gpus();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_GPU >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_GPU >&
 Machine::gpus() const {
-  // @@protoc_insertion_point(field_list:platform_detection_module.Machine.gpus)
+  // @@protoc_insertion_point(field_list:platform.Machine.gpus)
   return gpus_;
 }
 
-// repeated .platform_detection_module.Machine.NetworkAdapter network_adapters = 10;
+// repeated .platform.Machine.NetworkAdapter network_adapters = 10;
 inline int Machine::_internal_network_adapters_size() const {
   return network_adapters_.size();
 }
@@ -5133,118 +5522,139 @@ inline int Machine::network_adapters_size() const {
 inline void Machine::clear_network_adapters() {
   network_adapters_.Clear();
 }
-inline ::platform_detection_module::Machine_NetworkAdapter* Machine::mutable_network_adapters(int index) {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.Machine.network_adapters)
+inline ::platform::Machine_NetworkAdapter* Machine::mutable_network_adapters(int index) {
+  // @@protoc_insertion_point(field_mutable:platform.Machine.network_adapters)
   return network_adapters_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_NetworkAdapter >*
 Machine::mutable_network_adapters() {
-  // @@protoc_insertion_point(field_mutable_list:platform_detection_module.Machine.network_adapters)
+  // @@protoc_insertion_point(field_mutable_list:platform.Machine.network_adapters)
   return &network_adapters_;
 }
-inline const ::platform_detection_module::Machine_NetworkAdapter& Machine::_internal_network_adapters(int index) const {
+inline const ::platform::Machine_NetworkAdapter& Machine::_internal_network_adapters(int index) const {
   return network_adapters_.Get(index);
 }
-inline const ::platform_detection_module::Machine_NetworkAdapter& Machine::network_adapters(int index) const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.Machine.network_adapters)
+inline const ::platform::Machine_NetworkAdapter& Machine::network_adapters(int index) const {
+  // @@protoc_insertion_point(field_get:platform.Machine.network_adapters)
   return _internal_network_adapters(index);
 }
-inline ::platform_detection_module::Machine_NetworkAdapter* Machine::_internal_add_network_adapters() {
+inline ::platform::Machine_NetworkAdapter* Machine::_internal_add_network_adapters() {
   return network_adapters_.Add();
 }
-inline ::platform_detection_module::Machine_NetworkAdapter* Machine::add_network_adapters() {
-  // @@protoc_insertion_point(field_add:platform_detection_module.Machine.network_adapters)
+inline ::platform::Machine_NetworkAdapter* Machine::add_network_adapters() {
+  // @@protoc_insertion_point(field_add:platform.Machine.network_adapters)
   return _internal_add_network_adapters();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform_detection_module::Machine_NetworkAdapter >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::platform::Machine_NetworkAdapter >&
 Machine::network_adapters() const {
-  // @@protoc_insertion_point(field_list:platform_detection_module.Machine.network_adapters)
+  // @@protoc_insertion_point(field_list:platform.Machine.network_adapters)
   return network_adapters_;
 }
 
 // -------------------------------------------------------------------
 
-// PlatformInformation
+// Information
 
-// string version = 1;
-inline void PlatformInformation::clear_version() {
-  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+// .platform.SemanticVersion version = 1;
+inline bool Information::_internal_has_version() const {
+  return this != internal_default_instance() && version_ != nullptr;
 }
-inline const std::string& PlatformInformation::version() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.version)
+inline bool Information::has_version() const {
+  return _internal_has_version();
+}
+inline void Information::clear_version() {
+  if (GetArena() == nullptr && version_ != nullptr) {
+    delete version_;
+  }
+  version_ = nullptr;
+}
+inline const ::platform::SemanticVersion& Information::_internal_version() const {
+  const ::platform::SemanticVersion* p = version_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform::SemanticVersion*>(
+      &::platform::_SemanticVersion_default_instance_);
+}
+inline const ::platform::SemanticVersion& Information::version() const {
+  // @@protoc_insertion_point(field_get:platform.Information.version)
   return _internal_version();
 }
-inline void PlatformInformation::set_version(const std::string& value) {
-  _internal_set_version(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.PlatformInformation.version)
-}
-inline std::string* PlatformInformation::mutable_version() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.PlatformInformation.version)
-  return _internal_mutable_version();
-}
-inline const std::string& PlatformInformation::_internal_version() const {
-  return version_.Get();
-}
-inline void PlatformInformation::_internal_set_version(const std::string& value) {
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
-}
-inline void PlatformInformation::set_version(std::string&& value) {
-  
-  version_.Set(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:platform_detection_module.PlatformInformation.version)
-}
-inline void PlatformInformation::set_version(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
-              GetArena());
-  // @@protoc_insertion_point(field_set_char:platform_detection_module.PlatformInformation.version)
-}
-inline void PlatformInformation::set_version(const char* value,
-    size_t size) {
-  
-  version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:platform_detection_module.PlatformInformation.version)
-}
-inline std::string* PlatformInformation::_internal_mutable_version() {
-  
-  return version_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline std::string* PlatformInformation::release_version() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.PlatformInformation.version)
-  return version_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void PlatformInformation::set_allocated_version(std::string* version) {
-  if (version != nullptr) {
+inline void Information::unsafe_arena_set_allocated_version(
+    ::platform::SemanticVersion* version) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(version_);
+  }
+  version_ = version;
+  if (version) {
     
   } else {
     
   }
-  version_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), version,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.PlatformInformation.version)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform.Information.version)
+}
+inline ::platform::SemanticVersion* Information::release_version() {
+  
+  ::platform::SemanticVersion* temp = version_;
+  version_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::platform::SemanticVersion* Information::unsafe_arena_release_version() {
+  // @@protoc_insertion_point(field_release:platform.Information.version)
+  
+  ::platform::SemanticVersion* temp = version_;
+  version_ = nullptr;
+  return temp;
+}
+inline ::platform::SemanticVersion* Information::_internal_mutable_version() {
+  
+  if (version_ == nullptr) {
+    auto* p = CreateMaybeMessage<::platform::SemanticVersion>(GetArena());
+    version_ = p;
+  }
+  return version_;
+}
+inline ::platform::SemanticVersion* Information::mutable_version() {
+  // @@protoc_insertion_point(field_mutable:platform.Information.version)
+  return _internal_mutable_version();
+}
+inline void Information::set_allocated_version(::platform::SemanticVersion* version) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete version_;
+  }
+  if (version) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(version);
+    if (message_arena != submessage_arena) {
+      version = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, version, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  version_ = version;
+  // @@protoc_insertion_point(field_set_allocated:platform.Information.version)
 }
 
 // .google.protobuf.Timestamp timestamp = 2;
-inline bool PlatformInformation::_internal_has_timestamp() const {
+inline bool Information::_internal_has_timestamp() const {
   return this != internal_default_instance() && timestamp_ != nullptr;
 }
-inline bool PlatformInformation::has_timestamp() const {
+inline bool Information::has_timestamp() const {
   return _internal_has_timestamp();
 }
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& PlatformInformation::_internal_timestamp() const {
+inline const PROTOBUF_NAMESPACE_ID::Timestamp& Information::_internal_timestamp() const {
   const PROTOBUF_NAMESPACE_ID::Timestamp* p = timestamp_;
   return p != nullptr ? *p : *reinterpret_cast<const PROTOBUF_NAMESPACE_ID::Timestamp*>(
       &PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
 }
-inline const PROTOBUF_NAMESPACE_ID::Timestamp& PlatformInformation::timestamp() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.timestamp)
+inline const PROTOBUF_NAMESPACE_ID::Timestamp& Information::timestamp() const {
+  // @@protoc_insertion_point(field_get:platform.Information.timestamp)
   return _internal_timestamp();
 }
-inline void PlatformInformation::unsafe_arena_set_allocated_timestamp(
+inline void Information::unsafe_arena_set_allocated_timestamp(
     PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
@@ -5255,9 +5665,9 @@ inline void PlatformInformation::unsafe_arena_set_allocated_timestamp(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.PlatformInformation.timestamp)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform.Information.timestamp)
 }
-inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::release_timestamp() {
+inline PROTOBUF_NAMESPACE_ID::Timestamp* Information::release_timestamp() {
   
   PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
   timestamp_ = nullptr;
@@ -5266,14 +5676,14 @@ inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::release_timestamp(
   }
   return temp;
 }
-inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::unsafe_arena_release_timestamp() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.PlatformInformation.timestamp)
+inline PROTOBUF_NAMESPACE_ID::Timestamp* Information::unsafe_arena_release_timestamp() {
+  // @@protoc_insertion_point(field_release:platform.Information.timestamp)
   
   PROTOBUF_NAMESPACE_ID::Timestamp* temp = timestamp_;
   timestamp_ = nullptr;
   return temp;
 }
-inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::_internal_mutable_timestamp() {
+inline PROTOBUF_NAMESPACE_ID::Timestamp* Information::_internal_mutable_timestamp() {
   
   if (timestamp_ == nullptr) {
     auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::Timestamp>(GetArena());
@@ -5281,11 +5691,11 @@ inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::_internal_mutable_
   }
   return timestamp_;
 }
-inline PROTOBUF_NAMESPACE_ID::Timestamp* PlatformInformation::mutable_timestamp() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.PlatformInformation.timestamp)
+inline PROTOBUF_NAMESPACE_ID::Timestamp* Information::mutable_timestamp() {
+  // @@protoc_insertion_point(field_mutable:platform.Information.timestamp)
   return _internal_mutable_timestamp();
 }
-inline void PlatformInformation::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
+inline void Information::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::Timestamp* timestamp) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(timestamp_);
@@ -5302,53 +5712,53 @@ inline void PlatformInformation::set_allocated_timestamp(PROTOBUF_NAMESPACE_ID::
     
   }
   timestamp_ = timestamp;
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.PlatformInformation.timestamp)
+  // @@protoc_insertion_point(field_set_allocated:platform.Information.timestamp)
 }
 
-// .platform_detection_module.Bitness process_bitness = 3;
-inline void PlatformInformation::clear_process_bitness() {
+// .platform.Bitness process_bitness = 3;
+inline void Information::clear_process_bitness() {
   process_bitness_ = 0;
 }
-inline ::platform_detection_module::Bitness PlatformInformation::_internal_process_bitness() const {
-  return static_cast< ::platform_detection_module::Bitness >(process_bitness_);
+inline ::platform::Bitness Information::_internal_process_bitness() const {
+  return static_cast< ::platform::Bitness >(process_bitness_);
 }
-inline ::platform_detection_module::Bitness PlatformInformation::process_bitness() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.process_bitness)
+inline ::platform::Bitness Information::process_bitness() const {
+  // @@protoc_insertion_point(field_get:platform.Information.process_bitness)
   return _internal_process_bitness();
 }
-inline void PlatformInformation::_internal_set_process_bitness(::platform_detection_module::Bitness value) {
+inline void Information::_internal_set_process_bitness(::platform::Bitness value) {
   
   process_bitness_ = value;
 }
-inline void PlatformInformation::set_process_bitness(::platform_detection_module::Bitness value) {
+inline void Information::set_process_bitness(::platform::Bitness value) {
   _internal_set_process_bitness(value);
-  // @@protoc_insertion_point(field_set:platform_detection_module.PlatformInformation.process_bitness)
+  // @@protoc_insertion_point(field_set:platform.Information.process_bitness)
 }
 
-// .platform_detection_module.OS os = 4;
-inline bool PlatformInformation::_internal_has_os() const {
+// .platform.OS os = 4;
+inline bool Information::_internal_has_os() const {
   return this != internal_default_instance() && os_ != nullptr;
 }
-inline bool PlatformInformation::has_os() const {
+inline bool Information::has_os() const {
   return _internal_has_os();
 }
-inline void PlatformInformation::clear_os() {
+inline void Information::clear_os() {
   if (GetArena() == nullptr && os_ != nullptr) {
     delete os_;
   }
   os_ = nullptr;
 }
-inline const ::platform_detection_module::OS& PlatformInformation::_internal_os() const {
-  const ::platform_detection_module::OS* p = os_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::OS*>(
-      &::platform_detection_module::_OS_default_instance_);
+inline const ::platform::OS& Information::_internal_os() const {
+  const ::platform::OS* p = os_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform::OS*>(
+      &::platform::_OS_default_instance_);
 }
-inline const ::platform_detection_module::OS& PlatformInformation::os() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.os)
+inline const ::platform::OS& Information::os() const {
+  // @@protoc_insertion_point(field_get:platform.Information.os)
   return _internal_os();
 }
-inline void PlatformInformation::unsafe_arena_set_allocated_os(
-    ::platform_detection_module::OS* os) {
+inline void Information::unsafe_arena_set_allocated_os(
+    ::platform::OS* os) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(os_);
   }
@@ -5358,37 +5768,37 @@ inline void PlatformInformation::unsafe_arena_set_allocated_os(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.PlatformInformation.os)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform.Information.os)
 }
-inline ::platform_detection_module::OS* PlatformInformation::release_os() {
+inline ::platform::OS* Information::release_os() {
   
-  ::platform_detection_module::OS* temp = os_;
+  ::platform::OS* temp = os_;
   os_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::platform_detection_module::OS* PlatformInformation::unsafe_arena_release_os() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.PlatformInformation.os)
+inline ::platform::OS* Information::unsafe_arena_release_os() {
+  // @@protoc_insertion_point(field_release:platform.Information.os)
   
-  ::platform_detection_module::OS* temp = os_;
+  ::platform::OS* temp = os_;
   os_ = nullptr;
   return temp;
 }
-inline ::platform_detection_module::OS* PlatformInformation::_internal_mutable_os() {
+inline ::platform::OS* Information::_internal_mutable_os() {
   
   if (os_ == nullptr) {
-    auto* p = CreateMaybeMessage<::platform_detection_module::OS>(GetArena());
+    auto* p = CreateMaybeMessage<::platform::OS>(GetArena());
     os_ = p;
   }
   return os_;
 }
-inline ::platform_detection_module::OS* PlatformInformation::mutable_os() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.PlatformInformation.os)
+inline ::platform::OS* Information::mutable_os() {
+  // @@protoc_insertion_point(field_mutable:platform.Information.os)
   return _internal_mutable_os();
 }
-inline void PlatformInformation::set_allocated_os(::platform_detection_module::OS* os) {
+inline void Information::set_allocated_os(::platform::OS* os) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete os_;
@@ -5405,33 +5815,33 @@ inline void PlatformInformation::set_allocated_os(::platform_detection_module::O
     
   }
   os_ = os;
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.PlatformInformation.os)
+  // @@protoc_insertion_point(field_set_allocated:platform.Information.os)
 }
 
-// .platform_detection_module.Machine machine = 5;
-inline bool PlatformInformation::_internal_has_machine() const {
+// .platform.Machine machine = 5;
+inline bool Information::_internal_has_machine() const {
   return this != internal_default_instance() && machine_ != nullptr;
 }
-inline bool PlatformInformation::has_machine() const {
+inline bool Information::has_machine() const {
   return _internal_has_machine();
 }
-inline void PlatformInformation::clear_machine() {
+inline void Information::clear_machine() {
   if (GetArena() == nullptr && machine_ != nullptr) {
     delete machine_;
   }
   machine_ = nullptr;
 }
-inline const ::platform_detection_module::Machine& PlatformInformation::_internal_machine() const {
-  const ::platform_detection_module::Machine* p = machine_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::platform_detection_module::Machine*>(
-      &::platform_detection_module::_Machine_default_instance_);
+inline const ::platform::Machine& Information::_internal_machine() const {
+  const ::platform::Machine* p = machine_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::platform::Machine*>(
+      &::platform::_Machine_default_instance_);
 }
-inline const ::platform_detection_module::Machine& PlatformInformation::machine() const {
-  // @@protoc_insertion_point(field_get:platform_detection_module.PlatformInformation.machine)
+inline const ::platform::Machine& Information::machine() const {
+  // @@protoc_insertion_point(field_get:platform.Information.machine)
   return _internal_machine();
 }
-inline void PlatformInformation::unsafe_arena_set_allocated_machine(
-    ::platform_detection_module::Machine* machine) {
+inline void Information::unsafe_arena_set_allocated_machine(
+    ::platform::Machine* machine) {
   if (GetArena() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(machine_);
   }
@@ -5441,37 +5851,37 @@ inline void PlatformInformation::unsafe_arena_set_allocated_machine(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform_detection_module.PlatformInformation.machine)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:platform.Information.machine)
 }
-inline ::platform_detection_module::Machine* PlatformInformation::release_machine() {
+inline ::platform::Machine* Information::release_machine() {
   
-  ::platform_detection_module::Machine* temp = machine_;
+  ::platform::Machine* temp = machine_;
   machine_ = nullptr;
   if (GetArena() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
   return temp;
 }
-inline ::platform_detection_module::Machine* PlatformInformation::unsafe_arena_release_machine() {
-  // @@protoc_insertion_point(field_release:platform_detection_module.PlatformInformation.machine)
+inline ::platform::Machine* Information::unsafe_arena_release_machine() {
+  // @@protoc_insertion_point(field_release:platform.Information.machine)
   
-  ::platform_detection_module::Machine* temp = machine_;
+  ::platform::Machine* temp = machine_;
   machine_ = nullptr;
   return temp;
 }
-inline ::platform_detection_module::Machine* PlatformInformation::_internal_mutable_machine() {
+inline ::platform::Machine* Information::_internal_mutable_machine() {
   
   if (machine_ == nullptr) {
-    auto* p = CreateMaybeMessage<::platform_detection_module::Machine>(GetArena());
+    auto* p = CreateMaybeMessage<::platform::Machine>(GetArena());
     machine_ = p;
   }
   return machine_;
 }
-inline ::platform_detection_module::Machine* PlatformInformation::mutable_machine() {
-  // @@protoc_insertion_point(field_mutable:platform_detection_module.PlatformInformation.machine)
+inline ::platform::Machine* Information::mutable_machine() {
+  // @@protoc_insertion_point(field_mutable:platform.Information.machine)
   return _internal_mutable_machine();
 }
-inline void PlatformInformation::set_allocated_machine(::platform_detection_module::Machine* machine) {
+inline void Information::set_allocated_machine(::platform::Machine* machine) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   if (message_arena == nullptr) {
     delete machine_;
@@ -5488,7 +5898,7 @@ inline void PlatformInformation::set_allocated_machine(::platform_detection_modu
     
   }
   machine_ = machine;
-  // @@protoc_insertion_point(field_set_allocated:platform_detection_module.PlatformInformation.machine)
+  // @@protoc_insertion_point(field_set_allocated:platform.Information.machine)
 }
 
 #ifdef __GNUC__
@@ -5514,22 +5924,24 @@ inline void PlatformInformation::set_allocated_machine(::platform_detection_modu
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace platform_detection_module
+}  // namespace platform
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::platform_detection_module::OS_Kind> : ::std::true_type {};
+template <> struct is_proto_enum< ::platform::OS_Kind> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::platform_detection_module::OS_Kind>() {
-  return ::platform_detection_module::OS_Kind_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::platform::OS_Kind>() {
+  return ::platform::OS_Kind_descriptor();
 }
-template <> struct is_proto_enum< ::platform_detection_module::Bitness> : ::std::true_type {};
+template <> struct is_proto_enum< ::platform::Bitness> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::platform_detection_module::Bitness>() {
-  return ::platform_detection_module::Bitness_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::platform::Bitness>() {
+  return ::platform::Bitness_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

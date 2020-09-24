@@ -25,7 +25,12 @@ extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::S
 extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_OS_pdm_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs_pdm_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OS_Wine_pdm_2eproto;
-namespace platform_detection_module {
+extern PROTOBUF_INTERNAL_EXPORT_pdm_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SemanticVersion_pdm_2eproto;
+namespace platform {
+class SemanticVersionDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SemanticVersion> _instance;
+} _SemanticVersion_default_instance_;
 class OS_GraphicsAPIsDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OS_GraphicsAPIs> _instance;
@@ -66,20 +71,38 @@ class MachineDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Machine> _instance;
 } _Machine_default_instance_;
-class PlatformInformationDefaultTypeInternal {
+class InformationDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PlatformInformation> _instance;
-} _PlatformInformation_default_instance_;
-}  // namespace platform_detection_module
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Information> _instance;
+} _Information_default_instance_;
+}  // namespace platform
+static void InitDefaultsscc_info_Information_pdm_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::platform::_Information_default_instance_;
+    new (ptr) ::platform::Information();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::platform::Information::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_Information_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_Information_pdm_2eproto}, {
+      &scc_info_SemanticVersion_pdm_2eproto.base,
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
+      &scc_info_OS_pdm_2eproto.base,
+      &scc_info_Machine_pdm_2eproto.base,}};
+
 static void InitDefaultsscc_info_Machine_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_Machine_default_instance_;
-    new (ptr) ::platform_detection_module::Machine();
+    void* ptr = &::platform::_Machine_default_instance_;
+    new (ptr) ::platform::Machine();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::Machine::InitAsDefaultInstance();
+  ::platform::Machine::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_Machine_pdm_2eproto =
@@ -94,11 +117,11 @@ static void InitDefaultsscc_info_Machine_CPU_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_Machine_CPU_default_instance_;
-    new (ptr) ::platform_detection_module::Machine_CPU();
+    void* ptr = &::platform::_Machine_CPU_default_instance_;
+    new (ptr) ::platform::Machine_CPU();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::Machine_CPU::InitAsDefaultInstance();
+  ::platform::Machine_CPU::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_CPU_pdm_2eproto =
@@ -108,11 +131,11 @@ static void InitDefaultsscc_info_Machine_GPU_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_Machine_GPU_default_instance_;
-    new (ptr) ::platform_detection_module::Machine_GPU();
+    void* ptr = &::platform::_Machine_GPU_default_instance_;
+    new (ptr) ::platform::Machine_GPU();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::Machine_GPU::InitAsDefaultInstance();
+  ::platform::Machine_GPU::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Machine_GPU_pdm_2eproto =
@@ -123,11 +146,11 @@ static void InitDefaultsscc_info_Machine_GPU_Driver_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_Machine_GPU_Driver_default_instance_;
-    new (ptr) ::platform_detection_module::Machine_GPU_Driver();
+    void* ptr = &::platform::_Machine_GPU_Driver_default_instance_;
+    new (ptr) ::platform::Machine_GPU_Driver();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::Machine_GPU_Driver::InitAsDefaultInstance();
+  ::platform::Machine_GPU_Driver::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_GPU_Driver_pdm_2eproto =
@@ -137,11 +160,11 @@ static void InitDefaultsscc_info_Machine_Monitor_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_Machine_Monitor_default_instance_;
-    new (ptr) ::platform_detection_module::Machine_Monitor();
+    void* ptr = &::platform::_Machine_Monitor_default_instance_;
+    new (ptr) ::platform::Machine_Monitor();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::Machine_Monitor::InitAsDefaultInstance();
+  ::platform::Machine_Monitor::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_Monitor_pdm_2eproto =
@@ -151,11 +174,11 @@ static void InitDefaultsscc_info_Machine_NetworkAdapter_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_Machine_NetworkAdapter_default_instance_;
-    new (ptr) ::platform_detection_module::Machine_NetworkAdapter();
+    void* ptr = &::platform::_Machine_NetworkAdapter_default_instance_;
+    new (ptr) ::platform::Machine_NetworkAdapter();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::Machine_NetworkAdapter::InitAsDefaultInstance();
+  ::platform::Machine_NetworkAdapter::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_NetworkAdapter_pdm_2eproto =
@@ -165,11 +188,11 @@ static void InitDefaultsscc_info_Machine_VM_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_Machine_VM_default_instance_;
-    new (ptr) ::platform_detection_module::Machine_VM();
+    void* ptr = &::platform::_Machine_VM_default_instance_;
+    new (ptr) ::platform::Machine_VM();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::Machine_VM::InitAsDefaultInstance();
+  ::platform::Machine_VM::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Machine_VM_pdm_2eproto =
@@ -179,11 +202,11 @@ static void InitDefaultsscc_info_OS_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_OS_default_instance_;
-    new (ptr) ::platform_detection_module::OS();
+    void* ptr = &::platform::_OS_default_instance_;
+    new (ptr) ::platform::OS();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::OS::InitAsDefaultInstance();
+  ::platform::OS::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_OS_pdm_2eproto =
@@ -195,11 +218,11 @@ static void InitDefaultsscc_info_OS_GraphicsAPIs_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_OS_GraphicsAPIs_default_instance_;
-    new (ptr) ::platform_detection_module::OS_GraphicsAPIs();
+    void* ptr = &::platform::_OS_GraphicsAPIs_default_instance_;
+    new (ptr) ::platform::OS_GraphicsAPIs();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::OS_GraphicsAPIs::InitAsDefaultInstance();
+  ::platform::OS_GraphicsAPIs::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs_pdm_2eproto =
@@ -209,247 +232,253 @@ static void InitDefaultsscc_info_OS_Wine_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_OS_Wine_default_instance_;
-    new (ptr) ::platform_detection_module::OS_Wine();
+    void* ptr = &::platform::_OS_Wine_default_instance_;
+    new (ptr) ::platform::OS_Wine();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::OS_Wine::InitAsDefaultInstance();
+  ::platform::OS_Wine::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OS_Wine_pdm_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_OS_Wine_pdm_2eproto}, {}};
 
-static void InitDefaultsscc_info_PlatformInformation_pdm_2eproto() {
+static void InitDefaultsscc_info_SemanticVersion_pdm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::platform_detection_module::_PlatformInformation_default_instance_;
-    new (ptr) ::platform_detection_module::PlatformInformation();
+    void* ptr = &::platform::_SemanticVersion_default_instance_;
+    new (ptr) ::platform::SemanticVersion();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::platform_detection_module::PlatformInformation::InitAsDefaultInstance();
+  ::platform::SemanticVersion::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_PlatformInformation_pdm_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_PlatformInformation_pdm_2eproto}, {
-      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
-      &scc_info_OS_pdm_2eproto.base,
-      &scc_info_Machine_pdm_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SemanticVersion_pdm_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SemanticVersion_pdm_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_pdm_2eproto[11];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_pdm_2eproto[12];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_pdm_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_pdm_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_pdm_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_GraphicsAPIs, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::SemanticVersion, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_GraphicsAPIs, metal_supported_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_GraphicsAPIs, vulkan_supported_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_GraphicsAPIs, vulkan_highest_supported_version_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_GraphicsAPIs, d3d_highest_supported_version_),
+  PROTOBUF_FIELD_OFFSET(::platform::SemanticVersion, major_),
+  PROTOBUF_FIELD_OFFSET(::platform::SemanticVersion, minor_),
+  PROTOBUF_FIELD_OFFSET(::platform::SemanticVersion, patch_),
+  PROTOBUF_FIELD_OFFSET(::platform::SemanticVersion, prerelease_),
+  PROTOBUF_FIELD_OFFSET(::platform::SemanticVersion, build_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_Wine, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS_GraphicsAPIs, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_Wine, version_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS_Wine, host_os_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS_GraphicsAPIs, metal_supported_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS_GraphicsAPIs, vulkan_supported_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS_GraphicsAPIs, vulkan_highest_supported_version_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS_GraphicsAPIs, d3d_highest_supported_version_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS_Wine, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, type_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, name_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, bitness_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, major_version_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, minor_version_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, build_number_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, kernel_version_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, username_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, user_locale_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, is_remote_session_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, graphics_apis_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::OS, wine_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS_Wine, version_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS_Wine, host_os_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_CPU, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_CPU, bitness_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_CPU, logical_core_count_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_CPU, brand_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_CPU, vendor_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_CPU, model_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_CPU, stepping_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, type_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, name_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, bitness_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, major_version_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, minor_version_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, build_number_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, kernel_version_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, username_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, user_locale_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, is_remote_session_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, graphics_apis_),
+  PROTOBUF_FIELD_OFFSET(::platform::OS, wine_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_VM, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_CPU, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_VM, is_suspected_vm_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_VM, has_hypervisor_bit_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_VM, hypervisor_name_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_VM, is_hypervisor_guest_os_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_VM, has_vm_execution_timing_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_CPU, bitness_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_CPU, logical_core_count_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_CPU, brand_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_CPU, vendor_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_CPU, model_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_CPU, stepping_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_Monitor, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_VM, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_Monitor, name_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_Monitor, horizontal_resolution_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_Monitor, vertical_resolution_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_Monitor, bits_per_color_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_Monitor, refresh_rate_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_Monitor, dpi_scaling_percent_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_VM, is_suspected_vm_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_VM, has_hypervisor_bit_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_VM, hypervisor_name_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_VM, is_hypervisor_guest_os_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_VM, has_vm_execution_timing_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU_Driver, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_Monitor, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU_Driver, date_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU_Driver, vendor_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU_Driver, version_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_Monitor, name_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_Monitor, horizontal_resolution_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_Monitor, vertical_resolution_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_Monitor, bits_per_color_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_Monitor, refresh_rate_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_Monitor, dpi_scaling_percent_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU_Driver, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU, description_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU, vendor_id_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU, device_id_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU, revision_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU, video_memory_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_GPU, driver_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU_Driver, date_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU_Driver, vendor_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU_Driver, version_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_NetworkAdapter, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_NetworkAdapter, name_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_NetworkAdapter, mac_address_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine_NetworkAdapter, uuid_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU, description_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU, vendor_id_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU, device_id_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU, revision_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU, video_memory_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_GPU, driver_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_NetworkAdapter, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, model_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, name_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, uuid_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, total_memory_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, monitor_count_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, cpu_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, vm_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, monitors_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, gpus_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::Machine, network_adapters_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_NetworkAdapter, name_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_NetworkAdapter, mac_address_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine_NetworkAdapter, uuid_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::PlatformInformation, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::PlatformInformation, version_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::PlatformInformation, timestamp_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::PlatformInformation, process_bitness_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::PlatformInformation, os_),
-  PROTOBUF_FIELD_OFFSET(::platform_detection_module::PlatformInformation, machine_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, model_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, name_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, uuid_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, total_memory_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, monitor_count_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, cpu_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, vm_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, monitors_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, gpus_),
+  PROTOBUF_FIELD_OFFSET(::platform::Machine, network_adapters_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::platform::Information, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::platform::Information, version_),
+  PROTOBUF_FIELD_OFFSET(::platform::Information, timestamp_),
+  PROTOBUF_FIELD_OFFSET(::platform::Information, process_bitness_),
+  PROTOBUF_FIELD_OFFSET(::platform::Information, os_),
+  PROTOBUF_FIELD_OFFSET(::platform::Information, machine_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::platform_detection_module::OS_GraphicsAPIs)},
-  { 9, -1, sizeof(::platform_detection_module::OS_Wine)},
-  { 16, -1, sizeof(::platform_detection_module::OS)},
-  { 33, -1, sizeof(::platform_detection_module::Machine_CPU)},
-  { 44, -1, sizeof(::platform_detection_module::Machine_VM)},
-  { 54, -1, sizeof(::platform_detection_module::Machine_Monitor)},
-  { 65, -1, sizeof(::platform_detection_module::Machine_GPU_Driver)},
-  { 73, -1, sizeof(::platform_detection_module::Machine_GPU)},
-  { 84, -1, sizeof(::platform_detection_module::Machine_NetworkAdapter)},
-  { 92, -1, sizeof(::platform_detection_module::Machine)},
-  { 107, -1, sizeof(::platform_detection_module::PlatformInformation)},
+  { 0, -1, sizeof(::platform::SemanticVersion)},
+  { 10, -1, sizeof(::platform::OS_GraphicsAPIs)},
+  { 19, -1, sizeof(::platform::OS_Wine)},
+  { 26, -1, sizeof(::platform::OS)},
+  { 43, -1, sizeof(::platform::Machine_CPU)},
+  { 54, -1, sizeof(::platform::Machine_VM)},
+  { 64, -1, sizeof(::platform::Machine_Monitor)},
+  { 75, -1, sizeof(::platform::Machine_GPU_Driver)},
+  { 83, -1, sizeof(::platform::Machine_GPU)},
+  { 94, -1, sizeof(::platform::Machine_NetworkAdapter)},
+  { 102, -1, sizeof(::platform::Machine)},
+  { 117, -1, sizeof(::platform::Information)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_OS_GraphicsAPIs_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_OS_Wine_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_OS_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_Machine_CPU_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_Machine_VM_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_Machine_Monitor_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_Machine_GPU_Driver_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_Machine_GPU_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_Machine_NetworkAdapter_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_Machine_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform_detection_module::_PlatformInformation_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_SemanticVersion_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_OS_GraphicsAPIs_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_OS_Wine_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_OS_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_Machine_CPU_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_Machine_VM_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_Machine_Monitor_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_Machine_GPU_Driver_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_Machine_GPU_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_Machine_NetworkAdapter_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_Machine_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::platform::_Information_default_instance_),
 };
 
 const char descriptor_table_protodef_pdm_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\tpdm.proto\022\031platform_detection_module\032\037"
-  "google/protobuf/timestamp.proto\"\202\005\n\002OS\0220"
-  "\n\004type\030\001 \001(\0162\".platform_detection_module"
-  ".OS.Kind\022\014\n\004name\030\002 \001(\t\0223\n\007bitness\030\003 \001(\0162"
-  "\".platform_detection_module.Bitness\022\025\n\rm"
-  "ajor_version\030\004 \001(\t\022\025\n\rminor_version\030\005 \001("
-  "\t\022\024\n\014build_number\030\006 \001(\t\022\026\n\016kernel_versio"
-  "n\030\007 \001(\t\022\020\n\010username\030\010 \001(\t\022\023\n\013user_locale"
-  "\030\t \001(\t\022\031\n\021is_remote_session\030\n \001(\010\022A\n\rgra"
-  "phics_apis\030\013 \001(\0132*.platform_detection_mo"
-  "dule.OS.GraphicsAPIs\0220\n\004wine\030\014 \001(\0132\".pla"
-  "tform_detection_module.OS.Wine\032\222\001\n\014Graph"
-  "icsAPIs\022\027\n\017metal_supported\030\001 \001(\010\022\030\n\020vulk"
-  "an_supported\030\002 \001(\010\022(\n vulkan_highest_sup"
-  "ported_version\030\003 \001(\t\022%\n\035d3d_highest_supp"
-  "orted_version\030\004 \001(\t\032(\n\004Wine\022\017\n\007version\030\001"
-  " \001(\t\022\017\n\007host_os\030\002 \001(\t\"5\n\004Kind\022\013\n\007UNKNOWN"
-  "\020\000\022\013\n\007WINDOWS\020\001\022\t\n\005MACOS\020\002\022\010\n\004WINE\020\003\"\200\t\n"
-  "\007Machine\022\r\n\005model\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n"
-  "\004uuid\030\003 \001(\014\022\024\n\014total_memory\030\004 \001(\003\022\025\n\rmon"
-  "itor_count\030\005 \001(\005\0223\n\003cpu\030\006 \001(\0132&.platform"
-  "_detection_module.Machine.CPU\0221\n\002vm\030\007 \001("
-  "\0132%.platform_detection_module.Machine.VM"
-  "\022<\n\010monitors\030\010 \003(\0132*.platform_detection_"
-  "module.Machine.Monitor\0224\n\004gpus\030\t \003(\0132&.p"
-  "latform_detection_module.Machine.GPU\022K\n\020"
-  "network_adapters\030\n \003(\01321.platform_detect"
-  "ion_module.Machine.NetworkAdapter\032\226\001\n\003CP"
-  "U\0223\n\007bitness\030\001 \001(\0162\".platform_detection_"
-  "module.Bitness\022\032\n\022logical_core_count\030\002 \001"
-  "(\005\022\r\n\005brand\030\003 \001(\t\022\016\n\006vendor\030\004 \001(\t\022\r\n\005mod"
-  "el\030\005 \001(\005\022\020\n\010stepping\030\006 \001(\005\032\223\001\n\002VM\022\027\n\017is_"
-  "suspected_vm\030\001 \001(\010\022\032\n\022has_hypervisor_bit"
-  "\030\002 \001(\010\022\027\n\017hypervisor_name\030\003 \001(\t\022\036\n\026is_hy"
-  "pervisor_guest_os\030\004 \001(\010\022\037\n\027has_vm_execut"
-  "ion_timing\030\005 \001(\010\032\236\001\n\007Monitor\022\014\n\004name\030\001 \001"
-  "(\t\022\035\n\025horizontal_resolution\030\002 \001(\005\022\033\n\023ver"
-  "tical_resolution\030\003 \001(\005\022\026\n\016bits_per_color"
-  "\030\004 \001(\005\022\024\n\014refresh_rate\030\005 \001(\005\022\033\n\023dpi_scal"
-  "ing_percent\030\006 \001(\005\032\340\001\n\003GPU\022\023\n\013description"
-  "\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001(\005\022\021\n\tdevice_id\030\003"
-  " \001(\005\022\020\n\010revision\030\004 \001(\005\022\024\n\014video_memory\030\005"
-  " \001(\003\022=\n\006driver\030\006 \001(\0132-.platform_detectio"
-  "n_module.Machine.GPU.Driver\0327\n\006Driver\022\014\n"
-  "\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017\n\007version\030\003"
-  " \001(\t\032A\n\016NetworkAdapter\022\014\n\004name\030\001 \001(\t\022\023\n\013"
-  "mac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"\362\001\n\023Plat"
-  "formInformation\022\017\n\007version\030\001 \001(\t\022-\n\ttime"
-  "stamp\030\002 \001(\0132\032.google.protobuf.Timestamp\022"
-  ";\n\017process_bitness\030\003 \001(\0162\".platform_dete"
-  "ction_module.Bitness\022)\n\002os\030\004 \001(\0132\035.platf"
-  "orm_detection_module.OS\0223\n\007machine\030\005 \001(\013"
-  "2\".platform_detection_module.Machine*>\n\007"
-  "Bitness\022\023\n\017BITNESS_UNKNOWN\020\000\022\016\n\nBITNESS_"
-  "32\020\001\022\016\n\nBITNESS_64\020\002BFZDgithub.com/ccpga"
-  "mes/eve-proto-go/generated/platform_dete"
-  "ction_moduleb\006proto3"
+  "\n\tpdm.proto\022\010platform\032\037google/protobuf/t"
+  "imestamp.proto\"a\n\017SemanticVersion\022\r\n\005maj"
+  "or\030\001 \001(\r\022\r\n\005minor\030\002 \001(\r\022\r\n\005patch\030\003 \001(\r\022\022"
+  "\n\nprerelease\030\004 \001(\t\022\r\n\005build\030\005 \001(\t\"\276\004\n\002OS"
+  "\022\037\n\004type\030\001 \001(\0162\021.platform.OS.Kind\022\014\n\004nam"
+  "e\030\002 \001(\t\022\"\n\007bitness\030\003 \001(\0162\021.platform.Bitn"
+  "ess\022\025\n\rmajor_version\030\004 \001(\t\022\025\n\rminor_vers"
+  "ion\030\005 \001(\t\022\024\n\014build_number\030\006 \001(\t\022\026\n\016kerne"
+  "l_version\030\007 \001(\t\022\020\n\010username\030\010 \001(\t\022\023\n\013use"
+  "r_locale\030\t \001(\t\022\031\n\021is_remote_session\030\n \001("
+  "\010\0220\n\rgraphics_apis\030\013 \001(\0132\031.platform.OS.G"
+  "raphicsAPIs\022\037\n\004wine\030\014 \001(\0132\021.platform.OS."
+  "Wine\032\222\001\n\014GraphicsAPIs\022\027\n\017metal_supported"
+  "\030\001 \001(\010\022\030\n\020vulkan_supported\030\002 \001(\010\022(\n vulk"
+  "an_highest_supported_version\030\003 \001(\t\022%\n\035d3"
+  "d_highest_supported_version\030\004 \001(\t\032(\n\004Win"
+  "e\022\017\n\007version\030\001 \001(\t\022\017\n\007host_os\030\002 \001(\t\"5\n\004K"
+  "ind\022\013\n\007UNKNOWN\020\000\022\013\n\007WINDOWS\020\001\022\t\n\005MACOS\020\002"
+  "\022\010\n\004WINE\020\003\"\211\010\n\007Machine\022\r\n\005model\030\001 \001(\t\022\014\n"
+  "\004name\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\014\022\024\n\014total_memor"
+  "y\030\004 \001(\003\022\025\n\rmonitor_count\030\005 \001(\005\022\"\n\003cpu\030\006 "
+  "\001(\0132\025.platform.Machine.CPU\022 \n\002vm\030\007 \001(\0132\024"
+  ".platform.Machine.VM\022+\n\010monitors\030\010 \003(\0132\031"
+  ".platform.Machine.Monitor\022#\n\004gpus\030\t \003(\0132"
+  "\025.platform.Machine.GPU\022:\n\020network_adapte"
+  "rs\030\n \003(\0132 .platform.Machine.NetworkAdapt"
+  "er\032\205\001\n\003CPU\022\"\n\007bitness\030\001 \001(\0162\021.platform.B"
+  "itness\022\032\n\022logical_core_count\030\002 \001(\005\022\r\n\005br"
+  "and\030\003 \001(\t\022\016\n\006vendor\030\004 \001(\t\022\r\n\005model\030\005 \001(\005"
+  "\022\020\n\010stepping\030\006 \001(\005\032\223\001\n\002VM\022\027\n\017is_suspecte"
+  "d_vm\030\001 \001(\010\022\032\n\022has_hypervisor_bit\030\002 \001(\010\022\027"
+  "\n\017hypervisor_name\030\003 \001(\t\022\036\n\026is_hypervisor"
+  "_guest_os\030\004 \001(\010\022\037\n\027has_vm_execution_timi"
+  "ng\030\005 \001(\010\032\236\001\n\007Monitor\022\014\n\004name\030\001 \001(\t\022\035\n\025ho"
+  "rizontal_resolution\030\002 \001(\005\022\033\n\023vertical_re"
+  "solution\030\003 \001(\005\022\026\n\016bits_per_color\030\004 \001(\005\022\024"
+  "\n\014refresh_rate\030\005 \001(\005\022\033\n\023dpi_scaling_perc"
+  "ent\030\006 \001(\005\032\317\001\n\003GPU\022\023\n\013description\030\001 \001(\t\022\021"
+  "\n\tvendor_id\030\002 \001(\005\022\021\n\tdevice_id\030\003 \001(\005\022\020\n\010"
+  "revision\030\004 \001(\005\022\024\n\014video_memory\030\005 \001(\003\022,\n\006"
+  "driver\030\006 \001(\0132\034.platform.Machine.GPU.Driv"
+  "er\0327\n\006Driver\022\014\n\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001"
+  "(\t\022\017\n\007version\030\003 \001(\t\032A\n\016NetworkAdapter\022\014\n"
+  "\004name\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\014\022\014\n\004uuid"
+  "\030\003 \001(\014\"\322\001\n\013Information\022*\n\007version\030\001 \001(\0132"
+  "\031.platform.SemanticVersion\022-\n\ttimestamp\030"
+  "\002 \001(\0132\032.google.protobuf.Timestamp\022*\n\017pro"
+  "cess_bitness\030\003 \001(\0162\021.platform.Bitness\022\030\n"
+  "\002os\030\004 \001(\0132\014.platform.OS\022\"\n\007machine\030\005 \001(\013"
+  "2\021.platform.Machine*>\n\007Bitness\022\023\n\017BITNES"
+  "S_UNKNOWN\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBITNESS_6"
+  "4\020\002B5Z3github.com/ccpgames/eve-proto-go/"
+  "generated/platformb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_pdm_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pdm_2eproto_sccs[11] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pdm_2eproto_sccs[12] = {
+  &scc_info_Information_pdm_2eproto.base,
   &scc_info_Machine_pdm_2eproto.base,
   &scc_info_Machine_CPU_pdm_2eproto.base,
   &scc_info_Machine_GPU_pdm_2eproto.base,
@@ -460,19 +489,19 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pdm
   &scc_info_OS_pdm_2eproto.base,
   &scc_info_OS_GraphicsAPIs_pdm_2eproto.base,
   &scc_info_OS_Wine_pdm_2eproto.base,
-  &scc_info_PlatformInformation_pdm_2eproto.base,
+  &scc_info_SemanticVersion_pdm_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_pdm_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_pdm_2eproto = {
-  false, false, descriptor_table_protodef_pdm_2eproto, "pdm.proto", 2260,
-  &descriptor_table_pdm_2eproto_once, descriptor_table_pdm_2eproto_sccs, descriptor_table_pdm_2eproto_deps, 11, 1,
+  false, false, descriptor_table_protodef_pdm_2eproto, "pdm.proto", 2106,
+  &descriptor_table_pdm_2eproto_once, descriptor_table_pdm_2eproto_sccs, descriptor_table_pdm_2eproto_deps, 12, 1,
   schemas, file_default_instances, TableStruct_pdm_2eproto::offsets,
-  file_level_metadata_pdm_2eproto, 11, file_level_enum_descriptors_pdm_2eproto, file_level_service_descriptors_pdm_2eproto,
+  file_level_metadata_pdm_2eproto, 12, file_level_enum_descriptors_pdm_2eproto, file_level_service_descriptors_pdm_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_pdm_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_pdm_2eproto)), true);
-namespace platform_detection_module {
+namespace platform {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* OS_Kind_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_pdm_2eproto);
   return file_level_enum_descriptors_pdm_2eproto[0];
@@ -516,6 +545,337 @@ bool Bitness_IsValid(int value) {
 
 // ===================================================================
 
+void SemanticVersion::InitAsDefaultInstance() {
+}
+class SemanticVersion::_Internal {
+ public:
+};
+
+SemanticVersion::SemanticVersion(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:platform.SemanticVersion)
+}
+SemanticVersion::SemanticVersion(const SemanticVersion& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  prerelease_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_prerelease().empty()) {
+    prerelease_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_prerelease(),
+      GetArena());
+  }
+  build_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_build().empty()) {
+    build_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_build(),
+      GetArena());
+  }
+  ::memcpy(&major_, &from.major_,
+    static_cast<size_t>(reinterpret_cast<char*>(&patch_) -
+    reinterpret_cast<char*>(&major_)) + sizeof(patch_));
+  // @@protoc_insertion_point(copy_constructor:platform.SemanticVersion)
+}
+
+void SemanticVersion::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SemanticVersion_pdm_2eproto.base);
+  prerelease_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  build_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&major_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&patch_) -
+      reinterpret_cast<char*>(&major_)) + sizeof(patch_));
+}
+
+SemanticVersion::~SemanticVersion() {
+  // @@protoc_insertion_point(destructor:platform.SemanticVersion)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void SemanticVersion::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  prerelease_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  build_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void SemanticVersion::ArenaDtor(void* object) {
+  SemanticVersion* _this = reinterpret_cast< SemanticVersion* >(object);
+  (void)_this;
+}
+void SemanticVersion::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void SemanticVersion::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const SemanticVersion& SemanticVersion::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SemanticVersion_pdm_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void SemanticVersion::Clear() {
+// @@protoc_insertion_point(message_clear_start:platform.SemanticVersion)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  prerelease_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  build_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&major_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&patch_) -
+      reinterpret_cast<char*>(&major_)) + sizeof(patch_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SemanticVersion::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // uint32 major = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          major_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 minor = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          minor_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 patch = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          patch_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string prerelease = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_prerelease();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.SemanticVersion.prerelease"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string build = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_build();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.SemanticVersion.build"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* SemanticVersion::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:platform.SemanticVersion)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint32 major = 1;
+  if (this->major() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_major(), target);
+  }
+
+  // uint32 minor = 2;
+  if (this->minor() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_minor(), target);
+  }
+
+  // uint32 patch = 3;
+  if (this->patch() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_patch(), target);
+  }
+
+  // string prerelease = 4;
+  if (this->prerelease().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_prerelease().data(), static_cast<int>(this->_internal_prerelease().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "platform.SemanticVersion.prerelease");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_prerelease(), target);
+  }
+
+  // string build = 5;
+  if (this->build().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_build().data(), static_cast<int>(this->_internal_build().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "platform.SemanticVersion.build");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_build(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:platform.SemanticVersion)
+  return target;
+}
+
+size_t SemanticVersion::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:platform.SemanticVersion)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string prerelease = 4;
+  if (this->prerelease().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_prerelease());
+  }
+
+  // string build = 5;
+  if (this->build().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_build());
+  }
+
+  // uint32 major = 1;
+  if (this->major() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_major());
+  }
+
+  // uint32 minor = 2;
+  if (this->minor() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_minor());
+  }
+
+  // uint32 patch = 3;
+  if (this->patch() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_patch());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void SemanticVersion::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:platform.SemanticVersion)
+  GOOGLE_DCHECK_NE(&from, this);
+  const SemanticVersion* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SemanticVersion>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.SemanticVersion)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.SemanticVersion)
+    MergeFrom(*source);
+  }
+}
+
+void SemanticVersion::MergeFrom(const SemanticVersion& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.SemanticVersion)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.prerelease().size() > 0) {
+    _internal_set_prerelease(from._internal_prerelease());
+  }
+  if (from.build().size() > 0) {
+    _internal_set_build(from._internal_build());
+  }
+  if (from.major() != 0) {
+    _internal_set_major(from._internal_major());
+  }
+  if (from.minor() != 0) {
+    _internal_set_minor(from._internal_minor());
+  }
+  if (from.patch() != 0) {
+    _internal_set_patch(from._internal_patch());
+  }
+}
+
+void SemanticVersion::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:platform.SemanticVersion)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void SemanticVersion::CopyFrom(const SemanticVersion& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.SemanticVersion)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SemanticVersion::IsInitialized() const {
+  return true;
+}
+
+void SemanticVersion::InternalSwap(SemanticVersion* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  prerelease_.Swap(&other->prerelease_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  build_.Swap(&other->build_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SemanticVersion, patch_)
+      + sizeof(SemanticVersion::patch_)
+      - PROTOBUF_FIELD_OFFSET(SemanticVersion, major_)>(
+          reinterpret_cast<char*>(&major_),
+          reinterpret_cast<char*>(&other->major_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SemanticVersion::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 void OS_GraphicsAPIs::InitAsDefaultInstance() {
 }
 class OS_GraphicsAPIs::_Internal {
@@ -526,7 +886,7 @@ OS_GraphicsAPIs::OS_GraphicsAPIs(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.OS.GraphicsAPIs)
+  // @@protoc_insertion_point(arena_constructor:platform.OS.GraphicsAPIs)
 }
 OS_GraphicsAPIs::OS_GraphicsAPIs(const OS_GraphicsAPIs& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -544,7 +904,7 @@ OS_GraphicsAPIs::OS_GraphicsAPIs(const OS_GraphicsAPIs& from)
   ::memcpy(&metal_supported_, &from.metal_supported_,
     static_cast<size_t>(reinterpret_cast<char*>(&vulkan_supported_) -
     reinterpret_cast<char*>(&metal_supported_)) + sizeof(vulkan_supported_));
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.OS.GraphicsAPIs)
+  // @@protoc_insertion_point(copy_constructor:platform.OS.GraphicsAPIs)
 }
 
 void OS_GraphicsAPIs::SharedCtor() {
@@ -557,7 +917,7 @@ void OS_GraphicsAPIs::SharedCtor() {
 }
 
 OS_GraphicsAPIs::~OS_GraphicsAPIs() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.OS.GraphicsAPIs)
+  // @@protoc_insertion_point(destructor:platform.OS.GraphicsAPIs)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -584,7 +944,7 @@ const OS_GraphicsAPIs& OS_GraphicsAPIs::default_instance() {
 
 
 void OS_GraphicsAPIs::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.OS.GraphicsAPIs)
+// @@protoc_insertion_point(message_clear_start:platform.OS.GraphicsAPIs)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -624,7 +984,7 @@ const char* OS_GraphicsAPIs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_vulkan_highest_supported_version();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.GraphicsAPIs.vulkan_highest_supported_version"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -633,7 +993,7 @@ const char* OS_GraphicsAPIs::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_d3d_highest_supported_version();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.GraphicsAPIs.d3d_highest_supported_version"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -661,7 +1021,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* OS_GraphicsAPIs::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.OS.GraphicsAPIs)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.OS.GraphicsAPIs)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -682,7 +1042,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vulkan_highest_supported_version().data(), static_cast<int>(this->_internal_vulkan_highest_supported_version().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.GraphicsAPIs.vulkan_highest_supported_version");
+      "platform.OS.GraphicsAPIs.vulkan_highest_supported_version");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_vulkan_highest_supported_version(), target);
   }
@@ -692,7 +1052,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_d3d_highest_supported_version().data(), static_cast<int>(this->_internal_d3d_highest_supported_version().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.GraphicsAPIs.d3d_highest_supported_version");
+      "platform.OS.GraphicsAPIs.d3d_highest_supported_version");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_d3d_highest_supported_version(), target);
   }
@@ -701,12 +1061,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.OS.GraphicsAPIs)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.OS.GraphicsAPIs)
   return target;
 }
 
 size_t OS_GraphicsAPIs::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.OS.GraphicsAPIs)
+// @@protoc_insertion_point(message_byte_size_start:platform.OS.GraphicsAPIs)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -747,22 +1107,22 @@ size_t OS_GraphicsAPIs::ByteSizeLong() const {
 }
 
 void OS_GraphicsAPIs::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.OS.GraphicsAPIs)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.OS.GraphicsAPIs)
   GOOGLE_DCHECK_NE(&from, this);
   const OS_GraphicsAPIs* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OS_GraphicsAPIs>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.OS.GraphicsAPIs)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.OS.GraphicsAPIs)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.OS.GraphicsAPIs)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.OS.GraphicsAPIs)
     MergeFrom(*source);
   }
 }
 
 void OS_GraphicsAPIs::MergeFrom(const OS_GraphicsAPIs& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.OS.GraphicsAPIs)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.OS.GraphicsAPIs)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -783,14 +1143,14 @@ void OS_GraphicsAPIs::MergeFrom(const OS_GraphicsAPIs& from) {
 }
 
 void OS_GraphicsAPIs::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.OS.GraphicsAPIs)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.OS.GraphicsAPIs)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void OS_GraphicsAPIs::CopyFrom(const OS_GraphicsAPIs& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.OS.GraphicsAPIs)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.OS.GraphicsAPIs)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -830,7 +1190,7 @@ OS_Wine::OS_Wine(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.OS.Wine)
+  // @@protoc_insertion_point(arena_constructor:platform.OS.Wine)
 }
 OS_Wine::OS_Wine(const OS_Wine& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -845,7 +1205,7 @@ OS_Wine::OS_Wine(const OS_Wine& from)
     host_os_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_host_os(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.OS.Wine)
+  // @@protoc_insertion_point(copy_constructor:platform.OS.Wine)
 }
 
 void OS_Wine::SharedCtor() {
@@ -855,7 +1215,7 @@ void OS_Wine::SharedCtor() {
 }
 
 OS_Wine::~OS_Wine() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.OS.Wine)
+  // @@protoc_insertion_point(destructor:platform.OS.Wine)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -882,7 +1242,7 @@ const OS_Wine& OS_Wine::default_instance() {
 
 
 void OS_Wine::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.OS.Wine)
+// @@protoc_insertion_point(message_clear_start:platform.OS.Wine)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -905,7 +1265,7 @@ const char* OS_Wine::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_version();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.Wine.version"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.Wine.version"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -914,7 +1274,7 @@ const char* OS_Wine::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_host_os();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.Wine.host_os"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.Wine.host_os"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -942,7 +1302,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* OS_Wine::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.OS.Wine)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.OS.Wine)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -951,7 +1311,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.Wine.version");
+      "platform.OS.Wine.version");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_version(), target);
   }
@@ -961,7 +1321,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_host_os().data(), static_cast<int>(this->_internal_host_os().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.Wine.host_os");
+      "platform.OS.Wine.host_os");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_host_os(), target);
   }
@@ -970,12 +1330,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.OS.Wine)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.OS.Wine)
   return target;
 }
 
 size_t OS_Wine::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.OS.Wine)
+// @@protoc_insertion_point(message_byte_size_start:platform.OS.Wine)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1006,22 +1366,22 @@ size_t OS_Wine::ByteSizeLong() const {
 }
 
 void OS_Wine::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.OS.Wine)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.OS.Wine)
   GOOGLE_DCHECK_NE(&from, this);
   const OS_Wine* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OS_Wine>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.OS.Wine)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.OS.Wine)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.OS.Wine)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.OS.Wine)
     MergeFrom(*source);
   }
 }
 
 void OS_Wine::MergeFrom(const OS_Wine& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.OS.Wine)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.OS.Wine)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1036,14 +1396,14 @@ void OS_Wine::MergeFrom(const OS_Wine& from) {
 }
 
 void OS_Wine::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.OS.Wine)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.OS.Wine)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void OS_Wine::CopyFrom(const OS_Wine& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.OS.Wine)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.OS.Wine)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1068,22 +1428,22 @@ void OS_Wine::InternalSwap(OS_Wine* other) {
 // ===================================================================
 
 void OS::InitAsDefaultInstance() {
-  ::platform_detection_module::_OS_default_instance_._instance.get_mutable()->graphics_apis_ = const_cast< ::platform_detection_module::OS_GraphicsAPIs*>(
-      ::platform_detection_module::OS_GraphicsAPIs::internal_default_instance());
-  ::platform_detection_module::_OS_default_instance_._instance.get_mutable()->wine_ = const_cast< ::platform_detection_module::OS_Wine*>(
-      ::platform_detection_module::OS_Wine::internal_default_instance());
+  ::platform::_OS_default_instance_._instance.get_mutable()->graphics_apis_ = const_cast< ::platform::OS_GraphicsAPIs*>(
+      ::platform::OS_GraphicsAPIs::internal_default_instance());
+  ::platform::_OS_default_instance_._instance.get_mutable()->wine_ = const_cast< ::platform::OS_Wine*>(
+      ::platform::OS_Wine::internal_default_instance());
 }
 class OS::_Internal {
  public:
-  static const ::platform_detection_module::OS_GraphicsAPIs& graphics_apis(const OS* msg);
-  static const ::platform_detection_module::OS_Wine& wine(const OS* msg);
+  static const ::platform::OS_GraphicsAPIs& graphics_apis(const OS* msg);
+  static const ::platform::OS_Wine& wine(const OS* msg);
 };
 
-const ::platform_detection_module::OS_GraphicsAPIs&
+const ::platform::OS_GraphicsAPIs&
 OS::_Internal::graphics_apis(const OS* msg) {
   return *msg->graphics_apis_;
 }
-const ::platform_detection_module::OS_Wine&
+const ::platform::OS_Wine&
 OS::_Internal::wine(const OS* msg) {
   return *msg->wine_;
 }
@@ -1091,7 +1451,7 @@ OS::OS(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.OS)
+  // @@protoc_insertion_point(arena_constructor:platform.OS)
 }
 OS::OS(const OS& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1132,19 +1492,19 @@ OS::OS(const OS& from)
       GetArena());
   }
   if (from._internal_has_graphics_apis()) {
-    graphics_apis_ = new ::platform_detection_module::OS_GraphicsAPIs(*from.graphics_apis_);
+    graphics_apis_ = new ::platform::OS_GraphicsAPIs(*from.graphics_apis_);
   } else {
     graphics_apis_ = nullptr;
   }
   if (from._internal_has_wine()) {
-    wine_ = new ::platform_detection_module::OS_Wine(*from.wine_);
+    wine_ = new ::platform::OS_Wine(*from.wine_);
   } else {
     wine_ = nullptr;
   }
   ::memcpy(&type_, &from.type_,
     static_cast<size_t>(reinterpret_cast<char*>(&is_remote_session_) -
     reinterpret_cast<char*>(&type_)) + sizeof(is_remote_session_));
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.OS)
+  // @@protoc_insertion_point(copy_constructor:platform.OS)
 }
 
 void OS::SharedCtor() {
@@ -1162,7 +1522,7 @@ void OS::SharedCtor() {
 }
 
 OS::~OS() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.OS)
+  // @@protoc_insertion_point(destructor:platform.OS)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -1196,7 +1556,7 @@ const OS& OS::default_instance() {
 
 
 void OS::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.OS)
+// @@protoc_insertion_point(message_clear_start:platform.OS)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1230,12 +1590,12 @@ const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::interna
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .platform_detection_module.OS.Kind type = 1;
+      // .platform.OS.Kind type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_type(static_cast<::platform_detection_module::OS_Kind>(val));
+          _internal_set_type(static_cast<::platform::OS_Kind>(val));
         } else goto handle_unusual;
         continue;
       // string name = 2;
@@ -1243,16 +1603,16 @@ const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::interna
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .platform_detection_module.Bitness bitness = 3;
+      // .platform.Bitness bitness = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_bitness(static_cast<::platform_detection_module::Bitness>(val));
+          _internal_set_bitness(static_cast<::platform::Bitness>(val));
         } else goto handle_unusual;
         continue;
       // string major_version = 4;
@@ -1260,7 +1620,7 @@ const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::interna
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_major_version();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.major_version"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.major_version"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1269,7 +1629,7 @@ const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::interna
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_minor_version();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.minor_version"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.minor_version"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1278,7 +1638,7 @@ const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::interna
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           auto str = _internal_mutable_build_number();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.build_number"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.build_number"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1287,7 +1647,7 @@ const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::interna
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           auto str = _internal_mutable_kernel_version();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.kernel_version"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.kernel_version"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1296,7 +1656,7 @@ const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::interna
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           auto str = _internal_mutable_username();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.username"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.username"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1305,7 +1665,7 @@ const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::interna
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
           auto str = _internal_mutable_user_locale();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.OS.user_locale"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.OS.user_locale"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1316,14 +1676,14 @@ const char* OS::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::interna
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .platform_detection_module.OS.GraphicsAPIs graphics_apis = 11;
+      // .platform.OS.GraphicsAPIs graphics_apis = 11;
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_graphics_apis(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .platform_detection_module.OS.Wine wine = 12;
+      // .platform.OS.Wine wine = 12;
       case 12:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
           ptr = ctx->ParseMessage(_internal_mutable_wine(), ptr);
@@ -1354,11 +1714,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* OS::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.OS)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.OS)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .platform_detection_module.OS.Kind type = 1;
+  // .platform.OS.Kind type = 1;
   if (this->type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -1370,12 +1730,12 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.name");
+      "platform.OS.name");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_name(), target);
   }
 
-  // .platform_detection_module.Bitness bitness = 3;
+  // .platform.Bitness bitness = 3;
   if (this->bitness() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -1387,7 +1747,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_major_version().data(), static_cast<int>(this->_internal_major_version().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.major_version");
+      "platform.OS.major_version");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_major_version(), target);
   }
@@ -1397,7 +1757,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_minor_version().data(), static_cast<int>(this->_internal_minor_version().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.minor_version");
+      "platform.OS.minor_version");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_minor_version(), target);
   }
@@ -1407,7 +1767,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_build_number().data(), static_cast<int>(this->_internal_build_number().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.build_number");
+      "platform.OS.build_number");
     target = stream->WriteStringMaybeAliased(
         6, this->_internal_build_number(), target);
   }
@@ -1417,7 +1777,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_kernel_version().data(), static_cast<int>(this->_internal_kernel_version().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.kernel_version");
+      "platform.OS.kernel_version");
     target = stream->WriteStringMaybeAliased(
         7, this->_internal_kernel_version(), target);
   }
@@ -1427,7 +1787,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.username");
+      "platform.OS.username");
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_username(), target);
   }
@@ -1437,7 +1797,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_user_locale().data(), static_cast<int>(this->_internal_user_locale().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.OS.user_locale");
+      "platform.OS.user_locale");
     target = stream->WriteStringMaybeAliased(
         9, this->_internal_user_locale(), target);
   }
@@ -1448,7 +1808,7 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(10, this->_internal_is_remote_session(), target);
   }
 
-  // .platform_detection_module.OS.GraphicsAPIs graphics_apis = 11;
+  // .platform.OS.GraphicsAPIs graphics_apis = 11;
   if (this->has_graphics_apis()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1456,7 +1816,7 @@ failure:
         11, _Internal::graphics_apis(this), target, stream);
   }
 
-  // .platform_detection_module.OS.Wine wine = 12;
+  // .platform.OS.Wine wine = 12;
   if (this->has_wine()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -1468,12 +1828,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.OS)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.OS)
   return target;
 }
 
 size_t OS::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.OS)
+// @@protoc_insertion_point(message_byte_size_start:platform.OS)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1529,27 +1889,27 @@ size_t OS::ByteSizeLong() const {
         this->_internal_user_locale());
   }
 
-  // .platform_detection_module.OS.GraphicsAPIs graphics_apis = 11;
+  // .platform.OS.GraphicsAPIs graphics_apis = 11;
   if (this->has_graphics_apis()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *graphics_apis_);
   }
 
-  // .platform_detection_module.OS.Wine wine = 12;
+  // .platform.OS.Wine wine = 12;
   if (this->has_wine()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *wine_);
   }
 
-  // .platform_detection_module.OS.Kind type = 1;
+  // .platform.OS.Kind type = 1;
   if (this->type() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
   }
 
-  // .platform_detection_module.Bitness bitness = 3;
+  // .platform.Bitness bitness = 3;
   if (this->bitness() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_bitness());
@@ -1570,22 +1930,22 @@ size_t OS::ByteSizeLong() const {
 }
 
 void OS::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.OS)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.OS)
   GOOGLE_DCHECK_NE(&from, this);
   const OS* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OS>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.OS)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.OS)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.OS)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.OS)
     MergeFrom(*source);
   }
 }
 
 void OS::MergeFrom(const OS& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.OS)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.OS)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1613,10 +1973,10 @@ void OS::MergeFrom(const OS& from) {
     _internal_set_user_locale(from._internal_user_locale());
   }
   if (from.has_graphics_apis()) {
-    _internal_mutable_graphics_apis()->::platform_detection_module::OS_GraphicsAPIs::MergeFrom(from._internal_graphics_apis());
+    _internal_mutable_graphics_apis()->::platform::OS_GraphicsAPIs::MergeFrom(from._internal_graphics_apis());
   }
   if (from.has_wine()) {
-    _internal_mutable_wine()->::platform_detection_module::OS_Wine::MergeFrom(from._internal_wine());
+    _internal_mutable_wine()->::platform::OS_Wine::MergeFrom(from._internal_wine());
   }
   if (from.type() != 0) {
     _internal_set_type(from._internal_type());
@@ -1630,14 +1990,14 @@ void OS::MergeFrom(const OS& from) {
 }
 
 void OS::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.OS)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.OS)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void OS::CopyFrom(const OS& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.OS)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.OS)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1682,7 +2042,7 @@ Machine_CPU::Machine_CPU(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.Machine.CPU)
+  // @@protoc_insertion_point(arena_constructor:platform.Machine.CPU)
 }
 Machine_CPU::Machine_CPU(const Machine_CPU& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1700,7 +2060,7 @@ Machine_CPU::Machine_CPU(const Machine_CPU& from)
   ::memcpy(&bitness_, &from.bitness_,
     static_cast<size_t>(reinterpret_cast<char*>(&stepping_) -
     reinterpret_cast<char*>(&bitness_)) + sizeof(stepping_));
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.Machine.CPU)
+  // @@protoc_insertion_point(copy_constructor:platform.Machine.CPU)
 }
 
 void Machine_CPU::SharedCtor() {
@@ -1713,7 +2073,7 @@ void Machine_CPU::SharedCtor() {
 }
 
 Machine_CPU::~Machine_CPU() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.Machine.CPU)
+  // @@protoc_insertion_point(destructor:platform.Machine.CPU)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -1740,7 +2100,7 @@ const Machine_CPU& Machine_CPU::default_instance() {
 
 
 void Machine_CPU::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.Machine.CPU)
+// @@protoc_insertion_point(message_clear_start:platform.Machine.CPU)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1761,12 +2121,12 @@ const char* Machine_CPU::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // .platform_detection_module.Bitness bitness = 1;
+      // .platform.Bitness bitness = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_bitness(static_cast<::platform_detection_module::Bitness>(val));
+          _internal_set_bitness(static_cast<::platform::Bitness>(val));
         } else goto handle_unusual;
         continue;
       // int32 logical_core_count = 2;
@@ -1781,7 +2141,7 @@ const char* Machine_CPU::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_brand();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.CPU.brand"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.CPU.brand"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1790,7 +2150,7 @@ const char* Machine_CPU::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_vendor();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.CPU.vendor"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.CPU.vendor"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1832,11 +2192,11 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* Machine_CPU::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.Machine.CPU)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Machine.CPU)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .platform_detection_module.Bitness bitness = 1;
+  // .platform.Bitness bitness = 1;
   if (this->bitness() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
@@ -1854,7 +2214,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_brand().data(), static_cast<int>(this->_internal_brand().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.CPU.brand");
+      "platform.Machine.CPU.brand");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_brand(), target);
   }
@@ -1864,7 +2224,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vendor().data(), static_cast<int>(this->_internal_vendor().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.CPU.vendor");
+      "platform.Machine.CPU.vendor");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_vendor(), target);
   }
@@ -1885,12 +2245,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.Machine.CPU)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Machine.CPU)
   return target;
 }
 
 size_t Machine_CPU::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.Machine.CPU)
+// @@protoc_insertion_point(message_byte_size_start:platform.Machine.CPU)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1911,7 +2271,7 @@ size_t Machine_CPU::ByteSizeLong() const {
         this->_internal_vendor());
   }
 
-  // .platform_detection_module.Bitness bitness = 1;
+  // .platform.Bitness bitness = 1;
   if (this->bitness() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_bitness());
@@ -1948,22 +2308,22 @@ size_t Machine_CPU::ByteSizeLong() const {
 }
 
 void Machine_CPU::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.Machine.CPU)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Machine.CPU)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_CPU* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_CPU>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.Machine.CPU)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Machine.CPU)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.Machine.CPU)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Machine.CPU)
     MergeFrom(*source);
   }
 }
 
 void Machine_CPU::MergeFrom(const Machine_CPU& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.Machine.CPU)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Machine.CPU)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1990,14 +2350,14 @@ void Machine_CPU::MergeFrom(const Machine_CPU& from) {
 }
 
 void Machine_CPU::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.Machine.CPU)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Machine.CPU)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Machine_CPU::CopyFrom(const Machine_CPU& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.Machine.CPU)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Machine.CPU)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2037,7 +2397,7 @@ Machine_VM::Machine_VM(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.Machine.VM)
+  // @@protoc_insertion_point(arena_constructor:platform.Machine.VM)
 }
 Machine_VM::Machine_VM(const Machine_VM& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2050,7 +2410,7 @@ Machine_VM::Machine_VM(const Machine_VM& from)
   ::memcpy(&is_suspected_vm_, &from.is_suspected_vm_,
     static_cast<size_t>(reinterpret_cast<char*>(&has_vm_execution_timing_) -
     reinterpret_cast<char*>(&is_suspected_vm_)) + sizeof(has_vm_execution_timing_));
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.Machine.VM)
+  // @@protoc_insertion_point(copy_constructor:platform.Machine.VM)
 }
 
 void Machine_VM::SharedCtor() {
@@ -2062,7 +2422,7 @@ void Machine_VM::SharedCtor() {
 }
 
 Machine_VM::~Machine_VM() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.Machine.VM)
+  // @@protoc_insertion_point(destructor:platform.Machine.VM)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -2088,7 +2448,7 @@ const Machine_VM& Machine_VM::default_instance() {
 
 
 void Machine_VM::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.Machine.VM)
+// @@protoc_insertion_point(message_clear_start:platform.Machine.VM)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2127,7 +2487,7 @@ const char* Machine_VM::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_hypervisor_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.VM.hypervisor_name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.VM.hypervisor_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2169,7 +2529,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* Machine_VM::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.Machine.VM)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Machine.VM)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2190,7 +2550,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_hypervisor_name().data(), static_cast<int>(this->_internal_hypervisor_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.VM.hypervisor_name");
+      "platform.Machine.VM.hypervisor_name");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_hypervisor_name(), target);
   }
@@ -2211,12 +2571,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.Machine.VM)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Machine.VM)
   return target;
 }
 
 size_t Machine_VM::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.Machine.VM)
+// @@protoc_insertion_point(message_byte_size_start:platform.Machine.VM)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2260,22 +2620,22 @@ size_t Machine_VM::ByteSizeLong() const {
 }
 
 void Machine_VM::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.Machine.VM)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Machine.VM)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_VM* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_VM>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.Machine.VM)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Machine.VM)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.Machine.VM)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Machine.VM)
     MergeFrom(*source);
   }
 }
 
 void Machine_VM::MergeFrom(const Machine_VM& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.Machine.VM)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Machine.VM)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2299,14 +2659,14 @@ void Machine_VM::MergeFrom(const Machine_VM& from) {
 }
 
 void Machine_VM::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.Machine.VM)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Machine.VM)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Machine_VM::CopyFrom(const Machine_VM& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.Machine.VM)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Machine.VM)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2345,7 +2705,7 @@ Machine_Monitor::Machine_Monitor(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.Machine.Monitor)
+  // @@protoc_insertion_point(arena_constructor:platform.Machine.Monitor)
 }
 Machine_Monitor::Machine_Monitor(const Machine_Monitor& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2358,7 +2718,7 @@ Machine_Monitor::Machine_Monitor(const Machine_Monitor& from)
   ::memcpy(&horizontal_resolution_, &from.horizontal_resolution_,
     static_cast<size_t>(reinterpret_cast<char*>(&dpi_scaling_percent_) -
     reinterpret_cast<char*>(&horizontal_resolution_)) + sizeof(dpi_scaling_percent_));
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.Machine.Monitor)
+  // @@protoc_insertion_point(copy_constructor:platform.Machine.Monitor)
 }
 
 void Machine_Monitor::SharedCtor() {
@@ -2370,7 +2730,7 @@ void Machine_Monitor::SharedCtor() {
 }
 
 Machine_Monitor::~Machine_Monitor() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.Machine.Monitor)
+  // @@protoc_insertion_point(destructor:platform.Machine.Monitor)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -2396,7 +2756,7 @@ const Machine_Monitor& Machine_Monitor::default_instance() {
 
 
 void Machine_Monitor::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.Machine.Monitor)
+// @@protoc_insertion_point(message_clear_start:platform.Machine.Monitor)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2421,7 +2781,7 @@ const char* Machine_Monitor::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.Monitor.name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.Monitor.name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2484,7 +2844,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* Machine_Monitor::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.Machine.Monitor)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Machine.Monitor)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2493,7 +2853,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.Monitor.name");
+      "platform.Machine.Monitor.name");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_name(), target);
   }
@@ -2532,12 +2892,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.Machine.Monitor)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Machine.Monitor)
   return target;
 }
 
 size_t Machine_Monitor::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.Machine.Monitor)
+// @@protoc_insertion_point(message_byte_size_start:platform.Machine.Monitor)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2596,22 +2956,22 @@ size_t Machine_Monitor::ByteSizeLong() const {
 }
 
 void Machine_Monitor::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.Machine.Monitor)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Machine.Monitor)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_Monitor* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_Monitor>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.Machine.Monitor)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Machine.Monitor)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.Machine.Monitor)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Machine.Monitor)
     MergeFrom(*source);
   }
 }
 
 void Machine_Monitor::MergeFrom(const Machine_Monitor& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.Machine.Monitor)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Machine.Monitor)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2638,14 +2998,14 @@ void Machine_Monitor::MergeFrom(const Machine_Monitor& from) {
 }
 
 void Machine_Monitor::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.Machine.Monitor)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Machine.Monitor)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Machine_Monitor::CopyFrom(const Machine_Monitor& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.Machine.Monitor)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Machine.Monitor)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2684,7 +3044,7 @@ Machine_GPU_Driver::Machine_GPU_Driver(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.Machine.GPU.Driver)
+  // @@protoc_insertion_point(arena_constructor:platform.Machine.GPU.Driver)
 }
 Machine_GPU_Driver::Machine_GPU_Driver(const Machine_GPU_Driver& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2704,7 +3064,7 @@ Machine_GPU_Driver::Machine_GPU_Driver(const Machine_GPU_Driver& from)
     version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_version(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.Machine.GPU.Driver)
+  // @@protoc_insertion_point(copy_constructor:platform.Machine.GPU.Driver)
 }
 
 void Machine_GPU_Driver::SharedCtor() {
@@ -2715,7 +3075,7 @@ void Machine_GPU_Driver::SharedCtor() {
 }
 
 Machine_GPU_Driver::~Machine_GPU_Driver() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.Machine.GPU.Driver)
+  // @@protoc_insertion_point(destructor:platform.Machine.GPU.Driver)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -2743,7 +3103,7 @@ const Machine_GPU_Driver& Machine_GPU_Driver::default_instance() {
 
 
 void Machine_GPU_Driver::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.Machine.GPU.Driver)
+// @@protoc_insertion_point(message_clear_start:platform.Machine.GPU.Driver)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2767,7 +3127,7 @@ const char* Machine_GPU_Driver::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_date();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.GPU.Driver.date"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.GPU.Driver.date"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2776,7 +3136,7 @@ const char* Machine_GPU_Driver::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_vendor();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.GPU.Driver.vendor"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.GPU.Driver.vendor"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2785,7 +3145,7 @@ const char* Machine_GPU_Driver::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_version();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.GPU.Driver.version"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.GPU.Driver.version"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2813,7 +3173,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* Machine_GPU_Driver::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.Machine.GPU.Driver)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Machine.GPU.Driver)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2822,7 +3182,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_date().data(), static_cast<int>(this->_internal_date().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.GPU.Driver.date");
+      "platform.Machine.GPU.Driver.date");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_date(), target);
   }
@@ -2832,7 +3192,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_vendor().data(), static_cast<int>(this->_internal_vendor().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.GPU.Driver.vendor");
+      "platform.Machine.GPU.Driver.vendor");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_vendor(), target);
   }
@@ -2842,7 +3202,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.GPU.Driver.version");
+      "platform.Machine.GPU.Driver.version");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_version(), target);
   }
@@ -2851,12 +3211,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.Machine.GPU.Driver)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Machine.GPU.Driver)
   return target;
 }
 
 size_t Machine_GPU_Driver::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.Machine.GPU.Driver)
+// @@protoc_insertion_point(message_byte_size_start:platform.Machine.GPU.Driver)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2894,22 +3254,22 @@ size_t Machine_GPU_Driver::ByteSizeLong() const {
 }
 
 void Machine_GPU_Driver::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.Machine.GPU.Driver)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Machine.GPU.Driver)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_GPU_Driver* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_GPU_Driver>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.Machine.GPU.Driver)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Machine.GPU.Driver)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.Machine.GPU.Driver)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Machine.GPU.Driver)
     MergeFrom(*source);
   }
 }
 
 void Machine_GPU_Driver::MergeFrom(const Machine_GPU_Driver& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.Machine.GPU.Driver)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Machine.GPU.Driver)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -2927,14 +3287,14 @@ void Machine_GPU_Driver::MergeFrom(const Machine_GPU_Driver& from) {
 }
 
 void Machine_GPU_Driver::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.Machine.GPU.Driver)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Machine.GPU.Driver)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Machine_GPU_Driver::CopyFrom(const Machine_GPU_Driver& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.Machine.GPU.Driver)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Machine.GPU.Driver)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2960,15 +3320,15 @@ void Machine_GPU_Driver::InternalSwap(Machine_GPU_Driver* other) {
 // ===================================================================
 
 void Machine_GPU::InitAsDefaultInstance() {
-  ::platform_detection_module::_Machine_GPU_default_instance_._instance.get_mutable()->driver_ = const_cast< ::platform_detection_module::Machine_GPU_Driver*>(
-      ::platform_detection_module::Machine_GPU_Driver::internal_default_instance());
+  ::platform::_Machine_GPU_default_instance_._instance.get_mutable()->driver_ = const_cast< ::platform::Machine_GPU_Driver*>(
+      ::platform::Machine_GPU_Driver::internal_default_instance());
 }
 class Machine_GPU::_Internal {
  public:
-  static const ::platform_detection_module::Machine_GPU_Driver& driver(const Machine_GPU* msg);
+  static const ::platform::Machine_GPU_Driver& driver(const Machine_GPU* msg);
 };
 
-const ::platform_detection_module::Machine_GPU_Driver&
+const ::platform::Machine_GPU_Driver&
 Machine_GPU::_Internal::driver(const Machine_GPU* msg) {
   return *msg->driver_;
 }
@@ -2976,7 +3336,7 @@ Machine_GPU::Machine_GPU(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.Machine.GPU)
+  // @@protoc_insertion_point(arena_constructor:platform.Machine.GPU)
 }
 Machine_GPU::Machine_GPU(const Machine_GPU& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2987,14 +3347,14 @@ Machine_GPU::Machine_GPU(const Machine_GPU& from)
       GetArena());
   }
   if (from._internal_has_driver()) {
-    driver_ = new ::platform_detection_module::Machine_GPU_Driver(*from.driver_);
+    driver_ = new ::platform::Machine_GPU_Driver(*from.driver_);
   } else {
     driver_ = nullptr;
   }
   ::memcpy(&vendor_id_, &from.vendor_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&revision_) -
     reinterpret_cast<char*>(&vendor_id_)) + sizeof(revision_));
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.Machine.GPU)
+  // @@protoc_insertion_point(copy_constructor:platform.Machine.GPU)
 }
 
 void Machine_GPU::SharedCtor() {
@@ -3006,7 +3366,7 @@ void Machine_GPU::SharedCtor() {
 }
 
 Machine_GPU::~Machine_GPU() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.Machine.GPU)
+  // @@protoc_insertion_point(destructor:platform.Machine.GPU)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3033,7 +3393,7 @@ const Machine_GPU& Machine_GPU::default_instance() {
 
 
 void Machine_GPU::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.Machine.GPU)
+// @@protoc_insertion_point(message_clear_start:platform.Machine.GPU)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3062,7 +3422,7 @@ const char* Machine_GPU::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_description();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.GPU.description"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.GPU.description"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3094,7 +3454,7 @@ const char* Machine_GPU::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .platform_detection_module.Machine.GPU.Driver driver = 6;
+      // .platform.Machine.GPU.Driver driver = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_driver(), ptr);
@@ -3125,7 +3485,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* Machine_GPU::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.Machine.GPU)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Machine.GPU)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3134,7 +3494,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_description().data(), static_cast<int>(this->_internal_description().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.GPU.description");
+      "platform.Machine.GPU.description");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_description(), target);
   }
@@ -3163,7 +3523,7 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(5, this->_internal_video_memory(), target);
   }
 
-  // .platform_detection_module.Machine.GPU.Driver driver = 6;
+  // .platform.Machine.GPU.Driver driver = 6;
   if (this->has_driver()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3175,12 +3535,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.Machine.GPU)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Machine.GPU)
   return target;
 }
 
 size_t Machine_GPU::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.Machine.GPU)
+// @@protoc_insertion_point(message_byte_size_start:platform.Machine.GPU)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -3194,7 +3554,7 @@ size_t Machine_GPU::ByteSizeLong() const {
         this->_internal_description());
   }
 
-  // .platform_detection_module.Machine.GPU.Driver driver = 6;
+  // .platform.Machine.GPU.Driver driver = 6;
   if (this->has_driver()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3239,22 +3599,22 @@ size_t Machine_GPU::ByteSizeLong() const {
 }
 
 void Machine_GPU::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.Machine.GPU)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Machine.GPU)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_GPU* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_GPU>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.Machine.GPU)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Machine.GPU)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.Machine.GPU)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Machine.GPU)
     MergeFrom(*source);
   }
 }
 
 void Machine_GPU::MergeFrom(const Machine_GPU& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.Machine.GPU)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Machine.GPU)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -3264,7 +3624,7 @@ void Machine_GPU::MergeFrom(const Machine_GPU& from) {
     _internal_set_description(from._internal_description());
   }
   if (from.has_driver()) {
-    _internal_mutable_driver()->::platform_detection_module::Machine_GPU_Driver::MergeFrom(from._internal_driver());
+    _internal_mutable_driver()->::platform::Machine_GPU_Driver::MergeFrom(from._internal_driver());
   }
   if (from.vendor_id() != 0) {
     _internal_set_vendor_id(from._internal_vendor_id());
@@ -3281,14 +3641,14 @@ void Machine_GPU::MergeFrom(const Machine_GPU& from) {
 }
 
 void Machine_GPU::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.Machine.GPU)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Machine.GPU)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Machine_GPU::CopyFrom(const Machine_GPU& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.Machine.GPU)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Machine.GPU)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3327,7 +3687,7 @@ Machine_NetworkAdapter::Machine_NetworkAdapter(::PROTOBUF_NAMESPACE_ID::Arena* a
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.Machine.NetworkAdapter)
+  // @@protoc_insertion_point(arena_constructor:platform.Machine.NetworkAdapter)
 }
 Machine_NetworkAdapter::Machine_NetworkAdapter(const Machine_NetworkAdapter& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3347,7 +3707,7 @@ Machine_NetworkAdapter::Machine_NetworkAdapter(const Machine_NetworkAdapter& fro
     uuid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_uuid(),
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.Machine.NetworkAdapter)
+  // @@protoc_insertion_point(copy_constructor:platform.Machine.NetworkAdapter)
 }
 
 void Machine_NetworkAdapter::SharedCtor() {
@@ -3358,7 +3718,7 @@ void Machine_NetworkAdapter::SharedCtor() {
 }
 
 Machine_NetworkAdapter::~Machine_NetworkAdapter() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.Machine.NetworkAdapter)
+  // @@protoc_insertion_point(destructor:platform.Machine.NetworkAdapter)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3386,7 +3746,7 @@ const Machine_NetworkAdapter& Machine_NetworkAdapter::default_instance() {
 
 
 void Machine_NetworkAdapter::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.Machine.NetworkAdapter)
+// @@protoc_insertion_point(message_clear_start:platform.Machine.NetworkAdapter)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3410,7 +3770,7 @@ const char* Machine_NetworkAdapter::_InternalParse(const char* ptr, ::PROTOBUF_N
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.NetworkAdapter.name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.NetworkAdapter.name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3454,7 +3814,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* Machine_NetworkAdapter::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.Machine.NetworkAdapter)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Machine.NetworkAdapter)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3463,7 +3823,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.NetworkAdapter.name");
+      "platform.Machine.NetworkAdapter.name");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_name(), target);
   }
@@ -3484,12 +3844,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.Machine.NetworkAdapter)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Machine.NetworkAdapter)
   return target;
 }
 
 size_t Machine_NetworkAdapter::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.Machine.NetworkAdapter)
+// @@protoc_insertion_point(message_byte_size_start:platform.Machine.NetworkAdapter)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -3527,22 +3887,22 @@ size_t Machine_NetworkAdapter::ByteSizeLong() const {
 }
 
 void Machine_NetworkAdapter::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.Machine.NetworkAdapter)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Machine.NetworkAdapter)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine_NetworkAdapter* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine_NetworkAdapter>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.Machine.NetworkAdapter)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Machine.NetworkAdapter)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.Machine.NetworkAdapter)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Machine.NetworkAdapter)
     MergeFrom(*source);
   }
 }
 
 void Machine_NetworkAdapter::MergeFrom(const Machine_NetworkAdapter& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.Machine.NetworkAdapter)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Machine.NetworkAdapter)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -3560,14 +3920,14 @@ void Machine_NetworkAdapter::MergeFrom(const Machine_NetworkAdapter& from) {
 }
 
 void Machine_NetworkAdapter::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.Machine.NetworkAdapter)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Machine.NetworkAdapter)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Machine_NetworkAdapter::CopyFrom(const Machine_NetworkAdapter& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.Machine.NetworkAdapter)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Machine.NetworkAdapter)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3593,22 +3953,22 @@ void Machine_NetworkAdapter::InternalSwap(Machine_NetworkAdapter* other) {
 // ===================================================================
 
 void Machine::InitAsDefaultInstance() {
-  ::platform_detection_module::_Machine_default_instance_._instance.get_mutable()->cpu_ = const_cast< ::platform_detection_module::Machine_CPU*>(
-      ::platform_detection_module::Machine_CPU::internal_default_instance());
-  ::platform_detection_module::_Machine_default_instance_._instance.get_mutable()->vm_ = const_cast< ::platform_detection_module::Machine_VM*>(
-      ::platform_detection_module::Machine_VM::internal_default_instance());
+  ::platform::_Machine_default_instance_._instance.get_mutable()->cpu_ = const_cast< ::platform::Machine_CPU*>(
+      ::platform::Machine_CPU::internal_default_instance());
+  ::platform::_Machine_default_instance_._instance.get_mutable()->vm_ = const_cast< ::platform::Machine_VM*>(
+      ::platform::Machine_VM::internal_default_instance());
 }
 class Machine::_Internal {
  public:
-  static const ::platform_detection_module::Machine_CPU& cpu(const Machine* msg);
-  static const ::platform_detection_module::Machine_VM& vm(const Machine* msg);
+  static const ::platform::Machine_CPU& cpu(const Machine* msg);
+  static const ::platform::Machine_VM& vm(const Machine* msg);
 };
 
-const ::platform_detection_module::Machine_CPU&
+const ::platform::Machine_CPU&
 Machine::_Internal::cpu(const Machine* msg) {
   return *msg->cpu_;
 }
-const ::platform_detection_module::Machine_VM&
+const ::platform::Machine_VM&
 Machine::_Internal::vm(const Machine* msg) {
   return *msg->vm_;
 }
@@ -3619,7 +3979,7 @@ Machine::Machine(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   network_adapters_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.Machine)
+  // @@protoc_insertion_point(arena_constructor:platform.Machine)
 }
 Machine::Machine(const Machine& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -3643,19 +4003,19 @@ Machine::Machine(const Machine& from)
       GetArena());
   }
   if (from._internal_has_cpu()) {
-    cpu_ = new ::platform_detection_module::Machine_CPU(*from.cpu_);
+    cpu_ = new ::platform::Machine_CPU(*from.cpu_);
   } else {
     cpu_ = nullptr;
   }
   if (from._internal_has_vm()) {
-    vm_ = new ::platform_detection_module::Machine_VM(*from.vm_);
+    vm_ = new ::platform::Machine_VM(*from.vm_);
   } else {
     vm_ = nullptr;
   }
   ::memcpy(&total_memory_, &from.total_memory_,
     static_cast<size_t>(reinterpret_cast<char*>(&monitor_count_) -
     reinterpret_cast<char*>(&total_memory_)) + sizeof(monitor_count_));
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.Machine)
+  // @@protoc_insertion_point(copy_constructor:platform.Machine)
 }
 
 void Machine::SharedCtor() {
@@ -3669,7 +4029,7 @@ void Machine::SharedCtor() {
 }
 
 Machine::~Machine() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.Machine)
+  // @@protoc_insertion_point(destructor:platform.Machine)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3699,7 +4059,7 @@ const Machine& Machine::default_instance() {
 
 
 void Machine::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.Machine)
+// @@protoc_insertion_point(message_clear_start:platform.Machine)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3737,7 +4097,7 @@ const char* Machine::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_model();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.model"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.model"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3746,7 +4106,7 @@ const char* Machine::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.Machine.name"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform.Machine.name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3772,21 +4132,21 @@ const char* Machine::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .platform_detection_module.Machine.CPU cpu = 6;
+      // .platform.Machine.CPU cpu = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_cpu(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .platform_detection_module.Machine.VM vm = 7;
+      // .platform.Machine.VM vm = 7;
       case 7:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
           ptr = ctx->ParseMessage(_internal_mutable_vm(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated .platform_detection_module.Machine.Monitor monitors = 8;
+      // repeated .platform.Machine.Monitor monitors = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
           ptr -= 1;
@@ -3798,7 +4158,7 @@ const char* Machine::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<66>(ptr));
         } else goto handle_unusual;
         continue;
-      // repeated .platform_detection_module.Machine.GPU gpus = 9;
+      // repeated .platform.Machine.GPU gpus = 9;
       case 9:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
           ptr -= 1;
@@ -3810,7 +4170,7 @@ const char* Machine::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::in
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<74>(ptr));
         } else goto handle_unusual;
         continue;
-      // repeated .platform_detection_module.Machine.NetworkAdapter network_adapters = 10;
+      // repeated .platform.Machine.NetworkAdapter network_adapters = 10;
       case 10:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
           ptr -= 1;
@@ -3846,7 +4206,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* Machine::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.Machine)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Machine)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3855,7 +4215,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_model().data(), static_cast<int>(this->_internal_model().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.model");
+      "platform.Machine.model");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_model(), target);
   }
@@ -3865,7 +4225,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.Machine.name");
+      "platform.Machine.name");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_name(), target);
   }
@@ -3888,7 +4248,7 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_monitor_count(), target);
   }
 
-  // .platform_detection_module.Machine.CPU cpu = 6;
+  // .platform.Machine.CPU cpu = 6;
   if (this->has_cpu()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3896,7 +4256,7 @@ failure:
         6, _Internal::cpu(this), target, stream);
   }
 
-  // .platform_detection_module.Machine.VM vm = 7;
+  // .platform.Machine.VM vm = 7;
   if (this->has_vm()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -3904,7 +4264,7 @@ failure:
         7, _Internal::vm(this), target, stream);
   }
 
-  // repeated .platform_detection_module.Machine.Monitor monitors = 8;
+  // repeated .platform.Machine.Monitor monitors = 8;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_monitors_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -3912,7 +4272,7 @@ failure:
       InternalWriteMessage(8, this->_internal_monitors(i), target, stream);
   }
 
-  // repeated .platform_detection_module.Machine.GPU gpus = 9;
+  // repeated .platform.Machine.GPU gpus = 9;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_gpus_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -3920,7 +4280,7 @@ failure:
       InternalWriteMessage(9, this->_internal_gpus(i), target, stream);
   }
 
-  // repeated .platform_detection_module.Machine.NetworkAdapter network_adapters = 10;
+  // repeated .platform.Machine.NetworkAdapter network_adapters = 10;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->_internal_network_adapters_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
@@ -3932,33 +4292,33 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.Machine)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Machine)
   return target;
 }
 
 size_t Machine::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.Machine)
+// @@protoc_insertion_point(message_byte_size_start:platform.Machine)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .platform_detection_module.Machine.Monitor monitors = 8;
+  // repeated .platform.Machine.Monitor monitors = 8;
   total_size += 1UL * this->_internal_monitors_size();
   for (const auto& msg : this->monitors_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated .platform_detection_module.Machine.GPU gpus = 9;
+  // repeated .platform.Machine.GPU gpus = 9;
   total_size += 1UL * this->_internal_gpus_size();
   for (const auto& msg : this->gpus_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // repeated .platform_detection_module.Machine.NetworkAdapter network_adapters = 10;
+  // repeated .platform.Machine.NetworkAdapter network_adapters = 10;
   total_size += 1UL * this->_internal_network_adapters_size();
   for (const auto& msg : this->network_adapters_) {
     total_size +=
@@ -3986,14 +4346,14 @@ size_t Machine::ByteSizeLong() const {
         this->_internal_uuid());
   }
 
-  // .platform_detection_module.Machine.CPU cpu = 6;
+  // .platform.Machine.CPU cpu = 6;
   if (this->has_cpu()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *cpu_);
   }
 
-  // .platform_detection_module.Machine.VM vm = 7;
+  // .platform.Machine.VM vm = 7;
   if (this->has_vm()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -4024,22 +4384,22 @@ size_t Machine::ByteSizeLong() const {
 }
 
 void Machine::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.Machine)
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Machine)
   GOOGLE_DCHECK_NE(&from, this);
   const Machine* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Machine>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.Machine)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Machine)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.Machine)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Machine)
     MergeFrom(*source);
   }
 }
 
 void Machine::MergeFrom(const Machine& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.Machine)
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Machine)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -4058,10 +4418,10 @@ void Machine::MergeFrom(const Machine& from) {
     _internal_set_uuid(from._internal_uuid());
   }
   if (from.has_cpu()) {
-    _internal_mutable_cpu()->::platform_detection_module::Machine_CPU::MergeFrom(from._internal_cpu());
+    _internal_mutable_cpu()->::platform::Machine_CPU::MergeFrom(from._internal_cpu());
   }
   if (from.has_vm()) {
-    _internal_mutable_vm()->::platform_detection_module::Machine_VM::MergeFrom(from._internal_vm());
+    _internal_mutable_vm()->::platform::Machine_VM::MergeFrom(from._internal_vm());
   }
   if (from.total_memory() != 0) {
     _internal_set_total_memory(from._internal_total_memory());
@@ -4072,14 +4432,14 @@ void Machine::MergeFrom(const Machine& from) {
 }
 
 void Machine::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.Machine)
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Machine)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Machine::CopyFrom(const Machine& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.Machine)
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Machine)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4113,52 +4473,59 @@ void Machine::InternalSwap(Machine* other) {
 
 // ===================================================================
 
-void PlatformInformation::InitAsDefaultInstance() {
-  ::platform_detection_module::_PlatformInformation_default_instance_._instance.get_mutable()->timestamp_ = const_cast< PROTOBUF_NAMESPACE_ID::Timestamp*>(
+void Information::InitAsDefaultInstance() {
+  ::platform::_Information_default_instance_._instance.get_mutable()->version_ = const_cast< ::platform::SemanticVersion*>(
+      ::platform::SemanticVersion::internal_default_instance());
+  ::platform::_Information_default_instance_._instance.get_mutable()->timestamp_ = const_cast< PROTOBUF_NAMESPACE_ID::Timestamp*>(
       PROTOBUF_NAMESPACE_ID::Timestamp::internal_default_instance());
-  ::platform_detection_module::_PlatformInformation_default_instance_._instance.get_mutable()->os_ = const_cast< ::platform_detection_module::OS*>(
-      ::platform_detection_module::OS::internal_default_instance());
-  ::platform_detection_module::_PlatformInformation_default_instance_._instance.get_mutable()->machine_ = const_cast< ::platform_detection_module::Machine*>(
-      ::platform_detection_module::Machine::internal_default_instance());
+  ::platform::_Information_default_instance_._instance.get_mutable()->os_ = const_cast< ::platform::OS*>(
+      ::platform::OS::internal_default_instance());
+  ::platform::_Information_default_instance_._instance.get_mutable()->machine_ = const_cast< ::platform::Machine*>(
+      ::platform::Machine::internal_default_instance());
 }
-class PlatformInformation::_Internal {
+class Information::_Internal {
  public:
-  static const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const PlatformInformation* msg);
-  static const ::platform_detection_module::OS& os(const PlatformInformation* msg);
-  static const ::platform_detection_module::Machine& machine(const PlatformInformation* msg);
+  static const ::platform::SemanticVersion& version(const Information* msg);
+  static const PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const Information* msg);
+  static const ::platform::OS& os(const Information* msg);
+  static const ::platform::Machine& machine(const Information* msg);
 };
 
+const ::platform::SemanticVersion&
+Information::_Internal::version(const Information* msg) {
+  return *msg->version_;
+}
 const PROTOBUF_NAMESPACE_ID::Timestamp&
-PlatformInformation::_Internal::timestamp(const PlatformInformation* msg) {
+Information::_Internal::timestamp(const Information* msg) {
   return *msg->timestamp_;
 }
-const ::platform_detection_module::OS&
-PlatformInformation::_Internal::os(const PlatformInformation* msg) {
+const ::platform::OS&
+Information::_Internal::os(const Information* msg) {
   return *msg->os_;
 }
-const ::platform_detection_module::Machine&
-PlatformInformation::_Internal::machine(const PlatformInformation* msg) {
+const ::platform::Machine&
+Information::_Internal::machine(const Information* msg) {
   return *msg->machine_;
 }
-void PlatformInformation::clear_timestamp() {
+void Information::clear_timestamp() {
   if (GetArena() == nullptr && timestamp_ != nullptr) {
     delete timestamp_;
   }
   timestamp_ = nullptr;
 }
-PlatformInformation::PlatformInformation(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+Information::Information(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:platform_detection_module.PlatformInformation)
+  // @@protoc_insertion_point(arena_constructor:platform.Information)
 }
-PlatformInformation::PlatformInformation(const PlatformInformation& from)
+Information::Information(const Information& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_version().empty()) {
-    version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_version(),
-      GetArena());
+  if (from._internal_has_version()) {
+    version_ = new ::platform::SemanticVersion(*from.version_);
+  } else {
+    version_ = nullptr;
   }
   if (from._internal_has_timestamp()) {
     timestamp_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.timestamp_);
@@ -4166,63 +4533,65 @@ PlatformInformation::PlatformInformation(const PlatformInformation& from)
     timestamp_ = nullptr;
   }
   if (from._internal_has_os()) {
-    os_ = new ::platform_detection_module::OS(*from.os_);
+    os_ = new ::platform::OS(*from.os_);
   } else {
     os_ = nullptr;
   }
   if (from._internal_has_machine()) {
-    machine_ = new ::platform_detection_module::Machine(*from.machine_);
+    machine_ = new ::platform::Machine(*from.machine_);
   } else {
     machine_ = nullptr;
   }
   process_bitness_ = from.process_bitness_;
-  // @@protoc_insertion_point(copy_constructor:platform_detection_module.PlatformInformation)
+  // @@protoc_insertion_point(copy_constructor:platform.Information)
 }
 
-void PlatformInformation::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PlatformInformation_pdm_2eproto.base);
-  version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&timestamp_, 0, static_cast<size_t>(
+void Information::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Information_pdm_2eproto.base);
+  ::memset(&version_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&process_bitness_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(process_bitness_));
+      reinterpret_cast<char*>(&version_)) + sizeof(process_bitness_));
 }
 
-PlatformInformation::~PlatformInformation() {
-  // @@protoc_insertion_point(destructor:platform_detection_module.PlatformInformation)
+Information::~Information() {
+  // @@protoc_insertion_point(destructor:platform.Information)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PlatformInformation::SharedDtor() {
+void Information::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
-  version_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete version_;
   if (this != internal_default_instance()) delete timestamp_;
   if (this != internal_default_instance()) delete os_;
   if (this != internal_default_instance()) delete machine_;
 }
 
-void PlatformInformation::ArenaDtor(void* object) {
-  PlatformInformation* _this = reinterpret_cast< PlatformInformation* >(object);
+void Information::ArenaDtor(void* object) {
+  Information* _this = reinterpret_cast< Information* >(object);
   (void)_this;
 }
-void PlatformInformation::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void Information::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void PlatformInformation::SetCachedSize(int size) const {
+void Information::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PlatformInformation& PlatformInformation::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PlatformInformation_pdm_2eproto.base);
+const Information& Information::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Information_pdm_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void PlatformInformation::Clear() {
-// @@protoc_insertion_point(message_clear_start:platform_detection_module.PlatformInformation)
+void Information::Clear() {
+// @@protoc_insertion_point(message_clear_start:platform.Information)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && version_ != nullptr) {
+    delete version_;
+  }
+  version_ = nullptr;
   if (GetArena() == nullptr && timestamp_ != nullptr) {
     delete timestamp_;
   }
@@ -4239,7 +4608,7 @@ void PlatformInformation::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PlatformInformation::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Information::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
@@ -4247,12 +4616,10 @@ const char* PlatformInformation::_InternalParse(const char* ptr, ::PROTOBUF_NAME
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string version = 1;
+      // .platform.SemanticVersion version = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_version();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "platform_detection_module.PlatformInformation.version"));
+          ptr = ctx->ParseMessage(_internal_mutable_version(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -4263,22 +4630,22 @@ const char* PlatformInformation::_InternalParse(const char* ptr, ::PROTOBUF_NAME
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .platform_detection_module.Bitness process_bitness = 3;
+      // .platform.Bitness process_bitness = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_process_bitness(static_cast<::platform_detection_module::Bitness>(val));
+          _internal_set_process_bitness(static_cast<::platform::Bitness>(val));
         } else goto handle_unusual;
         continue;
-      // .platform_detection_module.OS os = 4;
+      // .platform.OS os = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_os(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // .platform_detection_module.Machine machine = 5;
+      // .platform.Machine machine = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_machine(), ptr);
@@ -4307,20 +4674,18 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PlatformInformation::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* Information::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:platform_detection_module.PlatformInformation)
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Information)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string version = 1;
-  if (this->version().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_version().data(), static_cast<int>(this->_internal_version().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "platform_detection_module.PlatformInformation.version");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_version(), target);
+  // .platform.SemanticVersion version = 1;
+  if (this->has_version()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::version(this), target, stream);
   }
 
   // .google.protobuf.Timestamp timestamp = 2;
@@ -4331,14 +4696,14 @@ failure:
         2, _Internal::timestamp(this), target, stream);
   }
 
-  // .platform_detection_module.Bitness process_bitness = 3;
+  // .platform.Bitness process_bitness = 3;
   if (this->process_bitness() != 0) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
       3, this->_internal_process_bitness(), target);
   }
 
-  // .platform_detection_module.OS os = 4;
+  // .platform.OS os = 4;
   if (this->has_os()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4346,7 +4711,7 @@ failure:
         4, _Internal::os(this), target, stream);
   }
 
-  // .platform_detection_module.Machine machine = 5;
+  // .platform.Machine machine = 5;
   if (this->has_machine()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
@@ -4358,23 +4723,23 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:platform_detection_module.PlatformInformation)
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Information)
   return target;
 }
 
-size_t PlatformInformation::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:platform_detection_module.PlatformInformation)
+size_t Information::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:platform.Information)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string version = 1;
-  if (this->version().size() > 0) {
+  // .platform.SemanticVersion version = 1;
+  if (this->has_version()) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_version());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *version_);
   }
 
   // .google.protobuf.Timestamp timestamp = 2;
@@ -4384,21 +4749,21 @@ size_t PlatformInformation::ByteSizeLong() const {
         *timestamp_);
   }
 
-  // .platform_detection_module.OS os = 4;
+  // .platform.OS os = 4;
   if (this->has_os()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *os_);
   }
 
-  // .platform_detection_module.Machine machine = 5;
+  // .platform.Machine machine = 5;
   if (this->has_machine()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *machine_);
   }
 
-  // .platform_detection_module.Bitness process_bitness = 3;
+  // .platform.Bitness process_bitness = 3;
   if (this->process_bitness() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_process_bitness());
@@ -4413,115 +4778,117 @@ size_t PlatformInformation::ByteSizeLong() const {
   return total_size;
 }
 
-void PlatformInformation::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:platform_detection_module.PlatformInformation)
+void Information::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Information)
   GOOGLE_DCHECK_NE(&from, this);
-  const PlatformInformation* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PlatformInformation>(
+  const Information* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Information>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform_detection_module.PlatformInformation)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Information)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform_detection_module.PlatformInformation)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Information)
     MergeFrom(*source);
   }
 }
 
-void PlatformInformation::MergeFrom(const PlatformInformation& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:platform_detection_module.PlatformInformation)
+void Information::MergeFrom(const Information& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Information)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.version().size() > 0) {
-    _internal_set_version(from._internal_version());
+  if (from.has_version()) {
+    _internal_mutable_version()->::platform::SemanticVersion::MergeFrom(from._internal_version());
   }
   if (from.has_timestamp()) {
     _internal_mutable_timestamp()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_timestamp());
   }
   if (from.has_os()) {
-    _internal_mutable_os()->::platform_detection_module::OS::MergeFrom(from._internal_os());
+    _internal_mutable_os()->::platform::OS::MergeFrom(from._internal_os());
   }
   if (from.has_machine()) {
-    _internal_mutable_machine()->::platform_detection_module::Machine::MergeFrom(from._internal_machine());
+    _internal_mutable_machine()->::platform::Machine::MergeFrom(from._internal_machine());
   }
   if (from.process_bitness() != 0) {
     _internal_set_process_bitness(from._internal_process_bitness());
   }
 }
 
-void PlatformInformation::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:platform_detection_module.PlatformInformation)
+void Information::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Information)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void PlatformInformation::CopyFrom(const PlatformInformation& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:platform_detection_module.PlatformInformation)
+void Information::CopyFrom(const Information& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Information)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool PlatformInformation::IsInitialized() const {
+bool Information::IsInitialized() const {
   return true;
 }
 
-void PlatformInformation::InternalSwap(PlatformInformation* other) {
+void Information::InternalSwap(Information* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  version_.Swap(&other->version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(PlatformInformation, process_bitness_)
-      + sizeof(PlatformInformation::process_bitness_)
-      - PROTOBUF_FIELD_OFFSET(PlatformInformation, timestamp_)>(
-          reinterpret_cast<char*>(&timestamp_),
-          reinterpret_cast<char*>(&other->timestamp_));
+      PROTOBUF_FIELD_OFFSET(Information, process_bitness_)
+      + sizeof(Information::process_bitness_)
+      - PROTOBUF_FIELD_OFFSET(Information, version_)>(
+          reinterpret_cast<char*>(&version_),
+          reinterpret_cast<char*>(&other->version_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata PlatformInformation::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Information::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace platform_detection_module
+}  // namespace platform
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::platform_detection_module::OS_GraphicsAPIs* Arena::CreateMaybeMessage< ::platform_detection_module::OS_GraphicsAPIs >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::OS_GraphicsAPIs >(arena);
+template<> PROTOBUF_NOINLINE ::platform::SemanticVersion* Arena::CreateMaybeMessage< ::platform::SemanticVersion >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::SemanticVersion >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::OS_Wine* Arena::CreateMaybeMessage< ::platform_detection_module::OS_Wine >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::OS_Wine >(arena);
+template<> PROTOBUF_NOINLINE ::platform::OS_GraphicsAPIs* Arena::CreateMaybeMessage< ::platform::OS_GraphicsAPIs >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::OS_GraphicsAPIs >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::OS* Arena::CreateMaybeMessage< ::platform_detection_module::OS >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::OS >(arena);
+template<> PROTOBUF_NOINLINE ::platform::OS_Wine* Arena::CreateMaybeMessage< ::platform::OS_Wine >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::OS_Wine >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::Machine_CPU* Arena::CreateMaybeMessage< ::platform_detection_module::Machine_CPU >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::Machine_CPU >(arena);
+template<> PROTOBUF_NOINLINE ::platform::OS* Arena::CreateMaybeMessage< ::platform::OS >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::OS >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::Machine_VM* Arena::CreateMaybeMessage< ::platform_detection_module::Machine_VM >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::Machine_VM >(arena);
+template<> PROTOBUF_NOINLINE ::platform::Machine_CPU* Arena::CreateMaybeMessage< ::platform::Machine_CPU >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::Machine_CPU >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::Machine_Monitor* Arena::CreateMaybeMessage< ::platform_detection_module::Machine_Monitor >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::Machine_Monitor >(arena);
+template<> PROTOBUF_NOINLINE ::platform::Machine_VM* Arena::CreateMaybeMessage< ::platform::Machine_VM >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::Machine_VM >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::Machine_GPU_Driver* Arena::CreateMaybeMessage< ::platform_detection_module::Machine_GPU_Driver >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::Machine_GPU_Driver >(arena);
+template<> PROTOBUF_NOINLINE ::platform::Machine_Monitor* Arena::CreateMaybeMessage< ::platform::Machine_Monitor >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::Machine_Monitor >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::Machine_GPU* Arena::CreateMaybeMessage< ::platform_detection_module::Machine_GPU >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::Machine_GPU >(arena);
+template<> PROTOBUF_NOINLINE ::platform::Machine_GPU_Driver* Arena::CreateMaybeMessage< ::platform::Machine_GPU_Driver >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::Machine_GPU_Driver >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::Machine_NetworkAdapter* Arena::CreateMaybeMessage< ::platform_detection_module::Machine_NetworkAdapter >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::Machine_NetworkAdapter >(arena);
+template<> PROTOBUF_NOINLINE ::platform::Machine_GPU* Arena::CreateMaybeMessage< ::platform::Machine_GPU >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::Machine_GPU >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::Machine* Arena::CreateMaybeMessage< ::platform_detection_module::Machine >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::Machine >(arena);
+template<> PROTOBUF_NOINLINE ::platform::Machine_NetworkAdapter* Arena::CreateMaybeMessage< ::platform::Machine_NetworkAdapter >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::Machine_NetworkAdapter >(arena);
 }
-template<> PROTOBUF_NOINLINE ::platform_detection_module::PlatformInformation* Arena::CreateMaybeMessage< ::platform_detection_module::PlatformInformation >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::platform_detection_module::PlatformInformation >(arena);
+template<> PROTOBUF_NOINLINE ::platform::Machine* Arena::CreateMaybeMessage< ::platform::Machine >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::Machine >(arena);
+}
+template<> PROTOBUF_NOINLINE ::platform::Information* Arena::CreateMaybeMessage< ::platform::Information >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::platform::Information >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

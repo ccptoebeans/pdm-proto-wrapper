@@ -10,5 +10,5 @@
 
 namespace pdm
 {
-    DllExport platform_detection_module::PlatformInformation GetData();
+    DllExport platform::Information GetData();
 }

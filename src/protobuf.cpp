@@ -2,59 +2,62 @@
 #include "pdm.h"
 #include <google/protobuf/util/time_util.h>
 
-namespace pdmproto = platform_detection_module;
-
-pdmproto::Bitness BitnessToProto(PDM::Bitness bitness)
+platform::Bitness BitnessToProto(PDM::Bitness bitness)
 {
 	switch(bitness)
 	{
 	case PDM::Bitness::BITNESS_32:
-		return pdmproto::BITNESS_32;
+		return platform::BITNESS_32;
 	case PDM::Bitness::BITNESS_64:
-		return pdmproto::BITNESS_64;
+		return platform::BITNESS_64;
     case PDM::Bitness::BITNESS_UNKNOWN:
 	default:
-        return pdmproto::BITNESS_UNKNOWN;
+        return platform::BITNESS_UNKNOWN;
 	}
 }
 
-pdmproto::OS::Kind OSKindToProto(PDM::OS osKind)
+platform::OS::Kind OSKindToProto(PDM::OS osKind)
 {
 	switch(osKind)
 	{
 	case PDM::OS::UNKNOWN:
-		return pdmproto::OS::Kind::OS_Kind_UNKNOWN;
+		return platform::OS::Kind::OS_Kind_UNKNOWN;
 	case PDM::OS::WINDOWS:
-		return pdmproto::OS::Kind::OS_Kind_WINDOWS;
+		return platform::OS::Kind::OS_Kind_WINDOWS;
 	case PDM::OS::MACOS:
-		return pdmproto::OS::Kind::OS_Kind_MACOS;
+		return platform::OS::Kind::OS_Kind_MACOS;
 	case PDM::OS::WINE:
-		return pdmproto::OS::Kind::OS_Kind_WINE;
+		return platform::OS::Kind::OS_Kind_WINE;
 	default:
 		throw std::invalid_argument("Invalid osType");
 	}
 }
 
-std::string VulkanSupportToProto(const PDM::VulkanProperties& raw)
+void AugmentVersion(const std::string& pdm_version, platform::SemanticVersion* result)
 {
-    if (raw.support == PDM::VulkanSupport::UNKNOWN)
-        return "UNKNOWN";
+    // FIXME correctly initialize to 0, and parse pdm_version!
+    uint32_t major = 1, minor = 1, patch = 0;
+    std::string prelease, build;
 
-    if (raw.support == PDM::VulkanSupport::UNSUPPORTED)
-        return "UNSUPPORTED";
+    (void)pdm_version;
 
-    return raw.version;
+    result->set_major(major);
+    result->set_minor(minor);
+    result->set_patch(patch);
+    result->set_prerelease(prelease);
+    result->set_build(build);
 }
 
 namespace PDMProtobuf
 {
-	DllExport pdmproto::PlatformInformation GetData()
+	DllExport platform::Information GetData()
 	{
-		pdmproto::PlatformInformation data;
+		platform::Information data;
 
-		data.set_version(PDM::GetPDMVersion());
-		*data.mutable_timestamp() = google::protobuf::util::TimeUtil::GetCurrentTime();
-		data.set_process_bitness(BitnessToProto(PDM::GetProcessBitness()));
+        *data.mutable_timestamp() = google::protobuf::util::TimeUtil::GetCurrentTime();
+        data.set_process_bitness(BitnessToProto(PDM::GetProcessBitness()));
+
+        AugmentVersion(PDM::GetPDMVersion(), data.mutable_version());
 
 		auto os = data.mutable_os();
 		os->set_type(OSKindToProto(PDM::GetOSType()));
