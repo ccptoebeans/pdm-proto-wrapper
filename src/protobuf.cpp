@@ -141,4 +141,10 @@ namespace PDMProtobuf
 
 		return data;
 	}
+
+	// Re-expose
+	void exposure_dummy()
+	{
+		PDM::RetrievePDMData( "", "" );
+	}
 }
