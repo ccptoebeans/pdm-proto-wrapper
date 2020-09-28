@@ -48,7 +48,7 @@ void AugmentVersion(const std::string& pdm_version, platform::SemanticVersion* r
     result->set_build(build);
 }
 
-namespace PDMProtobuf
+namespace pdm_proto
 {
 	DllExport platform::Information GetData()
 	{

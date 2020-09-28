@@ -8,7 +8,7 @@
 #define DllExport __attribute__((visibility("default")))
 #endif
 
-namespace pdm
+namespace pdm_proto
 {
     DllExport platform::Information GetData();
 }
