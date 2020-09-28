@@ -17,6 +17,12 @@ add_library(platform_pdm_proto_wrapper SHARED src/protobuf.cpp include/pdm/proto
 target_link_libraries(platform_pdm_proto_wrapper PUBLIC pdm protobuf::libprotobuf)
 target_include_directories(platform_pdm_proto_wrapper PUBLIC generated)
 
+if (APPLE)
+    target_compile_definitions(platform_pdm_proto_wrapper PUBLIC "DllExport=__attribute__((visibility(\"default\"))")
+elseif (MSVC)
+    target_compile_definitions(platform_pdm_proto_wrapper PUBLIC "DllExport=__declspec(dllexport)")
+endif()
+
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_STANDARD 17)
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_STANDARD_REQUIRED ON)
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_VISIBILITY_PRESET hidden)
