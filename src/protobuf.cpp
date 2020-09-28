@@ -1,6 +1,7 @@
 #include "../include/pdm/protobuf.h"
 #include "pdm.h"
 #include <google/protobuf/util/time_util.h>
+#include "semver.h"
 
 platform::Bitness BitnessToProto(PDM::Bitness bitness)
 {
@@ -35,17 +36,15 @@ platform::OS::Kind OSKindToProto(PDM::OS osKind)
 
 void AugmentVersion(const std::string& pdm_version, platform::SemanticVersion* result)
 {
-    // FIXME correctly initialize to 0, and parse pdm_version!
-    uint32_t major = 1, minor = 1, patch = 0;
-    std::string prelease, build;
+    pdm::SemanticVersion version;
 
-    (void)pdm_version;
+    (void)pdm::ParseSemanticVersion(pdm_version, version);
 
-    result->set_major(major);
-    result->set_minor(minor);
-    result->set_patch(patch);
-    result->set_prerelease(prelease);
-    result->set_build(build);
+    result->set_major(version.major);
+    result->set_minor(version.minor);
+    result->set_patch(version.patch);
+    result->set_prerelease(version.pre_release);
+    result->set_build(version.build);
 }
 
 namespace PDMProtobuf

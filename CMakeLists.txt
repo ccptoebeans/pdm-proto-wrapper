@@ -13,7 +13,7 @@ FetchContent_Populate(
 add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/protobuf/cmake)
 find_package(protobuf REQUIRED)
 
-add_library(platform_pdm_proto_wrapper SHARED src/protobuf.cpp include/pdm/protobuf.h generated/pdm.pb.cc)
+add_library(platform_pdm_proto_wrapper SHARED src/protobuf.cpp include/pdm/protobuf.h generated/pdm.pb.cc src/semver.h src/semver.cpp)
 target_link_libraries(platform_pdm_proto_wrapper PUBLIC pdm protobuf::libprotobuf)
 target_include_directories(platform_pdm_proto_wrapper PUBLIC generated)
 
@@ -21,3 +21,10 @@ set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_STANDARD 17)
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_STANDARD_REQUIRED ON)
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_VISIBILITY_PRESET hidden)
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY VISIBILITY_INLINES_HIDDEN YES)
+
+option(ENABLE_TESTS "Build with tests" ON)
+
+if(ENABLE_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
