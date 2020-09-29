@@ -18,7 +18,7 @@ namespace pdm {
         {
             if (state == CORE)
             {
-                if (std::isdigit(c)) {
+                if (isdigit(c)) {
                     *version_core *= 10;
                     *version_core += c - '0';
                     continue;
@@ -42,7 +42,7 @@ namespace pdm {
                     return false;
                 }
             } else if (state == PRE_RELEASE) {
-                if (std::isalnum(c) || c == '-' || c == '.')
+                if (isalnum(c) || c == '-' || c == '.')
                 {
                     result.pre_release += c;
                     continue;
@@ -53,7 +53,7 @@ namespace pdm {
                     return false;
                 }
             } else {
-                if (std::isalnum(c) || c == '-' || c == '.') {
+                if (isalnum(c) || c == '-' || c == '.') {
                     result.build += c;
                     continue;
                 } else {
