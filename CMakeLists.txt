@@ -23,6 +23,12 @@ add_library(platform_pdm_proto_wrapper STATIC
 target_link_libraries(platform_pdm_proto_wrapper PUBLIC pdm protobuf::libprotobuf)
 target_include_directories(platform_pdm_proto_wrapper PUBLIC generated)
 
+option(USE_WITH_PROTOBUF_DLL "Is this library going to be used with protobuf as DLL?" OFF)
+
+if(USE_WITH_PROTOBUF_DLL)
+    target_compile_definitions(platform_pdm_proto_wrapper PUBLIC PROTOBUF_USE_DLLS=1)
+endif()
+
 if (APPLE)
     target_compile_definitions(platform_pdm_proto_wrapper PRIVATE "DllExport=__attribute__((visibility(\"default\"))")
 elseif (MSVC)
