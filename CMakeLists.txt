@@ -30,7 +30,7 @@ if(USE_WITH_PROTOBUF_DLL)
 endif()
 
 if (APPLE)
-    target_compile_definitions(platform_pdm_proto_wrapper PRIVATE "DllExport=__attribute__((visibility(\"default\"))")
+    target_compile_definitions(platform_pdm_proto_wrapper PRIVATE "DllExport=__attribute__((visibility(\"default\")))")
 elseif (MSVC)
     target_compile_definitions(platform_pdm_proto_wrapper PRIVATE "DllExport=__declspec(dllexport)")
 endif()
