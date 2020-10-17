@@ -84,7 +84,10 @@ namespace pdm_proto
 		auto machine = data.mutable_machine();
 		machine->set_name(PDM::GetMachineName());
 		machine->set_model(PDM::GetHardwareModel());
-		machine->set_uuid(PDM::GetMachineUuid());
+		auto uuid = PDM::GetMachineUuid();
+		std::string uuidString(uuid.size(), '\0');
+		std::transform(uuid.cbegin(), uuid.cend(), uuidString.begin(), []( const std::byte c ) { return static_cast<unsigned char>(c); });
+		machine->set_uuid(uuidString);
 		machine->set_total_memory(PDM::GetTotalMemory());
 		machine->set_monitor_count(PDM::GetMonitorCount());
 	
@@ -134,7 +137,9 @@ namespace pdm_proto
 		{
 			auto networkAdapter = machine->add_network_adapters();
 			networkAdapter->set_name(networkAdapterData.name);
-			networkAdapter->set_mac_address(networkAdapterData.macAddress);
+			std::string mac(networkAdapterData.macAddress.size(), '\0');
+			std::transform(networkAdapterData.macAddress.cbegin(), networkAdapterData.macAddress.cend(), mac.begin(), []( std::byte c ) { return static_cast<unsigned char>(c); });
+			networkAdapter->set_mac_address(mac);
 			networkAdapter->set_uuid(networkAdapterData.uuid);
 		}
 
