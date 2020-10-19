@@ -84,7 +84,8 @@ namespace pdm_proto
 		auto machine = data.mutable_machine();
 		machine->set_name(PDM::GetMachineName());
 		machine->set_model(PDM::GetHardwareModel());
-		machine->set_uuid(PDM::GetMachineUuid());
+		auto uuid = PDM::GetMachineUuid();
+		machine->set_uuid(uuid.data(), uuid.size());
 		machine->set_total_memory(PDM::GetTotalMemory());
 		machine->set_monitor_count(PDM::GetMonitorCount());
 	
@@ -134,7 +135,7 @@ namespace pdm_proto
 		{
 			auto networkAdapter = machine->add_network_adapters();
 			networkAdapter->set_name(networkAdapterData.name);
-			networkAdapter->set_mac_address(networkAdapterData.macAddress);
+			networkAdapter->set_mac_address(networkAdapterData.macAddress.data(), networkAdapterData.macAddress.size());
 			networkAdapter->set_uuid(networkAdapterData.uuid);
 		}
 
