@@ -136,7 +136,7 @@ namespace pdm_proto
 			auto networkAdapter = machine->add_network_adapters();
 			networkAdapter->set_name(networkAdapterData.name);
 			networkAdapter->set_mac_address(networkAdapterData.macAddress.data(), networkAdapterData.macAddress.size());
-			networkAdapter->set_uuid(networkAdapterData.uuid);
+			networkAdapter->set_uuid(networkAdapterData.uuid.data(), networkAdapterData.uuid.size());
 		}
 
 		return data;
