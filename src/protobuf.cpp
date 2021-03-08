@@ -34,6 +34,21 @@ platform::OS::Kind OSKindToProto(PDM::OS osKind)
 	}
 }
 
+platform::OS::StreamingService::Provider StreamingServiceToProto(PDM::StreamingService service)
+{
+	switch(service)
+	{
+	case PDM::StreamingService::NONE:
+		return platform::OS::StreamingService::PROVIDER_UNSPECIFIED;
+	case PDM::StreamingService::UNKNOWN:
+		return platform::OS::StreamingService::PROVIDER_UNKNOWN;
+	case PDM::StreamingService::INTEL:
+		return platform::OS::StreamingService::PROVIDER_INTEL;
+	default:
+		throw std::invalid_argument( "Invalid streaming service type" );
+	}
+}
+
 void AugmentVersion(const std::string& pdm_version, platform::SemanticVersion* result)
 {
     pdm::SemanticVersion version;
@@ -69,6 +84,9 @@ namespace pdm_proto
 		os->set_username(PDM::GetUsername());
 		os->set_user_locale(PDM::GetUserLocale());
 		os->set_is_remote_session(PDM::IsRemoteSession());
+		
+		auto streamingService = os->mutable_streaming_service();
+		streamingService->set_provider(StreamingServiceToProto(PDM::GetStreamingService()));
 
 		auto graphicsAPIs = os->mutable_graphics_apis();
 		graphicsAPIs->set_metal_supported(PDM::GetMetalSupported());
