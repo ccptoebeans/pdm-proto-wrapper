@@ -1,6 +1,8 @@
 #pragma once
 
-#include "eve_launcher/pdm.pb.h"
+#include "eve_public/app/platform.pb.h"
+
+namespace platform = eve_public::app::platform;
 
 namespace pdm_proto
 {

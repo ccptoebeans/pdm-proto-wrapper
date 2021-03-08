@@ -26,10 +26,11 @@ extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto :
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_NetworkAdapter;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_VM;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_StreamingService;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_Wine;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_SemanticVersion;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Machine_GPU;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_OS;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_OS;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<5> scc_info_Machine;
 }  // namespace protobuf_eve_5fpublic_2fapp_2fplatform_2eproto
 namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
@@ -53,6 +54,11 @@ class OS_WineDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<OS_Wine>
       _instance;
 } _OS_Wine_default_instance_;
+class OS_StreamingServiceDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<OS_StreamingService>
+      _instance;
+} _OS_StreamingService_default_instance_;
 class OSDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<OS>
@@ -144,6 +150,20 @@ static void InitDefaultsOS_Wine() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_OS_Wine =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOS_Wine}, {}};
 
+static void InitDefaultsOS_StreamingService() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_public::app::platform::_OS_StreamingService_default_instance_;
+    new (ptr) ::eve_public::app::platform::OS_StreamingService();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_public::app::platform::OS_StreamingService::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_OS_StreamingService =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOS_StreamingService}, {}};
+
 static void InitDefaultsOS() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -155,10 +175,11 @@ static void InitDefaultsOS() {
   ::eve_public::app::platform::OS::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_OS =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsOS}, {
+::google::protobuf::internal::SCCInfo<3> scc_info_OS =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsOS}, {
       &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_OS_GraphicsAPIs.base,
-      &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_OS_Wine.base,}};
+      &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_OS_Wine.base,
+      &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_OS_StreamingService.base,}};
 
 static void InitDefaultsMachine_CPU() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -286,6 +307,7 @@ void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_SemanticVersion.base);
   ::google::protobuf::internal::InitSCC(&scc_info_OS_GraphicsAPIs.base);
   ::google::protobuf::internal::InitSCC(&scc_info_OS_Wine.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_OS_StreamingService.base);
   ::google::protobuf::internal::InitSCC(&scc_info_OS.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Machine_CPU.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Machine_VM.base);
@@ -297,8 +319,8 @@ void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_Information.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[12];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
+::google::protobuf::Metadata file_level_metadata[13];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[3];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -328,6 +350,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::OS_Wine, version_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::OS_Wine, host_os_),
   ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::OS_StreamingService, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::OS_StreamingService, provider_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::OS, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -344,6 +372,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::OS, is_remote_session_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::OS, graphics_apis_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::OS, wine_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::OS, streaming_service_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Machine_CPU, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -433,21 +462,23 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 0, -1, sizeof(::eve_public::app::platform::SemanticVersion)},
   { 10, -1, sizeof(::eve_public::app::platform::OS_GraphicsAPIs)},
   { 19, -1, sizeof(::eve_public::app::platform::OS_Wine)},
-  { 26, -1, sizeof(::eve_public::app::platform::OS)},
-  { 43, -1, sizeof(::eve_public::app::platform::Machine_CPU)},
-  { 54, -1, sizeof(::eve_public::app::platform::Machine_VM)},
-  { 64, -1, sizeof(::eve_public::app::platform::Machine_Monitor)},
-  { 75, -1, sizeof(::eve_public::app::platform::Machine_GPU_Driver)},
-  { 83, -1, sizeof(::eve_public::app::platform::Machine_GPU)},
-  { 94, -1, sizeof(::eve_public::app::platform::Machine_NetworkAdapter)},
-  { 102, -1, sizeof(::eve_public::app::platform::Machine)},
-  { 117, -1, sizeof(::eve_public::app::platform::Information)},
+  { 26, -1, sizeof(::eve_public::app::platform::OS_StreamingService)},
+  { 32, -1, sizeof(::eve_public::app::platform::OS)},
+  { 50, -1, sizeof(::eve_public::app::platform::Machine_CPU)},
+  { 61, -1, sizeof(::eve_public::app::platform::Machine_VM)},
+  { 71, -1, sizeof(::eve_public::app::platform::Machine_Monitor)},
+  { 82, -1, sizeof(::eve_public::app::platform::Machine_GPU_Driver)},
+  { 90, -1, sizeof(::eve_public::app::platform::Machine_GPU)},
+  { 101, -1, sizeof(::eve_public::app::platform::Machine_NetworkAdapter)},
+  { 109, -1, sizeof(::eve_public::app::platform::Machine)},
+  { 124, -1, sizeof(::eve_public::app::platform::Information)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_SemanticVersion_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_OS_GraphicsAPIs_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_OS_Wine_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_OS_StreamingService_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_OS_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_Machine_CPU_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_Machine_VM_default_instance_),
@@ -474,7 +505,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 12);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 13);
 }
 
 void AddDescriptorsImpl() {
@@ -484,7 +515,7 @@ void AddDescriptorsImpl() {
       "lic.app.platform\032\037google/protobuf/timest"
       "amp.proto\"a\n\017SemanticVersion\022\r\n\005major\030\001 "
       "\001(\r\022\r\n\005minor\030\002 \001(\r\022\r\n\005patch\030\003 \001(\r\022\022\n\npre"
-      "release\030\004 \001(\t\022\r\n\005build\030\005 \001(\t\"\222\005\n\002OS\022.\n\004t"
+      "release\030\004 \001(\t\022\r\n\005build\030\005 \001(\t\"\211\007\n\002OS\022.\n\004t"
       "ype\030\001 \001(\0162 .eve_public.app.platform.OS.K"
       "ind\022\014\n\004name\030\002 \001(\t\0221\n\007bitness\030\003 \001(\0162 .eve"
       "_public.app.platform.Bitness\022\025\n\rmajor_ve"
@@ -494,56 +525,62 @@ void AddDescriptorsImpl() {
       "\031\n\021is_remote_session\030\n \001(\010\022\?\n\rgraphics_a"
       "pis\030\013 \001(\0132(.eve_public.app.platform.OS.G"
       "raphicsAPIs\022.\n\004wine\030\014 \001(\0132 .eve_public.a"
-      "pp.platform.OS.Wine\032\222\001\n\014GraphicsAPIs\022\027\n\017"
-      "metal_supported\030\001 \001(\010\022\030\n\020vulkan_supporte"
-      "d\030\002 \001(\010\022(\n vulkan_highest_supported_vers"
-      "ion\030\003 \001(\t\022%\n\035d3d_highest_supported_versi"
-      "on\030\004 \001(\t\032(\n\004Wine\022\017\n\007version\030\001 \001(\t\022\017\n\007hos"
-      "t_os\030\002 \001(\t\"M\n\004Kind\022\024\n\020KIND_UNSPECIFIED\020\000"
-      "\022\020\n\014KIND_WINDOWS\020\001\022\016\n\nKIND_MACOS\020\002\022\r\n\tKI"
-      "ND_WINE\020\003\"\362\010\n\007Machine\022\r\n\005model\030\001 \001(\t\022\014\n\004"
-      "name\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\014\022\024\n\014total_memory"
-      "\030\004 \001(\003\022\025\n\rmonitor_count\030\005 \001(\005\0221\n\003cpu\030\006 \001"
-      "(\0132$.eve_public.app.platform.Machine.CPU"
-      "\022/\n\002vm\030\007 \001(\0132#.eve_public.app.platform.M"
-      "achine.VM\022:\n\010monitors\030\010 \003(\0132(.eve_public"
-      ".app.platform.Machine.Monitor\0222\n\004gpus\030\t "
-      "\003(\0132$.eve_public.app.platform.Machine.GP"
-      "U\022I\n\020network_adapters\030\n \003(\0132/.eve_public"
-      ".app.platform.Machine.NetworkAdapter\032\224\001\n"
-      "\003CPU\0221\n\007bitness\030\001 \001(\0162 .eve_public.app.p"
-      "latform.Bitness\022\032\n\022logical_core_count\030\002 "
-      "\001(\005\022\r\n\005brand\030\003 \001(\t\022\016\n\006vendor\030\004 \001(\t\022\r\n\005mo"
-      "del\030\005 \001(\005\022\020\n\010stepping\030\006 \001(\005\032\223\001\n\002VM\022\027\n\017is"
-      "_suspected_vm\030\001 \001(\010\022\032\n\022has_hypervisor_bi"
-      "t\030\002 \001(\010\022\027\n\017hypervisor_name\030\003 \001(\t\022\036\n\026is_h"
-      "ypervisor_guest_os\030\004 \001(\010\022\037\n\027has_vm_execu"
-      "tion_timing\030\005 \001(\010\032\236\001\n\007Monitor\022\014\n\004name\030\001 "
-      "\001(\t\022\035\n\025horizontal_resolution\030\002 \001(\005\022\033\n\023ve"
-      "rtical_resolution\030\003 \001(\005\022\026\n\016bits_per_colo"
-      "r\030\004 \001(\005\022\024\n\014refresh_rate\030\005 \001(\005\022\033\n\023dpi_sca"
-      "ling_percent\030\006 \001(\005\032\336\001\n\003GPU\022\023\n\013descriptio"
-      "n\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001(\005\022\021\n\tdevice_id\030"
-      "\003 \001(\005\022\020\n\010revision\030\004 \001(\005\022\024\n\014video_memory\030"
-      "\005 \001(\003\022;\n\006driver\030\006 \001(\0132+.eve_public.app.p"
-      "latform.Machine.GPU.Driver\0327\n\006Driver\022\014\n\004"
-      "date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017\n\007version\030\003 "
-      "\001(\t\032A\n\016NetworkAdapter\022\014\n\004name\030\001 \001(\t\022\023\n\013m"
-      "ac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"\216\002\n\013Infor"
-      "mation\0229\n\007version\030\001 \001(\0132(.eve_public.app"
-      ".platform.SemanticVersion\022-\n\ttimestamp\030\002"
-      " \001(\0132\032.google.protobuf.Timestamp\0229\n\017proc"
-      "ess_bitness\030\003 \001(\0162 .eve_public.app.platf"
-      "orm.Bitness\022\'\n\002os\030\004 \001(\0132\033.eve_public.app"
-      ".platform.OS\0221\n\007machine\030\005 \001(\0132 .eve_publ"
-      "ic.app.platform.Machine*B\n\007Bitness\022\027\n\023BI"
-      "TNESS_UNSPECIFIED\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nB"
-      "ITNESS_64\020\002BLZJgithub.com/ccpgames/eve-p"
-      "roto-go/generated/eve_public/application"
-      "/platformb\006proto3"
+      "pp.platform.OS.Wine\022G\n\021streaming_service"
+      "\030\r \001(\0132,.eve_public.app.platform.OS.Stre"
+      "amingService\032\222\001\n\014GraphicsAPIs\022\027\n\017metal_s"
+      "upported\030\001 \001(\010\022\030\n\020vulkan_supported\030\002 \001(\010"
+      "\022(\n vulkan_highest_supported_version\030\003 \001"
+      "(\t\022%\n\035d3d_highest_supported_version\030\004 \001("
+      "\t\032(\n\004Wine\022\017\n\007version\030\001 \001(\t\022\017\n\007host_os\030\002 "
+      "\001(\t\032\253\001\n\020StreamingService\022G\n\010provider\030\001 \001"
+      "(\01625.eve_public.app.platform.OS.Streamin"
+      "gService.Provider\"N\n\010Provider\022\030\n\024PROVIDE"
+      "R_UNSPECIFIED\020\000\022\024\n\020PROVIDER_UNKNOWN\020\001\022\022\n"
+      "\016PROVIDER_INTEL\020\002\"M\n\004Kind\022\024\n\020KIND_UNSPEC"
+      "IFIED\020\000\022\020\n\014KIND_WINDOWS\020\001\022\016\n\nKIND_MACOS\020"
+      "\002\022\r\n\tKIND_WINE\020\003\"\362\010\n\007Machine\022\r\n\005model\030\001 "
+      "\001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\014\022\024\n\014total"
+      "_memory\030\004 \001(\003\022\025\n\rmonitor_count\030\005 \001(\005\0221\n\003"
+      "cpu\030\006 \001(\0132$.eve_public.app.platform.Mach"
+      "ine.CPU\022/\n\002vm\030\007 \001(\0132#.eve_public.app.pla"
+      "tform.Machine.VM\022:\n\010monitors\030\010 \003(\0132(.eve"
+      "_public.app.platform.Machine.Monitor\0222\n\004"
+      "gpus\030\t \003(\0132$.eve_public.app.platform.Mac"
+      "hine.GPU\022I\n\020network_adapters\030\n \003(\0132/.eve"
+      "_public.app.platform.Machine.NetworkAdap"
+      "ter\032\224\001\n\003CPU\0221\n\007bitness\030\001 \001(\0162 .eve_publi"
+      "c.app.platform.Bitness\022\032\n\022logical_core_c"
+      "ount\030\002 \001(\005\022\r\n\005brand\030\003 \001(\t\022\016\n\006vendor\030\004 \001("
+      "\t\022\r\n\005model\030\005 \001(\005\022\020\n\010stepping\030\006 \001(\005\032\223\001\n\002V"
+      "M\022\027\n\017is_suspected_vm\030\001 \001(\010\022\032\n\022has_hyperv"
+      "isor_bit\030\002 \001(\010\022\027\n\017hypervisor_name\030\003 \001(\t\022"
+      "\036\n\026is_hypervisor_guest_os\030\004 \001(\010\022\037\n\027has_v"
+      "m_execution_timing\030\005 \001(\010\032\236\001\n\007Monitor\022\014\n\004"
+      "name\030\001 \001(\t\022\035\n\025horizontal_resolution\030\002 \001("
+      "\005\022\033\n\023vertical_resolution\030\003 \001(\005\022\026\n\016bits_p"
+      "er_color\030\004 \001(\005\022\024\n\014refresh_rate\030\005 \001(\005\022\033\n\023"
+      "dpi_scaling_percent\030\006 \001(\005\032\336\001\n\003GPU\022\023\n\013des"
+      "cription\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001(\005\022\021\n\tdev"
+      "ice_id\030\003 \001(\005\022\020\n\010revision\030\004 \001(\005\022\024\n\014video_"
+      "memory\030\005 \001(\003\022;\n\006driver\030\006 \001(\0132+.eve_publi"
+      "c.app.platform.Machine.GPU.Driver\0327\n\006Dri"
+      "ver\022\014\n\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017\n\007ver"
+      "sion\030\003 \001(\t\032A\n\016NetworkAdapter\022\014\n\004name\030\001 \001"
+      "(\t\022\023\n\013mac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"\216\002"
+      "\n\013Information\0229\n\007version\030\001 \001(\0132(.eve_pub"
+      "lic.app.platform.SemanticVersion\022-\n\ttime"
+      "stamp\030\002 \001(\0132\032.google.protobuf.Timestamp\022"
+      "9\n\017process_bitness\030\003 \001(\0162 .eve_public.ap"
+      "p.platform.Bitness\022\'\n\002os\030\004 \001(\0132\033.eve_pub"
+      "lic.app.platform.OS\0221\n\007machine\030\005 \001(\0132 .e"
+      "ve_public.app.platform.Machine*B\n\007Bitnes"
+      "s\022\027\n\023BITNESS_UNSPECIFIED\020\000\022\016\n\nBITNESS_32"
+      "\020\001\022\016\n\nBITNESS_64\020\002BLZJgithub.com/ccpgame"
+      "s/eve-proto-go/generated/eve_public/appl"
+      "ication/platformb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2417);
+      descriptor, 2664);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "eve_public/app/platform.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -563,9 +600,32 @@ struct StaticDescriptorInitializer {
 namespace eve_public {
 namespace app {
 namespace platform {
-const ::google::protobuf::EnumDescriptor* OS_Kind_descriptor() {
+const ::google::protobuf::EnumDescriptor* OS_StreamingService_Provider_descriptor() {
   protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_enum_descriptors[0];
+}
+bool OS_StreamingService_Provider_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const OS_StreamingService_Provider OS_StreamingService::PROVIDER_UNSPECIFIED;
+const OS_StreamingService_Provider OS_StreamingService::PROVIDER_UNKNOWN;
+const OS_StreamingService_Provider OS_StreamingService::PROVIDER_INTEL;
+const OS_StreamingService_Provider OS_StreamingService::Provider_MIN;
+const OS_StreamingService_Provider OS_StreamingService::Provider_MAX;
+const int OS_StreamingService::Provider_ARRAYSIZE;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+const ::google::protobuf::EnumDescriptor* OS_Kind_descriptor() {
+  protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_enum_descriptors[1];
 }
 bool OS_Kind_IsValid(int value) {
   switch (value) {
@@ -590,7 +650,7 @@ const int OS::Kind_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 const ::google::protobuf::EnumDescriptor* Bitness_descriptor() {
   protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_enum_descriptors[1];
+  return protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_enum_descriptors[2];
 }
 bool Bitness_IsValid(int value) {
   switch (value) {
@@ -1700,11 +1760,238 @@ void OS_Wine::InternalSwap(OS_Wine* other) {
 
 // ===================================================================
 
+void OS_StreamingService::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int OS_StreamingService::kProviderFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+OS_StreamingService::OS_StreamingService()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_OS_StreamingService.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:eve_public.app.platform.OS.StreamingService)
+}
+OS_StreamingService::OS_StreamingService(const OS_StreamingService& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  provider_ = from.provider_;
+  // @@protoc_insertion_point(copy_constructor:eve_public.app.platform.OS.StreamingService)
+}
+
+void OS_StreamingService::SharedCtor() {
+  provider_ = 0;
+}
+
+OS_StreamingService::~OS_StreamingService() {
+  // @@protoc_insertion_point(destructor:eve_public.app.platform.OS.StreamingService)
+  SharedDtor();
+}
+
+void OS_StreamingService::SharedDtor() {
+}
+
+void OS_StreamingService::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* OS_StreamingService::descriptor() {
+  ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const OS_StreamingService& OS_StreamingService::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_OS_StreamingService.base);
+  return *internal_default_instance();
+}
+
+
+void OS_StreamingService::Clear() {
+// @@protoc_insertion_point(message_clear_start:eve_public.app.platform.OS.StreamingService)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  provider_ = 0;
+  _internal_metadata_.Clear();
+}
+
+bool OS_StreamingService::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:eve_public.app.platform.OS.StreamingService)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .eve_public.app.platform.OS.StreamingService.Provider provider = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_provider(static_cast< ::eve_public::app::platform::OS_StreamingService_Provider >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:eve_public.app.platform.OS.StreamingService)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:eve_public.app.platform.OS.StreamingService)
+  return false;
+#undef DO_
+}
+
+void OS_StreamingService::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:eve_public.app.platform.OS.StreamingService)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .eve_public.app.platform.OS.StreamingService.Provider provider = 1;
+  if (this->provider() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->provider(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:eve_public.app.platform.OS.StreamingService)
+}
+
+::google::protobuf::uint8* OS_StreamingService::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:eve_public.app.platform.OS.StreamingService)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .eve_public.app.platform.OS.StreamingService.Provider provider = 1;
+  if (this->provider() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->provider(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:eve_public.app.platform.OS.StreamingService)
+  return target;
+}
+
+size_t OS_StreamingService::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:eve_public.app.platform.OS.StreamingService)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // .eve_public.app.platform.OS.StreamingService.Provider provider = 1;
+  if (this->provider() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->provider());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void OS_StreamingService::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:eve_public.app.platform.OS.StreamingService)
+  GOOGLE_DCHECK_NE(&from, this);
+  const OS_StreamingService* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const OS_StreamingService>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_public.app.platform.OS.StreamingService)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_public.app.platform.OS.StreamingService)
+    MergeFrom(*source);
+  }
+}
+
+void OS_StreamingService::MergeFrom(const OS_StreamingService& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:eve_public.app.platform.OS.StreamingService)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.provider() != 0) {
+    set_provider(from.provider());
+  }
+}
+
+void OS_StreamingService::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:eve_public.app.platform.OS.StreamingService)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void OS_StreamingService::CopyFrom(const OS_StreamingService& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:eve_public.app.platform.OS.StreamingService)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool OS_StreamingService::IsInitialized() const {
+  return true;
+}
+
+void OS_StreamingService::Swap(OS_StreamingService* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void OS_StreamingService::InternalSwap(OS_StreamingService* other) {
+  using std::swap;
+  swap(provider_, other->provider_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata OS_StreamingService::GetMetadata() const {
+  protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
 void OS::InitAsDefaultInstance() {
   ::eve_public::app::platform::_OS_default_instance_._instance.get_mutable()->graphics_apis_ = const_cast< ::eve_public::app::platform::OS_GraphicsAPIs*>(
       ::eve_public::app::platform::OS_GraphicsAPIs::internal_default_instance());
   ::eve_public::app::platform::_OS_default_instance_._instance.get_mutable()->wine_ = const_cast< ::eve_public::app::platform::OS_Wine*>(
       ::eve_public::app::platform::OS_Wine::internal_default_instance());
+  ::eve_public::app::platform::_OS_default_instance_._instance.get_mutable()->streaming_service_ = const_cast< ::eve_public::app::platform::OS_StreamingService*>(
+      ::eve_public::app::platform::OS_StreamingService::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int OS::kTypeFieldNumber;
@@ -1719,6 +2006,7 @@ const int OS::kUserLocaleFieldNumber;
 const int OS::kIsRemoteSessionFieldNumber;
 const int OS::kGraphicsApisFieldNumber;
 const int OS::kWineFieldNumber;
+const int OS::kStreamingServiceFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 OS::OS()
@@ -1770,6 +2058,11 @@ OS::OS(const OS& from)
   } else {
     wine_ = NULL;
   }
+  if (from.has_streaming_service()) {
+    streaming_service_ = new ::eve_public::app::platform::OS_StreamingService(*from.streaming_service_);
+  } else {
+    streaming_service_ = NULL;
+  }
   ::memcpy(&type_, &from.type_,
     static_cast<size_t>(reinterpret_cast<char*>(&is_remote_session_) -
     reinterpret_cast<char*>(&type_)) + sizeof(is_remote_session_));
@@ -1804,6 +2097,7 @@ void OS::SharedDtor() {
   user_locale_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete graphics_apis_;
   if (this != internal_default_instance()) delete wine_;
+  if (this != internal_default_instance()) delete streaming_service_;
 }
 
 void OS::SetCachedSize(int size) const {
@@ -1841,6 +2135,10 @@ void OS::Clear() {
     delete wine_;
   }
   wine_ = NULL;
+  if (GetArenaNoVirtual() == NULL && streaming_service_ != NULL) {
+    delete streaming_service_;
+  }
+  streaming_service_ = NULL;
   ::memset(&type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&is_remote_session_) -
       reinterpret_cast<char*>(&type_)) + sizeof(is_remote_session_));
@@ -2037,6 +2335,18 @@ bool OS::MergePartialFromCodedStream(
         break;
       }
 
+      // .eve_public.app.platform.OS.StreamingService streaming_service = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(106u /* 106 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_streaming_service()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -2162,6 +2472,12 @@ void OS::SerializeWithCachedSizes(
       12, this->_internal_wine(), output);
   }
 
+  // .eve_public.app.platform.OS.StreamingService streaming_service = 13;
+  if (this->has_streaming_service()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      13, this->_internal_streaming_service(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -2284,6 +2600,13 @@ void OS::SerializeWithCachedSizes(
         12, this->_internal_wine(), deterministic, target);
   }
 
+  // .eve_public.app.platform.OS.StreamingService streaming_service = 13;
+  if (this->has_streaming_service()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        13, this->_internal_streaming_service(), deterministic, target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -2364,6 +2687,13 @@ size_t OS::ByteSizeLong() const {
         *wine_);
   }
 
+  // .eve_public.app.platform.OS.StreamingService streaming_service = 13;
+  if (this->has_streaming_service()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *streaming_service_);
+  }
+
   // .eve_public.app.platform.OS.Kind type = 1;
   if (this->type() != 0) {
     total_size += 1 +
@@ -2442,6 +2772,9 @@ void OS::MergeFrom(const OS& from) {
   if (from.has_wine()) {
     mutable_wine()->::eve_public::app::platform::OS_Wine::MergeFrom(from.wine());
   }
+  if (from.has_streaming_service()) {
+    mutable_streaming_service()->::eve_public::app::platform::OS_StreamingService::MergeFrom(from.streaming_service());
+  }
   if (from.type() != 0) {
     set_type(from.type());
   }
@@ -2493,6 +2826,7 @@ void OS::InternalSwap(OS* other) {
     GetArenaNoVirtual());
   swap(graphics_apis_, other->graphics_apis_);
   swap(wine_, other->wine_);
+  swap(streaming_service_, other->streaming_service_);
   swap(type_, other->type_);
   swap(bitness_, other->bitness_);
   swap(is_remote_session_, other->is_remote_session_);
@@ -6017,6 +6351,9 @@ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_public::app::platform::OS_Gr
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_public::app::platform::OS_Wine* Arena::CreateMaybeMessage< ::eve_public::app::platform::OS_Wine >(Arena* arena) {
   return Arena::CreateInternal< ::eve_public::app::platform::OS_Wine >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_public::app::platform::OS_StreamingService* Arena::CreateMaybeMessage< ::eve_public::app::platform::OS_StreamingService >(Arena* arena) {
+  return Arena::CreateInternal< ::eve_public::app::platform::OS_StreamingService >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_public::app::platform::OS* Arena::CreateMaybeMessage< ::eve_public::app::platform::OS >(Arena* arena) {
   return Arena::CreateInternal< ::eve_public::app::platform::OS >(arena);

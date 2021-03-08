@@ -13,7 +13,7 @@ platform::Bitness BitnessToProto(PDM::Bitness bitness)
 		return platform::BITNESS_64;
     case PDM::Bitness::BITNESS_UNKNOWN:
 	default:
-        return platform::BITNESS_UNKNOWN;
+        return platform::BITNESS_UNSPECIFIED;
 	}
 }
 
@@ -22,13 +22,13 @@ platform::OS::Kind OSKindToProto(PDM::OS osKind)
 	switch(osKind)
 	{
 	case PDM::OS::UNKNOWN:
-		return platform::OS::Kind::OS_Kind_UNKNOWN;
+		return platform::OS::Kind::OS_Kind_KIND_UNSPECIFIED;
 	case PDM::OS::WINDOWS:
-		return platform::OS::Kind::OS_Kind_WINDOWS;
+		return platform::OS::Kind::OS_Kind_KIND_WINDOWS;
 	case PDM::OS::MACOS:
-		return platform::OS::Kind::OS_Kind_MACOS;
+		return platform::OS::Kind::OS_Kind_KIND_MACOS;
 	case PDM::OS::WINE:
-		return platform::OS::Kind::OS_Kind_WINE;
+		return platform::OS::Kind::OS_Kind_KIND_WINE;
 	default:
 		throw std::invalid_argument("Invalid osType");
 	}

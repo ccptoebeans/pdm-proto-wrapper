@@ -14,7 +14,7 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/protobuf/cmake)
 find_package(protobuf REQUIRED)
 
 add_library(platform_pdm_proto_wrapper STATIC
-    generated/eve_launcher/pdm.pb.cc
+    generated/eve_public/app/platform.pb.cc
     include/pdm/protobuf.h
     src/protobuf.cpp
     src/semver.h
