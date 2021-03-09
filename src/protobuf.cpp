@@ -13,7 +13,11 @@ platform::Bitness BitnessToProto(PDM::Bitness bitness)
 		return platform::BITNESS_64;
     case PDM::Bitness::BITNESS_UNKNOWN:
 	default:
-        return platform::BITNESS_UNKNOWN;
+#if USE_EVE_PUBLIC_DOMAIN
+        return platform::BITNESS_UNSPECIFIED;
+#else
+		return platform::BITNESS_UNKNOWN;
+#endif
 	}
 }
 
@@ -21,6 +25,16 @@ platform::OS::Kind OSKindToProto(PDM::OS osKind)
 {
 	switch(osKind)
 	{
+#if USE_EVE_PUBLIC_DOMAIN
+	case PDM::OS::UNKNOWN:
+		return platform::OS::Kind::OS_Kind_KIND_UNSPECIFIED;
+	case PDM::OS::WINDOWS:
+		return platform::OS::Kind::OS_Kind_KIND_WINDOWS;
+	case PDM::OS::MACOS:
+		return platform::OS::Kind::OS_Kind_KIND_MACOS;
+	case PDM::OS::WINE:
+		return platform::OS::Kind::OS_Kind_KIND_WINE;
+#else
 	case PDM::OS::UNKNOWN:
 		return platform::OS::Kind::OS_Kind_UNKNOWN;
 	case PDM::OS::WINDOWS:
@@ -29,8 +43,24 @@ platform::OS::Kind OSKindToProto(PDM::OS osKind)
 		return platform::OS::Kind::OS_Kind_MACOS;
 	case PDM::OS::WINE:
 		return platform::OS::Kind::OS_Kind_WINE;
+#endif
 	default:
 		throw std::invalid_argument("Invalid osType");
+	}
+}
+
+platform::OS::StreamingService::Provider StreamingServiceToProto(PDM::StreamingService service)
+{
+	switch(service)
+	{
+	case PDM::StreamingService::NONE:
+		return platform::OS::StreamingService::PROVIDER_UNSPECIFIED;
+	case PDM::StreamingService::UNKNOWN:
+		return platform::OS::StreamingService::PROVIDER_UNKNOWN;
+	case PDM::StreamingService::INTEL:
+		return platform::OS::StreamingService::PROVIDER_INTEL;
+	default:
+		throw std::invalid_argument( "Invalid streaming service type" );
 	}
 }
 
@@ -69,6 +99,9 @@ namespace pdm_proto
 		os->set_username(PDM::GetUsername());
 		os->set_user_locale(PDM::GetUserLocale());
 		os->set_is_remote_session(PDM::IsRemoteSession());
+		
+		auto streamingService = os->mutable_streaming_service();
+		streamingService->set_provider(StreamingServiceToProto(PDM::GetStreamingService()));
 
 		auto graphicsAPIs = os->mutable_graphics_apis();
 		graphicsAPIs->set_metal_supported(PDM::GetMetalSupported());

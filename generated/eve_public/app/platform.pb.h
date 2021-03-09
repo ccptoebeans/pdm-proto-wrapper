@@ -40,7 +40,7 @@ namespace protobuf_eve_5fpublic_2fapp_2fplatform_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[12];
+  static const ::google::protobuf::internal::ParseTable schema[13];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -80,6 +80,9 @@ extern OSDefaultTypeInternal _OS_default_instance_;
 class OS_GraphicsAPIs;
 class OS_GraphicsAPIsDefaultTypeInternal;
 extern OS_GraphicsAPIsDefaultTypeInternal _OS_GraphicsAPIs_default_instance_;
+class OS_StreamingService;
+class OS_StreamingServiceDefaultTypeInternal;
+extern OS_StreamingServiceDefaultTypeInternal _OS_StreamingService_default_instance_;
 class OS_Wine;
 class OS_WineDefaultTypeInternal;
 extern OS_WineDefaultTypeInternal _OS_Wine_default_instance_;
@@ -101,6 +104,7 @@ template<> ::eve_public::app::platform::Machine_NetworkAdapter* Arena::CreateMay
 template<> ::eve_public::app::platform::Machine_VM* Arena::CreateMaybeMessage<::eve_public::app::platform::Machine_VM>(Arena*);
 template<> ::eve_public::app::platform::OS* Arena::CreateMaybeMessage<::eve_public::app::platform::OS>(Arena*);
 template<> ::eve_public::app::platform::OS_GraphicsAPIs* Arena::CreateMaybeMessage<::eve_public::app::platform::OS_GraphicsAPIs>(Arena*);
+template<> ::eve_public::app::platform::OS_StreamingService* Arena::CreateMaybeMessage<::eve_public::app::platform::OS_StreamingService>(Arena*);
 template<> ::eve_public::app::platform::OS_Wine* Arena::CreateMaybeMessage<::eve_public::app::platform::OS_Wine>(Arena*);
 template<> ::eve_public::app::platform::SemanticVersion* Arena::CreateMaybeMessage<::eve_public::app::platform::SemanticVersion>(Arena*);
 }  // namespace protobuf
@@ -109,6 +113,28 @@ namespace eve_public {
 namespace app {
 namespace platform {
 
+enum OS_StreamingService_Provider {
+  OS_StreamingService_Provider_PROVIDER_UNSPECIFIED = 0,
+  OS_StreamingService_Provider_PROVIDER_UNKNOWN = 1,
+  OS_StreamingService_Provider_PROVIDER_INTEL = 2,
+  OS_StreamingService_Provider_OS_StreamingService_Provider_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  OS_StreamingService_Provider_OS_StreamingService_Provider_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool OS_StreamingService_Provider_IsValid(int value);
+const OS_StreamingService_Provider OS_StreamingService_Provider_Provider_MIN = OS_StreamingService_Provider_PROVIDER_UNSPECIFIED;
+const OS_StreamingService_Provider OS_StreamingService_Provider_Provider_MAX = OS_StreamingService_Provider_PROVIDER_INTEL;
+const int OS_StreamingService_Provider_Provider_ARRAYSIZE = OS_StreamingService_Provider_Provider_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* OS_StreamingService_Provider_descriptor();
+inline const ::std::string& OS_StreamingService_Provider_Name(OS_StreamingService_Provider value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    OS_StreamingService_Provider_descriptor(), value);
+}
+inline bool OS_StreamingService_Provider_Parse(
+    const ::std::string& name, OS_StreamingService_Provider* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<OS_StreamingService_Provider>(
+    OS_StreamingService_Provider_descriptor(), name, value);
+}
 enum OS_Kind {
   OS_Kind_KIND_UNSPECIFIED = 0,
   OS_Kind_KIND_WINDOWS = 1,
@@ -569,6 +595,137 @@ class OS_Wine : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 };
 // -------------------------------------------------------------------
 
+class OS_StreamingService : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_public.app.platform.OS.StreamingService) */ {
+ public:
+  OS_StreamingService();
+  virtual ~OS_StreamingService();
+
+  OS_StreamingService(const OS_StreamingService& from);
+
+  inline OS_StreamingService& operator=(const OS_StreamingService& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  OS_StreamingService(OS_StreamingService&& from) noexcept
+    : OS_StreamingService() {
+    *this = ::std::move(from);
+  }
+
+  inline OS_StreamingService& operator=(OS_StreamingService&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const OS_StreamingService& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const OS_StreamingService* internal_default_instance() {
+    return reinterpret_cast<const OS_StreamingService*>(
+               &_OS_StreamingService_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  void Swap(OS_StreamingService* other);
+  friend void swap(OS_StreamingService& a, OS_StreamingService& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline OS_StreamingService* New() const final {
+    return CreateMaybeMessage<OS_StreamingService>(NULL);
+  }
+
+  OS_StreamingService* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<OS_StreamingService>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const OS_StreamingService& from);
+  void MergeFrom(const OS_StreamingService& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(OS_StreamingService* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  typedef OS_StreamingService_Provider Provider;
+  static const Provider PROVIDER_UNSPECIFIED =
+    OS_StreamingService_Provider_PROVIDER_UNSPECIFIED;
+  static const Provider PROVIDER_UNKNOWN =
+    OS_StreamingService_Provider_PROVIDER_UNKNOWN;
+  static const Provider PROVIDER_INTEL =
+    OS_StreamingService_Provider_PROVIDER_INTEL;
+  static inline bool Provider_IsValid(int value) {
+    return OS_StreamingService_Provider_IsValid(value);
+  }
+  static const Provider Provider_MIN =
+    OS_StreamingService_Provider_Provider_MIN;
+  static const Provider Provider_MAX =
+    OS_StreamingService_Provider_Provider_MAX;
+  static const int Provider_ARRAYSIZE =
+    OS_StreamingService_Provider_Provider_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  Provider_descriptor() {
+    return OS_StreamingService_Provider_descriptor();
+  }
+  static inline const ::std::string& Provider_Name(Provider value) {
+    return OS_StreamingService_Provider_Name(value);
+  }
+  static inline bool Provider_Parse(const ::std::string& name,
+      Provider* value) {
+    return OS_StreamingService_Provider_Parse(name, value);
+  }
+
+  // accessors -------------------------------------------------------
+
+  // .eve_public.app.platform.OS.StreamingService.Provider provider = 1;
+  void clear_provider();
+  static const int kProviderFieldNumber = 1;
+  ::eve_public::app::platform::OS_StreamingService_Provider provider() const;
+  void set_provider(::eve_public::app::platform::OS_StreamingService_Provider value);
+
+  // @@protoc_insertion_point(class_scope:eve_public.app.platform.OS.StreamingService)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  int provider_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class OS : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_public.app.platform.OS) */ {
  public:
   OS();
@@ -604,7 +761,7 @@ class OS : public ::google::protobuf::Message /* @@protoc_insertion_point(class_
                &_OS_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    3;
+    4;
 
   void Swap(OS* other);
   friend void swap(OS& a, OS& b) {
@@ -656,6 +813,7 @@ class OS : public ::google::protobuf::Message /* @@protoc_insertion_point(class_
 
   typedef OS_GraphicsAPIs GraphicsAPIs;
   typedef OS_Wine Wine;
+  typedef OS_StreamingService StreamingService;
 
   typedef OS_Kind Kind;
   static const Kind KIND_UNSPECIFIED =
@@ -811,6 +969,18 @@ class OS : public ::google::protobuf::Message /* @@protoc_insertion_point(class_
   ::eve_public::app::platform::OS_Wine* mutable_wine();
   void set_allocated_wine(::eve_public::app::platform::OS_Wine* wine);
 
+  // .eve_public.app.platform.OS.StreamingService streaming_service = 13;
+  bool has_streaming_service() const;
+  void clear_streaming_service();
+  static const int kStreamingServiceFieldNumber = 13;
+  private:
+  const ::eve_public::app::platform::OS_StreamingService& _internal_streaming_service() const;
+  public:
+  const ::eve_public::app::platform::OS_StreamingService& streaming_service() const;
+  ::eve_public::app::platform::OS_StreamingService* release_streaming_service();
+  ::eve_public::app::platform::OS_StreamingService* mutable_streaming_service();
+  void set_allocated_streaming_service(::eve_public::app::platform::OS_StreamingService* streaming_service);
+
   // .eve_public.app.platform.OS.Kind type = 1;
   void clear_type();
   static const int kTypeFieldNumber = 1;
@@ -842,6 +1012,7 @@ class OS : public ::google::protobuf::Message /* @@protoc_insertion_point(class_
   ::google::protobuf::internal::ArenaStringPtr user_locale_;
   ::eve_public::app::platform::OS_GraphicsAPIs* graphics_apis_;
   ::eve_public::app::platform::OS_Wine* wine_;
+  ::eve_public::app::platform::OS_StreamingService* streaming_service_;
   int type_;
   int bitness_;
   bool is_remote_session_;
@@ -885,7 +1056,7 @@ class Machine_CPU : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_Machine_CPU_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    5;
 
   void Swap(Machine_CPU* other);
   friend void swap(Machine_CPU& a, Machine_CPU& b) {
@@ -1039,7 +1210,7 @@ class Machine_VM : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_Machine_VM_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    6;
 
   void Swap(Machine_VM* other);
   friend void swap(Machine_VM& a, Machine_VM& b) {
@@ -1178,7 +1349,7 @@ class Machine_Monitor : public ::google::protobuf::Message /* @@protoc_insertion
                &_Machine_Monitor_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    7;
 
   void Swap(Machine_Monitor* other);
   friend void swap(Machine_Monitor& a, Machine_Monitor& b) {
@@ -1324,7 +1495,7 @@ class Machine_GPU_Driver : public ::google::protobuf::Message /* @@protoc_insert
                &_Machine_GPU_Driver_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    8;
 
   void Swap(Machine_GPU_Driver* other);
   friend void swap(Machine_GPU_Driver& a, Machine_GPU_Driver& b) {
@@ -1465,7 +1636,7 @@ class Machine_GPU : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_Machine_GPU_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    9;
 
   void Swap(Machine_GPU* other);
   friend void swap(Machine_GPU& a, Machine_GPU& b) {
@@ -1619,7 +1790,7 @@ class Machine_NetworkAdapter : public ::google::protobuf::Message /* @@protoc_in
                &_Machine_NetworkAdapter_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    10;
 
   void Swap(Machine_NetworkAdapter* other);
   friend void swap(Machine_NetworkAdapter& a, Machine_NetworkAdapter& b) {
@@ -1760,7 +1931,7 @@ class Machine : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_Machine_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    11;
 
   void Swap(Machine* other);
   friend void swap(Machine& a, Machine& b) {
@@ -1986,7 +2157,7 @@ class Information : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_Information_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    12;
 
   void Swap(Information* other);
   friend void swap(Information& a, Information& b) {
@@ -2513,6 +2684,24 @@ inline void OS_Wine::set_allocated_host_os(::std::string* host_os) {
 
 // -------------------------------------------------------------------
 
+// OS_StreamingService
+
+// .eve_public.app.platform.OS.StreamingService.Provider provider = 1;
+inline void OS_StreamingService::clear_provider() {
+  provider_ = 0;
+}
+inline ::eve_public::app::platform::OS_StreamingService_Provider OS_StreamingService::provider() const {
+  // @@protoc_insertion_point(field_get:eve_public.app.platform.OS.StreamingService.provider)
+  return static_cast< ::eve_public::app::platform::OS_StreamingService_Provider >(provider_);
+}
+inline void OS_StreamingService::set_provider(::eve_public::app::platform::OS_StreamingService_Provider value) {
+  
+  provider_ = value;
+  // @@protoc_insertion_point(field_set:eve_public.app.platform.OS.StreamingService.provider)
+}
+
+// -------------------------------------------------------------------
+
 // OS
 
 // .eve_public.app.platform.OS.Kind type = 1;
@@ -3034,6 +3223,60 @@ inline void OS::set_allocated_wine(::eve_public::app::platform::OS_Wine* wine) {
   }
   wine_ = wine;
   // @@protoc_insertion_point(field_set_allocated:eve_public.app.platform.OS.wine)
+}
+
+// .eve_public.app.platform.OS.StreamingService streaming_service = 13;
+inline bool OS::has_streaming_service() const {
+  return this != internal_default_instance() && streaming_service_ != NULL;
+}
+inline void OS::clear_streaming_service() {
+  if (GetArenaNoVirtual() == NULL && streaming_service_ != NULL) {
+    delete streaming_service_;
+  }
+  streaming_service_ = NULL;
+}
+inline const ::eve_public::app::platform::OS_StreamingService& OS::_internal_streaming_service() const {
+  return *streaming_service_;
+}
+inline const ::eve_public::app::platform::OS_StreamingService& OS::streaming_service() const {
+  const ::eve_public::app::platform::OS_StreamingService* p = streaming_service_;
+  // @@protoc_insertion_point(field_get:eve_public.app.platform.OS.streaming_service)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_public::app::platform::OS_StreamingService*>(
+      &::eve_public::app::platform::_OS_StreamingService_default_instance_);
+}
+inline ::eve_public::app::platform::OS_StreamingService* OS::release_streaming_service() {
+  // @@protoc_insertion_point(field_release:eve_public.app.platform.OS.streaming_service)
+  
+  ::eve_public::app::platform::OS_StreamingService* temp = streaming_service_;
+  streaming_service_ = NULL;
+  return temp;
+}
+inline ::eve_public::app::platform::OS_StreamingService* OS::mutable_streaming_service() {
+  
+  if (streaming_service_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_public::app::platform::OS_StreamingService>(GetArenaNoVirtual());
+    streaming_service_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_public.app.platform.OS.streaming_service)
+  return streaming_service_;
+}
+inline void OS::set_allocated_streaming_service(::eve_public::app::platform::OS_StreamingService* streaming_service) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete streaming_service_;
+  }
+  if (streaming_service) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      streaming_service = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, streaming_service, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  streaming_service_ = streaming_service;
+  // @@protoc_insertion_point(field_set_allocated:eve_public.app.platform.OS.streaming_service)
 }
 
 // -------------------------------------------------------------------
@@ -4578,6 +4821,8 @@ inline void Information::set_allocated_machine(::eve_public::app::platform::Mach
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -4588,6 +4833,11 @@ inline void Information::set_allocated_machine(::eve_public::app::platform::Mach
 namespace google {
 namespace protobuf {
 
+template <> struct is_proto_enum< ::eve_public::app::platform::OS_StreamingService_Provider> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::eve_public::app::platform::OS_StreamingService_Provider>() {
+  return ::eve_public::app::platform::OS_StreamingService_Provider_descriptor();
+}
 template <> struct is_proto_enum< ::eve_public::app::platform::OS_Kind> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::eve_public::app::platform::OS_Kind>() {
