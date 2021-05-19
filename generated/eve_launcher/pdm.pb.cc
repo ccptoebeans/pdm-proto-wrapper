@@ -563,12 +563,12 @@ void AddDescriptorsImpl() {
       "ss\030\003 \001(\0162\021.platform.Bitness\022\030\n\002os\030\004 \001(\0132"
       "\014.platform.OS\022\"\n\007machine\030\005 \001(\0132\021.platfor"
       "m.Machine*>\n\007Bitness\022\023\n\017BITNESS_UNKNOWN\020"
-      "\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBITNESS_64\020\002B5Z3git"
+      "\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBITNESS_64\020\002BBZ@git"
       "hub.com/ccpgames/eve-proto-go/generated/"
-      "platformb\006proto3"
+      "eve_launcher/platformb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2336);
+      descriptor, 2349);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "eve_launcher/pdm.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
