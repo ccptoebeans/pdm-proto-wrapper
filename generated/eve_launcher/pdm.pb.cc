@@ -316,7 +316,7 @@ void InitDefaults() {
 }
 
 ::google::protobuf::Metadata file_level_metadata[13];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[3];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[4];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -380,6 +380,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_CPU, vendor_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_CPU, model_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_CPU, stepping_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_CPU, architecture_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_CPU, extensions_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_VM, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -461,13 +463,13 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 26, -1, sizeof(::platform::OS_StreamingService)},
   { 32, -1, sizeof(::platform::OS)},
   { 50, -1, sizeof(::platform::Machine_CPU)},
-  { 61, -1, sizeof(::platform::Machine_VM)},
-  { 71, -1, sizeof(::platform::Machine_Monitor)},
-  { 82, -1, sizeof(::platform::Machine_GPU_Driver)},
-  { 90, -1, sizeof(::platform::Machine_GPU)},
-  { 101, -1, sizeof(::platform::Machine_NetworkAdapter)},
-  { 109, -1, sizeof(::platform::Machine)},
-  { 124, -1, sizeof(::platform::Information)},
+  { 63, -1, sizeof(::platform::Machine_VM)},
+  { 73, -1, sizeof(::platform::Machine_Monitor)},
+  { 84, -1, sizeof(::platform::Machine_GPU_Driver)},
+  { 92, -1, sizeof(::platform::Machine_GPU)},
+  { 103, -1, sizeof(::platform::Machine_NetworkAdapter)},
+  { 111, -1, sizeof(::platform::Machine)},
+  { 126, -1, sizeof(::platform::Information)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -531,44 +533,50 @@ void AddDescriptorsImpl() {
       "\024PROVIDER_UNSPECIFIED\020\000\022\024\n\020PROVIDER_UNKN"
       "OWN\020\001\022\022\n\016PROVIDER_INTEL\020\002\"5\n\004Kind\022\013\n\007UNK"
       "NOWN\020\000\022\013\n\007WINDOWS\020\001\022\t\n\005MACOS\020\002\022\010\n\004WINE\020\003"
-      "\"\211\010\n\007Machine\022\r\n\005model\030\001 \001(\t\022\014\n\004name\030\002 \001("
+      "\"\343\t\n\007Machine\022\r\n\005model\030\001 \001(\t\022\014\n\004name\030\002 \001("
       "\t\022\014\n\004uuid\030\003 \001(\014\022\024\n\014total_memory\030\004 \001(\003\022\025\n"
       "\rmonitor_count\030\005 \001(\005\022\"\n\003cpu\030\006 \001(\0132\025.plat"
       "form.Machine.CPU\022 \n\002vm\030\007 \001(\0132\024.platform."
       "Machine.VM\022+\n\010monitors\030\010 \003(\0132\031.platform."
       "Machine.Monitor\022#\n\004gpus\030\t \003(\0132\025.platform"
       ".Machine.GPU\022:\n\020network_adapters\030\n \003(\0132 "
-      ".platform.Machine.NetworkAdapter\032\205\001\n\003CPU"
+      ".platform.Machine.NetworkAdapter\032\337\002\n\003CPU"
       "\022\"\n\007bitness\030\001 \001(\0162\021.platform.Bitness\022\032\n\022"
       "logical_core_count\030\002 \001(\005\022\r\n\005brand\030\003 \001(\t\022"
       "\016\n\006vendor\030\004 \001(\t\022\r\n\005model\030\005 \001(\005\022\020\n\010steppi"
-      "ng\030\006 \001(\005\032\223\001\n\002VM\022\027\n\017is_suspected_vm\030\001 \001(\010"
-      "\022\032\n\022has_hypervisor_bit\030\002 \001(\010\022\027\n\017hypervis"
-      "or_name\030\003 \001(\t\022\036\n\026is_hypervisor_guest_os\030"
-      "\004 \001(\010\022\037\n\027has_vm_execution_timing\030\005 \001(\010\032\236"
-      "\001\n\007Monitor\022\014\n\004name\030\001 \001(\t\022\035\n\025horizontal_r"
-      "esolution\030\002 \001(\005\022\033\n\023vertical_resolution\030\003"
-      " \001(\005\022\026\n\016bits_per_color\030\004 \001(\005\022\024\n\014refresh_"
-      "rate\030\005 \001(\005\022\033\n\023dpi_scaling_percent\030\006 \001(\005\032"
-      "\317\001\n\003GPU\022\023\n\013description\030\001 \001(\t\022\021\n\tvendor_i"
-      "d\030\002 \001(\005\022\021\n\tdevice_id\030\003 \001(\005\022\020\n\010revision\030\004"
-      " \001(\005\022\024\n\014video_memory\030\005 \001(\003\022,\n\006driver\030\006 \001"
-      "(\0132\034.platform.Machine.GPU.Driver\0327\n\006Driv"
-      "er\022\014\n\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017\n\007vers"
-      "ion\030\003 \001(\t\032A\n\016NetworkAdapter\022\014\n\004name\030\001 \001("
-      "\t\022\023\n\013mac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"\322\001\n"
-      "\013Information\022*\n\007version\030\001 \001(\0132\031.platform"
-      ".SemanticVersion\022-\n\ttimestamp\030\002 \001(\0132\032.go"
-      "ogle.protobuf.Timestamp\022*\n\017process_bitne"
-      "ss\030\003 \001(\0162\021.platform.Bitness\022\030\n\002os\030\004 \001(\0132"
-      "\014.platform.OS\022\"\n\007machine\030\005 \001(\0132\021.platfor"
-      "m.Machine*>\n\007Bitness\022\023\n\017BITNESS_UNKNOWN\020"
-      "\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBITNESS_64\020\002BBZ@git"
-      "hub.com/ccpgames/eve-proto-go/generated/"
-      "eve_launcher/platformb\006proto3"
+      "ng\030\006 \001(\005\0228\n\014architecture\030\007 \001(\0162\".platfor"
+      "m.Machine.CPU.Architecture\022\022\n\nextensions"
+      "\030\010 \003(\t\"\211\001\n\014Architecture\022\034\n\030ARCHITECTURE_"
+      "UNSPECIFIED\020\000\022\024\n\020ARCHITECTURE_X86\020\001\022\027\n\023A"
+      "RCHITECTURE_X86_64\020\002\022\024\n\020ARCHITECTURE_ARM"
+      "\020\003\022\026\n\022ARCHITECTURE_ARM64\020\004\032\223\001\n\002VM\022\027\n\017is_"
+      "suspected_vm\030\001 \001(\010\022\032\n\022has_hypervisor_bit"
+      "\030\002 \001(\010\022\027\n\017hypervisor_name\030\003 \001(\t\022\036\n\026is_hy"
+      "pervisor_guest_os\030\004 \001(\010\022\037\n\027has_vm_execut"
+      "ion_timing\030\005 \001(\010\032\236\001\n\007Monitor\022\014\n\004name\030\001 \001"
+      "(\t\022\035\n\025horizontal_resolution\030\002 \001(\005\022\033\n\023ver"
+      "tical_resolution\030\003 \001(\005\022\026\n\016bits_per_color"
+      "\030\004 \001(\005\022\024\n\014refresh_rate\030\005 \001(\005\022\033\n\023dpi_scal"
+      "ing_percent\030\006 \001(\005\032\317\001\n\003GPU\022\023\n\013description"
+      "\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001(\005\022\021\n\tdevice_id\030\003"
+      " \001(\005\022\020\n\010revision\030\004 \001(\005\022\024\n\014video_memory\030\005"
+      " \001(\003\022,\n\006driver\030\006 \001(\0132\034.platform.Machine."
+      "GPU.Driver\0327\n\006Driver\022\014\n\004date\030\001 \001(\t\022\016\n\006ve"
+      "ndor\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\032A\n\016NetworkAd"
+      "apter\022\014\n\004name\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\014"
+      "\022\014\n\004uuid\030\003 \001(\014\"\322\001\n\013Information\022*\n\007versio"
+      "n\030\001 \001(\0132\031.platform.SemanticVersion\022-\n\tti"
+      "mestamp\030\002 \001(\0132\032.google.protobuf.Timestam"
+      "p\022*\n\017process_bitness\030\003 \001(\0162\021.platform.Bi"
+      "tness\022\030\n\002os\030\004 \001(\0132\014.platform.OS\022\"\n\007machi"
+      "ne\030\005 \001(\0132\021.platform.Machine*>\n\007Bitness\022\023"
+      "\n\017BITNESS_UNKNOWN\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nB"
+      "ITNESS_64\020\002BBZ@github.com/ccpgames/eve-p"
+      "roto-go/generated/eve_launcher/platformb"
+      "\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2349);
+      descriptor, 2567);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "eve_launcher/pdm.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -634,9 +642,36 @@ const OS_Kind OS::Kind_MIN;
 const OS_Kind OS::Kind_MAX;
 const int OS::Kind_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-const ::google::protobuf::EnumDescriptor* Bitness_descriptor() {
+const ::google::protobuf::EnumDescriptor* Machine_CPU_Architecture_descriptor() {
   protobuf_eve_5flauncher_2fpdm_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_eve_5flauncher_2fpdm_2eproto::file_level_enum_descriptors[2];
+}
+bool Machine_CPU_Architecture_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const Machine_CPU_Architecture Machine_CPU::ARCHITECTURE_UNSPECIFIED;
+const Machine_CPU_Architecture Machine_CPU::ARCHITECTURE_X86;
+const Machine_CPU_Architecture Machine_CPU::ARCHITECTURE_X86_64;
+const Machine_CPU_Architecture Machine_CPU::ARCHITECTURE_ARM;
+const Machine_CPU_Architecture Machine_CPU::ARCHITECTURE_ARM64;
+const Machine_CPU_Architecture Machine_CPU::Architecture_MIN;
+const Machine_CPU_Architecture Machine_CPU::Architecture_MAX;
+const int Machine_CPU::Architecture_ARRAYSIZE;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+const ::google::protobuf::EnumDescriptor* Bitness_descriptor() {
+  protobuf_eve_5flauncher_2fpdm_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_eve_5flauncher_2fpdm_2eproto::file_level_enum_descriptors[3];
 }
 bool Bitness_IsValid(int value) {
   switch (value) {
@@ -2836,6 +2871,8 @@ const int Machine_CPU::kBrandFieldNumber;
 const int Machine_CPU::kVendorFieldNumber;
 const int Machine_CPU::kModelFieldNumber;
 const int Machine_CPU::kSteppingFieldNumber;
+const int Machine_CPU::kArchitectureFieldNumber;
+const int Machine_CPU::kExtensionsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Machine_CPU::Machine_CPU()
@@ -2847,7 +2884,8 @@ Machine_CPU::Machine_CPU()
 }
 Machine_CPU::Machine_CPU(const Machine_CPU& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
+      _internal_metadata_(NULL),
+      extensions_(from.extensions_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   brand_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.brand().size() > 0) {
@@ -2858,8 +2896,8 @@ Machine_CPU::Machine_CPU(const Machine_CPU& from)
     vendor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vendor_);
   }
   ::memcpy(&bitness_, &from.bitness_,
-    static_cast<size_t>(reinterpret_cast<char*>(&stepping_) -
-    reinterpret_cast<char*>(&bitness_)) + sizeof(stepping_));
+    static_cast<size_t>(reinterpret_cast<char*>(&architecture_) -
+    reinterpret_cast<char*>(&bitness_)) + sizeof(architecture_));
   // @@protoc_insertion_point(copy_constructor:platform.Machine.CPU)
 }
 
@@ -2867,8 +2905,8 @@ void Machine_CPU::SharedCtor() {
   brand_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   vendor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&bitness_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&stepping_) -
-      reinterpret_cast<char*>(&bitness_)) + sizeof(stepping_));
+      reinterpret_cast<char*>(&architecture_) -
+      reinterpret_cast<char*>(&bitness_)) + sizeof(architecture_));
 }
 
 Machine_CPU::~Machine_CPU() {
@@ -2901,11 +2939,12 @@ void Machine_CPU::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  extensions_.Clear();
   brand_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   vendor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&bitness_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&stepping_) -
-      reinterpret_cast<char*>(&bitness_)) + sizeof(stepping_));
+      reinterpret_cast<char*>(&architecture_) -
+      reinterpret_cast<char*>(&bitness_)) + sizeof(architecture_));
   _internal_metadata_.Clear();
 }
 
@@ -3008,6 +3047,38 @@ bool Machine_CPU::MergePartialFromCodedStream(
         break;
       }
 
+      // .platform.Machine.CPU.Architecture architecture = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_architecture(static_cast< ::platform::Machine_CPU_Architecture >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated string extensions = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->add_extensions()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->extensions(this->extensions_size() - 1).data(),
+            static_cast<int>(this->extensions(this->extensions_size() - 1).length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "platform.Machine.CPU.extensions"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -3075,6 +3146,22 @@ void Machine_CPU::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(6, this->stepping(), output);
   }
 
+  // .platform.Machine.CPU.Architecture architecture = 7;
+  if (this->architecture() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      7, this->architecture(), output);
+  }
+
+  // repeated string extensions = 8;
+  for (int i = 0, n = this->extensions_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->extensions(i).data(), static_cast<int>(this->extensions(i).length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "platform.Machine.CPU.extensions");
+    ::google::protobuf::internal::WireFormatLite::WriteString(
+      8, this->extensions(i), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -3132,6 +3219,22 @@ void Machine_CPU::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(6, this->stepping(), target);
   }
 
+  // .platform.Machine.CPU.Architecture architecture = 7;
+  if (this->architecture() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      7, this->architecture(), target);
+  }
+
+  // repeated string extensions = 8;
+  for (int i = 0, n = this->extensions_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->extensions(i).data(), static_cast<int>(this->extensions(i).length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "platform.Machine.CPU.extensions");
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteStringToArray(8, this->extensions(i), target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -3149,6 +3252,14 @@ size_t Machine_CPU::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
+  // repeated string extensions = 8;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->extensions_size());
+  for (int i = 0, n = this->extensions_size(); i < n; i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+      this->extensions(i));
+  }
+
   // string brand = 3;
   if (this->brand().size() > 0) {
     total_size += 1 +
@@ -3190,6 +3301,12 @@ size_t Machine_CPU::ByteSizeLong() const {
         this->stepping());
   }
 
+  // .platform.Machine.CPU.Architecture architecture = 7;
+  if (this->architecture() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->architecture());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -3217,6 +3334,7 @@ void Machine_CPU::MergeFrom(const Machine_CPU& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  extensions_.MergeFrom(from.extensions_);
   if (from.brand().size() > 0) {
 
     brand_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.brand_);
@@ -3236,6 +3354,9 @@ void Machine_CPU::MergeFrom(const Machine_CPU& from) {
   }
   if (from.stepping() != 0) {
     set_stepping(from.stepping());
+  }
+  if (from.architecture() != 0) {
+    set_architecture(from.architecture());
   }
 }
 
@@ -3263,6 +3384,7 @@ void Machine_CPU::Swap(Machine_CPU* other) {
 }
 void Machine_CPU::InternalSwap(Machine_CPU* other) {
   using std::swap;
+  extensions_.InternalSwap(CastToBase(&other->extensions_));
   brand_.Swap(&other->brand_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   vendor_.Swap(&other->vendor_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
@@ -3271,6 +3393,7 @@ void Machine_CPU::InternalSwap(Machine_CPU* other) {
   swap(logical_core_count_, other->logical_core_count_);
   swap(model_, other->model_);
   swap(stepping_, other->stepping_);
+  swap(architecture_, other->architecture_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 

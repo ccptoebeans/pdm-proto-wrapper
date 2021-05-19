@@ -152,6 +152,30 @@ inline bool OS_Kind_Parse(
   return ::google::protobuf::internal::ParseNamedEnum<OS_Kind>(
     OS_Kind_descriptor(), name, value);
 }
+enum Machine_CPU_Architecture {
+  Machine_CPU_Architecture_ARCHITECTURE_UNSPECIFIED = 0,
+  Machine_CPU_Architecture_ARCHITECTURE_X86 = 1,
+  Machine_CPU_Architecture_ARCHITECTURE_X86_64 = 2,
+  Machine_CPU_Architecture_ARCHITECTURE_ARM = 3,
+  Machine_CPU_Architecture_ARCHITECTURE_ARM64 = 4,
+  Machine_CPU_Architecture_Machine_CPU_Architecture_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  Machine_CPU_Architecture_Machine_CPU_Architecture_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool Machine_CPU_Architecture_IsValid(int value);
+const Machine_CPU_Architecture Machine_CPU_Architecture_Architecture_MIN = Machine_CPU_Architecture_ARCHITECTURE_UNSPECIFIED;
+const Machine_CPU_Architecture Machine_CPU_Architecture_Architecture_MAX = Machine_CPU_Architecture_ARCHITECTURE_ARM64;
+const int Machine_CPU_Architecture_Architecture_ARRAYSIZE = Machine_CPU_Architecture_Architecture_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* Machine_CPU_Architecture_descriptor();
+inline const ::std::string& Machine_CPU_Architecture_Name(Machine_CPU_Architecture value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    Machine_CPU_Architecture_descriptor(), value);
+}
+inline bool Machine_CPU_Architecture_Parse(
+    const ::std::string& name, Machine_CPU_Architecture* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<Machine_CPU_Architecture>(
+    Machine_CPU_Architecture_descriptor(), name, value);
+}
 enum Bitness {
   BITNESS_UNKNOWN = 0,
   BITNESS_32 = 1,
@@ -1100,7 +1124,61 @@ class Machine_CPU : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // nested types ----------------------------------------------------
 
+  typedef Machine_CPU_Architecture Architecture;
+  static const Architecture ARCHITECTURE_UNSPECIFIED =
+    Machine_CPU_Architecture_ARCHITECTURE_UNSPECIFIED;
+  static const Architecture ARCHITECTURE_X86 =
+    Machine_CPU_Architecture_ARCHITECTURE_X86;
+  static const Architecture ARCHITECTURE_X86_64 =
+    Machine_CPU_Architecture_ARCHITECTURE_X86_64;
+  static const Architecture ARCHITECTURE_ARM =
+    Machine_CPU_Architecture_ARCHITECTURE_ARM;
+  static const Architecture ARCHITECTURE_ARM64 =
+    Machine_CPU_Architecture_ARCHITECTURE_ARM64;
+  static inline bool Architecture_IsValid(int value) {
+    return Machine_CPU_Architecture_IsValid(value);
+  }
+  static const Architecture Architecture_MIN =
+    Machine_CPU_Architecture_Architecture_MIN;
+  static const Architecture Architecture_MAX =
+    Machine_CPU_Architecture_Architecture_MAX;
+  static const int Architecture_ARRAYSIZE =
+    Machine_CPU_Architecture_Architecture_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  Architecture_descriptor() {
+    return Machine_CPU_Architecture_descriptor();
+  }
+  static inline const ::std::string& Architecture_Name(Architecture value) {
+    return Machine_CPU_Architecture_Name(value);
+  }
+  static inline bool Architecture_Parse(const ::std::string& name,
+      Architecture* value) {
+    return Machine_CPU_Architecture_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
+
+  // repeated string extensions = 8;
+  int extensions_size() const;
+  void clear_extensions();
+  static const int kExtensionsFieldNumber = 8;
+  const ::std::string& extensions(int index) const;
+  ::std::string* mutable_extensions(int index);
+  void set_extensions(int index, const ::std::string& value);
+  #if LANG_CXX11
+  void set_extensions(int index, ::std::string&& value);
+  #endif
+  void set_extensions(int index, const char* value);
+  void set_extensions(int index, const char* value, size_t size);
+  ::std::string* add_extensions();
+  void add_extensions(const ::std::string& value);
+  #if LANG_CXX11
+  void add_extensions(::std::string&& value);
+  #endif
+  void add_extensions(const char* value);
+  void add_extensions(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& extensions() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_extensions();
 
   // string brand = 3;
   void clear_brand();
@@ -1154,16 +1232,24 @@ class Machine_CPU : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::int32 stepping() const;
   void set_stepping(::google::protobuf::int32 value);
 
+  // .platform.Machine.CPU.Architecture architecture = 7;
+  void clear_architecture();
+  static const int kArchitectureFieldNumber = 7;
+  ::platform::Machine_CPU_Architecture architecture() const;
+  void set_architecture(::platform::Machine_CPU_Architecture value);
+
   // @@protoc_insertion_point(class_scope:platform.Machine.CPU)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> extensions_;
   ::google::protobuf::internal::ArenaStringPtr brand_;
   ::google::protobuf::internal::ArenaStringPtr vendor_;
   int bitness_;
   ::google::protobuf::int32 logical_core_count_;
   ::google::protobuf::int32 model_;
   ::google::protobuf::int32 stepping_;
+  int architecture_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_eve_5flauncher_2fpdm_2eproto::TableStruct;
 };
@@ -3439,6 +3525,89 @@ inline void Machine_CPU::set_stepping(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:platform.Machine.CPU.stepping)
 }
 
+// .platform.Machine.CPU.Architecture architecture = 7;
+inline void Machine_CPU::clear_architecture() {
+  architecture_ = 0;
+}
+inline ::platform::Machine_CPU_Architecture Machine_CPU::architecture() const {
+  // @@protoc_insertion_point(field_get:platform.Machine.CPU.architecture)
+  return static_cast< ::platform::Machine_CPU_Architecture >(architecture_);
+}
+inline void Machine_CPU::set_architecture(::platform::Machine_CPU_Architecture value) {
+  
+  architecture_ = value;
+  // @@protoc_insertion_point(field_set:platform.Machine.CPU.architecture)
+}
+
+// repeated string extensions = 8;
+inline int Machine_CPU::extensions_size() const {
+  return extensions_.size();
+}
+inline void Machine_CPU::clear_extensions() {
+  extensions_.Clear();
+}
+inline const ::std::string& Machine_CPU::extensions(int index) const {
+  // @@protoc_insertion_point(field_get:platform.Machine.CPU.extensions)
+  return extensions_.Get(index);
+}
+inline ::std::string* Machine_CPU::mutable_extensions(int index) {
+  // @@protoc_insertion_point(field_mutable:platform.Machine.CPU.extensions)
+  return extensions_.Mutable(index);
+}
+inline void Machine_CPU::set_extensions(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:platform.Machine.CPU.extensions)
+  extensions_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+inline void Machine_CPU::set_extensions(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:platform.Machine.CPU.extensions)
+  extensions_.Mutable(index)->assign(std::move(value));
+}
+#endif
+inline void Machine_CPU::set_extensions(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  extensions_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:platform.Machine.CPU.extensions)
+}
+inline void Machine_CPU::set_extensions(int index, const char* value, size_t size) {
+  extensions_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:platform.Machine.CPU.extensions)
+}
+inline ::std::string* Machine_CPU::add_extensions() {
+  // @@protoc_insertion_point(field_add_mutable:platform.Machine.CPU.extensions)
+  return extensions_.Add();
+}
+inline void Machine_CPU::add_extensions(const ::std::string& value) {
+  extensions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:platform.Machine.CPU.extensions)
+}
+#if LANG_CXX11
+inline void Machine_CPU::add_extensions(::std::string&& value) {
+  extensions_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:platform.Machine.CPU.extensions)
+}
+#endif
+inline void Machine_CPU::add_extensions(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  extensions_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:platform.Machine.CPU.extensions)
+}
+inline void Machine_CPU::add_extensions(const char* value, size_t size) {
+  extensions_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:platform.Machine.CPU.extensions)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Machine_CPU::extensions() const {
+  // @@protoc_insertion_point(field_list:platform.Machine.CPU.extensions)
+  return extensions_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+Machine_CPU::mutable_extensions() {
+  // @@protoc_insertion_point(field_mutable_list:platform.Machine.CPU.extensions)
+  return &extensions_;
+}
+
 // -------------------------------------------------------------------
 
 // Machine_VM
@@ -4834,6 +5003,11 @@ template <> struct is_proto_enum< ::platform::OS_Kind> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::platform::OS_Kind>() {
   return ::platform::OS_Kind_descriptor();
+}
+template <> struct is_proto_enum< ::platform::Machine_CPU_Architecture> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::platform::Machine_CPU_Architecture>() {
+  return ::platform::Machine_CPU_Architecture_descriptor();
 }
 template <> struct is_proto_enum< ::platform::Bitness> : ::std::true_type {};
 template <>
