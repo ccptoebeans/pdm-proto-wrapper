@@ -21,6 +21,25 @@ platform::Bitness BitnessToProto(PDM::Bitness bitness)
 	}
 }
 
+platform::Machine::CPU::Architecture CPUArchitectureToProto(PDM::CPUArchitecture archictecture)
+{
+	switch(archictecture)
+	{
+	case PDM::CPUArchitecture::X86:
+		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_X86;
+	case PDM::CPUArchitecture::X86_64:
+		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_X86_64;
+	case PDM::CPUArchitecture::ARM:
+		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_ARM;
+	case PDM::CPUArchitecture::ARM64:
+		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_ARM64;
+	case PDM::CPUArchitecture::UNKNOWN:
+		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_UNSPECIFIED;
+	default:
+		throw std::invalid_argument("Invalid CPU architecture");
+	}
+}
+
 platform::OS::Kind OSKindToProto(PDM::OS osKind)
 {
 	switch(osKind)
@@ -130,6 +149,9 @@ namespace pdm_proto
 		cpu->set_vendor(cpuInfo.vendor);
 		cpu->set_model(cpuInfo.model);
 		cpu->set_stepping(cpuInfo.stepping);
+		cpu->set_architecture(CPUArchitectureToProto(cpuInfo.architecture));
+		for (const auto& extension : cpuInfo.extensions)
+			cpu->add_extensions(extension);
 
 		auto vm = machine->mutable_vm();
 		vm->set_is_suspected_vm(PDM::IsSuspectedVM());
