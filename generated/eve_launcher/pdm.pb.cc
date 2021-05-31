@@ -28,6 +28,7 @@ extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_StreamingService;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_Wine;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Process;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_SemanticVersion;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Machine_GPU;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_OS;
@@ -97,6 +98,11 @@ class MachineDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<Machine>
       _instance;
 } _Machine_default_instance_;
+class ProcessDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Process>
+      _instance;
+} _Process_default_instance_;
 class InformationDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Information>
@@ -281,6 +287,20 @@ static void InitDefaultsMachine() {
       &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_GPU.base,
       &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_NetworkAdapter.base,}};
 
+static void InitDefaultsProcess() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::platform::_Process_default_instance_;
+    new (ptr) ::platform::Process();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::platform::Process::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_Process =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsProcess}, {}};
+
 static void InitDefaultsInformation() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -292,12 +312,13 @@ static void InitDefaultsInformation() {
   ::platform::Information::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<4> scc_info_Information =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsInformation}, {
+::google::protobuf::internal::SCCInfo<5> scc_info_Information =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 5, InitDefaultsInformation}, {
       &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_SemanticVersion.base,
       &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,
       &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_OS.base,
-      &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine.base,}};
+      &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine.base,
+      &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Process.base,}};
 
 void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_SemanticVersion.base);
@@ -312,10 +333,11 @@ void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_Machine_GPU.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Machine_NetworkAdapter.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Machine.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Process.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Information.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[13];
+::google::protobuf::Metadata file_level_metadata[14];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[4];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
@@ -446,6 +468,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine, gpus_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine, network_adapters_),
   ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Process, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Process, running_under_rosetta_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Process, bitness_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Information, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -455,6 +484,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Information, process_bitness_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Information, os_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Information, machine_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Information, process_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::platform::SemanticVersion)},
@@ -469,7 +499,8 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 92, -1, sizeof(::platform::Machine_GPU)},
   { 103, -1, sizeof(::platform::Machine_NetworkAdapter)},
   { 111, -1, sizeof(::platform::Machine)},
-  { 126, -1, sizeof(::platform::Information)},
+  { 126, -1, sizeof(::platform::Process)},
+  { 133, -1, sizeof(::platform::Information)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -485,6 +516,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Machine_GPU_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Machine_NetworkAdapter_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Machine_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Process_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Information_default_instance_),
 };
 
@@ -503,7 +535,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 13);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 14);
 }
 
 void AddDescriptorsImpl() {
@@ -564,19 +596,22 @@ void AddDescriptorsImpl() {
       "GPU.Driver\0327\n\006Driver\022\014\n\004date\030\001 \001(\t\022\016\n\006ve"
       "ndor\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\032A\n\016NetworkAd"
       "apter\022\014\n\004name\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\014"
-      "\022\014\n\004uuid\030\003 \001(\014\"\322\001\n\013Information\022*\n\007versio"
-      "n\030\001 \001(\0132\031.platform.SemanticVersion\022-\n\tti"
-      "mestamp\030\002 \001(\0132\032.google.protobuf.Timestam"
-      "p\022*\n\017process_bitness\030\003 \001(\0162\021.platform.Bi"
-      "tness\022\030\n\002os\030\004 \001(\0132\014.platform.OS\022\"\n\007machi"
-      "ne\030\005 \001(\0132\021.platform.Machine*>\n\007Bitness\022\023"
-      "\n\017BITNESS_UNKNOWN\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nB"
-      "ITNESS_64\020\002BBZ@github.com/ccpgames/eve-p"
-      "roto-go/generated/eve_launcher/platformb"
-      "\006proto3"
+      "\022\014\n\004uuid\030\003 \001(\014\"L\n\007Process\022\035\n\025running_und"
+      "er_rosetta\030\001 \001(\010\022\"\n\007bitness\030\002 \001(\0162\021.plat"
+      "form.Bitness\"\372\001\n\013Information\022*\n\007version\030"
+      "\001 \001(\0132\031.platform.SemanticVersion\022-\n\ttime"
+      "stamp\030\002 \001(\0132\032.google.protobuf.Timestamp\022"
+      ".\n\017process_bitness\030\003 \001(\0162\021.platform.Bitn"
+      "essB\002\030\001\022\030\n\002os\030\004 \001(\0132\014.platform.OS\022\"\n\007mac"
+      "hine\030\005 \001(\0132\021.platform.Machine\022\"\n\007process"
+      "\030\006 \001(\0132\021.platform.Process*>\n\007Bitness\022\023\n\017"
+      "BITNESS_UNKNOWN\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBIT"
+      "NESS_64\020\002BBZ@github.com/ccpgames/eve-pro"
+      "to-go/generated/eve_launcher/platformb\006p"
+      "roto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2567);
+      descriptor, 2685);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "eve_launcher/pdm.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -6019,6 +6054,271 @@ void Machine::InternalSwap(Machine* other) {
 
 // ===================================================================
 
+void Process::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Process::kRunningUnderRosettaFieldNumber;
+const int Process::kBitnessFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Process::Process()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Process.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:platform.Process)
+}
+Process::Process(const Process& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&running_under_rosetta_, &from.running_under_rosetta_,
+    static_cast<size_t>(reinterpret_cast<char*>(&bitness_) -
+    reinterpret_cast<char*>(&running_under_rosetta_)) + sizeof(bitness_));
+  // @@protoc_insertion_point(copy_constructor:platform.Process)
+}
+
+void Process::SharedCtor() {
+  ::memset(&running_under_rosetta_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&bitness_) -
+      reinterpret_cast<char*>(&running_under_rosetta_)) + sizeof(bitness_));
+}
+
+Process::~Process() {
+  // @@protoc_insertion_point(destructor:platform.Process)
+  SharedDtor();
+}
+
+void Process::SharedDtor() {
+}
+
+void Process::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* Process::descriptor() {
+  ::protobuf_eve_5flauncher_2fpdm_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_eve_5flauncher_2fpdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const Process& Process::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Process.base);
+  return *internal_default_instance();
+}
+
+
+void Process::Clear() {
+// @@protoc_insertion_point(message_clear_start:platform.Process)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&running_under_rosetta_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&bitness_) -
+      reinterpret_cast<char*>(&running_under_rosetta_)) + sizeof(bitness_));
+  _internal_metadata_.Clear();
+}
+
+bool Process::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:platform.Process)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // bool running_under_rosetta = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &running_under_rosetta_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .platform.Bitness bitness = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_bitness(static_cast< ::platform::Bitness >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:platform.Process)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:platform.Process)
+  return false;
+#undef DO_
+}
+
+void Process::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:platform.Process)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bool running_under_rosetta = 1;
+  if (this->running_under_rosetta() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->running_under_rosetta(), output);
+  }
+
+  // .platform.Bitness bitness = 2;
+  if (this->bitness() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      2, this->bitness(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:platform.Process)
+}
+
+::google::protobuf::uint8* Process::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Process)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bool running_under_rosetta = 1;
+  if (this->running_under_rosetta() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->running_under_rosetta(), target);
+  }
+
+  // .platform.Bitness bitness = 2;
+  if (this->bitness() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      2, this->bitness(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Process)
+  return target;
+}
+
+size_t Process::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:platform.Process)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // bool running_under_rosetta = 1;
+  if (this->running_under_rosetta() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // .platform.Bitness bitness = 2;
+  if (this->bitness() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->bitness());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Process::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Process)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Process* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Process>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Process)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Process)
+    MergeFrom(*source);
+  }
+}
+
+void Process::MergeFrom(const Process& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Process)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.running_under_rosetta() != 0) {
+    set_running_under_rosetta(from.running_under_rosetta());
+  }
+  if (from.bitness() != 0) {
+    set_bitness(from.bitness());
+  }
+}
+
+void Process::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Process)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Process::CopyFrom(const Process& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Process)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Process::IsInitialized() const {
+  return true;
+}
+
+void Process::Swap(Process* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Process::InternalSwap(Process* other) {
+  using std::swap;
+  swap(running_under_rosetta_, other->running_under_rosetta_);
+  swap(bitness_, other->bitness_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata Process::GetMetadata() const {
+  protobuf_eve_5flauncher_2fpdm_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_eve_5flauncher_2fpdm_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
 void Information::InitAsDefaultInstance() {
   ::platform::_Information_default_instance_._instance.get_mutable()->version_ = const_cast< ::platform::SemanticVersion*>(
       ::platform::SemanticVersion::internal_default_instance());
@@ -6028,6 +6328,8 @@ void Information::InitAsDefaultInstance() {
       ::platform::OS::internal_default_instance());
   ::platform::_Information_default_instance_._instance.get_mutable()->machine_ = const_cast< ::platform::Machine*>(
       ::platform::Machine::internal_default_instance());
+  ::platform::_Information_default_instance_._instance.get_mutable()->process_ = const_cast< ::platform::Process*>(
+      ::platform::Process::internal_default_instance());
 }
 void Information::clear_timestamp() {
   if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
@@ -6041,6 +6343,7 @@ const int Information::kTimestampFieldNumber;
 const int Information::kProcessBitnessFieldNumber;
 const int Information::kOsFieldNumber;
 const int Information::kMachineFieldNumber;
+const int Information::kProcessFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Information::Information()
@@ -6074,6 +6377,11 @@ Information::Information(const Information& from)
   } else {
     machine_ = NULL;
   }
+  if (from.has_process()) {
+    process_ = new ::platform::Process(*from.process_);
+  } else {
+    process_ = NULL;
+  }
   process_bitness_ = from.process_bitness_;
   // @@protoc_insertion_point(copy_constructor:platform.Information)
 }
@@ -6094,6 +6402,7 @@ void Information::SharedDtor() {
   if (this != internal_default_instance()) delete timestamp_;
   if (this != internal_default_instance()) delete os_;
   if (this != internal_default_instance()) delete machine_;
+  if (this != internal_default_instance()) delete process_;
 }
 
 void Information::SetCachedSize(int size) const {
@@ -6132,6 +6441,10 @@ void Information::Clear() {
     delete machine_;
   }
   machine_ = NULL;
+  if (GetArenaNoVirtual() == NULL && process_ != NULL) {
+    delete process_;
+  }
+  process_ = NULL;
   process_bitness_ = 0;
   _internal_metadata_.Clear();
 }
@@ -6170,7 +6483,7 @@ bool Information::MergePartialFromCodedStream(
         break;
       }
 
-      // .platform.Bitness process_bitness = 3;
+      // .platform.Bitness process_bitness = 3 [deprecated = true];
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
@@ -6203,6 +6516,18 @@ bool Information::MergePartialFromCodedStream(
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_machine()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .platform.Process process = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_process()));
         } else {
           goto handle_unusual;
         }
@@ -6247,7 +6572,7 @@ void Information::SerializeWithCachedSizes(
       2, this->_internal_timestamp(), output);
   }
 
-  // .platform.Bitness process_bitness = 3;
+  // .platform.Bitness process_bitness = 3 [deprecated = true];
   if (this->process_bitness() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       3, this->process_bitness(), output);
@@ -6263,6 +6588,12 @@ void Information::SerializeWithCachedSizes(
   if (this->has_machine()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       5, this->_internal_machine(), output);
+  }
+
+  // .platform.Process process = 6;
+  if (this->has_process()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->_internal_process(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6293,7 +6624,7 @@ void Information::SerializeWithCachedSizes(
         2, this->_internal_timestamp(), deterministic, target);
   }
 
-  // .platform.Bitness process_bitness = 3;
+  // .platform.Bitness process_bitness = 3 [deprecated = true];
   if (this->process_bitness() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       3, this->process_bitness(), target);
@@ -6311,6 +6642,13 @@ void Information::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         5, this->_internal_machine(), deterministic, target);
+  }
+
+  // .platform.Process process = 6;
+  if (this->has_process()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, this->_internal_process(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6358,7 +6696,14 @@ size_t Information::ByteSizeLong() const {
         *machine_);
   }
 
-  // .platform.Bitness process_bitness = 3;
+  // .platform.Process process = 6;
+  if (this->has_process()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *process_);
+  }
+
+  // .platform.Bitness process_bitness = 3 [deprecated = true];
   if (this->process_bitness() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->process_bitness());
@@ -6403,6 +6748,9 @@ void Information::MergeFrom(const Information& from) {
   if (from.has_machine()) {
     mutable_machine()->::platform::Machine::MergeFrom(from.machine());
   }
+  if (from.has_process()) {
+    mutable_process()->::platform::Process::MergeFrom(from.process());
+  }
   if (from.process_bitness() != 0) {
     set_process_bitness(from.process_bitness());
   }
@@ -6436,6 +6784,7 @@ void Information::InternalSwap(Information* other) {
   swap(timestamp_, other->timestamp_);
   swap(os_, other->os_);
   swap(machine_, other->machine_);
+  swap(process_, other->process_);
   swap(process_bitness_, other->process_bitness_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
@@ -6485,6 +6834,9 @@ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::platform::Machine_NetworkAdapter
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::platform::Machine* Arena::CreateMaybeMessage< ::platform::Machine >(Arena* arena) {
   return Arena::CreateInternal< ::platform::Machine >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::platform::Process* Arena::CreateMaybeMessage< ::platform::Process >(Arena* arena) {
+  return Arena::CreateInternal< ::platform::Process >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::platform::Information* Arena::CreateMaybeMessage< ::platform::Information >(Arena* arena) {
   return Arena::CreateInternal< ::platform::Information >(arena);
