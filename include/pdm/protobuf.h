@@ -7,7 +7,9 @@ namespace platform = eve_public::app::platform;
 #include "eve_launcher/pdm.pb.h"
 #endif
 
+#include "pdm.h"
+
 namespace pdm_proto
 {
-    DllExport platform::Information GetData();
+    PDMDllExport platform::Information GetData();
 }

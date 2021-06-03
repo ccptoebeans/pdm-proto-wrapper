@@ -1,4 +1,5 @@
 #include "../src/semver.h"
+#include "../include/pdm/protobuf.h"
 #include <gtest/gtest.h>
 
 struct test_row {
@@ -23,7 +24,7 @@ test_row test_rows[] = {
     {"v1.2.3", false, { 0, 0, 0, "", ""}},
 };
 
-TEST(foo, bar) {
+TEST(SemanticVersion, CanConvertSemverData) {
     for (int i = 0; i < (sizeof(test_rows)/sizeof(test_row)); ++i) {
         auto& row = test_rows[i];
         pdm::SemanticVersion test_result;
@@ -32,4 +33,9 @@ TEST(foo, bar) {
             EXPECT_EQ(row.expected_result, test_result);
         }
     }
+}
+
+TEST(PdmProto, CanGetProtobufData)
+{
+    pdm_proto::GetData();
 }

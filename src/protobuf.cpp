@@ -98,7 +98,7 @@ void AugmentVersion(const std::string& pdm_version, platform::SemanticVersion* r
 
 namespace pdm_proto
 {
-	DllExport platform::Information GetData()
+	platform::Information GetData()
 	{
 		platform::Information data;
 
