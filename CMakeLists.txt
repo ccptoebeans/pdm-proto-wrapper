@@ -35,16 +35,8 @@ if(USE_EVE_PUBLIC_DOMAIN)
     target_compile_definitions(platform_pdm_proto_wrapper PUBLIC USE_EVE_PUBLIC_DOMAIN)
 endif()
 
-option(USE_WITH_PROTOBUF_DLL "Is this library going to be used with protobuf as DLL?" OFF)
-
-if(USE_WITH_PROTOBUF_DLL)
+if(BUILD_SHARED_LIBS)
     target_compile_definitions(platform_pdm_proto_wrapper PUBLIC PROTOBUF_USE_DLLS=1)
-endif()
-
-if (APPLE)
-    target_compile_definitions(platform_pdm_proto_wrapper PRIVATE "DllExport=__attribute__((visibility(\"default\")))")
-elseif (MSVC)
-    target_compile_definitions(platform_pdm_proto_wrapper PRIVATE "DllExport=__declspec(dllexport)")
 endif()
 
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_STANDARD 17)
