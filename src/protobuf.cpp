@@ -76,7 +76,7 @@ platform::OS::StreamingService::Provider StreamingServiceToProto(PDM::StreamingS
 		return platform::OS::StreamingService::PROVIDER_UNSPECIFIED;
 	case PDM::StreamingService::UNKNOWN:
 		return platform::OS::StreamingService::PROVIDER_UNKNOWN;
-	case PDM::StreamingService::INTEL:
+	case PDM::StreamingService::INTEL_STREAM:
 		return platform::OS::StreamingService::PROVIDER_INTEL;
 	default:
 		throw std::invalid_argument( "Invalid streaming service type" );
@@ -103,9 +103,13 @@ namespace pdm_proto
 		platform::Information data;
 
         *data.mutable_timestamp() = google::protobuf::util::TimeUtil::GetCurrentTime();
-        data.set_process_bitness(BitnessToProto(PDM::GetProcessBitness()));
+        data.set_process_bitness(BitnessToProto(PDM::GetProcessBitness())); // Deprecated
 
         AugmentVersion(PDM::GetPDMVersion(), data.mutable_version());
+
+		auto process = data.mutable_process();
+		process->set_bitness(BitnessToProto(PDM::GetProcessBitness()));
+		process->set_running_under_rosetta(PDM::IsRosetta());
 
 		auto os = data.mutable_os();
 		os->set_type(OSKindToProto(PDM::GetOSType()));
@@ -195,11 +199,5 @@ namespace pdm_proto
 		}
 
 		return data;
-	}
-
-	// Re-expose
-	void exposure_dummy()
-	{
-		PDM::RetrievePDMData( "", "" );
 	}
 }
