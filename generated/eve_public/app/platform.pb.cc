@@ -28,6 +28,7 @@ extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto :
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_GraphicsAPIs;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_StreamingService;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OS_Wine;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Process;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_SemanticVersion;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Machine_GPU;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5fpublic_2fapp_2fplatform_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_OS;
@@ -99,6 +100,11 @@ class MachineDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<Machine>
       _instance;
 } _Machine_default_instance_;
+class ProcessDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Process>
+      _instance;
+} _Process_default_instance_;
 class InformationDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Information>
@@ -285,6 +291,20 @@ static void InitDefaultsMachine() {
       &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_Machine_GPU.base,
       &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_Machine_NetworkAdapter.base,}};
 
+static void InitDefaultsProcess() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::eve_public::app::platform::_Process_default_instance_;
+    new (ptr) ::eve_public::app::platform::Process();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::eve_public::app::platform::Process::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_Process =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsProcess}, {}};
+
 static void InitDefaultsInformation() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -296,12 +316,13 @@ static void InitDefaultsInformation() {
   ::eve_public::app::platform::Information::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<4> scc_info_Information =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsInformation}, {
+::google::protobuf::internal::SCCInfo<5> scc_info_Information =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 5, InitDefaultsInformation}, {
       &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_SemanticVersion.base,
       &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,
       &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_OS.base,
-      &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_Machine.base,}};
+      &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_Machine.base,
+      &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_Process.base,}};
 
 void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_SemanticVersion.base);
@@ -316,10 +337,11 @@ void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_Machine_GPU.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Machine_NetworkAdapter.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Machine.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Process.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Information.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[13];
+::google::protobuf::Metadata file_level_metadata[14];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[4];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
@@ -450,6 +472,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Machine, gpus_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Machine, network_adapters_),
   ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Process, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Process, running_under_rosetta_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Process, bitness_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Information, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -459,6 +488,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Information, process_bitness_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Information, os_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Information, machine_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Information, process_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::eve_public::app::platform::SemanticVersion)},
@@ -473,7 +503,8 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 92, -1, sizeof(::eve_public::app::platform::Machine_GPU)},
   { 103, -1, sizeof(::eve_public::app::platform::Machine_NetworkAdapter)},
   { 111, -1, sizeof(::eve_public::app::platform::Machine)},
-  { 126, -1, sizeof(::eve_public::app::platform::Information)},
+  { 126, -1, sizeof(::eve_public::app::platform::Process)},
+  { 133, -1, sizeof(::eve_public::app::platform::Information)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -489,6 +520,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_Machine_GPU_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_Machine_NetworkAdapter_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_Machine_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_Process_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::eve_public::app::platform::_Information_default_instance_),
 };
 
@@ -507,7 +539,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 13);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 14);
 }
 
 void AddDescriptorsImpl() {
@@ -574,21 +606,25 @@ void AddDescriptorsImpl() {
       "latform.Machine.GPU.Driver\0327\n\006Driver\022\014\n\004"
       "date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017\n\007version\030\003 "
       "\001(\t\032A\n\016NetworkAdapter\022\014\n\004name\030\001 \001(\t\022\023\n\013m"
-      "ac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"\216\002\n\013Infor"
-      "mation\0229\n\007version\030\001 \001(\0132(.eve_public.app"
-      ".platform.SemanticVersion\022-\n\ttimestamp\030\002"
-      " \001(\0132\032.google.protobuf.Timestamp\0229\n\017proc"
-      "ess_bitness\030\003 \001(\0162 .eve_public.app.platf"
-      "orm.Bitness\022\'\n\002os\030\004 \001(\0132\033.eve_public.app"
-      ".platform.OS\0221\n\007machine\030\005 \001(\0132 .eve_publ"
-      "ic.app.platform.Machine*B\n\007Bitness\022\027\n\023BI"
-      "TNESS_UNSPECIFIED\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nB"
-      "ITNESS_64\020\002BLZJgithub.com/ccpgames/eve-p"
-      "roto-go/generated/eve_public/application"
-      "/platformb\006proto3"
+      "ac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"[\n\007Proces"
+      "s\022\035\n\025running_under_rosetta\030\001 \001(\010\0221\n\007bitn"
+      "ess\030\002 \001(\0162 .eve_public.app.platform.Bitn"
+      "ess\"\305\002\n\013Information\0229\n\007version\030\001 \001(\0132(.e"
+      "ve_public.app.platform.SemanticVersion\022-"
+      "\n\ttimestamp\030\002 \001(\0132\032.google.protobuf.Time"
+      "stamp\022=\n\017process_bitness\030\003 \001(\0162 .eve_pub"
+      "lic.app.platform.BitnessB\002\030\001\022\'\n\002os\030\004 \001(\013"
+      "2\033.eve_public.app.platform.OS\0221\n\007machine"
+      "\030\005 \001(\0132 .eve_public.app.platform.Machine"
+      "\0221\n\007process\030\006 \001(\0132 .eve_public.app.platf"
+      "orm.Process*B\n\007Bitness\022\027\n\023BITNESS_UNSPEC"
+      "IFIED\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBITNESS_64\020\002B"
+      "LZJgithub.com/ccpgames/eve-proto-go/gene"
+      "rated/eve_public/application/platformb\006p"
+      "roto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2897);
+      descriptor, 3045);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "eve_public/app/platform.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -6033,6 +6069,271 @@ void Machine::InternalSwap(Machine* other) {
 
 // ===================================================================
 
+void Process::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Process::kRunningUnderRosettaFieldNumber;
+const int Process::kBitnessFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Process::Process()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_Process.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:eve_public.app.platform.Process)
+}
+Process::Process(const Process& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&running_under_rosetta_, &from.running_under_rosetta_,
+    static_cast<size_t>(reinterpret_cast<char*>(&bitness_) -
+    reinterpret_cast<char*>(&running_under_rosetta_)) + sizeof(bitness_));
+  // @@protoc_insertion_point(copy_constructor:eve_public.app.platform.Process)
+}
+
+void Process::SharedCtor() {
+  ::memset(&running_under_rosetta_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&bitness_) -
+      reinterpret_cast<char*>(&running_under_rosetta_)) + sizeof(bitness_));
+}
+
+Process::~Process() {
+  // @@protoc_insertion_point(destructor:eve_public.app.platform.Process)
+  SharedDtor();
+}
+
+void Process::SharedDtor() {
+}
+
+void Process::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* Process::descriptor() {
+  ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const Process& Process::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::scc_info_Process.base);
+  return *internal_default_instance();
+}
+
+
+void Process::Clear() {
+// @@protoc_insertion_point(message_clear_start:eve_public.app.platform.Process)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&running_under_rosetta_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&bitness_) -
+      reinterpret_cast<char*>(&running_under_rosetta_)) + sizeof(bitness_));
+  _internal_metadata_.Clear();
+}
+
+bool Process::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:eve_public.app.platform.Process)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // bool running_under_rosetta = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &running_under_rosetta_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .eve_public.app.platform.Bitness bitness = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_bitness(static_cast< ::eve_public::app::platform::Bitness >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:eve_public.app.platform.Process)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:eve_public.app.platform.Process)
+  return false;
+#undef DO_
+}
+
+void Process::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:eve_public.app.platform.Process)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bool running_under_rosetta = 1;
+  if (this->running_under_rosetta() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->running_under_rosetta(), output);
+  }
+
+  // .eve_public.app.platform.Bitness bitness = 2;
+  if (this->bitness() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      2, this->bitness(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:eve_public.app.platform.Process)
+}
+
+::google::protobuf::uint8* Process::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:eve_public.app.platform.Process)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bool running_under_rosetta = 1;
+  if (this->running_under_rosetta() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->running_under_rosetta(), target);
+  }
+
+  // .eve_public.app.platform.Bitness bitness = 2;
+  if (this->bitness() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      2, this->bitness(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:eve_public.app.platform.Process)
+  return target;
+}
+
+size_t Process::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:eve_public.app.platform.Process)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // bool running_under_rosetta = 1;
+  if (this->running_under_rosetta() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // .eve_public.app.platform.Bitness bitness = 2;
+  if (this->bitness() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->bitness());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Process::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:eve_public.app.platform.Process)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Process* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Process>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:eve_public.app.platform.Process)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:eve_public.app.platform.Process)
+    MergeFrom(*source);
+  }
+}
+
+void Process::MergeFrom(const Process& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:eve_public.app.platform.Process)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.running_under_rosetta() != 0) {
+    set_running_under_rosetta(from.running_under_rosetta());
+  }
+  if (from.bitness() != 0) {
+    set_bitness(from.bitness());
+  }
+}
+
+void Process::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:eve_public.app.platform.Process)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Process::CopyFrom(const Process& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:eve_public.app.platform.Process)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Process::IsInitialized() const {
+  return true;
+}
+
+void Process::Swap(Process* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Process::InternalSwap(Process* other) {
+  using std::swap;
+  swap(running_under_rosetta_, other->running_under_rosetta_);
+  swap(bitness_, other->bitness_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata Process::GetMetadata() const {
+  protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
 void Information::InitAsDefaultInstance() {
   ::eve_public::app::platform::_Information_default_instance_._instance.get_mutable()->version_ = const_cast< ::eve_public::app::platform::SemanticVersion*>(
       ::eve_public::app::platform::SemanticVersion::internal_default_instance());
@@ -6042,6 +6343,8 @@ void Information::InitAsDefaultInstance() {
       ::eve_public::app::platform::OS::internal_default_instance());
   ::eve_public::app::platform::_Information_default_instance_._instance.get_mutable()->machine_ = const_cast< ::eve_public::app::platform::Machine*>(
       ::eve_public::app::platform::Machine::internal_default_instance());
+  ::eve_public::app::platform::_Information_default_instance_._instance.get_mutable()->process_ = const_cast< ::eve_public::app::platform::Process*>(
+      ::eve_public::app::platform::Process::internal_default_instance());
 }
 void Information::clear_timestamp() {
   if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
@@ -6055,6 +6358,7 @@ const int Information::kTimestampFieldNumber;
 const int Information::kProcessBitnessFieldNumber;
 const int Information::kOsFieldNumber;
 const int Information::kMachineFieldNumber;
+const int Information::kProcessFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Information::Information()
@@ -6088,6 +6392,11 @@ Information::Information(const Information& from)
   } else {
     machine_ = NULL;
   }
+  if (from.has_process()) {
+    process_ = new ::eve_public::app::platform::Process(*from.process_);
+  } else {
+    process_ = NULL;
+  }
   process_bitness_ = from.process_bitness_;
   // @@protoc_insertion_point(copy_constructor:eve_public.app.platform.Information)
 }
@@ -6108,6 +6417,7 @@ void Information::SharedDtor() {
   if (this != internal_default_instance()) delete timestamp_;
   if (this != internal_default_instance()) delete os_;
   if (this != internal_default_instance()) delete machine_;
+  if (this != internal_default_instance()) delete process_;
 }
 
 void Information::SetCachedSize(int size) const {
@@ -6146,6 +6456,10 @@ void Information::Clear() {
     delete machine_;
   }
   machine_ = NULL;
+  if (GetArenaNoVirtual() == NULL && process_ != NULL) {
+    delete process_;
+  }
+  process_ = NULL;
   process_bitness_ = 0;
   _internal_metadata_.Clear();
 }
@@ -6184,7 +6498,7 @@ bool Information::MergePartialFromCodedStream(
         break;
       }
 
-      // .eve_public.app.platform.Bitness process_bitness = 3;
+      // .eve_public.app.platform.Bitness process_bitness = 3 [deprecated = true];
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
@@ -6217,6 +6531,18 @@ bool Information::MergePartialFromCodedStream(
             static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_machine()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .eve_public.app.platform.Process process = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_process()));
         } else {
           goto handle_unusual;
         }
@@ -6261,7 +6587,7 @@ void Information::SerializeWithCachedSizes(
       2, this->_internal_timestamp(), output);
   }
 
-  // .eve_public.app.platform.Bitness process_bitness = 3;
+  // .eve_public.app.platform.Bitness process_bitness = 3 [deprecated = true];
   if (this->process_bitness() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       3, this->process_bitness(), output);
@@ -6277,6 +6603,12 @@ void Information::SerializeWithCachedSizes(
   if (this->has_machine()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       5, this->_internal_machine(), output);
+  }
+
+  // .eve_public.app.platform.Process process = 6;
+  if (this->has_process()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      6, this->_internal_process(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6307,7 +6639,7 @@ void Information::SerializeWithCachedSizes(
         2, this->_internal_timestamp(), deterministic, target);
   }
 
-  // .eve_public.app.platform.Bitness process_bitness = 3;
+  // .eve_public.app.platform.Bitness process_bitness = 3 [deprecated = true];
   if (this->process_bitness() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       3, this->process_bitness(), target);
@@ -6325,6 +6657,13 @@ void Information::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         5, this->_internal_machine(), deterministic, target);
+  }
+
+  // .eve_public.app.platform.Process process = 6;
+  if (this->has_process()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        6, this->_internal_process(), deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -6372,7 +6711,14 @@ size_t Information::ByteSizeLong() const {
         *machine_);
   }
 
-  // .eve_public.app.platform.Bitness process_bitness = 3;
+  // .eve_public.app.platform.Process process = 6;
+  if (this->has_process()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *process_);
+  }
+
+  // .eve_public.app.platform.Bitness process_bitness = 3 [deprecated = true];
   if (this->process_bitness() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->process_bitness());
@@ -6417,6 +6763,9 @@ void Information::MergeFrom(const Information& from) {
   if (from.has_machine()) {
     mutable_machine()->::eve_public::app::platform::Machine::MergeFrom(from.machine());
   }
+  if (from.has_process()) {
+    mutable_process()->::eve_public::app::platform::Process::MergeFrom(from.process());
+  }
   if (from.process_bitness() != 0) {
     set_process_bitness(from.process_bitness());
   }
@@ -6450,6 +6799,7 @@ void Information::InternalSwap(Information* other) {
   swap(timestamp_, other->timestamp_);
   swap(os_, other->os_);
   swap(machine_, other->machine_);
+  swap(process_, other->process_);
   swap(process_bitness_, other->process_bitness_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
@@ -6501,6 +6851,9 @@ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_public::app::platform::Machi
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_public::app::platform::Machine* Arena::CreateMaybeMessage< ::eve_public::app::platform::Machine >(Arena* arena) {
   return Arena::CreateInternal< ::eve_public::app::platform::Machine >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_public::app::platform::Process* Arena::CreateMaybeMessage< ::eve_public::app::platform::Process >(Arena* arena) {
+  return Arena::CreateInternal< ::eve_public::app::platform::Process >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::eve_public::app::platform::Information* Arena::CreateMaybeMessage< ::eve_public::app::platform::Information >(Arena* arena) {
   return Arena::CreateInternal< ::eve_public::app::platform::Information >(arena);

@@ -40,7 +40,7 @@ namespace protobuf_eve_5fpublic_2fapp_2fplatform_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[13];
+  static const ::google::protobuf::internal::ParseTable schema[14];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -86,6 +86,9 @@ extern OS_StreamingServiceDefaultTypeInternal _OS_StreamingService_default_insta
 class OS_Wine;
 class OS_WineDefaultTypeInternal;
 extern OS_WineDefaultTypeInternal _OS_Wine_default_instance_;
+class Process;
+class ProcessDefaultTypeInternal;
+extern ProcessDefaultTypeInternal _Process_default_instance_;
 class SemanticVersion;
 class SemanticVersionDefaultTypeInternal;
 extern SemanticVersionDefaultTypeInternal _SemanticVersion_default_instance_;
@@ -106,6 +109,7 @@ template<> ::eve_public::app::platform::OS* Arena::CreateMaybeMessage<::eve_publ
 template<> ::eve_public::app::platform::OS_GraphicsAPIs* Arena::CreateMaybeMessage<::eve_public::app::platform::OS_GraphicsAPIs>(Arena*);
 template<> ::eve_public::app::platform::OS_StreamingService* Arena::CreateMaybeMessage<::eve_public::app::platform::OS_StreamingService>(Arena*);
 template<> ::eve_public::app::platform::OS_Wine* Arena::CreateMaybeMessage<::eve_public::app::platform::OS_Wine>(Arena*);
+template<> ::eve_public::app::platform::Process* Arena::CreateMaybeMessage<::eve_public::app::platform::Process>(Arena*);
 template<> ::eve_public::app::platform::SemanticVersion* Arena::CreateMaybeMessage<::eve_public::app::platform::SemanticVersion>(Arena*);
 }  // namespace protobuf
 }  // namespace google
@@ -2208,6 +2212,116 @@ class Machine : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 };
 // -------------------------------------------------------------------
 
+class Process : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_public.app.platform.Process) */ {
+ public:
+  Process();
+  virtual ~Process();
+
+  Process(const Process& from);
+
+  inline Process& operator=(const Process& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  Process(Process&& from) noexcept
+    : Process() {
+    *this = ::std::move(from);
+  }
+
+  inline Process& operator=(Process&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Process& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Process* internal_default_instance() {
+    return reinterpret_cast<const Process*>(
+               &_Process_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    12;
+
+  void Swap(Process* other);
+  friend void swap(Process& a, Process& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Process* New() const final {
+    return CreateMaybeMessage<Process>(NULL);
+  }
+
+  Process* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<Process>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const Process& from);
+  void MergeFrom(const Process& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Process* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // bool running_under_rosetta = 1;
+  void clear_running_under_rosetta();
+  static const int kRunningUnderRosettaFieldNumber = 1;
+  bool running_under_rosetta() const;
+  void set_running_under_rosetta(bool value);
+
+  // .eve_public.app.platform.Bitness bitness = 2;
+  void clear_bitness();
+  static const int kBitnessFieldNumber = 2;
+  ::eve_public::app::platform::Bitness bitness() const;
+  void set_bitness(::eve_public::app::platform::Bitness value);
+
+  // @@protoc_insertion_point(class_scope:eve_public.app.platform.Process)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  bool running_under_rosetta_;
+  int bitness_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class Information : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:eve_public.app.platform.Information) */ {
  public:
   Information();
@@ -2243,7 +2357,7 @@ class Information : public ::google::protobuf::Message /* @@protoc_insertion_poi
                &_Information_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    13;
 
   void Swap(Information* other);
   friend void swap(Information& a, Information& b) {
@@ -2343,11 +2457,23 @@ class Information : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::eve_public::app::platform::Machine* mutable_machine();
   void set_allocated_machine(::eve_public::app::platform::Machine* machine);
 
-  // .eve_public.app.platform.Bitness process_bitness = 3;
-  void clear_process_bitness();
-  static const int kProcessBitnessFieldNumber = 3;
-  ::eve_public::app::platform::Bitness process_bitness() const;
-  void set_process_bitness(::eve_public::app::platform::Bitness value);
+  // .eve_public.app.platform.Process process = 6;
+  bool has_process() const;
+  void clear_process();
+  static const int kProcessFieldNumber = 6;
+  private:
+  const ::eve_public::app::platform::Process& _internal_process() const;
+  public:
+  const ::eve_public::app::platform::Process& process() const;
+  ::eve_public::app::platform::Process* release_process();
+  ::eve_public::app::platform::Process* mutable_process();
+  void set_allocated_process(::eve_public::app::platform::Process* process);
+
+  // .eve_public.app.platform.Bitness process_bitness = 3 [deprecated = true];
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR void clear_process_bitness();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR static const int kProcessBitnessFieldNumber = 3;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR ::eve_public::app::platform::Bitness process_bitness() const;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR void set_process_bitness(::eve_public::app::platform::Bitness value);
 
   // @@protoc_insertion_point(class_scope:eve_public.app.platform.Information)
  private:
@@ -2357,6 +2483,7 @@ class Information : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::Timestamp* timestamp_;
   ::eve_public::app::platform::OS* os_;
   ::eve_public::app::platform::Machine* machine_;
+  ::eve_public::app::platform::Process* process_;
   int process_bitness_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::TableStruct;
@@ -4738,6 +4865,38 @@ Machine::network_adapters() const {
 
 // -------------------------------------------------------------------
 
+// Process
+
+// bool running_under_rosetta = 1;
+inline void Process::clear_running_under_rosetta() {
+  running_under_rosetta_ = false;
+}
+inline bool Process::running_under_rosetta() const {
+  // @@protoc_insertion_point(field_get:eve_public.app.platform.Process.running_under_rosetta)
+  return running_under_rosetta_;
+}
+inline void Process::set_running_under_rosetta(bool value) {
+  
+  running_under_rosetta_ = value;
+  // @@protoc_insertion_point(field_set:eve_public.app.platform.Process.running_under_rosetta)
+}
+
+// .eve_public.app.platform.Bitness bitness = 2;
+inline void Process::clear_bitness() {
+  bitness_ = 0;
+}
+inline ::eve_public::app::platform::Bitness Process::bitness() const {
+  // @@protoc_insertion_point(field_get:eve_public.app.platform.Process.bitness)
+  return static_cast< ::eve_public::app::platform::Bitness >(bitness_);
+}
+inline void Process::set_bitness(::eve_public::app::platform::Bitness value) {
+  
+  bitness_ = value;
+  // @@protoc_insertion_point(field_set:eve_public.app.platform.Process.bitness)
+}
+
+// -------------------------------------------------------------------
+
 // Information
 
 // .eve_public.app.platform.SemanticVersion version = 1;
@@ -4843,7 +5002,7 @@ inline void Information::set_allocated_timestamp(::google::protobuf::Timestamp* 
   // @@protoc_insertion_point(field_set_allocated:eve_public.app.platform.Information.timestamp)
 }
 
-// .eve_public.app.platform.Bitness process_bitness = 3;
+// .eve_public.app.platform.Bitness process_bitness = 3 [deprecated = true];
 inline void Information::clear_process_bitness() {
   process_bitness_ = 0;
 }
@@ -4965,9 +5124,65 @@ inline void Information::set_allocated_machine(::eve_public::app::platform::Mach
   // @@protoc_insertion_point(field_set_allocated:eve_public.app.platform.Information.machine)
 }
 
+// .eve_public.app.platform.Process process = 6;
+inline bool Information::has_process() const {
+  return this != internal_default_instance() && process_ != NULL;
+}
+inline void Information::clear_process() {
+  if (GetArenaNoVirtual() == NULL && process_ != NULL) {
+    delete process_;
+  }
+  process_ = NULL;
+}
+inline const ::eve_public::app::platform::Process& Information::_internal_process() const {
+  return *process_;
+}
+inline const ::eve_public::app::platform::Process& Information::process() const {
+  const ::eve_public::app::platform::Process* p = process_;
+  // @@protoc_insertion_point(field_get:eve_public.app.platform.Information.process)
+  return p != NULL ? *p : *reinterpret_cast<const ::eve_public::app::platform::Process*>(
+      &::eve_public::app::platform::_Process_default_instance_);
+}
+inline ::eve_public::app::platform::Process* Information::release_process() {
+  // @@protoc_insertion_point(field_release:eve_public.app.platform.Information.process)
+  
+  ::eve_public::app::platform::Process* temp = process_;
+  process_ = NULL;
+  return temp;
+}
+inline ::eve_public::app::platform::Process* Information::mutable_process() {
+  
+  if (process_ == NULL) {
+    auto* p = CreateMaybeMessage<::eve_public::app::platform::Process>(GetArenaNoVirtual());
+    process_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:eve_public.app.platform.Information.process)
+  return process_;
+}
+inline void Information::set_allocated_process(::eve_public::app::platform::Process* process) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete process_;
+  }
+  if (process) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      process = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, process, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  process_ = process;
+  // @@protoc_insertion_point(field_set_allocated:eve_public.app.platform.Information.process)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
