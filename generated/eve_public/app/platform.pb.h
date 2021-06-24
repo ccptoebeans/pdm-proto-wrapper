@@ -186,6 +186,28 @@ inline bool Machine_CPU_Architecture_Parse(
   return ::google::protobuf::internal::ParseNamedEnum<Machine_CPU_Architecture>(
     Machine_CPU_Architecture_descriptor(), name, value);
 }
+enum Machine_CPU_BatteryDetection {
+  Machine_CPU_BatteryDetection_BATTERY_UNSPECIFIED = 0,
+  Machine_CPU_BatteryDetection_BATTERY_DETECTED = 1,
+  Machine_CPU_BatteryDetection_BATTERY_NOT_DETECTED = 2,
+  Machine_CPU_BatteryDetection_Machine_CPU_BatteryDetection_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  Machine_CPU_BatteryDetection_Machine_CPU_BatteryDetection_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool Machine_CPU_BatteryDetection_IsValid(int value);
+const Machine_CPU_BatteryDetection Machine_CPU_BatteryDetection_BatteryDetection_MIN = Machine_CPU_BatteryDetection_BATTERY_UNSPECIFIED;
+const Machine_CPU_BatteryDetection Machine_CPU_BatteryDetection_BatteryDetection_MAX = Machine_CPU_BatteryDetection_BATTERY_NOT_DETECTED;
+const int Machine_CPU_BatteryDetection_BatteryDetection_ARRAYSIZE = Machine_CPU_BatteryDetection_BatteryDetection_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* Machine_CPU_BatteryDetection_descriptor();
+inline const ::std::string& Machine_CPU_BatteryDetection_Name(Machine_CPU_BatteryDetection value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    Machine_CPU_BatteryDetection_descriptor(), value);
+}
+inline bool Machine_CPU_BatteryDetection_Parse(
+    const ::std::string& name, Machine_CPU_BatteryDetection* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<Machine_CPU_BatteryDetection>(
+    Machine_CPU_BatteryDetection_descriptor(), name, value);
+}
 enum Bitness {
   BITNESS_UNSPECIFIED = 0,
   BITNESS_32 = 1,
@@ -1166,6 +1188,34 @@ class Machine_CPU : public ::google::protobuf::Message /* @@protoc_insertion_poi
     return Machine_CPU_Architecture_Parse(name, value);
   }
 
+  typedef Machine_CPU_BatteryDetection BatteryDetection;
+  static const BatteryDetection BATTERY_UNSPECIFIED =
+    Machine_CPU_BatteryDetection_BATTERY_UNSPECIFIED;
+  static const BatteryDetection BATTERY_DETECTED =
+    Machine_CPU_BatteryDetection_BATTERY_DETECTED;
+  static const BatteryDetection BATTERY_NOT_DETECTED =
+    Machine_CPU_BatteryDetection_BATTERY_NOT_DETECTED;
+  static inline bool BatteryDetection_IsValid(int value) {
+    return Machine_CPU_BatteryDetection_IsValid(value);
+  }
+  static const BatteryDetection BatteryDetection_MIN =
+    Machine_CPU_BatteryDetection_BatteryDetection_MIN;
+  static const BatteryDetection BatteryDetection_MAX =
+    Machine_CPU_BatteryDetection_BatteryDetection_MAX;
+  static const int BatteryDetection_ARRAYSIZE =
+    Machine_CPU_BatteryDetection_BatteryDetection_ARRAYSIZE;
+  static inline const ::google::protobuf::EnumDescriptor*
+  BatteryDetection_descriptor() {
+    return Machine_CPU_BatteryDetection_descriptor();
+  }
+  static inline const ::std::string& BatteryDetection_Name(BatteryDetection value) {
+    return Machine_CPU_BatteryDetection_Name(value);
+  }
+  static inline bool BatteryDetection_Parse(const ::std::string& name,
+      BatteryDetection* value) {
+    return Machine_CPU_BatteryDetection_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   // repeated string extensions = 8;
@@ -1248,6 +1298,12 @@ class Machine_CPU : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::eve_public::app::platform::Machine_CPU_Architecture architecture() const;
   void set_architecture(::eve_public::app::platform::Machine_CPU_Architecture value);
 
+  // .eve_public.app.platform.Machine.CPU.BatteryDetection battery_detection = 9;
+  void clear_battery_detection();
+  static const int kBatteryDetectionFieldNumber = 9;
+  ::eve_public::app::platform::Machine_CPU_BatteryDetection battery_detection() const;
+  void set_battery_detection(::eve_public::app::platform::Machine_CPU_BatteryDetection value);
+
   // @@protoc_insertion_point(class_scope:eve_public.app.platform.Machine.CPU)
  private:
 
@@ -1260,6 +1316,7 @@ class Machine_CPU : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::int32 model_;
   ::google::protobuf::int32 stepping_;
   int architecture_;
+  int battery_detection_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::TableStruct;
 };
@@ -3741,6 +3798,20 @@ Machine_CPU::mutable_extensions() {
   return &extensions_;
 }
 
+// .eve_public.app.platform.Machine.CPU.BatteryDetection battery_detection = 9;
+inline void Machine_CPU::clear_battery_detection() {
+  battery_detection_ = 0;
+}
+inline ::eve_public::app::platform::Machine_CPU_BatteryDetection Machine_CPU::battery_detection() const {
+  // @@protoc_insertion_point(field_get:eve_public.app.platform.Machine.CPU.battery_detection)
+  return static_cast< ::eve_public::app::platform::Machine_CPU_BatteryDetection >(battery_detection_);
+}
+inline void Machine_CPU::set_battery_detection(::eve_public::app::platform::Machine_CPU_BatteryDetection value) {
+  
+  battery_detection_ = value;
+  // @@protoc_insertion_point(field_set:eve_public.app.platform.Machine.CPU.battery_detection)
+}
+
 // -------------------------------------------------------------------
 
 // Machine_VM
@@ -5231,6 +5302,11 @@ template <> struct is_proto_enum< ::eve_public::app::platform::Machine_CPU_Archi
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::eve_public::app::platform::Machine_CPU_Architecture>() {
   return ::eve_public::app::platform::Machine_CPU_Architecture_descriptor();
+}
+template <> struct is_proto_enum< ::eve_public::app::platform::Machine_CPU_BatteryDetection> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::eve_public::app::platform::Machine_CPU_BatteryDetection>() {
+  return ::eve_public::app::platform::Machine_CPU_BatteryDetection_descriptor();
 }
 template <> struct is_proto_enum< ::eve_public::app::platform::Bitness> : ::std::true_type {};
 template <>

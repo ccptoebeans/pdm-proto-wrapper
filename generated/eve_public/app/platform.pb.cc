@@ -342,7 +342,7 @@ void InitDefaults() {
 }
 
 ::google::protobuf::Metadata file_level_metadata[14];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[4];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[5];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -408,6 +408,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Machine_CPU, stepping_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Machine_CPU, architecture_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Machine_CPU, extensions_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Machine_CPU, battery_detection_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::eve_public::app::platform::Machine_VM, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -497,14 +498,14 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 26, -1, sizeof(::eve_public::app::platform::OS_StreamingService)},
   { 32, -1, sizeof(::eve_public::app::platform::OS)},
   { 50, -1, sizeof(::eve_public::app::platform::Machine_CPU)},
-  { 63, -1, sizeof(::eve_public::app::platform::Machine_VM)},
-  { 73, -1, sizeof(::eve_public::app::platform::Machine_Monitor)},
-  { 84, -1, sizeof(::eve_public::app::platform::Machine_GPU_Driver)},
-  { 92, -1, sizeof(::eve_public::app::platform::Machine_GPU)},
-  { 103, -1, sizeof(::eve_public::app::platform::Machine_NetworkAdapter)},
-  { 111, -1, sizeof(::eve_public::app::platform::Machine)},
-  { 126, -1, sizeof(::eve_public::app::platform::Process)},
-  { 133, -1, sizeof(::eve_public::app::platform::Information)},
+  { 64, -1, sizeof(::eve_public::app::platform::Machine_VM)},
+  { 74, -1, sizeof(::eve_public::app::platform::Machine_Monitor)},
+  { 85, -1, sizeof(::eve_public::app::platform::Machine_GPU_Driver)},
+  { 93, -1, sizeof(::eve_public::app::platform::Machine_GPU)},
+  { 104, -1, sizeof(::eve_public::app::platform::Machine_NetworkAdapter)},
+  { 112, -1, sizeof(::eve_public::app::platform::Machine)},
+  { 127, -1, sizeof(::eve_public::app::platform::Process)},
+  { 134, -1, sizeof(::eve_public::app::platform::Information)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -572,7 +573,7 @@ void AddDescriptorsImpl() {
       "R_UNSPECIFIED\020\000\022\024\n\020PROVIDER_UNKNOWN\020\001\022\022\n"
       "\016PROVIDER_INTEL\020\002\"M\n\004Kind\022\024\n\020KIND_UNSPEC"
       "IFIED\020\000\022\020\n\014KIND_WINDOWS\020\001\022\016\n\nKIND_MACOS\020"
-      "\002\022\r\n\tKIND_WINE\020\003\"\333\n\n\007Machine\022\r\n\005model\030\001 "
+      "\002\022\r\n\tKIND_WINE\020\003\"\212\014\n\007Machine\022\r\n\005model\030\001 "
       "\001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004uuid\030\003 \001(\014\022\024\n\014total"
       "_memory\030\004 \001(\003\022\025\n\rmonitor_count\030\005 \001(\005\0221\n\003"
       "cpu\030\006 \001(\0132$.eve_public.app.platform.Mach"
@@ -582,49 +583,53 @@ void AddDescriptorsImpl() {
       "gpus\030\t \003(\0132$.eve_public.app.platform.Mac"
       "hine.GPU\022I\n\020network_adapters\030\n \003(\0132/.eve"
       "_public.app.platform.Machine.NetworkAdap"
-      "ter\032\375\002\n\003CPU\0221\n\007bitness\030\001 \001(\0162 .eve_publi"
+      "ter\032\254\004\n\003CPU\0221\n\007bitness\030\001 \001(\0162 .eve_publi"
       "c.app.platform.Bitness\022\032\n\022logical_core_c"
       "ount\030\002 \001(\005\022\r\n\005brand\030\003 \001(\t\022\016\n\006vendor\030\004 \001("
       "\t\022\r\n\005model\030\005 \001(\005\022\020\n\010stepping\030\006 \001(\005\022G\n\014ar"
       "chitecture\030\007 \001(\01621.eve_public.app.platfo"
       "rm.Machine.CPU.Architecture\022\022\n\nextension"
-      "s\030\010 \003(\t\"\211\001\n\014Architecture\022\034\n\030ARCHITECTURE"
-      "_UNSPECIFIED\020\000\022\024\n\020ARCHITECTURE_X86\020\001\022\027\n\023"
-      "ARCHITECTURE_X86_64\020\002\022\024\n\020ARCHITECTURE_AR"
-      "M\020\003\022\026\n\022ARCHITECTURE_ARM64\020\004\032\223\001\n\002VM\022\027\n\017is"
-      "_suspected_vm\030\001 \001(\010\022\032\n\022has_hypervisor_bi"
-      "t\030\002 \001(\010\022\027\n\017hypervisor_name\030\003 \001(\t\022\036\n\026is_h"
-      "ypervisor_guest_os\030\004 \001(\010\022\037\n\027has_vm_execu"
-      "tion_timing\030\005 \001(\010\032\236\001\n\007Monitor\022\014\n\004name\030\001 "
-      "\001(\t\022\035\n\025horizontal_resolution\030\002 \001(\005\022\033\n\023ve"
-      "rtical_resolution\030\003 \001(\005\022\026\n\016bits_per_colo"
-      "r\030\004 \001(\005\022\024\n\014refresh_rate\030\005 \001(\005\022\033\n\023dpi_sca"
-      "ling_percent\030\006 \001(\005\032\336\001\n\003GPU\022\023\n\013descriptio"
-      "n\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001(\005\022\021\n\tdevice_id\030"
-      "\003 \001(\005\022\020\n\010revision\030\004 \001(\005\022\024\n\014video_memory\030"
-      "\005 \001(\003\022;\n\006driver\030\006 \001(\0132+.eve_public.app.p"
-      "latform.Machine.GPU.Driver\0327\n\006Driver\022\014\n\004"
-      "date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017\n\007version\030\003 "
-      "\001(\t\032A\n\016NetworkAdapter\022\014\n\004name\030\001 \001(\t\022\023\n\013m"
-      "ac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"[\n\007Proces"
-      "s\022\035\n\025running_under_rosetta\030\001 \001(\010\0221\n\007bitn"
-      "ess\030\002 \001(\0162 .eve_public.app.platform.Bitn"
-      "ess\"\305\002\n\013Information\0229\n\007version\030\001 \001(\0132(.e"
-      "ve_public.app.platform.SemanticVersion\022-"
-      "\n\ttimestamp\030\002 \001(\0132\032.google.protobuf.Time"
-      "stamp\022=\n\017process_bitness\030\003 \001(\0162 .eve_pub"
-      "lic.app.platform.BitnessB\002\030\001\022\'\n\002os\030\004 \001(\013"
-      "2\033.eve_public.app.platform.OS\0221\n\007machine"
-      "\030\005 \001(\0132 .eve_public.app.platform.Machine"
-      "\0221\n\007process\030\006 \001(\0132 .eve_public.app.platf"
-      "orm.Process*B\n\007Bitness\022\027\n\023BITNESS_UNSPEC"
-      "IFIED\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBITNESS_64\020\002B"
-      "LZJgithub.com/ccpgames/eve-proto-go/gene"
-      "rated/eve_public/application/platformb\006p"
-      "roto3"
+      "s\030\010 \003(\t\022P\n\021battery_detection\030\t \001(\01625.eve"
+      "_public.app.platform.Machine.CPU.Battery"
+      "Detection\"\211\001\n\014Architecture\022\034\n\030ARCHITECTU"
+      "RE_UNSPECIFIED\020\000\022\024\n\020ARCHITECTURE_X86\020\001\022\027"
+      "\n\023ARCHITECTURE_X86_64\020\002\022\024\n\020ARCHITECTURE_"
+      "ARM\020\003\022\026\n\022ARCHITECTURE_ARM64\020\004\"[\n\020Battery"
+      "Detection\022\027\n\023BATTERY_UNSPECIFIED\020\000\022\024\n\020BA"
+      "TTERY_DETECTED\020\001\022\030\n\024BATTERY_NOT_DETECTED"
+      "\020\002\032\223\001\n\002VM\022\027\n\017is_suspected_vm\030\001 \001(\010\022\032\n\022ha"
+      "s_hypervisor_bit\030\002 \001(\010\022\027\n\017hypervisor_nam"
+      "e\030\003 \001(\t\022\036\n\026is_hypervisor_guest_os\030\004 \001(\010\022"
+      "\037\n\027has_vm_execution_timing\030\005 \001(\010\032\236\001\n\007Mon"
+      "itor\022\014\n\004name\030\001 \001(\t\022\035\n\025horizontal_resolut"
+      "ion\030\002 \001(\005\022\033\n\023vertical_resolution\030\003 \001(\005\022\026"
+      "\n\016bits_per_color\030\004 \001(\005\022\024\n\014refresh_rate\030\005"
+      " \001(\005\022\033\n\023dpi_scaling_percent\030\006 \001(\005\032\336\001\n\003GP"
+      "U\022\023\n\013description\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001("
+      "\005\022\021\n\tdevice_id\030\003 \001(\005\022\020\n\010revision\030\004 \001(\005\022\024"
+      "\n\014video_memory\030\005 \001(\003\022;\n\006driver\030\006 \001(\0132+.e"
+      "ve_public.app.platform.Machine.GPU.Drive"
+      "r\0327\n\006Driver\022\014\n\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001("
+      "\t\022\017\n\007version\030\003 \001(\t\032A\n\016NetworkAdapter\022\014\n\004"
+      "name\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\014\022\014\n\004uuid\030"
+      "\003 \001(\014\"[\n\007Process\022\035\n\025running_under_rosett"
+      "a\030\001 \001(\010\0221\n\007bitness\030\002 \001(\0162 .eve_public.ap"
+      "p.platform.Bitness\"\305\002\n\013Information\0229\n\007ve"
+      "rsion\030\001 \001(\0132(.eve_public.app.platform.Se"
+      "manticVersion\022-\n\ttimestamp\030\002 \001(\0132\032.googl"
+      "e.protobuf.Timestamp\022=\n\017process_bitness\030"
+      "\003 \001(\0162 .eve_public.app.platform.BitnessB"
+      "\002\030\001\022\'\n\002os\030\004 \001(\0132\033.eve_public.app.platfor"
+      "m.OS\0221\n\007machine\030\005 \001(\0132 .eve_public.app.p"
+      "latform.Machine\0221\n\007process\030\006 \001(\0132 .eve_p"
+      "ublic.app.platform.Process*B\n\007Bitness\022\027\n"
+      "\023BITNESS_UNSPECIFIED\020\000\022\016\n\nBITNESS_32\020\001\022\016"
+      "\n\nBITNESS_64\020\002BLZJgithub.com/ccpgames/ev"
+      "e-proto-go/generated/eve_public/applicat"
+      "ion/platformb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3045);
+      descriptor, 3220);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "eve_public/app/platform.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -719,9 +724,32 @@ const Machine_CPU_Architecture Machine_CPU::Architecture_MIN;
 const Machine_CPU_Architecture Machine_CPU::Architecture_MAX;
 const int Machine_CPU::Architecture_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-const ::google::protobuf::EnumDescriptor* Bitness_descriptor() {
+const ::google::protobuf::EnumDescriptor* Machine_CPU_BatteryDetection_descriptor() {
   protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_enum_descriptors[3];
+}
+bool Machine_CPU_BatteryDetection_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const Machine_CPU_BatteryDetection Machine_CPU::BATTERY_UNSPECIFIED;
+const Machine_CPU_BatteryDetection Machine_CPU::BATTERY_DETECTED;
+const Machine_CPU_BatteryDetection Machine_CPU::BATTERY_NOT_DETECTED;
+const Machine_CPU_BatteryDetection Machine_CPU::BatteryDetection_MIN;
+const Machine_CPU_BatteryDetection Machine_CPU::BatteryDetection_MAX;
+const int Machine_CPU::BatteryDetection_ARRAYSIZE;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+const ::google::protobuf::EnumDescriptor* Bitness_descriptor() {
+  protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_eve_5fpublic_2fapp_2fplatform_2eproto::file_level_enum_descriptors[4];
 }
 bool Bitness_IsValid(int value) {
   switch (value) {
@@ -2923,6 +2951,7 @@ const int Machine_CPU::kModelFieldNumber;
 const int Machine_CPU::kSteppingFieldNumber;
 const int Machine_CPU::kArchitectureFieldNumber;
 const int Machine_CPU::kExtensionsFieldNumber;
+const int Machine_CPU::kBatteryDetectionFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Machine_CPU::Machine_CPU()
@@ -2946,8 +2975,8 @@ Machine_CPU::Machine_CPU(const Machine_CPU& from)
     vendor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vendor_);
   }
   ::memcpy(&bitness_, &from.bitness_,
-    static_cast<size_t>(reinterpret_cast<char*>(&architecture_) -
-    reinterpret_cast<char*>(&bitness_)) + sizeof(architecture_));
+    static_cast<size_t>(reinterpret_cast<char*>(&battery_detection_) -
+    reinterpret_cast<char*>(&bitness_)) + sizeof(battery_detection_));
   // @@protoc_insertion_point(copy_constructor:eve_public.app.platform.Machine.CPU)
 }
 
@@ -2955,8 +2984,8 @@ void Machine_CPU::SharedCtor() {
   brand_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   vendor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&bitness_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&architecture_) -
-      reinterpret_cast<char*>(&bitness_)) + sizeof(architecture_));
+      reinterpret_cast<char*>(&battery_detection_) -
+      reinterpret_cast<char*>(&bitness_)) + sizeof(battery_detection_));
 }
 
 Machine_CPU::~Machine_CPU() {
@@ -2993,8 +3022,8 @@ void Machine_CPU::Clear() {
   brand_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   vendor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&bitness_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&architecture_) -
-      reinterpret_cast<char*>(&bitness_)) + sizeof(architecture_));
+      reinterpret_cast<char*>(&battery_detection_) -
+      reinterpret_cast<char*>(&bitness_)) + sizeof(battery_detection_));
   _internal_metadata_.Clear();
 }
 
@@ -3129,6 +3158,21 @@ bool Machine_CPU::MergePartialFromCodedStream(
         break;
       }
 
+      // .eve_public.app.platform.Machine.CPU.BatteryDetection battery_detection = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_battery_detection(static_cast< ::eve_public::app::platform::Machine_CPU_BatteryDetection >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -3212,6 +3256,12 @@ void Machine_CPU::SerializeWithCachedSizes(
       8, this->extensions(i), output);
   }
 
+  // .eve_public.app.platform.Machine.CPU.BatteryDetection battery_detection = 9;
+  if (this->battery_detection() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      9, this->battery_detection(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -3283,6 +3333,12 @@ void Machine_CPU::SerializeWithCachedSizes(
       "eve_public.app.platform.Machine.CPU.extensions");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(8, this->extensions(i), target);
+  }
+
+  // .eve_public.app.platform.Machine.CPU.BatteryDetection battery_detection = 9;
+  if (this->battery_detection() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      9, this->battery_detection(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3357,6 +3413,12 @@ size_t Machine_CPU::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->architecture());
   }
 
+  // .eve_public.app.platform.Machine.CPU.BatteryDetection battery_detection = 9;
+  if (this->battery_detection() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->battery_detection());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -3408,6 +3470,9 @@ void Machine_CPU::MergeFrom(const Machine_CPU& from) {
   if (from.architecture() != 0) {
     set_architecture(from.architecture());
   }
+  if (from.battery_detection() != 0) {
+    set_battery_detection(from.battery_detection());
+  }
 }
 
 void Machine_CPU::CopyFrom(const ::google::protobuf::Message& from) {
@@ -3444,6 +3509,7 @@ void Machine_CPU::InternalSwap(Machine_CPU* other) {
   swap(model_, other->model_);
   swap(stepping_, other->stepping_);
   swap(architecture_, other->architecture_);
+  swap(battery_detection_, other->battery_detection_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
