@@ -79,7 +79,22 @@ platform::OS::StreamingService::Provider StreamingServiceToProto(PDM::StreamingS
 	case PDM::StreamingService::INTEL_STREAM:
 		return platform::OS::StreamingService::PROVIDER_INTEL;
 	default:
-		throw std::invalid_argument( "Invalid streaming service type" );
+		throw std::invalid_argument("Invalid streaming service type");
+	}
+}
+
+platform::Machine::BatteryDetection BatteryDetectionToProto(PDM::BatteryStatus status)
+{
+	switch(status)
+	{
+	case PDM::BatteryStatus::UNKNOWN:
+		return platform::Machine::BATTERY_UNSPECIFIED;
+	case PDM::BatteryStatus::DETECTED:
+		return platform::Machine::BATTERY_DETECTED;
+	case PDM::BatteryStatus::NOT_DETECTED:
+		return platform::Machine::BATTERY_NOT_DETECTED;
+	default:
+		throw std::invalid_argument("Invalid battery status");
 	}
 }
 
@@ -144,6 +159,7 @@ namespace pdm_proto
 		machine->set_uuid(uuid.data(), uuid.size());
 		machine->set_total_memory(PDM::GetTotalMemory());
 		machine->set_monitor_count(PDM::GetMonitorCount());
+		machine->set_battery_detection(BatteryDetectionToProto(PDM::GetBatteryStatus()));
 	
 		auto cpu = machine->mutable_cpu();
 		auto cpuInfo = PDM::GetCPUInfo();
