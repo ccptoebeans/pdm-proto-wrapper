@@ -22,6 +22,7 @@
 namespace protobuf_eve_5flauncher_2fpdm_2eproto {
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_CPU;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_GPU_Driver;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_HardDrive;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_Monitor;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_NetworkAdapter;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_VM;
@@ -32,7 +33,7 @@ extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_SemanticVersion;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Machine_GPU;
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_OS;
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<5> scc_info_Machine;
+extern PROTOBUF_INTERNAL_EXPORT_protobuf_eve_5flauncher_2fpdm_2eproto ::google::protobuf::internal::SCCInfo<6> scc_info_Machine;
 }  // namespace protobuf_eve_5flauncher_2fpdm_2eproto
 namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
@@ -93,6 +94,11 @@ class Machine_NetworkAdapterDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<Machine_NetworkAdapter>
       _instance;
 } _Machine_NetworkAdapter_default_instance_;
+class Machine_HardDriveDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<Machine_HardDrive>
+      _instance;
+} _Machine_HardDrive_default_instance_;
 class MachineDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<Machine>
@@ -268,6 +274,20 @@ static void InitDefaultsMachine_NetworkAdapter() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_Machine_NetworkAdapter =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMachine_NetworkAdapter}, {}};
 
+static void InitDefaultsMachine_HardDrive() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::platform::_Machine_HardDrive_default_instance_;
+    new (ptr) ::platform::Machine_HardDrive();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::platform::Machine_HardDrive::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_Machine_HardDrive =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsMachine_HardDrive}, {}};
+
 static void InitDefaultsMachine() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -279,13 +299,14 @@ static void InitDefaultsMachine() {
   ::platform::Machine::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<5> scc_info_Machine =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 5, InitDefaultsMachine}, {
+::google::protobuf::internal::SCCInfo<6> scc_info_Machine =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 6, InitDefaultsMachine}, {
       &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_CPU.base,
       &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_VM.base,
       &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_Monitor.base,
       &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_GPU.base,
-      &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_NetworkAdapter.base,}};
+      &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_NetworkAdapter.base,
+      &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_HardDrive.base,}};
 
 static void InitDefaultsProcess() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -332,13 +353,14 @@ void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_Machine_GPU_Driver.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Machine_GPU.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Machine_NetworkAdapter.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_Machine_HardDrive.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Machine.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Process.base);
   ::google::protobuf::internal::InitSCC(&scc_info_Information.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[14];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[5];
+::google::protobuf::Metadata file_level_metadata[15];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[6];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -404,6 +426,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_CPU, stepping_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_CPU, architecture_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_CPU, extensions_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_CPU, frequency_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_VM, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -444,6 +467,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_GPU, revision_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_GPU, video_memory_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_GPU, driver_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_GPU, core_count_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_NetworkAdapter, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -452,6 +476,14 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_NetworkAdapter, name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_NetworkAdapter, mac_address_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_NetworkAdapter, uuid_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_HardDrive, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_HardDrive, name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_HardDrive, drive_type_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine_HardDrive, size_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -468,6 +500,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine, gpus_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine, network_adapters_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine, battery_detection_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Machine, hard_drives_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::platform::Process, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -494,14 +527,15 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 26, -1, sizeof(::platform::OS_StreamingService)},
   { 32, -1, sizeof(::platform::OS)},
   { 50, -1, sizeof(::platform::Machine_CPU)},
-  { 63, -1, sizeof(::platform::Machine_VM)},
-  { 73, -1, sizeof(::platform::Machine_Monitor)},
-  { 84, -1, sizeof(::platform::Machine_GPU_Driver)},
-  { 92, -1, sizeof(::platform::Machine_GPU)},
-  { 103, -1, sizeof(::platform::Machine_NetworkAdapter)},
-  { 111, -1, sizeof(::platform::Machine)},
-  { 127, -1, sizeof(::platform::Process)},
-  { 134, -1, sizeof(::platform::Information)},
+  { 64, -1, sizeof(::platform::Machine_VM)},
+  { 74, -1, sizeof(::platform::Machine_Monitor)},
+  { 85, -1, sizeof(::platform::Machine_GPU_Driver)},
+  { 93, -1, sizeof(::platform::Machine_GPU)},
+  { 105, -1, sizeof(::platform::Machine_NetworkAdapter)},
+  { 113, -1, sizeof(::platform::Machine_HardDrive)},
+  { 121, -1, sizeof(::platform::Machine)},
+  { 138, -1, sizeof(::platform::Process)},
+  { 145, -1, sizeof(::platform::Information)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -516,6 +550,7 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Machine_GPU_Driver_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Machine_GPU_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Machine_NetworkAdapter_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Machine_HardDrive_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Machine_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Process_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::platform::_Information_default_instance_),
@@ -536,7 +571,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 14);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 15);
 }
 
 void AddDescriptorsImpl() {
@@ -566,7 +601,7 @@ void AddDescriptorsImpl() {
       "\024PROVIDER_UNSPECIFIED\020\000\022\024\n\020PROVIDER_UNKN"
       "OWN\020\001\022\022\n\016PROVIDER_INTEL\020\002\"5\n\004Kind\022\013\n\007UNK"
       "NOWN\020\000\022\013\n\007WINDOWS\020\001\022\t\n\005MACOS\020\002\022\010\n\004WINE\020\003"
-      "\"\377\n\n\007Machine\022\r\n\005model\030\001 \001(\t\022\014\n\004name\030\002 \001("
+      "\"\213\r\n\007Machine\022\r\n\005model\030\001 \001(\t\022\014\n\004name\030\002 \001("
       "\t\022\014\n\004uuid\030\003 \001(\014\022\024\n\014total_memory\030\004 \001(\003\022\025\n"
       "\rmonitor_count\030\005 \001(\005\022\"\n\003cpu\030\006 \001(\0132\025.plat"
       "form.Machine.CPU\022 \n\002vm\030\007 \001(\0132\024.platform."
@@ -575,48 +610,54 @@ void AddDescriptorsImpl() {
       ".Machine.GPU\022:\n\020network_adapters\030\n \003(\0132 "
       ".platform.Machine.NetworkAdapter\022=\n\021batt"
       "ery_detection\030\013 \001(\0162\".platform.Machine.B"
-      "atteryDetection\032\337\002\n\003CPU\022\"\n\007bitness\030\001 \001(\016"
-      "2\021.platform.Bitness\022\032\n\022logical_core_coun"
-      "t\030\002 \001(\005\022\r\n\005brand\030\003 \001(\t\022\016\n\006vendor\030\004 \001(\t\022\r"
-      "\n\005model\030\005 \001(\005\022\020\n\010stepping\030\006 \001(\005\0228\n\014archi"
-      "tecture\030\007 \001(\0162\".platform.Machine.CPU.Arc"
-      "hitecture\022\022\n\nextensions\030\010 \003(\t\"\211\001\n\014Archit"
-      "ecture\022\034\n\030ARCHITECTURE_UNSPECIFIED\020\000\022\024\n\020"
-      "ARCHITECTURE_X86\020\001\022\027\n\023ARCHITECTURE_X86_6"
-      "4\020\002\022\024\n\020ARCHITECTURE_ARM\020\003\022\026\n\022ARCHITECTUR"
-      "E_ARM64\020\004\032\223\001\n\002VM\022\027\n\017is_suspected_vm\030\001 \001("
-      "\010\022\032\n\022has_hypervisor_bit\030\002 \001(\010\022\027\n\017hypervi"
-      "sor_name\030\003 \001(\t\022\036\n\026is_hypervisor_guest_os"
-      "\030\004 \001(\010\022\037\n\027has_vm_execution_timing\030\005 \001(\010\032"
-      "\236\001\n\007Monitor\022\014\n\004name\030\001 \001(\t\022\035\n\025horizontal_"
-      "resolution\030\002 \001(\005\022\033\n\023vertical_resolution\030"
-      "\003 \001(\005\022\026\n\016bits_per_color\030\004 \001(\005\022\024\n\014refresh"
-      "_rate\030\005 \001(\005\022\033\n\023dpi_scaling_percent\030\006 \001(\005"
-      "\032\317\001\n\003GPU\022\023\n\013description\030\001 \001(\t\022\021\n\tvendor_"
-      "id\030\002 \001(\005\022\021\n\tdevice_id\030\003 \001(\005\022\020\n\010revision\030"
-      "\004 \001(\005\022\024\n\014video_memory\030\005 \001(\003\022,\n\006driver\030\006 "
-      "\001(\0132\034.platform.Machine.GPU.Driver\0327\n\006Dri"
-      "ver\022\014\n\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001(\t\022\017\n\007ver"
-      "sion\030\003 \001(\t\032A\n\016NetworkAdapter\022\014\n\004name\030\001 \001"
-      "(\t\022\023\n\013mac_address\030\002 \001(\014\022\014\n\004uuid\030\003 \001(\014\"[\n"
-      "\020BatteryDetection\022\027\n\023BATTERY_UNSPECIFIED"
-      "\020\000\022\024\n\020BATTERY_DETECTED\020\001\022\030\n\024BATTERY_NOT_"
-      "DETECTED\020\002\"L\n\007Process\022\035\n\025running_under_r"
-      "osetta\030\001 \001(\010\022\"\n\007bitness\030\002 \001(\0162\021.platform"
-      ".Bitness\"\372\001\n\013Information\022*\n\007version\030\001 \001("
-      "\0132\031.platform.SemanticVersion\022-\n\ttimestam"
-      "p\030\002 \001(\0132\032.google.protobuf.Timestamp\022.\n\017p"
-      "rocess_bitness\030\003 \001(\0162\021.platform.BitnessB"
-      "\002\030\001\022\030\n\002os\030\004 \001(\0132\014.platform.OS\022\"\n\007machine"
-      "\030\005 \001(\0132\021.platform.Machine\022\"\n\007process\030\006 \001"
-      "(\0132\021.platform.Process*>\n\007Bitness\022\023\n\017BITN"
-      "ESS_UNKNOWN\020\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBITNESS"
-      "_64\020\002BBZ@github.com/ccpgames/eve-proto-g"
-      "o/generated/eve_launcher/platformb\006proto"
-      "3"
+      "atteryDetection\0220\n\013hard_drives\030\014 \003(\0132\033.p"
+      "latform.Machine.HardDrive\032\362\002\n\003CPU\022\"\n\007bit"
+      "ness\030\001 \001(\0162\021.platform.Bitness\022\032\n\022logical"
+      "_core_count\030\002 \001(\005\022\r\n\005brand\030\003 \001(\t\022\016\n\006vend"
+      "or\030\004 \001(\t\022\r\n\005model\030\005 \001(\005\022\020\n\010stepping\030\006 \001("
+      "\005\0228\n\014architecture\030\007 \001(\0162\".platform.Machi"
+      "ne.CPU.Architecture\022\022\n\nextensions\030\010 \003(\t\022"
+      "\021\n\tfrequency\030\t \001(\r\"\211\001\n\014Architecture\022\034\n\030A"
+      "RCHITECTURE_UNSPECIFIED\020\000\022\024\n\020ARCHITECTUR"
+      "E_X86\020\001\022\027\n\023ARCHITECTURE_X86_64\020\002\022\024\n\020ARCH"
+      "ITECTURE_ARM\020\003\022\026\n\022ARCHITECTURE_ARM64\020\004\032\223"
+      "\001\n\002VM\022\027\n\017is_suspected_vm\030\001 \001(\010\022\032\n\022has_hy"
+      "pervisor_bit\030\002 \001(\010\022\027\n\017hypervisor_name\030\003 "
+      "\001(\t\022\036\n\026is_hypervisor_guest_os\030\004 \001(\010\022\037\n\027h"
+      "as_vm_execution_timing\030\005 \001(\010\032\236\001\n\007Monitor"
+      "\022\014\n\004name\030\001 \001(\t\022\035\n\025horizontal_resolution\030"
+      "\002 \001(\005\022\033\n\023vertical_resolution\030\003 \001(\005\022\026\n\016bi"
+      "ts_per_color\030\004 \001(\005\022\024\n\014refresh_rate\030\005 \001(\005"
+      "\022\033\n\023dpi_scaling_percent\030\006 \001(\005\032\343\001\n\003GPU\022\023\n"
+      "\013description\030\001 \001(\t\022\021\n\tvendor_id\030\002 \001(\005\022\021\n"
+      "\tdevice_id\030\003 \001(\005\022\020\n\010revision\030\004 \001(\005\022\024\n\014vi"
+      "deo_memory\030\005 \001(\003\022,\n\006driver\030\006 \001(\0132\034.platf"
+      "orm.Machine.GPU.Driver\022\022\n\ncore_count\030\007 \001"
+      "(\r\0327\n\006Driver\022\014\n\004date\030\001 \001(\t\022\016\n\006vendor\030\002 \001"
+      "(\t\022\017\n\007version\030\003 \001(\t\032A\n\016NetworkAdapter\022\014\n"
+      "\004name\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\014\022\014\n\004uuid"
+      "\030\003 \001(\014\032\260\001\n\tHardDrive\022\014\n\004name\030\001 \001(\t\0229\n\ndr"
+      "ive_type\030\002 \001(\0162%.platform.Machine.HardDr"
+      "ive.DriveType\022\014\n\004size\030\003 \001(\004\"L\n\tDriveType"
+      "\022\031\n\025DRIVETYPE_UNSPECIFIED\020\000\022\021\n\rDRIVETYPE"
+      "_SSD\020\001\022\021\n\rDRIVETYPE_HDD\020\002\"[\n\020BatteryDete"
+      "ction\022\027\n\023BATTERY_UNSPECIFIED\020\000\022\024\n\020BATTER"
+      "Y_DETECTED\020\001\022\030\n\024BATTERY_NOT_DETECTED\020\002\"L"
+      "\n\007Process\022\035\n\025running_under_rosetta\030\001 \001(\010"
+      "\022\"\n\007bitness\030\002 \001(\0162\021.platform.Bitness\"\372\001\n"
+      "\013Information\022*\n\007version\030\001 \001(\0132\031.platform"
+      ".SemanticVersion\022-\n\ttimestamp\030\002 \001(\0132\032.go"
+      "ogle.protobuf.Timestamp\022.\n\017process_bitne"
+      "ss\030\003 \001(\0162\021.platform.BitnessB\002\030\001\022\030\n\002os\030\004 "
+      "\001(\0132\014.platform.OS\022\"\n\007machine\030\005 \001(\0132\021.pla"
+      "tform.Machine\022\"\n\007process\030\006 \001(\0132\021.platfor"
+      "m.Process*>\n\007Bitness\022\023\n\017BITNESS_UNKNOWN\020"
+      "\000\022\016\n\nBITNESS_32\020\001\022\016\n\nBITNESS_64\020\002BBZ@git"
+      "hub.com/ccpgames/eve-proto-go/generated/"
+      "eve_launcher/platformb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 2841);
+      descriptor, 3109);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "eve_launcher/pdm.proto", &protobuf_RegisterTypes);
   ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
@@ -709,9 +750,32 @@ const Machine_CPU_Architecture Machine_CPU::Architecture_MIN;
 const Machine_CPU_Architecture Machine_CPU::Architecture_MAX;
 const int Machine_CPU::Architecture_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-const ::google::protobuf::EnumDescriptor* Machine_BatteryDetection_descriptor() {
+const ::google::protobuf::EnumDescriptor* Machine_HardDrive_DriveType_descriptor() {
   protobuf_eve_5flauncher_2fpdm_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_eve_5flauncher_2fpdm_2eproto::file_level_enum_descriptors[3];
+}
+bool Machine_HardDrive_DriveType_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const Machine_HardDrive_DriveType Machine_HardDrive::DRIVETYPE_UNSPECIFIED;
+const Machine_HardDrive_DriveType Machine_HardDrive::DRIVETYPE_SSD;
+const Machine_HardDrive_DriveType Machine_HardDrive::DRIVETYPE_HDD;
+const Machine_HardDrive_DriveType Machine_HardDrive::DriveType_MIN;
+const Machine_HardDrive_DriveType Machine_HardDrive::DriveType_MAX;
+const int Machine_HardDrive::DriveType_ARRAYSIZE;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+const ::google::protobuf::EnumDescriptor* Machine_BatteryDetection_descriptor() {
+  protobuf_eve_5flauncher_2fpdm_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_eve_5flauncher_2fpdm_2eproto::file_level_enum_descriptors[4];
 }
 bool Machine_BatteryDetection_IsValid(int value) {
   switch (value) {
@@ -734,7 +798,7 @@ const int Machine::BatteryDetection_ARRAYSIZE;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 const ::google::protobuf::EnumDescriptor* Bitness_descriptor() {
   protobuf_eve_5flauncher_2fpdm_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_eve_5flauncher_2fpdm_2eproto::file_level_enum_descriptors[4];
+  return protobuf_eve_5flauncher_2fpdm_2eproto::file_level_enum_descriptors[5];
 }
 bool Bitness_IsValid(int value) {
   switch (value) {
@@ -2936,6 +3000,7 @@ const int Machine_CPU::kModelFieldNumber;
 const int Machine_CPU::kSteppingFieldNumber;
 const int Machine_CPU::kArchitectureFieldNumber;
 const int Machine_CPU::kExtensionsFieldNumber;
+const int Machine_CPU::kFrequencyFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Machine_CPU::Machine_CPU()
@@ -2959,8 +3024,8 @@ Machine_CPU::Machine_CPU(const Machine_CPU& from)
     vendor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.vendor_);
   }
   ::memcpy(&bitness_, &from.bitness_,
-    static_cast<size_t>(reinterpret_cast<char*>(&architecture_) -
-    reinterpret_cast<char*>(&bitness_)) + sizeof(architecture_));
+    static_cast<size_t>(reinterpret_cast<char*>(&frequency_) -
+    reinterpret_cast<char*>(&bitness_)) + sizeof(frequency_));
   // @@protoc_insertion_point(copy_constructor:platform.Machine.CPU)
 }
 
@@ -2968,8 +3033,8 @@ void Machine_CPU::SharedCtor() {
   brand_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   vendor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&bitness_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&architecture_) -
-      reinterpret_cast<char*>(&bitness_)) + sizeof(architecture_));
+      reinterpret_cast<char*>(&frequency_) -
+      reinterpret_cast<char*>(&bitness_)) + sizeof(frequency_));
 }
 
 Machine_CPU::~Machine_CPU() {
@@ -3006,8 +3071,8 @@ void Machine_CPU::Clear() {
   brand_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   vendor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&bitness_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&architecture_) -
-      reinterpret_cast<char*>(&bitness_)) + sizeof(architecture_));
+      reinterpret_cast<char*>(&frequency_) -
+      reinterpret_cast<char*>(&bitness_)) + sizeof(frequency_));
   _internal_metadata_.Clear();
 }
 
@@ -3142,6 +3207,20 @@ bool Machine_CPU::MergePartialFromCodedStream(
         break;
       }
 
+      // uint32 frequency = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &frequency_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -3225,6 +3304,11 @@ void Machine_CPU::SerializeWithCachedSizes(
       8, this->extensions(i), output);
   }
 
+  // uint32 frequency = 9;
+  if (this->frequency() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(9, this->frequency(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -3296,6 +3380,11 @@ void Machine_CPU::SerializeWithCachedSizes(
       "platform.Machine.CPU.extensions");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(8, this->extensions(i), target);
+  }
+
+  // uint32 frequency = 9;
+  if (this->frequency() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(9, this->frequency(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3370,6 +3459,13 @@ size_t Machine_CPU::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->architecture());
   }
 
+  // uint32 frequency = 9;
+  if (this->frequency() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->frequency());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -3421,6 +3517,9 @@ void Machine_CPU::MergeFrom(const Machine_CPU& from) {
   if (from.architecture() != 0) {
     set_architecture(from.architecture());
   }
+  if (from.frequency() != 0) {
+    set_frequency(from.frequency());
+  }
 }
 
 void Machine_CPU::CopyFrom(const ::google::protobuf::Message& from) {
@@ -3457,6 +3556,7 @@ void Machine_CPU::InternalSwap(Machine_CPU* other) {
   swap(model_, other->model_);
   swap(stepping_, other->stepping_);
   swap(architecture_, other->architecture_);
+  swap(frequency_, other->frequency_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -4655,6 +4755,7 @@ const int Machine_GPU::kDeviceIdFieldNumber;
 const int Machine_GPU::kRevisionFieldNumber;
 const int Machine_GPU::kVideoMemoryFieldNumber;
 const int Machine_GPU::kDriverFieldNumber;
+const int Machine_GPU::kCoreCountFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Machine_GPU::Machine_GPU()
@@ -4678,16 +4779,16 @@ Machine_GPU::Machine_GPU(const Machine_GPU& from)
     driver_ = NULL;
   }
   ::memcpy(&vendor_id_, &from.vendor_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&revision_) -
-    reinterpret_cast<char*>(&vendor_id_)) + sizeof(revision_));
+    static_cast<size_t>(reinterpret_cast<char*>(&core_count_) -
+    reinterpret_cast<char*>(&vendor_id_)) + sizeof(core_count_));
   // @@protoc_insertion_point(copy_constructor:platform.Machine.GPU)
 }
 
 void Machine_GPU::SharedCtor() {
   description_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&driver_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&revision_) -
-      reinterpret_cast<char*>(&driver_)) + sizeof(revision_));
+      reinterpret_cast<char*>(&core_count_) -
+      reinterpret_cast<char*>(&driver_)) + sizeof(core_count_));
 }
 
 Machine_GPU::~Machine_GPU() {
@@ -4726,8 +4827,8 @@ void Machine_GPU::Clear() {
   }
   driver_ = NULL;
   ::memset(&vendor_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&revision_) -
-      reinterpret_cast<char*>(&vendor_id_)) + sizeof(revision_));
+      reinterpret_cast<char*>(&core_count_) -
+      reinterpret_cast<char*>(&vendor_id_)) + sizeof(core_count_));
   _internal_metadata_.Clear();
 }
 
@@ -4825,6 +4926,20 @@ bool Machine_GPU::MergePartialFromCodedStream(
         break;
       }
 
+      // uint32 core_count = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &core_count_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -4887,6 +5002,11 @@ void Machine_GPU::SerializeWithCachedSizes(
       6, this->_internal_driver(), output);
   }
 
+  // uint32 core_count = 7;
+  if (this->core_count() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(7, this->core_count(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -4937,6 +5057,11 @@ void Machine_GPU::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
         6, this->_internal_driver(), deterministic, target);
+  }
+
+  // uint32 core_count = 7;
+  if (this->core_count() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(7, this->core_count(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -4998,6 +5123,13 @@ size_t Machine_GPU::ByteSizeLong() const {
         this->revision());
   }
 
+  // uint32 core_count = 7;
+  if (this->core_count() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->core_count());
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
@@ -5044,6 +5176,9 @@ void Machine_GPU::MergeFrom(const Machine_GPU& from) {
   if (from.revision() != 0) {
     set_revision(from.revision());
   }
+  if (from.core_count() != 0) {
+    set_core_count(from.core_count());
+  }
 }
 
 void Machine_GPU::CopyFrom(const ::google::protobuf::Message& from) {
@@ -5077,6 +5212,7 @@ void Machine_GPU::InternalSwap(Machine_GPU* other) {
   swap(device_id_, other->device_id_);
   swap(video_memory_, other->video_memory_);
   swap(revision_, other->revision_);
+  swap(core_count_, other->core_count_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
@@ -5422,6 +5558,331 @@ void Machine_NetworkAdapter::InternalSwap(Machine_NetworkAdapter* other) {
 
 // ===================================================================
 
+void Machine_HardDrive::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Machine_HardDrive::kNameFieldNumber;
+const int Machine_HardDrive::kDriveTypeFieldNumber;
+const int Machine_HardDrive::kSizeFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Machine_HardDrive::Machine_HardDrive()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_HardDrive.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:platform.Machine.HardDrive)
+}
+Machine_HardDrive::Machine_HardDrive(const Machine_HardDrive& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.name().size() > 0) {
+    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
+  ::memcpy(&size_, &from.size_,
+    static_cast<size_t>(reinterpret_cast<char*>(&drive_type_) -
+    reinterpret_cast<char*>(&size_)) + sizeof(drive_type_));
+  // @@protoc_insertion_point(copy_constructor:platform.Machine.HardDrive)
+}
+
+void Machine_HardDrive::SharedCtor() {
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&size_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&drive_type_) -
+      reinterpret_cast<char*>(&size_)) + sizeof(drive_type_));
+}
+
+Machine_HardDrive::~Machine_HardDrive() {
+  // @@protoc_insertion_point(destructor:platform.Machine.HardDrive)
+  SharedDtor();
+}
+
+void Machine_HardDrive::SharedDtor() {
+  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void Machine_HardDrive::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* Machine_HardDrive::descriptor() {
+  ::protobuf_eve_5flauncher_2fpdm_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_eve_5flauncher_2fpdm_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const Machine_HardDrive& Machine_HardDrive::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_eve_5flauncher_2fpdm_2eproto::scc_info_Machine_HardDrive.base);
+  return *internal_default_instance();
+}
+
+
+void Machine_HardDrive::Clear() {
+// @@protoc_insertion_point(message_clear_start:platform.Machine.HardDrive)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&size_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&drive_type_) -
+      reinterpret_cast<char*>(&size_)) + sizeof(drive_type_));
+  _internal_metadata_.Clear();
+}
+
+bool Machine_HardDrive::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:platform.Machine.HardDrive)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string name = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_name()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->name().data(), static_cast<int>(this->name().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "platform.Machine.HardDrive.name"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .platform.Machine.HardDrive.DriveType drive_type = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_drive_type(static_cast< ::platform::Machine_HardDrive_DriveType >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 size = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &size_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:platform.Machine.HardDrive)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:platform.Machine.HardDrive)
+  return false;
+#undef DO_
+}
+
+void Machine_HardDrive::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:platform.Machine.HardDrive)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (this->name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->name().data(), static_cast<int>(this->name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "platform.Machine.HardDrive.name");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->name(), output);
+  }
+
+  // .platform.Machine.HardDrive.DriveType drive_type = 2;
+  if (this->drive_type() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      2, this->drive_type(), output);
+  }
+
+  // uint64 size = 3;
+  if (this->size() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(3, this->size(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:platform.Machine.HardDrive)
+}
+
+::google::protobuf::uint8* Machine_HardDrive::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:platform.Machine.HardDrive)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
+  if (this->name().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->name().data(), static_cast<int>(this->name().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "platform.Machine.HardDrive.name");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->name(), target);
+  }
+
+  // .platform.Machine.HardDrive.DriveType drive_type = 2;
+  if (this->drive_type() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      2, this->drive_type(), target);
+  }
+
+  // uint64 size = 3;
+  if (this->size() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(3, this->size(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:platform.Machine.HardDrive)
+  return target;
+}
+
+size_t Machine_HardDrive::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:platform.Machine.HardDrive)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string name = 1;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->name());
+  }
+
+  // uint64 size = 3;
+  if (this->size() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->size());
+  }
+
+  // .platform.Machine.HardDrive.DriveType drive_type = 2;
+  if (this->drive_type() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->drive_type());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Machine_HardDrive::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:platform.Machine.HardDrive)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Machine_HardDrive* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Machine_HardDrive>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:platform.Machine.HardDrive)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:platform.Machine.HardDrive)
+    MergeFrom(*source);
+  }
+}
+
+void Machine_HardDrive::MergeFrom(const Machine_HardDrive& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:platform.Machine.HardDrive)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.name().size() > 0) {
+
+    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
+  if (from.size() != 0) {
+    set_size(from.size());
+  }
+  if (from.drive_type() != 0) {
+    set_drive_type(from.drive_type());
+  }
+}
+
+void Machine_HardDrive::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:platform.Machine.HardDrive)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Machine_HardDrive::CopyFrom(const Machine_HardDrive& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:platform.Machine.HardDrive)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Machine_HardDrive::IsInitialized() const {
+  return true;
+}
+
+void Machine_HardDrive::Swap(Machine_HardDrive* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Machine_HardDrive::InternalSwap(Machine_HardDrive* other) {
+  using std::swap;
+  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(size_, other->size_);
+  swap(drive_type_, other->drive_type_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata Machine_HardDrive::GetMetadata() const {
+  protobuf_eve_5flauncher_2fpdm_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_eve_5flauncher_2fpdm_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
 void Machine::InitAsDefaultInstance() {
   ::platform::_Machine_default_instance_._instance.get_mutable()->cpu_ = const_cast< ::platform::Machine_CPU*>(
       ::platform::Machine_CPU::internal_default_instance());
@@ -5440,6 +5901,7 @@ const int Machine::kMonitorsFieldNumber;
 const int Machine::kGpusFieldNumber;
 const int Machine::kNetworkAdaptersFieldNumber;
 const int Machine::kBatteryDetectionFieldNumber;
+const int Machine::kHardDrivesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Machine::Machine()
@@ -5454,7 +5916,8 @@ Machine::Machine(const Machine& from)
       _internal_metadata_(NULL),
       monitors_(from.monitors_),
       gpus_(from.gpus_),
-      network_adapters_(from.network_adapters_) {
+      network_adapters_(from.network_adapters_),
+      hard_drives_(from.hard_drives_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.model().size() > 0) {
@@ -5529,6 +5992,7 @@ void Machine::Clear() {
   monitors_.Clear();
   gpus_.Clear();
   network_adapters_.Clear();
+  hard_drives_.Clear();
   model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   uuid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -5703,6 +6167,18 @@ bool Machine::MergePartialFromCodedStream(
         break;
       }
 
+      // repeated .platform.Machine.HardDrive hard_drives = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_hard_drives()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -5810,6 +6286,15 @@ void Machine::SerializeWithCachedSizes(
       11, this->battery_detection(), output);
   }
 
+  // repeated .platform.Machine.HardDrive hard_drives = 12;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->hard_drives_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      12,
+      this->hard_drives(static_cast<int>(i)),
+      output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -5907,6 +6392,14 @@ void Machine::SerializeWithCachedSizes(
       11, this->battery_detection(), target);
   }
 
+  // repeated .platform.Machine.HardDrive hard_drives = 12;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->hard_drives_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        12, this->hard_drives(static_cast<int>(i)), deterministic, target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -5954,6 +6447,17 @@ size_t Machine::ByteSizeLong() const {
       total_size +=
         ::google::protobuf::internal::WireFormatLite::MessageSize(
           this->network_adapters(static_cast<int>(i)));
+    }
+  }
+
+  // repeated .platform.Machine.HardDrive hard_drives = 12;
+  {
+    unsigned int count = static_cast<unsigned int>(this->hard_drives_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->hard_drives(static_cast<int>(i)));
     }
   }
 
@@ -6042,6 +6546,7 @@ void Machine::MergeFrom(const Machine& from) {
   monitors_.MergeFrom(from.monitors_);
   gpus_.MergeFrom(from.gpus_);
   network_adapters_.MergeFrom(from.network_adapters_);
+  hard_drives_.MergeFrom(from.hard_drives_);
   if (from.model().size() > 0) {
 
     model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.model_);
@@ -6098,6 +6603,7 @@ void Machine::InternalSwap(Machine* other) {
   CastToBase(&monitors_)->InternalSwap(CastToBase(&other->monitors_));
   CastToBase(&gpus_)->InternalSwap(CastToBase(&other->gpus_));
   CastToBase(&network_adapters_)->InternalSwap(CastToBase(&other->network_adapters_));
+  CastToBase(&hard_drives_)->InternalSwap(CastToBase(&other->hard_drives_));
   model_.Swap(&other->model_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
@@ -6897,6 +7403,9 @@ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::platform::Machine_GPU* Arena::Cr
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::platform::Machine_NetworkAdapter* Arena::CreateMaybeMessage< ::platform::Machine_NetworkAdapter >(Arena* arena) {
   return Arena::CreateInternal< ::platform::Machine_NetworkAdapter >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::platform::Machine_HardDrive* Arena::CreateMaybeMessage< ::platform::Machine_HardDrive >(Arena* arena) {
+  return Arena::CreateInternal< ::platform::Machine_HardDrive >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::platform::Machine* Arena::CreateMaybeMessage< ::platform::Machine >(Arena* arena) {
   return Arena::CreateInternal< ::platform::Machine >(arena);
