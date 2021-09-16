@@ -98,6 +98,21 @@ platform::Machine::BatteryDetection BatteryDetectionToProto(PDM::BatteryStatus s
 	}
 }
 
+platform::Machine::HardDrive::DriveType HardDriveTypeToProto(PDM::HardDriveInfo::HardDriveType type)
+{
+	switch (type)
+	{
+	case PDM::HardDriveInfo::HardDriveType::UNKNOWN:
+		return platform::Machine::HardDrive::DRIVETYPE_UNSPECIFIED;
+	case PDM::HardDriveInfo::HardDriveType::SSD:
+		return platform::Machine::HardDrive::DRIVETYPE_SSD;
+	case PDM::HardDriveInfo::HardDriveType::HDD:
+		return platform::Machine::HardDrive::DRIVETYPE_HDD;
+	default:
+		throw std::invalid_argument("Invalid hard drive type");
+	}
+}
+
 void AugmentVersion(const std::string& pdm_version, platform::SemanticVersion* result)
 {
     pdm::SemanticVersion version;
@@ -170,6 +185,7 @@ namespace pdm_proto
 		cpu->set_model(cpuInfo.model);
 		cpu->set_stepping(cpuInfo.stepping);
 		cpu->set_architecture(CPUArchitectureToProto(cpuInfo.architecture));
+		cpu->set_frequency(cpuInfo.frequency);
 		for (const auto& extension : cpuInfo.extensions)
 			cpu->add_extensions(extension);
 
@@ -199,6 +215,7 @@ namespace pdm_proto
 			gpu->set_device_id(gpuData.deviceID);
 			gpu->set_revision(gpuData.revision);
 			gpu->set_video_memory(gpuData.memory);
+			gpu->set_core_count(gpuData.coreCount);
 
 			auto driver = gpu->mutable_driver();
 			driver->set_date(gpuData.driverDate);
@@ -212,6 +229,14 @@ namespace pdm_proto
 			networkAdapter->set_name(networkAdapterData.name);
 			networkAdapter->set_mac_address(networkAdapterData.macAddress.data(), networkAdapterData.macAddress.size());
 			networkAdapter->set_uuid(networkAdapterData.uuid.data(), networkAdapterData.uuid.size());
+		}
+
+		for (const auto& hardDriveData : PDM::GetHardDriveInfo())
+		{
+			auto hardDrive = machine->add_hard_drives();
+			hardDrive->set_name(hardDriveData.name);
+			hardDrive->set_drive_type(HardDriveTypeToProto(hardDriveData.type));
+			hardDrive->set_size(hardDriveData.size);
 		}
 
 		return data;
