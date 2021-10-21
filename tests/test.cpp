@@ -35,7 +35,12 @@ TEST(SemanticVersion, CanConvertSemverData) {
     }
 }
 
-TEST(PdmProto, CanGetProtobufData)
+TEST(PdmProto, CanGetEVEPublicProtobufData)
 {
-    pdm_proto::GetData();
+	pdm_proto::GetEVEPublicData();
+}
+
+TEST(PdmProto, CanGetEVELauncherProtobufData)
+{
+	pdm_proto::GetEVELauncherData();
 }
