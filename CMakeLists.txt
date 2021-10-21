@@ -13,27 +13,18 @@ FetchContent_Populate(
 add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/protobuf/cmake)
 find_package(protobuf REQUIRED)
 
-option(USE_EVE_PUBLIC_DOMAIN "ON for using the eve_public and OFF for using the eve_launcher proto domain" OFF)
-
-if(USE_EVE_PUBLIC_DOMAIN)
-    set(PROTO_CC_FILE generated/eve_public/app/platform.pb.cc)
-else()
-    set(PROTO_CC_FILE generated/eve_launcher/pdm.pb.cc)
-endif()
-
 add_library(platform_pdm_proto_wrapper STATIC
-    ${PROTO_CC_FILE}
+    generated/eve_public/app/platform.pb.cc
+    generated/eve_launcher/pdm.pb.cc
     include/pdm/protobuf.h
-    src/protobuf.cpp
+    src/protobuf_template.h
+    src/protobuf_public.cpp
+    src/protobuf_launcher.cpp
     src/semver.h
     src/semver.cpp
 )
 target_link_libraries(platform_pdm_proto_wrapper PUBLIC pdm protobuf::libprotobuf)
 target_include_directories(platform_pdm_proto_wrapper PUBLIC generated)
-
-if(USE_EVE_PUBLIC_DOMAIN)
-    target_compile_definitions(platform_pdm_proto_wrapper PUBLIC USE_EVE_PUBLIC_DOMAIN)
-endif()
 
 option(USE_WITH_PROTOBUF_DLL "Is this library going to be used with protobuf as DLL?" OFF)
 

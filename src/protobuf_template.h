@@ -1,7 +1,28 @@
-#include "../include/pdm/protobuf.h"
+#pragma once
+
 #include "pdm.h"
 #include <google/protobuf/util/time_util.h>
 #include "semver.h"
+
+#if PDM_PROTO_USE_EVE_PUBLIC_DOMAIN
+
+#include "eve_public/app/platform.pb.h"
+#define PDM_PROTO_GET_DATA_NAME GetEVEPublicData
+#define PDM_PROTO_BITNESS_UNSPECIFIED BITNESS_UNSPECIFIED
+#define PDM_PROTO_OS_KIND_UNSPECIFIED KIND_UNSPECIFIED
+#define PDM_PROTO_OS_KIND(KIND) KIND_ ## KIND
+
+namespace platform = eve_public::app::platform;
+
+#else
+
+#include "eve_launcher/pdm.pb.h"
+#define PDM_PROTO_GET_DATA_NAME GetEVELauncherData
+#define PDM_PROTO_BITNESS_UNSPECIFIED BITNESS_UNKNOWN
+#define PDM_PROTO_OS_KIND_UNSPECIFIED UNKNOWN
+#define PDM_PROTO_OS_KIND(KIND) KIND
+
+#endif
 
 platform::Bitness BitnessToProto(PDM::Bitness bitness)
 {
@@ -13,11 +34,7 @@ platform::Bitness BitnessToProto(PDM::Bitness bitness)
 		return platform::BITNESS_64;
     case PDM::Bitness::BITNESS_UNKNOWN:
 	default:
-#if USE_EVE_PUBLIC_DOMAIN
-        return platform::BITNESS_UNSPECIFIED;
-#else
-		return platform::BITNESS_UNKNOWN;
-#endif
+        return platform::PDM_PROTO_BITNESS_UNSPECIFIED;
 	}
 }
 
@@ -26,15 +43,15 @@ platform::Machine::CPU::Architecture CPUArchitectureToProto(PDM::CPUArchitecture
 	switch(archictecture)
 	{
 	case PDM::CPUArchitecture::X86:
-		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_X86;
+		return platform::Machine::CPU::ARCHITECTURE_X86;
 	case PDM::CPUArchitecture::X86_64:
-		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_X86_64;
+		return platform::Machine::CPU::ARCHITECTURE_X86_64;
 	case PDM::CPUArchitecture::ARM:
-		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_ARM;
+		return platform::Machine::CPU::ARCHITECTURE_ARM;
 	case PDM::CPUArchitecture::ARM64:
-		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_ARM64;
+		return platform::Machine::CPU::ARCHITECTURE_ARM64;
 	case PDM::CPUArchitecture::UNKNOWN:
-		return platform::Machine::CPU::Architecture::Machine_CPU_Architecture_ARCHITECTURE_UNSPECIFIED;
+		return platform::Machine::CPU::ARCHITECTURE_UNSPECIFIED;
 	default:
 		throw std::invalid_argument("Invalid CPU architecture");
 	}
@@ -44,25 +61,14 @@ platform::OS::Kind OSKindToProto(PDM::OS osKind)
 {
 	switch(osKind)
 	{
-#if USE_EVE_PUBLIC_DOMAIN
 	case PDM::OS::UNKNOWN:
-		return platform::OS::Kind::OS_Kind_KIND_UNSPECIFIED;
+		return platform::OS::PDM_PROTO_OS_KIND_UNSPECIFIED;
 	case PDM::OS::WINDOWS:
-		return platform::OS::Kind::OS_Kind_KIND_WINDOWS;
+		return platform::OS::PDM_PROTO_OS_KIND(WINDOWS);
 	case PDM::OS::MACOS:
-		return platform::OS::Kind::OS_Kind_KIND_MACOS;
+		return platform::OS::PDM_PROTO_OS_KIND(MACOS);
 	case PDM::OS::WINE:
-		return platform::OS::Kind::OS_Kind_KIND_WINE;
-#else
-	case PDM::OS::UNKNOWN:
-		return platform::OS::Kind::OS_Kind_UNKNOWN;
-	case PDM::OS::WINDOWS:
-		return platform::OS::Kind::OS_Kind_WINDOWS;
-	case PDM::OS::MACOS:
-		return platform::OS::Kind::OS_Kind_MACOS;
-	case PDM::OS::WINE:
-		return platform::OS::Kind::OS_Kind_WINE;
-#endif
+		return platform::OS::PDM_PROTO_OS_KIND(WINE);
 	default:
 		throw std::invalid_argument("Invalid osType");
 	}
@@ -128,7 +134,7 @@ void AugmentVersion(const std::string& pdm_version, platform::SemanticVersion* r
 
 namespace pdm_proto
 {
-	platform::Information GetData()
+	platform::Information PDM_PROTO_GET_DATA_NAME()
 	{
 		platform::Information data;
 
