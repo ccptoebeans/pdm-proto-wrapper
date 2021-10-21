@@ -24,112 +24,115 @@ namespace platform = eve_public::app::platform;
 
 #endif
 
-platform::Bitness BitnessToProto(PDM::Bitness bitness)
+namespace
 {
-	switch(bitness)
+	platform::Bitness BitnessToProto(PDM::Bitness bitness)
 	{
-	case PDM::Bitness::BITNESS_32:
-		return platform::BITNESS_32;
-	case PDM::Bitness::BITNESS_64:
-		return platform::BITNESS_64;
-    case PDM::Bitness::BITNESS_UNKNOWN:
-	default:
-        return platform::PDM_PROTO_BITNESS_UNSPECIFIED;
+		switch(bitness)
+		{
+		case PDM::Bitness::BITNESS_32:
+			return platform::BITNESS_32;
+		case PDM::Bitness::BITNESS_64:
+			return platform::BITNESS_64;
+		case PDM::Bitness::BITNESS_UNKNOWN:
+		default:
+			return platform::PDM_PROTO_BITNESS_UNSPECIFIED;
+		}
 	}
-}
 
-platform::Machine::CPU::Architecture CPUArchitectureToProto(PDM::CPUArchitecture archictecture)
-{
-	switch(archictecture)
+	platform::Machine::CPU::Architecture CPUArchitectureToProto(PDM::CPUArchitecture archictecture)
 	{
-	case PDM::CPUArchitecture::X86:
-		return platform::Machine::CPU::ARCHITECTURE_X86;
-	case PDM::CPUArchitecture::X86_64:
-		return platform::Machine::CPU::ARCHITECTURE_X86_64;
-	case PDM::CPUArchitecture::ARM:
-		return platform::Machine::CPU::ARCHITECTURE_ARM;
-	case PDM::CPUArchitecture::ARM64:
-		return platform::Machine::CPU::ARCHITECTURE_ARM64;
-	case PDM::CPUArchitecture::UNKNOWN:
-		return platform::Machine::CPU::ARCHITECTURE_UNSPECIFIED;
-	default:
-		throw std::invalid_argument("Invalid CPU architecture");
+		switch(archictecture)
+		{
+		case PDM::CPUArchitecture::X86:
+			return platform::Machine::CPU::ARCHITECTURE_X86;
+		case PDM::CPUArchitecture::X86_64:
+			return platform::Machine::CPU::ARCHITECTURE_X86_64;
+		case PDM::CPUArchitecture::ARM:
+			return platform::Machine::CPU::ARCHITECTURE_ARM;
+		case PDM::CPUArchitecture::ARM64:
+			return platform::Machine::CPU::ARCHITECTURE_ARM64;
+		case PDM::CPUArchitecture::UNKNOWN:
+			return platform::Machine::CPU::ARCHITECTURE_UNSPECIFIED;
+		default:
+			throw std::invalid_argument("Invalid CPU architecture");
+		}
 	}
-}
 
-platform::OS::Kind OSKindToProto(PDM::OS osKind)
-{
-	switch(osKind)
+	platform::OS::Kind OSKindToProto(PDM::OS osKind)
 	{
-	case PDM::OS::UNKNOWN:
-		return platform::OS::PDM_PROTO_OS_KIND_UNSPECIFIED;
-	case PDM::OS::WINDOWS:
-		return platform::OS::PDM_PROTO_OS_KIND(WINDOWS);
-	case PDM::OS::MACOS:
-		return platform::OS::PDM_PROTO_OS_KIND(MACOS);
-	case PDM::OS::WINE:
-		return platform::OS::PDM_PROTO_OS_KIND(WINE);
-	default:
-		throw std::invalid_argument("Invalid osType");
+		switch(osKind)
+		{
+		case PDM::OS::UNKNOWN:
+			return platform::OS::PDM_PROTO_OS_KIND_UNSPECIFIED;
+		case PDM::OS::WINDOWS:
+			return platform::OS::PDM_PROTO_OS_KIND(WINDOWS);
+		case PDM::OS::MACOS:
+			return platform::OS::PDM_PROTO_OS_KIND(MACOS);
+		case PDM::OS::WINE:
+			return platform::OS::PDM_PROTO_OS_KIND(WINE);
+		default:
+			throw std::invalid_argument("Invalid osType");
+		}
 	}
-}
 
-platform::OS::StreamingService::Provider StreamingServiceToProto(PDM::StreamingService service)
-{
-	switch(service)
+	platform::OS::StreamingService::Provider StreamingServiceToProto(PDM::StreamingService service)
 	{
-	case PDM::StreamingService::NONE:
-		return platform::OS::StreamingService::PROVIDER_UNSPECIFIED;
-	case PDM::StreamingService::UNKNOWN:
-		return platform::OS::StreamingService::PROVIDER_UNKNOWN;
-	case PDM::StreamingService::INTEL_STREAM:
-		return platform::OS::StreamingService::PROVIDER_INTEL;
-	default:
-		throw std::invalid_argument("Invalid streaming service type");
+		switch(service)
+		{
+		case PDM::StreamingService::NONE:
+			return platform::OS::StreamingService::PROVIDER_UNSPECIFIED;
+		case PDM::StreamingService::UNKNOWN:
+			return platform::OS::StreamingService::PROVIDER_UNKNOWN;
+		case PDM::StreamingService::INTEL_STREAM:
+			return platform::OS::StreamingService::PROVIDER_INTEL;
+		default:
+			throw std::invalid_argument("Invalid streaming service type");
+		}
 	}
-}
 
-platform::Machine::BatteryDetection BatteryDetectionToProto(PDM::BatteryStatus status)
-{
-	switch(status)
+	platform::Machine::BatteryDetection BatteryDetectionToProto(PDM::BatteryStatus status)
 	{
-	case PDM::BatteryStatus::UNKNOWN:
-		return platform::Machine::BATTERY_UNSPECIFIED;
-	case PDM::BatteryStatus::DETECTED:
-		return platform::Machine::BATTERY_DETECTED;
-	case PDM::BatteryStatus::NOT_DETECTED:
-		return platform::Machine::BATTERY_NOT_DETECTED;
-	default:
-		throw std::invalid_argument("Invalid battery status");
+		switch(status)
+		{
+		case PDM::BatteryStatus::UNKNOWN:
+			return platform::Machine::BATTERY_UNSPECIFIED;
+		case PDM::BatteryStatus::DETECTED:
+			return platform::Machine::BATTERY_DETECTED;
+		case PDM::BatteryStatus::NOT_DETECTED:
+			return platform::Machine::BATTERY_NOT_DETECTED;
+		default:
+			throw std::invalid_argument("Invalid battery status");
+		}
 	}
-}
 
-platform::Machine::HardDrive::DriveType HardDriveTypeToProto(PDM::HardDriveInfo::HardDriveType type)
-{
-	switch (type)
+	platform::Machine::HardDrive::DriveType HardDriveTypeToProto(PDM::HardDriveInfo::HardDriveType type)
 	{
-	case PDM::HardDriveInfo::HardDriveType::UNKNOWN:
-		return platform::Machine::HardDrive::DRIVETYPE_UNSPECIFIED;
-	case PDM::HardDriveInfo::HardDriveType::SSD:
-		return platform::Machine::HardDrive::DRIVETYPE_SSD;
-	case PDM::HardDriveInfo::HardDriveType::HDD:
-		return platform::Machine::HardDrive::DRIVETYPE_HDD;
-	default:
-		throw std::invalid_argument("Invalid hard drive type");
+		switch (type)
+		{
+		case PDM::HardDriveInfo::HardDriveType::UNKNOWN:
+			return platform::Machine::HardDrive::DRIVETYPE_UNSPECIFIED;
+		case PDM::HardDriveInfo::HardDriveType::SSD:
+			return platform::Machine::HardDrive::DRIVETYPE_SSD;
+		case PDM::HardDriveInfo::HardDriveType::HDD:
+			return platform::Machine::HardDrive::DRIVETYPE_HDD;
+		default:
+			throw std::invalid_argument("Invalid hard drive type");
+		}
 	}
-}
 
-void AugmentVersion(const std::string& pdm_version, platform::SemanticVersion* result)
-{
-    pdm::SemanticVersion version;
+	void AugmentVersion(const std::string& pdm_version, platform::SemanticVersion* result)
+	{
+		pdm::SemanticVersion version;
 
-    (void)pdm::ParseSemanticVersion(pdm_version, version);
+		(void)pdm::ParseSemanticVersion(pdm_version, version);
 
-    result->set_major(version.major);
-    result->set_minor(version.minor);
-    result->set_patch(version.patch);
-    result->set_prerelease(version.pre_release);
-    result->set_build(version.build);
+		result->set_major(version.major);
+		result->set_minor(version.minor);
+		result->set_patch(version.patch);
+		result->set_prerelease(version.pre_release);
+		result->set_build(version.build);
+	}
 }
 
 namespace pdm_proto
