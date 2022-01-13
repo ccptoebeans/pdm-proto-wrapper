@@ -30,11 +30,18 @@ cmake --build .build
 1. add the `include/` directory to your compilers include directories
 2. somewhere in your code do this:
 ```c++
+#include <stringstream>
 #include <pdm/protobuf.h>
 
 void foo() {
-    auto bar = pdm::GetData();
-    // bar is now an instance of the protobuf encoded details.
+    std::stringstream buffer;
+    // `GetData` and `GetEVEPublicData` return data from the eve_public proto domain.
+    // `GetEVELauncherData` can be used to return data from the deprecated eve_launcher proto domain.
+    auto can_serialize = pdm_proto::GetData(&buffer);
+    if (can_serialize) {
+        // buffer now contains an instance of the protobuf encoded details.
+        // Use `ParseFromIStream(&buffer)` to retrieve the actual protobuf structure
+    }
 }
 ```
 3. Add `pdm_protobuf.lib` to your linker libraries
