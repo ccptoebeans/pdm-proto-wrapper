@@ -1,10 +1,9 @@
 #pragma once
 
-#include "eve_public/app/platform.pb.h"
-#include "eve_launcher/pdm.pb.h"
+#include <ostream>
 
 namespace pdm_proto
 {
-	eve_public::app::platform::Information GetEVEPublicData();
-	platform::Information GetEVELauncherData();
+  bool GetEVEPublicData(std::ostream* stream);
+  bool GetEVELauncherData(std::ostream* stream);
 }

@@ -1,5 +1,7 @@
 #include "../src/semver.h"
 #include "../include/pdm/protobuf.h"
+#include "../generated/eve_launcher/pdm.pb.h"
+#include "../generated/eve_public/app/platform.pb.h"
 #include <gtest/gtest.h>
 
 struct test_row {
@@ -37,10 +39,16 @@ TEST(SemanticVersion, CanConvertSemverData) {
 
 TEST(PdmProto, CanGetEVEPublicProtobufData)
 {
-	pdm_proto::GetEVEPublicData();
+        eve_public::app::platform::Information msg;
+        std::stringstream out;
+        ASSERT_TRUE(pdm_proto::GetEVEPublicData(&out));
+        ASSERT_TRUE(msg.ParseFromIstream(&out));
 }
 
 TEST(PdmProto, CanGetEVELauncherProtobufData)
 {
-	pdm_proto::GetEVELauncherData();
+        platform::Information msg;
+        std::stringstream out;
+	ASSERT_TRUE(pdm_proto::GetEVELauncherData(&out));
+        ASSERT_TRUE(msg.ParseFromIstream(&out));
 }
