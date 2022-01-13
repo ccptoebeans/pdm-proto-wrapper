@@ -45,6 +45,14 @@ TEST(PdmProto, CanGetEVEPublicProtobufData)
         ASSERT_TRUE(msg.ParseFromIstream(&out));
 }
 
+TEST(PdmProto, CanGetData)
+{
+        eve_public::app::platform::Information msg;
+        std::stringstream out;
+        ASSERT_TRUE(pdm_proto::GetEVEPublicData(&out));
+        ASSERT_TRUE(msg.ParseFromIstream(&out));
+}
+
 TEST(PdmProto, CanGetEVELauncherProtobufData)
 {
         platform::Information msg;

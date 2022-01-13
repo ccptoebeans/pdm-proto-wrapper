@@ -250,4 +250,8 @@ namespace pdm_proto
 
 		return data.SerializeToOstream(out);
 	}
+
+#if PDM_PROTO_USE_EVE_PUBLIC_DOMAIN
+auto GetData = PDM_PROTO_GET_DATA_NAME;
+#endif
 }
