@@ -137,7 +137,7 @@ namespace
 
 namespace pdm_proto
 {
-	platform::Information PDM_PROTO_GET_DATA_NAME()
+	bool PDM_PROTO_GET_DATA_NAME(std::ostream* out)
 	{
 		platform::Information data;
 
@@ -248,6 +248,10 @@ namespace pdm_proto
 			hardDrive->set_size(hardDriveData.size);
 		}
 
-		return data;
+		return data.SerializeToOstream(out);
 	}
+
+#if PDM_PROTO_USE_EVE_PUBLIC_DOMAIN
+auto GetData = PDM_PROTO_GET_DATA_NAME;
+#endif
 }

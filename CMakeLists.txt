@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(platform_pdm_proto_wrapper)
+project(platform_pdm_proto_wrapper VERSION 2.0.0)
 
 add_subdirectory(platform-pdm)
 
