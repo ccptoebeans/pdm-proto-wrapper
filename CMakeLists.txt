@@ -67,6 +67,6 @@ if(NOT protobuf_BUILD_SHARED_LIBS)
             WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
         )
     else()
-        message(WARNING "Post build step to combine libs doesn't support current platform")
+        message(FATAL_ERROR "Post build step to combine libs doesn't support current platform")
     endif()
 endif()
