@@ -1,17 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 project(platform_pdm_proto_wrapper VERSION 2.0.0)
 
-add_subdirectory(platform-pdm)
-
-include(FetchContent)
-
-FetchContent_Populate(
-  protobuf
-  SOURCE_DIR protobuf
-  URL https://github.com/protocolbuffers/protobuf/releases/download/v3.6.0/protobuf-cpp-3.6.0.tar.gz
-)
-add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/protobuf/cmake)
-find_package(protobuf REQUIRED)
+find_package(carbon-pdm CONFIG REQUIRED)
+find_package(protobuf CONFIG REQUIRED)
 
 add_library(platform_pdm_proto_wrapper STATIC
     generated/eve_public/app/platform.pb.cc
