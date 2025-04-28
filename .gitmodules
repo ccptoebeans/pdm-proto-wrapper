@@ -1,3 +1,6 @@
 [submodule "platform-pdm"]
 	path = platform-pdm
 	url = git@github.com:ccpgames/platform-pdm.git
+[submodule "vcpkg"]
+	path = vendor/github.com/microsoft/vcpkg
+	url = git@github.com:microsoft/vcpkg.git
