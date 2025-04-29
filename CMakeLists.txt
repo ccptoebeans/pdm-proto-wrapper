@@ -15,7 +15,13 @@ add_library(platform_pdm_proto_wrapper STATIC
     src/semver.cpp
 )
 target_link_libraries(platform_pdm_proto_wrapper PUBLIC pdm protobuf::libprotobuf)
-target_include_directories(platform_pdm_proto_wrapper PUBLIC generated)
+get_target_property(PDM_INTERFACE_INCLUDE_DIRECTORIES pdm INTERFACE_INCLUDE_DIRECTORIES)
+target_include_directories(platform_pdm_proto_wrapper
+        PUBLIC
+            $<INSTALL_INTERFACE:include>
+            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/generated>
+)
 
 option(USE_WITH_PROTOBUF_DLL "Is this library going to be used with protobuf as DLL?" OFF)
 
@@ -35,29 +41,26 @@ if(ENABLE_TESTS)
     add_subdirectory(tests)
 endif()
 
-#Combine static libs into one lib if protobuf is static
-if(NOT protobuf_BUILD_SHARED_LIBS)
-    
-    set(PDM_WITH_PROTO_NAME "${CMAKE_STATIC_LIBRARY_PREFIX}pdm_with_proto${CMAKE_STATIC_LIBRARY_SUFFIX}")
+# Install rules
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+    install(
+            TARGETS platform_pdm_proto_wrapper
+            EXPORT platform_pdm_proto_wrapperTargets
+            CONFIGURATIONS Release
+            ARCHIVE DESTINATION lib/
+            LIBRARY DESTINATION lib/
+    )
+    # Install rule for available public headers
+    install(DIRECTORY include/ DESTINATION include)
 
-    if (WIN32)
-        #requires lib.exe to be available msvc
-        add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
-        COMMAND lib.exe /OUT:$<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
-                $<TARGET_FILE:platform_pdm_proto_wrapper>
-                $<TARGET_FILE:pdm>
-                $<TARGET_FILE:protobuf::libprotobuf>
-            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-        )
-    elseif (APPLE)
-        add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
-        COMMAND libtool -static -o $<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
-                $<TARGET_FILE:platform_pdm_proto_wrapper>
-                $<TARGET_FILE:pdm>
-                $<TARGET_FILE:protobuf::libprotobuf>
-            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-        )
-    else()
-        message(FATAL_ERROR "Post build step to combine libs doesn't support current platform")
-    endif()
+    install(
+            EXPORT platform_pdm_proto_wrapperTargets
+            DESTINATION ${CMAKE_INSTALL_PREFIX}/share/carbon-pdmprotowrapper
+            FILE carbon-pdmprotowrapper.cmake
+    )
+
+    install(
+            FILES carbon-pdmprotowrapperConfig.cmake
+            DESTINATION ${CMAKE_INSTALL_PREFIX}/share/carbon-pdmprotowrapper
+    )
 endif()
