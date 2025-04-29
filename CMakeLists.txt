@@ -34,15 +34,16 @@ set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_STANDARD_REQUIRED ON
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY CXX_VISIBILITY_PRESET hidden)
 set_property(TARGET platform_pdm_proto_wrapper PROPERTY VISIBILITY_INLINES_HIDDEN YES)
 
-option(ENABLE_TESTS "Build with tests" ON)
-
-if(ENABLE_TESTS)
-    enable_testing()
-    add_subdirectory(tests)
-endif()
 
 # Install rules
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+    option(BUILD_TESTING "Build with tests" ON)
+
+    if(BUILD_TESTING)
+        enable_testing()
+        add_subdirectory(tests)
+    endif()
+
     install(
             TARGETS platform_pdm_proto_wrapper
             EXPORT platform_pdm_proto_wrapperTargets
