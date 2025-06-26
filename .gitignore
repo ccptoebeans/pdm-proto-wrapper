@@ -4,3 +4,10 @@
 out/
 build/
 CMakeSettings.json
+
+# Local development preset
+CMakeUserPreset.json
+
+# Build output
+cmake-build-*/
+.cmake-build-*/
