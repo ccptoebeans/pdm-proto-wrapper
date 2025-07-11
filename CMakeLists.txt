@@ -49,19 +49,19 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         set(PDM_WITH_PROTO_NAME "${CMAKE_STATIC_LIBRARY_PREFIX}pdm_with_proto${CMAKE_STATIC_LIBRARY_SUFFIX}")
 
         if (WIN32)
-            find_program(LIB lib REQUIRED)
+            find_program(LIB_TOOL_EXE lib REQUIRED)
             #requires lib.exe to be available msvc
             add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
-                    COMMAND ${LIB} /OUT:$<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
+                    COMMAND ${LIB_TOOL_EXE} /OUT:$<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
                     $<TARGET_FILE:platform_pdm_proto_wrapper>
                     $<TARGET_FILE:pdm>
                     $<TARGET_FILE:protobuf::libprotobuf>
                     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
             )
         elseif (APPLE)
-            find_program(LIBTOOL libtool REQUIRED)
+            find_program(LIBTOOL_TOOL_EXE libtool REQUIRED)
             add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
-                    COMMAND ${LIBTOOL} -static -o $<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
+                    COMMAND ${LIBTOOL_TOOL_EXE} -static -o $<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
                     $<TARGET_FILE:platform_pdm_proto_wrapper>
                     $<TARGET_FILE:pdm>
                     $<TARGET_FILE:protobuf::libprotobuf>
