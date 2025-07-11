@@ -56,75 +56,147 @@
       "hidden": true
     },
     {
-      "name": "vs-x64-windows-internal",
+      "name": "vs-x64-windows-internal-md",
       "inherits": "visual-studio",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-internal",
-        "VCPKG_HOST_TRIPLET": "x64-windows-internal"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-internal-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-internal-md"
       }
     },
     {
-      "name": "vs-x64-windows-release",
+      "name": "vs-x64-windows-release-md",
       "inherits": "visual-studio",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-release",
-        "VCPKG_HOST_TRIPLET": "x64-windows-release"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-release-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-release-md"
       }
     },
     {
-      "name": "vs-x64-windows-debug",
+      "name": "vs-x64-windows-debug-md",
       "inherits": "visual-studio",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-debug",
-        "VCPKG_HOST_TRIPLET": "x64-windows-debug"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-debug-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-debug-md"
       }
     },
     {
-      "name": "vs-x64-windows-trinitydev",
+      "name": "vs-x64-windows-trinitydev-md",
       "inherits": "visual-studio",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev",
-        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-md"
       }
     },
     {
-      "name": "nmc-x64-windows-internal",
+      "name": "nmc-x64-windows-internal-md",
       "inherits": ["ninja-multi-config", "windows"],
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-internal",
-        "VCPKG_HOST_TRIPLET": "x64-windows-internal"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-internal-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-internal-md"
       }
     },
     {
-      "name": "nmc-x64-windows-release",
+      "name": "nmc-x64-windows-release-md",
       "inherits": ["ninja-multi-config", "windows"],
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-release",
-        "VCPKG_HOST_TRIPLET": "x64-windows-release"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-release-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-release-md"
       }
     },
     {
-      "name": "nmc-x64-windows-debug",
+      "name": "nmc-x64-windows-debug-md",
       "inherits": ["ninja-multi-config", "windows"],
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-debug",
-        "VCPKG_HOST_TRIPLET": "x64-windows-debug"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-debug-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-debug-md"
       }
     },
     {
-      "name": "nmc-x64-windows-trinitydev",
+      "name": "nmc-x64-windows-trinitydev-md",
       "inherits": ["ninja-multi-config", "windows"],
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev",
-        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev-md",
+        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-md"
+      }
+    },
+    {
+      "name": "vs-x64-windows-internal-mt",
+      "inherits": "visual-studio",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Internal",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-internal-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-internal-mt"
+      }
+    },
+    {
+      "name": "vs-x64-windows-release-mt",
+      "inherits": "visual-studio",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-release-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-release-mt"
+      }
+    },
+    {
+      "name": "vs-x64-windows-debug-mt",
+      "inherits": "visual-studio",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-debug-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-debug-mt"
+      }
+    },
+    {
+      "name": "vs-x64-windows-trinitydev-mt",
+      "inherits": "visual-studio",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "TrinityDev",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-mt"
+      }
+    },
+    {
+      "name": "nmc-x64-windows-internal-mt",
+      "inherits": ["ninja-multi-config", "windows"],
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Internal",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-internal-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-internal-mt"
+      }
+    },
+    {
+      "name": "nmc-x64-windows-release-mt",
+      "inherits": ["ninja-multi-config", "windows"],
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-release-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-release-mt"
+      }
+    },
+    {
+      "name": "nmc-x64-windows-debug-mt",
+      "inherits": ["ninja-multi-config", "windows"],
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-debug-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-debug-mt"
+      }
+    },
+    {
+      "name": "nmc-x64-windows-trinitydev-mt",
+      "inherits": ["ninja-multi-config", "windows"],
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "TrinityDev",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-mt"
       }
     },
     {

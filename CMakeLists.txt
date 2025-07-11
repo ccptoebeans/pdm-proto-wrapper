@@ -44,6 +44,34 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         add_subdirectory(tests)
     endif()
 
+    option(protobuf_COMBINE_SHARED_LIBS "Combine static libs into one lib if protobuf is static" OFF)
+    if(protobuf_COMBINE_SHARED_LIBS)
+        set(PDM_WITH_PROTO_NAME "${CMAKE_STATIC_LIBRARY_PREFIX}pdm_with_proto${CMAKE_STATIC_LIBRARY_SUFFIX}")
+
+        if (WIN32)
+            find_program(LIB lib REQUIRED)
+            #requires lib.exe to be available msvc
+            add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
+                    COMMAND ${LIB} /OUT:$<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
+                    $<TARGET_FILE:platform_pdm_proto_wrapper>
+                    $<TARGET_FILE:pdm>
+                    $<TARGET_FILE:protobuf::libprotobuf>
+                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+            )
+        elseif (APPLE)
+            find_program(LIBTOOL libtool REQUIRED)
+            add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
+                    COMMAND ${LIBTOOL} -static -o $<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
+                    $<TARGET_FILE:platform_pdm_proto_wrapper>
+                    $<TARGET_FILE:pdm>
+                    $<TARGET_FILE:protobuf::libprotobuf>
+                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+            )
+        else()
+            message(FATAL_ERROR "Post build step to combine libs doesn't support current platform")
+        endif()
+    endif()
+
     install(
             TARGETS platform_pdm_proto_wrapper
             EXPORT platform_pdm_proto_wrapperTargets
