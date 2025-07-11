@@ -61,7 +61,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
         "VCPKG_TARGET_TRIPLET": "x64-windows-internal-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-internal-md"
+        "VCPKG_HOST_TRIPLET": "x64-windows-internal-md",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
       }
     },
     {
@@ -70,7 +71,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "VCPKG_TARGET_TRIPLET": "x64-windows-release-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-release-md"
+        "VCPKG_HOST_TRIPLET": "x64-windows-release-md",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
       }
     },
     {
@@ -79,7 +81,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "VCPKG_TARGET_TRIPLET": "x64-windows-debug-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-debug-md"
+        "VCPKG_HOST_TRIPLET": "x64-windows-debug-md",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
       }
     },
     {
@@ -88,7 +91,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
         "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-md"
+        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-md",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
       }
     },
     {
@@ -97,7 +101,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
         "VCPKG_TARGET_TRIPLET": "x64-windows-internal-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-internal-md"
+        "VCPKG_HOST_TRIPLET": "x64-windows-internal-md",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
       }
     },
     {
@@ -106,7 +111,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "VCPKG_TARGET_TRIPLET": "x64-windows-release-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-release-md"
+        "VCPKG_HOST_TRIPLET": "x64-windows-release-md",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
       }
     },
     {
@@ -115,7 +121,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "VCPKG_TARGET_TRIPLET": "x64-windows-debug-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-debug-md"
+        "VCPKG_HOST_TRIPLET": "x64-windows-debug-md",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
       }
     },
     {
@@ -124,7 +131,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
         "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev-md",
-        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-md"
+        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-md",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
       }
     },
     {
@@ -133,7 +141,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
         "VCPKG_TARGET_TRIPLET": "x64-windows-internal-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-internal-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-internal-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -142,7 +151,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "VCPKG_TARGET_TRIPLET": "x64-windows-release-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-release-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-release-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -151,7 +161,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "VCPKG_TARGET_TRIPLET": "x64-windows-debug-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-debug-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-debug-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -160,7 +171,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
         "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -169,7 +181,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
         "VCPKG_TARGET_TRIPLET": "x64-windows-internal-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-internal-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-internal-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -178,7 +191,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "VCPKG_TARGET_TRIPLET": "x64-windows-release-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-release-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-release-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -187,7 +201,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "VCPKG_TARGET_TRIPLET": "x64-windows-debug-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-debug-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-debug-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -196,7 +211,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
         "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
