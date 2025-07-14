@@ -44,8 +44,9 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         add_subdirectory(tests)
     endif()
 
-    option(protobuf_COMBINE_SHARED_LIBS "Combine static libs into one lib if protobuf is static" OFF)
-    if(protobuf_COMBINE_SHARED_LIBS)
+    option(COMBINE_SHARED_LIBS "Combine static libs into one lib if protobuf is static" OFF)
+
+    if(COMBINE_SHARED_LIBS)
         set(PDM_WITH_PROTO_NAME "${CMAKE_STATIC_LIBRARY_PREFIX}pdm_with_proto${CMAKE_STATIC_LIBRARY_SUFFIX}")
 
         if (WIN32)
