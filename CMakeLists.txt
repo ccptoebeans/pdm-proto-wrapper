@@ -4,7 +4,9 @@ project(platform_pdm_proto_wrapper VERSION 2.0.0)
 find_package(carbon-pdm CONFIG REQUIRED)
 find_package(protobuf CONFIG REQUIRED)
 
-add_library(platform_pdm_proto_wrapper STATIC
+OPTION(BUILD_SHARED_LIBS "build using shared libraries" OFF)
+
+add_library(platform_pdm_proto_wrapper
     generated/eve_public/app/platform.pb.cc
     generated/eve_launcher/pdm.pb.cc
     include/pdm/protobuf.h
@@ -44,34 +46,37 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         add_subdirectory(tests)
     endif()
 
-    option(COMBINE_SHARED_LIBS "Combine static libs into one lib if protobuf is static" OFF)
+    if (NOT BUILD_SHARED_LIBS)
+        option(COMBINE_STATIC_LIBS "Combine static libs into one lib if protobuf is static" OFF)
 
-    if(COMBINE_SHARED_LIBS)
-        set(PDM_WITH_PROTO_NAME "${CMAKE_STATIC_LIBRARY_PREFIX}pdm_with_proto${CMAKE_STATIC_LIBRARY_SUFFIX}")
+        if(COMBINE_STATIC_LIBS)
+            set(PDM_WITH_PROTO_NAME "${CMAKE_STATIC_LIBRARY_PREFIX}pdm_with_proto${CMAKE_STATIC_LIBRARY_SUFFIX}")
 
-        if (WIN32)
-            find_program(LIB_TOOL_EXE lib REQUIRED)
-            #requires lib.exe to be available msvc
-            add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
-                    COMMAND ${LIB_TOOL_EXE} /OUT:$<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
-                    $<TARGET_FILE:platform_pdm_proto_wrapper>
-                    $<TARGET_FILE:pdm>
-                    $<TARGET_FILE:protobuf::libprotobuf>
-                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-            )
-        elseif (APPLE)
-            find_program(LIBTOOL_TOOL_EXE libtool REQUIRED)
-            add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
-                    COMMAND ${LIBTOOL_TOOL_EXE} -static -o $<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
-                    $<TARGET_FILE:platform_pdm_proto_wrapper>
-                    $<TARGET_FILE:pdm>
-                    $<TARGET_FILE:protobuf::libprotobuf>
-                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-            )
-        else()
-            message(FATAL_ERROR "Post build step to combine libs doesn't support current platform")
+            if (WIN32)
+                find_program(LIB_TOOL_EXE lib REQUIRED)
+                #requires lib.exe to be available msvc
+                add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
+                        COMMAND ${LIB_TOOL_EXE} /OUT:$<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
+                        $<TARGET_FILE:platform_pdm_proto_wrapper>
+                        $<TARGET_FILE:pdm>
+                        $<TARGET_FILE:protobuf::libprotobuf>
+                        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+                )
+            elseif (APPLE)
+                find_program(LIBTOOL_TOOL_EXE libtool REQUIRED)
+                add_custom_command(TARGET platform_pdm_proto_wrapper POST_BUILD
+                        COMMAND ${LIBTOOL_TOOL_EXE} -static -o $<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME}
+                        $<TARGET_FILE:platform_pdm_proto_wrapper>
+                        $<TARGET_FILE:pdm>
+                        $<TARGET_FILE:protobuf::libprotobuf>
+                        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+                )
+            else()
+                message(FATAL_ERROR "Post build step to combine libs doesn't support current platform")
+            endif()
         endif()
-    endif()
+    endif ()
+
 
     install(
             TARGETS platform_pdm_proto_wrapper
