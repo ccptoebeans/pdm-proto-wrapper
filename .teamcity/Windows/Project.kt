@@ -20,7 +20,7 @@ import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 import jetbrains.buildServer.configs.kotlin.buildFeatures.provideAwsCredentials
 
 val ReleaseMonolith = CarbonBuildWindows("Release Windows", "Release", "nmc-x64-windows-static-release")
-val ReleaseLauncher = CarbonBuildWindows("Release Windows", "Release", "nmc-x64-windows-static-release-mt")
+val ReleaseLauncher = CarbonBuildWindows("Release Launcher", "Release", "nmc-x64-windows-static-release-mt")
 
 object Project : Project({
     id("Windows")
