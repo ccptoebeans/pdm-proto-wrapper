@@ -19,8 +19,8 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 import jetbrains.buildServer.configs.kotlin.buildFeatures.provideAwsCredentials
 
-val ReleaseMonolith = CarbonBuildWindows("Release Windows", "Release", "nmc-x64-windows-static-release")
-val ReleaseLauncher = CarbonBuildWindows("Release Launcher", "Release", "nmc-x64-windows-static-release-mt")
+val ReleaseMonolith = CarbonBuildWindows("Release Windows /MD", "Release", "nmc-x64-windows-static-release")
+val ReleaseLauncher = CarbonBuildWindows("Release /MT (Launcher)", "Release", "nmc-x64-windows-static-release-mt")
 
 object Project : Project({
     id("Windows")
@@ -102,8 +102,8 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
         exec {
             name = "Run Tests"
             workingDir = "%env.CMAKE_BUILD_FOLDER%"
-            path = "ctest"
-            arguments = "-C %env.CMAKE_CONFIG_TYPE% -V --output-on-failure --output-junit %env.CTEST_JUNIT_OUTPUT_FILE% -j 8"
+            path = "tests/%env.CMAKE_CONFIG_TYPE%/Tests.exe"
+            arguments = ""
         }
         exec {
             name = "Upload symbols to sentry"

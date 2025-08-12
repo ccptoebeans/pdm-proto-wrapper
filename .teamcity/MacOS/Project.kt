@@ -19,7 +19,7 @@ import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 import jetbrains.buildServer.configs.kotlin.buildFeatures.provideAwsCredentials
 
-val Release = CarbonBuildMacOS("Release MacOS", "Release", "nmc-universal-osx-static-release")
+val Release = CarbonBuildMacOS("Release MacOS (Launcher & Monolith)", "Release", "nmc-universal-osx-static-release")
 
 object Project : Project({
     id("MacOS")
@@ -93,8 +93,8 @@ class CarbonBuildMacOS(buildName: String, configType: String, preset: String) : 
         exec {
             name = "Run Tests"
             workingDir = "%env.CMAKE_BUILD_FOLDER%"
-            path = "ctest"
-            arguments = "-C %env.CMAKE_CONFIG_TYPE% -V --output-on-failure --output-junit %env.CTEST_JUNIT_OUTPUT_FILE% -j 8"
+            path = "tests/%env.CMAKE_CONFIG_TYPE%/Tests"
+            arguments = ""
         }
         exec {
             name = "Upload symbols to sentry"
