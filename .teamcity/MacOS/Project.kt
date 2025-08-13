@@ -32,6 +32,8 @@ class CarbonBuildMacOS(buildName: String, configType: String, preset: String) : 
     id(buildName.toId())
     name = buildName
 
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX%"
+
     params {
         param("env.SENTRY_CLI_DEBUG_SYMBOL_TYPE", "dsym")
         param("env.GIT_TAG_HASH_OVERRIDE", "")
