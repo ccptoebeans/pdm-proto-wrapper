@@ -31,7 +31,7 @@ object Project : Project({
 })
 
 
-class CarbonBuildWindows(buildName: String, configType: String, preset: String, install_archive: String) : BuildType({
+class CarbonBuildWindows(buildName: String, configType: String, preset: String) : BuildType({
     id(buildName.toId())
     this.name = buildName
 
