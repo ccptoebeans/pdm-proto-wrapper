@@ -94,11 +94,11 @@ class CarbonBuildMacOS(buildName: String, configType: String, preset: String) : 
         exec {
             name = "Run Tests"
             workingDir = "%env.CMAKE_BUILD_FOLDER%/tests/%env.CMAKE_CONFIG_TYPE%"
-            path = "test_exe"
+            path = "./test_exe"
             arguments = ""
         }
         exec {
-            "Run cmake install"
+            name = "Run cmake install"
             path = "cmake"
             arguments = "install -B %env.CMAKE_BUILD_FOLDER%"
         }

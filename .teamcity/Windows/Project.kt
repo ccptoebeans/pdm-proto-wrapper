@@ -109,7 +109,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
             arguments = ""
         }
         exec {
-            "Run cmake install"
+            name = "Run cmake install"
             path = "cmake"
             arguments = "install -B %env.CMAKE_BUILD_FOLDER%"
         }
