@@ -109,9 +109,9 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
             arguments = ""
         }
         exec {
-            name = "Run cmake install"
+            name = "Package artifact"
             path = "cmake"
-            arguments = "install -B %env.CMAKE_BUILD_FOLDER%"
+            arguments = "--install %env.CMAKE_BUILD_FOLDER% --config %env.CMAKE_CONFIG_TYPE%"
         }
         exec {
             name = "Upload symbols to sentry"
