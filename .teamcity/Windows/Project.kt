@@ -101,8 +101,8 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
         }
         exec {
             name = "Run Tests"
-            workingDir = "%env.CMAKE_BUILD_FOLDER%"
-            path = "tests/%env.CMAKE_CONFIG_TYPE%/Tests.exe"
+            workingDir = "%env.CMAKE_BUILD_FOLDER%/tests/%env.CMAKE_CONFIG_TYPE%"
+            path = "Tests_exe.exe"
             arguments = ""
         }
         exec {
