@@ -31,9 +31,11 @@ object Project : Project({
 })
 
 
-class CarbonBuildWindows(buildName: String, configType: String, preset: String) : BuildType({
+class CarbonBuildWindows(buildName: String, configType: String, preset: String, install_archive: String) : BuildType({
     id(buildName.toId())
     this.name = buildName
+
+    artifactRules = "%env.CMAKE_INSTALL_PREFIX%"
 
     params {
         param("carbon_ref", "refs/heads/feature/kotlin")
@@ -55,6 +57,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
         param("env.CMAKE_PRESET", preset)
         param("env.VCPKG_BINARY_SOURCES", "clear;x-aws,s3://vcpkg-binary-cache-static/cache/,readwrite")
         param("env.X_VCPKG_REGISTRIES_CACHE", "%teamcity.build.checkoutDir%/%github_checkout_folder%/regcache")
+        param("env.INSTALL_ARCHIVE", "ON")
     }
 
     vcs {
@@ -92,7 +95,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
         exec {
             name = "Configure"
             path = "cmake"
-            arguments = "--preset %env.CMAKE_PRESET% -S %teamcity.build.checkoutDir%/%github_checkout_folder% -B %env.CMAKE_BUILD_FOLDER% -DCMAKE_INSTALL_PREFIX=%env.CMAKE_INSTALL_PREFIX% -DVCPKG_INSTALL_OPTIONS=--x-buildtrees-root=%teamcity.build.checkoutDir%/%github_checkout_folder%/buildtrees"
+            arguments = "--preset %env.CMAKE_PRESET% -DINSTALL_ARCHIVE=%env.INSTALL_ARCHIVE% -S %teamcity.build.checkoutDir%/%github_checkout_folder% -B %env.CMAKE_BUILD_FOLDER% -DCMAKE_INSTALL_PREFIX=%env.CMAKE_INSTALL_PREFIX% -DVCPKG_INSTALL_OPTIONS=--x-buildtrees-root=%teamcity.build.checkoutDir%/%github_checkout_folder%/buildtrees"
         }
         exec {
             name = "Build"
@@ -102,8 +105,13 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
         exec {
             name = "Run Tests"
             workingDir = "%env.CMAKE_BUILD_FOLDER%/tests/%env.CMAKE_CONFIG_TYPE%"
-            path = "Tests_exe.exe"
+            path = "test_exe.exe"
             arguments = ""
+        }
+        exec {
+            "Run cmake install"
+            path = "cmake"
+            arguments = "install -B %env.CMAKE_BUILD_FOLDER%"
         }
         exec {
             name = "Upload symbols to sentry"
