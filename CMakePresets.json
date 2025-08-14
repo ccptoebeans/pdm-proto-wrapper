@@ -56,83 +56,91 @@
       "hidden": true
     },
     {
-      "name": "vs-x64-windows-internal",
+      "name": "vs-x64-windows-static-internal",
       "inherits": "visual-studio",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
         "VCPKG_TARGET_TRIPLET": "x64-windows-internal",
         "VCPKG_HOST_TRIPLET": "x64-windows-internal",
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
-      "name": "vs-x64-windows-release",
+      "name": "vs-x64-windows-static-release",
       "inherits": "visual-studio",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-release",
-        "VCPKG_HOST_TRIPLET": "x64-windows-release",
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-release",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-release",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
-      "name": "vs-x64-windows-debug",
+      "name": "vs-x64-windows-static-debug",
       "inherits": "visual-studio",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-debug",
-        "VCPKG_HOST_TRIPLET": "x64-windows-debug",
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-debug",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-debug",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
-      "name": "vs-x64-windows-trinitydev",
+      "name": "vs-x64-windows-static-trinitydev",
       "inherits": "visual-studio",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev",
-        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev",
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-trinitydev",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-trinitydev",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
-      "name": "nmc-x64-windows-internal",
+      "name": "nmc-x64-windows-static-internal",
       "inherits": ["ninja-multi-config", "windows"],
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-internal",
-        "VCPKG_HOST_TRIPLET": "x64-windows-internal",
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-internal",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-internal",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
-      "name": "nmc-x64-windows-release",
+      "name": "nmc-x64-windows-static-release",
       "inherits": ["ninja-multi-config", "windows"],
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-release",
-        "VCPKG_HOST_TRIPLET": "x64-windows-release",
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-release",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-release",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
-      "name": "nmc-x64-windows-debug",
+      "name": "nmc-x64-windows-static-debug",
       "inherits": ["ninja-multi-config", "windows"],
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-debug",
-        "VCPKG_HOST_TRIPLET": "x64-windows-debug",
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-debug",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-debug",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
-      "name": "nmc-x64-windows-trinitydev",
+      "name": "nmc-x64-windows-static-trinitydev",
       "inherits": ["ninja-multi-config", "windows"],
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-trinitydev",
-        "VCPKG_HOST_TRIPLET": "x64-windows-trinitydev",
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-trinitydev",
+        "VCPKG_HOST_TRIPLET": "x64-windows-static-trinitydev",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
@@ -221,7 +229,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
         "VCPKG_TARGET_TRIPLET": "universal-osx-static-internal",
-        "VCPKG_HOST_TRIPLET": "universal-osx-static-internal"
+        "VCPKG_HOST_TRIPLET": "universal-osx-static-internal",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
@@ -230,7 +239,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "VCPKG_TARGET_TRIPLET": "universal-osx-static-release",
-        "VCPKG_HOST_TRIPLET": "universal-osx-static-release"
+        "VCPKG_HOST_TRIPLET": "universal-osx-static-release",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
@@ -239,7 +249,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "VCPKG_TARGET_TRIPLET": "universal-osx-static-debug",
-        "VCPKG_HOST_TRIPLET": "universal-osx-static-debug"
+        "VCPKG_HOST_TRIPLET": "universal-osx-static-debug",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     },
     {
@@ -248,7 +259,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
         "VCPKG_TARGET_TRIPLET": "universal-osx-static-trinitydev",
-        "VCPKG_HOST_TRIPLET": "universal-osx-static-trinitydev"
+        "VCPKG_HOST_TRIPLET": "universal-osx-static-trinitydev",
+        "COMBINE_STATIC_LIBS": "ON"
       }
     }
   ]

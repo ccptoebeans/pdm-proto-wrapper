@@ -46,11 +46,12 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         add_subdirectory(tests)
     endif()
 
+    set(PDM_WITH_PROTO_NAME "${CMAKE_STATIC_LIBRARY_PREFIX}pdm_with_proto${CMAKE_STATIC_LIBRARY_SUFFIX}")
+
     if (NOT BUILD_SHARED_LIBS)
         option(COMBINE_STATIC_LIBS "Combine static libs into one lib if protobuf is static" OFF)
 
         if(COMBINE_STATIC_LIBS)
-            set(PDM_WITH_PROTO_NAME "${CMAKE_STATIC_LIBRARY_PREFIX}pdm_with_proto${CMAKE_STATIC_LIBRARY_SUFFIX}")
 
             if (WIN32)
                 find_program(LIB_TOOL_EXE lib REQUIRED)
@@ -77,25 +78,53 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
         endif()
     endif ()
 
+    option(INSTALL_ARCHIVE "Generate an archive of all build files on install (including static dependencies), This is useful for some legacy usage that exists on CI" OFF)
+    if (INSTALL_ARCHIVE)
 
-    install(
-            TARGETS platform_pdm_proto_wrapper
-            EXPORT platform_pdm_proto_wrapperTargets
-            CONFIGURATIONS Release
-            ARCHIVE DESTINATION lib/
-            LIBRARY DESTINATION lib/
-    )
-    # Install rule for available public headers
-    install(DIRECTORY include/ DESTINATION include)
+        set(INSTALL_LIBS
+                $<TARGET_FILE:platform_pdm_proto_wrapper>
+                $<TARGET_FILE:pdm>
+                $<TARGET_FILE:protobuf::libprotobuf>
+        )
 
-    install(
-            EXPORT platform_pdm_proto_wrapperTargets
-            DESTINATION ${CMAKE_INSTALL_PREFIX}/share/carbon-pdmprotowrapper
-            FILE carbon-pdmprotowrapper.cmake
-    )
+        get_target_property(PDM_INCLUDE_DIRS pdm INTERFACE_INCLUDE_DIRECTORIES)
+        get_target_property(PROTO_INCLUDE_DIRS protobuf::libprotobuf INTERFACE_INCLUDE_DIRECTORIES)
 
-    install(
-            FILES carbon-pdmprotowrapperConfig.cmake
-            DESTINATION ${CMAKE_INSTALL_PREFIX}/share/carbon-pdmprotowrapper
-    )
+        file(GLOB PDM_INCLUDE_FILES "${PDM_INCLUDE_DIRS}/*.h")
+        file(GLOB PROTO_INCLUDE_FILES "${PROTO_INCLUDE_DIRS}/*.h")
+
+        if (COMBINE_STATIC_LIBS)
+            list(APPEND install_libs $<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME})
+        endif ()
+
+        install(
+                FILES ${INSTALL_LIBS}
+                DESTINATION lib/
+        )
+        install(DIRECTORY include/ DESTINATION include)
+        install(FILES ${PDM_INCLUDE_FILES} DESTINATION include)
+        install(FILES ${PROTO_INCLUDE_FILES} DESTINATION include)
+
+    else ()
+        install(
+                TARGETS platform_pdm_proto_wrapper
+                EXPORT platform_pdm_proto_wrapperTargets
+                CONFIGURATIONS Release
+                ARCHIVE DESTINATION lib/
+                LIBRARY DESTINATION lib/
+        )
+        # Install rule for available public headers
+        install(DIRECTORY include/ DESTINATION include)
+
+        install(
+                EXPORT platform_pdm_proto_wrapperTargets
+                DESTINATION ${CMAKE_INSTALL_PREFIX}/share/carbon-pdmprotowrapper
+                FILE carbon-pdmprotowrapper.cmake
+        )
+
+        install(
+                FILES carbon-pdmprotowrapperConfig.cmake
+                DESTINATION ${CMAKE_INSTALL_PREFIX}/share/carbon-pdmprotowrapper
+        )
+    endif()
 endif()
