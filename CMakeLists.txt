@@ -87,6 +87,12 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
                 $<TARGET_FILE:protobuf::libprotobuf>
         )
 
+        get_target_property(PDM_INCLUDE_DIRS pdm INTERFACE_INCLUDE_DIRECTORIES)
+        get_target_property(PROTO_INCLUDE_DIRS protobuf::libprotobuf INTERFACE_INCLUDE_DIRECTORIES)
+
+        file(GLOB PDM_INCLUDE_FILES "${PDM_INCLUDE_DIRS}/*.h")
+        file(GLOB PROTO_INCLUDE_FILES "${PROTO_INCLUDE_DIRS}/*.h")
+
         if (COMBINE_STATIC_LIBS)
             list(APPEND install_libs $<TARGET_FILE_DIR:platform_pdm_proto_wrapper>/${PDM_WITH_PROTO_NAME})
         endif ()
@@ -96,6 +102,9 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
                 DESTINATION lib/
         )
         install(DIRECTORY include/ DESTINATION include)
+        install(FILES ${PDM_INCLUDE_FILES} DESTINATION include)
+        install(FILES ${PROTO_INCLUDE_FILES} DESTINATION include)
+
     else ()
         install(
                 TARGETS platform_pdm_proto_wrapper
