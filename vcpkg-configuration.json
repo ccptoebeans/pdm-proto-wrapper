@@ -7,8 +7,8 @@
   "registries": [
     {
       "kind": "git",
-      "repository": "git@github.com:ccpgames/carbon-vcpkg-registry.git",
-      "baseline": "7a1f91c8f25d29c602bd04bbcdfc589d8f24375f",
+      "repository": "git@github.com:carbonengine/vcpkg-registry.git",
+      "baseline": "2339631e734bb8a1fbc8150ee43466e5e37d2935",
       "packages": ["carbon-*", "greenlet", "python3", "ccp-debug-info", "tracy"]
     }
   ]

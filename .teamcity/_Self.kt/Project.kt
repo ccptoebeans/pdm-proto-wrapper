@@ -7,7 +7,7 @@ import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 object Project : Project({
 
-    description = "Build / Publish pipeline for https://github.com/ccpgames/platform-pdm-proto-wrapper"
+    description = "Build / Publish pipeline for https://github.com/carbonengine/pdm-proto-wrapper"
 
     params {
         param("carbon_ref", "refs/heads/main")

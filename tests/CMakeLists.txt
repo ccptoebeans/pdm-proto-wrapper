@@ -1,3 +1,5 @@
+# Copyright © 2026 CCP ehf.
+
 find_package(GTest CONFIG REQUIRED)
 
 add_executable(test_exe test.cpp)

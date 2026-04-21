@@ -6,7 +6,7 @@ platform-pdm-proto-wrapper
 
 platform-pdm-proto-wrapper depends on the platform-pdm git submodule. So you should clone the repository with the following command:
 ```
-git clone git@github.com:ccpgames/platform-pdm-proto-wrapper.git --recurse-submodules
+git clone git@github.com:carbonengine/pdm-proto-wrapper.git --recurse-submodules
 ```
 
 ### Building

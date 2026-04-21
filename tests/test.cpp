@@ -1,3 +1,5 @@
+// Copyright © 2026 CCP ehf.
+
 #include "../src/semver.h"
 #include "../include/pdm/protobuf.h"
 #include "../generated/eve_launcher/pdm.pb.h"
