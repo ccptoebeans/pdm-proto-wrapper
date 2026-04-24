@@ -198,10 +198,10 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
 
     features {
         pullRequests {
-            vcsRootExtId = "${AbsoluteId("Carbon_PlatformPdmProtoWrapper_PlatformPdmProtoWrapper")}"
+            vcsRootExtId = "${DslContext.settingsRootId.id}"
             provider = github {
                 authType = token {
-                    token = "credentialsJSON:06ae89f1-d5f2-4c8d-a91a-9712c233ce06"
+                    token = "%GITHUB_CARBON_PAT%"
                 }
                 filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
             }
@@ -210,7 +210,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String) 
             publisher = github {
                 githubUrl = "https://api.github.com"
                 authType = personalToken {
-                    token = "credentialsJSON:a37ec416-c03b-4ac3-a92b-ecbd3a3d8c8e"
+                    token = "%GITHUB_CARBON_PAT%"
                 }
             }
         }
