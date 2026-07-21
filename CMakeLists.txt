@@ -1,6 +1,4 @@
-# Copyright © 2026 CCP ehf.
-
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.19)
 project(platform_pdm_proto_wrapper VERSION 2.0.0)
 
 find_package(carbon-pdm CONFIG REQUIRED)
@@ -9,22 +7,35 @@ find_package(protobuf CONFIG REQUIRED)
 OPTION(BUILD_SHARED_LIBS "build using shared libraries" OFF)
 
 add_library(platform_pdm_proto_wrapper
-    generated/eve_public/app/platform.pb.cc
-    generated/eve_launcher/pdm.pb.cc
-    include/pdm/protobuf.h
-    src/protobuf_template.h
-    src/protobuf_public.cpp
-    src/protobuf_launcher.cpp
-    src/semver.h
-    src/semver.cpp
+        generated/eve_public/app/platform.pb.cc
+        generated/eve_launcher/pdm.pb.cc
+        include/pdm/protobuf.h
+        src/protobuf_template.h
+        src/protobuf_public.cpp
+        src/protobuf_launcher.cpp
+        src/semver.h
+        src/semver.cpp
 )
+
+find_program(PROTOC_EXE protoc)
+
+add_custom_command(OUTPUT
+        generated/eve_launcher/pdm.pb.cc
+        generated/eve_launcher/pdm.pb.h
+        generated/eve_public/app/platform.pb.cc
+        generated/eve_public/app/platform.pb.h
+        COMMAND ${PROTOC_EXE} --proto_path=${CMAKE_CURRENT_SOURCE_DIR}/protos/4d8a22b2b9eadfbec8fad6e44986feab33dd4951/eve_launcher --cpp_out=${CMAKE_CURRENT_BINARY_DIR}/generated/eve_launcher pdm.proto
+        COMMAND ${PROTOC_EXE} --proto_path=${CMAKE_CURRENT_SOURCE_DIR}/protos/4d8a22b2b9eadfbec8fad6e44986feab33dd4951/eve_public/app --cpp_out=${CMAKE_CURRENT_BINARY_DIR}/generated/eve_public/app platform.proto
+        COMMENT "Generating protos for pdm.proto and platform.proto from eve-proto ref 4d8a22b2b9eadfbec8fad6e44986feab33dd4951"
+)
+
 target_link_libraries(platform_pdm_proto_wrapper PUBLIC pdm protobuf::libprotobuf)
 get_target_property(PDM_INTERFACE_INCLUDE_DIRECTORIES pdm INTERFACE_INCLUDE_DIRECTORIES)
 target_include_directories(platform_pdm_proto_wrapper
         PUBLIC
-            $<INSTALL_INTERFACE:include>
-            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/generated>
+        $<INSTALL_INTERFACE:include>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/generated>
 )
 
 option(USE_WITH_PROTOBUF_DLL "Is this library going to be used with protobuf as DLL?" OFF)
