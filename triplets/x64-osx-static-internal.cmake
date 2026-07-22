@@ -1,4 +1,4 @@
-set(BASE_TRIPLET_FILE ${CMAKE_CURRENT_LIST_DIR}../vendor/github.com/carbonengine/vcpkg-registry/triplets/x64-osx-internal.cmake)
+set(BASE_TRIPLET_FILE ${CMAKE_CURRENT_LIST_DIR}/../vendor/github.com/carbonengine/vcpkg-registry/triplets/x64-osx-internal.cmake)
 
 include(BASE_TRIPLET_FILE)
 
