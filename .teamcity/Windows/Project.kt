@@ -1,5 +1,6 @@
 package Windows
 
+import jetbrains.buildServer.configs.kotlin.DslContext
 import jetbrains.buildServer.configs.kotlin.Project
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
@@ -61,7 +62,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
     }
 
     vcs {
-        root(AbsoluteId("Carbon_PlatformPdmProtoWrapper_PlatformPdmProtoWrapper"),"+:. => %github_checkout_folder%")
+        root(AbsoluteId(DslContext.settingsRootId),"+:. => %github_checkout_folder%")
         root(AbsoluteId("CarbonPipelineTools"), "+:. => carbon_pipeline_tools")
         cleanCheckout = true
     }
@@ -189,7 +190,7 @@ class CarbonBuildWindows(buildName: String, configType: String, preset: String, 
 
     triggers {
         vcs {
-            triggerRules = "+:root=${AbsoluteId("Carbon_PlatformPdmProtoWrapper_PlatformPdmProtoWrapper").id}:."
+            triggerRules = "+:root=${DslContext.settingsRootId.id}:."
 
             param("disabled", "true")
         }
