@@ -1,6 +1,6 @@
 // Copyright © 2026 CCP ehf.
 
-package _Self.buildTypes
+package MacOS
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.vcsLabeling
@@ -10,7 +10,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.buildSteps.exec
 
 class UniversalBuild() : BuildType({
-    name = "Create MacOS Universal Binaries"
+    name = "macOS Universal Build"
 
     params{
         param("carbon-pipeline-tools-ref", "refs/heads/main")
@@ -82,25 +82,6 @@ class UniversalBuild() : BuildType({
     }
 
     dependencies {
-        dependency(MacOS.arm64_Debug) {
-            snapshot {
-                onDependencyFailure = FailureAction.FAIL_TO_START
-            }
-
-            artifacts {
-                artifactRules = "**/*=>%system.teamcity.build.workingDir%/arm64"
-            }
-        }
-        dependency(MacOS.x64_Debug) {
-            snapshot {
-                onDependencyFailure = FailureAction.FAIL_TO_START
-            }
-
-            artifacts {
-                artifactRules = "**/*=>%system.teamcity.build.workingDir%/x64"
-            }
-        }
-
         dependency(MacOS.arm64_Release) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
@@ -111,44 +92,6 @@ class UniversalBuild() : BuildType({
             }
         }
         dependency(MacOS.x64_Release) {
-            snapshot {
-                onDependencyFailure = FailureAction.FAIL_TO_START
-            }
-
-            artifacts {
-                artifactRules = "**/*=>%system.teamcity.build.workingDir%/x64"
-            }
-        }
-
-        dependency(MacOS.arm64_Internal) {
-            snapshot {
-                onDependencyFailure = FailureAction.FAIL_TO_START
-            }
-
-            artifacts {
-                artifactRules = "**/*=>%system.teamcity.build.workingDir%/arm64"
-            }
-        }
-        dependency(MacOS.x64_Internal) {
-            snapshot {
-                onDependencyFailure = FailureAction.FAIL_TO_START
-            }
-
-            artifacts {
-                artifactRules = "**/*=>%system.teamcity.build.workingDir%/x64"
-            }
-        }
-
-        dependency(MacOS.arm64_TrinityDev) {
-            snapshot {
-                onDependencyFailure = FailureAction.FAIL_TO_START
-            }
-
-            artifacts {
-                artifactRules = "**/*=>%system.teamcity.build.workingDir%/arm64"
-            }
-        }
-        dependency(MacOS.x64_TrinityDev) {
             snapshot {
                 onDependencyFailure = FailureAction.FAIL_TO_START
             }
