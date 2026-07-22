@@ -87,7 +87,7 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
         "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-trinitydev",
-        "VCPKG_HOST_TRIPLET": "x64-windows-1450-static-trinitydev",
+        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-trinitydev",
         "COMBINE_STATIC_LIBS": "ON"
       }
     },
@@ -96,8 +96,8 @@
       "inherits": "windows",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-static-internal-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-static-internal-mt"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-internal-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-internal-mt"
       }
     },
     {
@@ -105,8 +105,8 @@
       "inherits": "windows",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-static-release-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-static-release-mt"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-release-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-release-mt"
       }
     },
     {
@@ -114,8 +114,8 @@
       "inherits": "windows",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-static-debug-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-static-debug-mt"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-debug-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-debug-mt"
       }
     },
     {
@@ -123,8 +123,8 @@
       "inherits": "windows",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
-        "VCPKG_TARGET_TRIPLET": "x64-windows-static-trinitydev-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-static-trinitydev-mt"
+        "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-trinitydev-mt",
+        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-trinitydev-mt"
       }
     },
 
