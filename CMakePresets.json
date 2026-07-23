@@ -27,10 +27,6 @@
         "lhs": "${hostSystemName}",
         "rhs": "Windows"
       },
-      "cacheVariables": {
-        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
-        "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/vendor/github.com/carbonengine/vcpkg-registry/toolchains/x64-windows-145-carbon.cmake"
-      },
       "hidden": true
     },
     {
@@ -58,7 +54,8 @@
         "CMAKE_BUILD_TYPE": "Internal",
         "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-internal",
         "VCPKG_HOST_TRIPLET": "x64-windows-145-static-internal",
-        "COMBINE_STATIC_LIBS": "ON"
+        "COMBINE_STATIC_LIBS": "ON",
+        "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/vendor/github.com/carbonengine/vcpkg-registry/toolchains/x64-windows-145-carbon.cmake"
       }
     },
     {
@@ -68,7 +65,8 @@
         "CMAKE_BUILD_TYPE": "Release",
         "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-release",
         "VCPKG_HOST_TRIPLET": "x64-windows-145-static-release",
-        "COMBINE_STATIC_LIBS": "ON"
+        "COMBINE_STATIC_LIBS": "ON",
+        "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/vendor/github.com/carbonengine/vcpkg-registry/toolchains/x64-windows-145-carbon.cmake"
       }
     },
     {
@@ -78,7 +76,8 @@
         "CMAKE_BUILD_TYPE": "Debug",
         "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-debug",
         "VCPKG_HOST_TRIPLET": "x64-windows-145-static-debug",
-        "COMBINE_STATIC_LIBS": "ON"
+        "COMBINE_STATIC_LIBS": "ON",
+        "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/vendor/github.com/carbonengine/vcpkg-registry/toolchains/x64-windows-145-carbon.cmake"
       }
     },
     {
@@ -88,7 +87,8 @@
         "CMAKE_BUILD_TYPE": "TrinityDev",
         "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-trinitydev",
         "VCPKG_HOST_TRIPLET": "x64-windows-145-static-trinitydev",
-        "COMBINE_STATIC_LIBS": "ON"
+        "COMBINE_STATIC_LIBS": "ON",
+        "VCPKG_CHAINLOAD_TOOLCHAIN_FILE": "${sourceDir}/vendor/github.com/carbonengine/vcpkg-registry/toolchains/x64-windows-145-carbon.cmake"
       }
     },
     {
@@ -97,7 +97,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Internal",
         "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-internal-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-internal-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-internal-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -106,7 +107,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-release-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-release-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-release-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -115,7 +117,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-debug-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-debug-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-debug-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
     {
@@ -124,7 +127,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "TrinityDev",
         "VCPKG_TARGET_TRIPLET": "x64-windows-145-static-trinitydev-mt",
-        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-trinitydev-mt"
+        "VCPKG_HOST_TRIPLET": "x64-windows-145-static-trinitydev-mt",
+        "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
       }
     },
 
