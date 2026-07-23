@@ -9,6 +9,8 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.python
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.buildSteps.exec
 
+val universalMacOSBuild = UniversalBuild()
+
 class UniversalBuild() : BuildType({
     name = "macOS Universal Build"
 
